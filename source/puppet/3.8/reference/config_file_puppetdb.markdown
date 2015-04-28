@@ -39,4 +39,3 @@ The `puppetdb.conf` file uses the same INI-like format as `puppet.conf`, but onl
 * The `port` setting must be set to the port of the PuppetDB server.
 
 See the [PuppetDB manual](/puppetdb/latest/) for more information.
-

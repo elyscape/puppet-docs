@@ -131,4 +131,3 @@ Although the console allows groups to contain other groups, a compliance group p
 &larr; [Cloud Provisioning: Man Page: puppet node](./cloudprovisioner_man_node.html) --- [Index](./) --- [Compliance: Using the Compliance Workflow](./compliance_using.html) &rarr;
 
 * * *
-

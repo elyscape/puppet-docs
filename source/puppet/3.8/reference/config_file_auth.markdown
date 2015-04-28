@@ -58,4 +58,3 @@ The location of the `confdir` varies; it depends on the OS, Puppet distribution,
 ## Format
 
 **[See the HTTPS access control documentation for full details about the `auth.conf` file](/guides/rest_auth_conf.html).**
-

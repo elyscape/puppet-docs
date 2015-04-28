@@ -57,5 +57,3 @@ Work In Progress
 ----------------
 
 This document is a stub.  You can help Puppet by submitting contributions to it.
-
-

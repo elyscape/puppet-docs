@@ -188,5 +188,3 @@ In earlier versions of Puppet, nodes could inherit from other nodes using the `i
 > * [ENCs][enc] can look up data from any arbitrary source and return it to Puppet as top-scope variables.
 > * If you have node-specific data in an external CMDB, you can easily write [custom Puppet functions][custom_functions] to query it.
 > * For very small numbers of nodes, you can copy and paste to make complete node definitions for special-case nodes.
-
-

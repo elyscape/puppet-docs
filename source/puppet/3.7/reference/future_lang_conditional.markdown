@@ -389,4 +389,3 @@ These are not normal variables, and have some special behaviors:
 
 * The values of the numbered variables do not persist outside the value associated with the pattern that set them.
 * In nested conditionals, each conditional has its own set of values for the set of numbered variables. At the end of an interior statement, the numbered variables are reset to their previous values for the remainder of the outside statement. (This causes conditional statements to act like [local scopes][local], but only with regard to the numbered variables.)
-

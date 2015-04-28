@@ -133,4 +133,3 @@ r10k deploy display -p --detail production vmwr webrefactor
 ~~~
 
 The above example displays details on the modules for your production, vmwr, and webrefactor environments.
-

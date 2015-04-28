@@ -75,4 +75,3 @@ On these platforms, Puppet Labs does not build official packages.
 ### Windows
 
 {% include platforms_windows.markdown %}
-

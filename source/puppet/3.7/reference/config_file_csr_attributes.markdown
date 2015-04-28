@@ -76,4 +76,3 @@ Numeric ID              | Short Name         | Descriptive Name
 1.3.6.1.4.1.34380.1.1.2 | `pp_instance_id`   | Puppet Node Instance ID
 1.3.6.1.4.1.34380.1.1.3 | `pp_image_name`    | Puppet Node Image Name
 1.3.6.1.4.1.34380.1.1.4 | `pp_preshared_key` | Puppet Node Preshared Key
-

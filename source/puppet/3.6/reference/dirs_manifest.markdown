@@ -45,4 +45,3 @@ If the main manifest is a directory, Puppet will parse every `.pp` file in the d
 Puppet will act as though the whole directory were just one big manifest; for example, a variable assigned in the file `01_all_nodes.pp` would be accessible in `node_web01.pp`.
 
 Puppet will only read **the first level of files** in a manifest directory; it won't descend into subdirectories.
-

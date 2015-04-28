@@ -135,4 +135,3 @@ Prior to Puppet 3.5 and Puppet Enterprise 3.2, the `puppet config print` command
 * `puppet apply --configprint <SETTING>`
 
 These behave much the same as the current behavior of `puppet config print`, and still work with this version of Puppet.
-

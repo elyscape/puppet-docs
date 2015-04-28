@@ -314,4 +314,3 @@ The issue can be resolved by appending these four configuration lines to the fil
     classes_per_page: 50
     groups_per_page: 50
     reports_per_page: 20
-

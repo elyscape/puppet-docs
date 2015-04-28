@@ -136,4 +136,3 @@ In an example NTP module where service configuration is moved out into its own c
 {% endhighlight %}
 
 In this case, the `ntp::service` class still isn't technically contained, but any resource can safely form a relationship with the `ntp` class and be assured that the relationship will propagate into all relevant resources.
-

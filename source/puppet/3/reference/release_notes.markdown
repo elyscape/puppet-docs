@@ -1456,4 +1456,3 @@ The [`srv_domain`](/references/latest/configuration.html#srvdomain) setting can 
 Use the Puppet issue tracker to find every bug fixed in a given version of Puppet.
 
 * [All bugs fixed in 3.0.0][target_300] (approx. 220)
-

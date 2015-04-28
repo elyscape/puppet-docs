@@ -449,4 +449,3 @@ Agent SSL certificate             | `puppet agent --configprint hostcert`
 Agent SSL certificate private key | `puppet agent --configprint hostprivkey`
 Root CA certificate               | `puppet agent --configprint localcacert`
 Master CA certificate             | `puppet agent --configprint ssl_client_ca_auth`
-

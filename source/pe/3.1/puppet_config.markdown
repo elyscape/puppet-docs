@@ -45,6 +45,3 @@ Keep in mind that if you delete the `/etc/puppetlabs/installer/answers.install` 
 * * *
 
 - [Next: Troubleshooting Puppet](./trouble_puppet.html)
-
-
-

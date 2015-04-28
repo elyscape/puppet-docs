@@ -171,4 +171,3 @@ this issue.
 &larr; [Cloud Provisioning: Overview](./cloudprovisioner_overview.html) --- [Index](./) --- [Cloud Provisioning: Provisioning with VMware](./cloudprovisioner_vmware.html) &rarr;
 
 * * *
-

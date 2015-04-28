@@ -703,4 +703,3 @@ The full set of changes Augeas should apply eventually looks like this:
     set sasl_allowed_username_list/004 userA
 
 The limitation here, as in the above example with `/etc/resolv.conf` is that we can not extend an existing list in *sasl_allowed_username_list*. Instead the list is fixed (but variably long).
-

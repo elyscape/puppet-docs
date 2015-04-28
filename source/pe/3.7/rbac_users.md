@@ -211,4 +211,3 @@ Remote user:
 * **409 Conflict** If the user login collides with an existing user's login.
 
 The request should return the user object with the changes made.
-

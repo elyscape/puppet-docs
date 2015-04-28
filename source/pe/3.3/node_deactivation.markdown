@@ -38,4 +38,3 @@ From time to time, you may need to completely deactivate an agent node in your P
 7. On the agent node, remove the node certificates in `/etc/puppetlabs/mcollective/ssl/clients`.
 
 At this point, the node should be fully deactivated.
-

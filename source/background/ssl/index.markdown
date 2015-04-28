@@ -37,4 +37,3 @@ HTTP is a useful protocol for building applications, and it can be tunneled over
 [**Appendix: Anatomy of a Certificate**](./cert_anatomy.html)
 
 This page shows several example certificates and points out their most important features, in order to highlight the lessons covered in the previous articles.
-

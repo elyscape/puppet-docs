@@ -122,4 +122,3 @@ Dados dos nodos diferentes con variables Puppet diferentes, aquí tienes dos man
 + common.yaml
 
 Ten en cuenta que, como **virtual_false.yaml** no existe, es ignorada por completo.
-

@@ -263,4 +263,3 @@ If two or more resources require each other in a loop, Puppet will compile the c
     Try the '--graph' option and opening the resulting '.dot' file in OmniGraffle or GraphViz
 
 To locate the directory containing the graph files, run `puppet agent --configprint graphdir`.
-

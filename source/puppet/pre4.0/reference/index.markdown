@@ -24,4 +24,3 @@ Supported Versions
 Currently, the preview of Puppet 4.0 and Puppet Server 2.0 only support RHEL 7, CentOS 7, and derived distros.
 
 We'll be releasing preview packages for other systems as we get closer to a final release.
-

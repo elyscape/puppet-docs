@@ -426,5 +426,3 @@ Version notes can optionally include a `<p class="noisy">`, which will make the 
 
 **Toolsmith:**
 -->
-
-

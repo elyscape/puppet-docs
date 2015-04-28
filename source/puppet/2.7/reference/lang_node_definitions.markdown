@@ -242,4 +242,3 @@ In the above example, `www1.example.com` would receive the `common, ntp, apache,
 > * If you have node-specific data in an external CMDB, you can easily write [custom Puppet functions][custom_functions] to query it.
 > * For very small numbers of nodes, you can copy and paste to make complete node definitions for special-case nodes.
 > * With discipline, you can use node inheritance **only** for data lookup. The safest approach is to **only set variables** in the base nodes, then declare **all** classes in the derived nodes. This is less terse than the mix-and-match that most users try first, but is completely reliable.
-

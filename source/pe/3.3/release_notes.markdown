@@ -359,4 +359,3 @@ For help with Puppet-specific terms and language, visit [the glossary](/referenc
 For a complete guide to the Puppet language, visit [the reference manual](/puppet/3.6/reference/)
 
 * * *
-

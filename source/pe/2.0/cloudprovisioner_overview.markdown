@@ -73,4 +73,3 @@ capability can be installed by setting the `q_puppet_cloud_install` option to `y
 &larr; [Orchestration: Usage and Examples](./orchestration_usage.html) --- [Index](./) --- [Cloud Provisioning: Configuring and Troubleshooting](./cloudprovisioner_configuring.html) &rarr;
 
 * * *
-

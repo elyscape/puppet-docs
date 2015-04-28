@@ -163,4 +163,3 @@ Note that the zack-r10k module does not support SLES.
 ## Next Steps
 
 Once you've listed each repo you want to manage with r10k in r10k.yaml, you're ready to specify your modules in your Puppetfile. If you've already done that, then you're ready to [run r10k][running] to sync your environments.
-

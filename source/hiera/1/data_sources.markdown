@@ -113,4 +113,3 @@ Any string may include any number of [interpolation tokens][variables].
                       }
 }
 {% endhighlight %}
-

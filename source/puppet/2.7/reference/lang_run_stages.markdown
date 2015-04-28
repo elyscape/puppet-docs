@@ -62,4 +62,3 @@ Limitations and Known Issues
 * Due to the "anchor pattern issue" with [containment][], classes that declare other classes will behave badly if declared with a run stage. (The second-order classes will "float off" into the main stage, and since the first-order class likely depended on their resources, this will likely cause failures.)
 
 Due to these limitations, **stages should only be used with the simplest of classes,** and only when absolutely necessary. Mass dependencies like package repositories are effectively the only valid use case.
-

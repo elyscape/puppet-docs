@@ -159,4 +159,3 @@ If Puppet agent attempts to do a configuration run while disabled --- either a s
 ## Configuring Puppet Agent
 
 Puppet agent should be configured with [puppet.conf][], using the `[agent]` and/or `[main]` section. For notes on which settings are most relevant to Puppet agent, see the [short list of important settings][short_settings].
-

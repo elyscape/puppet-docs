@@ -42,4 +42,3 @@ If you are using an ENC and it specifies an environment for that node, it will o
 The one exception is if the default `production` environment doesn't exist. In this case, the agent will successfully retrieve an empty catalog.
 
 **With config file environments,** nodes **can** be assigned to environments that are not configured. This will cause them to fall back to global values for `modulepath` and `manifest`.
-

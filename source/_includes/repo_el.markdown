@@ -11,4 +11,3 @@ To enable the repository, run the command below that corresponds to your OS vers
 #### Enterprise Linux 5
 
     $ sudo rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-5.noarch.rpm
-

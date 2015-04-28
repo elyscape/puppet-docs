@@ -195,4 +195,3 @@ Two iteration functions were removed entirely in Puppet 3.4, since their functio
 
 * `foreach` --- this function was simply a duplicate of `each`. Use `each` instead.
 * `reject` --- this function was like `filter` (previously `select`), but inverted the filtering criteria. Instead, use `filter` with an inverted criteria. (Instead of `[1,2,3].reject |$val| { $val > 2 }`, use `[1,2,3].filter |$val| { $val <= 2 }`.)
-

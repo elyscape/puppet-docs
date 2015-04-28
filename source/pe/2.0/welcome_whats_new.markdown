@@ -222,4 +222,3 @@ Puppet Enterprise's Apache configuration now discards any X-Forwarded-For header
 &larr; [Welcome: Components and Roles](./welcome_roles.html) --- [Index](./) --- [Welcome: Known Issues](./welcome_known_issues.html) &rarr;
 
 * * *
-

@@ -174,4 +174,3 @@ Classes are made available by Puppet modules; you'll need to [install some on th
 * Use [node definitions][] in the [main manifest][manifest] to determine which nodes receive which classes.
 * Use an [external node classifier][] to assign classes to nodes.
 * Use [Hiera][] to classify your nodes via [the `hiera_include` function][hiera_include].
-

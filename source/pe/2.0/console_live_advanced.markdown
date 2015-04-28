@@ -63,4 +63,3 @@ Results:
 &larr; [Console: Live Management: Controlling Puppet](./console_live_puppet.html) --- [Index](./) --- [Puppet: Overview](./puppet_overview.html) &rarr;
 
 * * *
-

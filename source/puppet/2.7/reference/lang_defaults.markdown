@@ -56,4 +56,3 @@ Resource defaults obey dynamic scope; [see here for a full description of scope 
 You can declare global resource defaults in the [site manifest][sitemanifest] outside any [node definition][node].
 
 Unlike dynamic variable lookup, dynamic scope for resource defaults is not deprecated in Puppet 2.7.
-

@@ -121,4 +121,3 @@ Part of a last run summary results view:
 &larr; [Console: Live Management: Managing Resources](./console_live_resources.html) --- [Index](./) --- [Console: Live Management: Advanced Tasks](./console_live_advanced.html) &rarr;
 
 * * *
-

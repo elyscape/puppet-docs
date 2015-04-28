@@ -89,4 +89,3 @@ Bottleneck: SSL Performance
 PuppetDB uses its own embedded SSL processing, which is usually not a performance problem. However, truly large deployments will be able to squeeze out more performance by terminating SSL with Apache or Nginx instead. If you are using multiple PuppetDB servers behind a reverse proxy, we recommend terminating SSL at the proxy server.
 
 Instructions for configuring external SSL termination are currently beyond the scope of this manual. If your site is big enough for this to be necessary, you have probably done it with several other services before.
-

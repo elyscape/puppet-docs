@@ -152,7 +152,3 @@ See Also
 
 -   [Provider Development](./provider_development.html)
 -   [Creating Custom Types](./custom_types.html)
-
-
-
-

@@ -314,4 +314,3 @@ On each agent node you upgrade to PE 2.0, make the following edits to `/etc/pupp
 &larr; [Installing: Basic Installation](./install_basic.html) --- [Index](./) --- [Installing: Uninstalling](./install_uninstalling.html) &rarr;
 
 * * *
-

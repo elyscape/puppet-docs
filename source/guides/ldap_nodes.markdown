@@ -285,4 +285,3 @@ And then a default node in LDAP or your external node source like:
     objectClass: puppetClient
     objectClass: top
     cn: default
-

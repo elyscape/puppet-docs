@@ -160,4 +160,3 @@ This section will be filled in at a later date.
 * [Maintaining Dashboard](./maintaining.html)
 * [Using Dashboard](./using.html)
 * [Rake API](./rake_api.html)
-

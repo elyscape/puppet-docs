@@ -126,4 +126,3 @@ The `init` action combines the options for the `classify` and
 &larr; [Cloud Provisioning: Provisioning with AWS](./cloudprovisioner_aws.html) --- [Index](./) --- [Cloud Provisioning: Man Page: puppet node_vmware](./cloudprovisioner_man_node_vmware.html) &rarr;
 
 * * *
-

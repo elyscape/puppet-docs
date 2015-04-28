@@ -267,4 +267,3 @@ This new code was used identically to the older code:
       end
     end
 {% endhighlight %}
-

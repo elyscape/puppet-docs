@@ -28,5 +28,3 @@ The steps required for a complete replacement remediation vary based on the arch
 
 
 [OS_list]: http://puppetlabs.com/blog/heartbleed-and-puppet-supported-operating-systems
-
-

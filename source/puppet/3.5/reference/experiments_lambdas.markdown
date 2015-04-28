@@ -158,5 +158,3 @@ Statements in a Lambda Body
 -----
 
 The statements in a lambda body can be anything legal in Puppet except definition of classes, resource types (i.e. 'define'), or nodes. This is the same rule as for any conditional construct in Puppet.
-
-

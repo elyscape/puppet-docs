@@ -136,5 +136,3 @@ The following command opens a specific node's log: `razor nodes <node name> log`
 
 
 - [Next: Razor Command Reference](./razor_reference.html)
-
-

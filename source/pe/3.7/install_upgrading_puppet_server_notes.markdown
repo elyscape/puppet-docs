@@ -51,8 +51,3 @@ Notable changes include:
 * Changes to the [Ruby interpreter running on the Puppet master](/puppetserver/1.0/services_master_puppetserver.html#jruby-interpreters)
 
 * Changes to the [certificate authority service](/puppetserver/1.0/services_master_puppetserver.html#certificate-authority-service)
-
-
-
-
-

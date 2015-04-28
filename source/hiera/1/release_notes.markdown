@@ -150,5 +150,3 @@ Hiera 1.2.0 contains new features and bug fixes.
   The original code for interpolation had, hidden somewhere in its depths,
   supported recursive expansion of interpolations. This adds that support
   back in.
-
-

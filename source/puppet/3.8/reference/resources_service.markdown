@@ -102,4 +102,3 @@ A complete service resource is very simple:
       enable => true,
     }
 {% endhighlight %}
-

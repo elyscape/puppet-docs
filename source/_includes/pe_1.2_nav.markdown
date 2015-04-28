@@ -19,4 +19,3 @@
 - {% if page.url contains 'known_issues.html' %}**Known Issues**{% else %}[Known Issues](./known_issues.html){% endif %}
 - {% if page.url contains 'troubleshooting.html' %}**Troubleshooting**{% else %}[Troubleshooting](./troubleshooting.html){% endif %}
 - {% if page.url contains 'answer_file_reference.html' %}**Answer File Reference**{% else %}[Answer File Reference](./answer_file_reference.html){% endif %}
-

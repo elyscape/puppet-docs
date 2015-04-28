@@ -110,4 +110,3 @@ Since the console is the main point of control for your infrastructure, you will
 &larr; [Installing: What gets installed where?](./install_what_and_where.html) --- [Index](./) --- [Console: Navigating the Console](./console_navigating.html) &rarr;
 
 * * *
-

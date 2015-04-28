@@ -45,4 +45,3 @@ A patch containing the following items would be trivial if less than 10 lines, a
 * Breaking a source files into multiple source files, or consolidating multiple source files into one source file, with no code changes
 
 There are many gray areas. If it doesn't fall into one of the above categories, please check with faq@puppetlabs.com.
-

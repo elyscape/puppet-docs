@@ -150,5 +150,3 @@ At this point you should have a functioning installation of Puppet Enterprise. Y
 * * *
 
 - Next: [First Steps: Building Your Work Environment](dg_first_steps.html)
-
-

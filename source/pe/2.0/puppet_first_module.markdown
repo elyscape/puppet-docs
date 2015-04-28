@@ -117,4 +117,3 @@ Remember that creating the module won't automatically assign the class to any no
 &larr; [Puppet: Overview](./puppet_overview.html) --- [Index](./) --- [Puppet: Assigning a Class to a Node](./puppet_classifying.html) &rarr;
 
 * * *
-

@@ -54,4 +54,3 @@ By default, `auth.conf` will allow all agent nodes with valid certificates to ac
 You can then [configure `auth.conf` restrictions as per normal.][auth_conf]
 
 For more information on how the old `allow` and `deny` directives in `fileserver.conf` work, see the [file serving documentation](/guides/file_serving.html).
-

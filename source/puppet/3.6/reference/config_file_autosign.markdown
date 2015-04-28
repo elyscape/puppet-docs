@@ -34,4 +34,3 @@ The `autosign.conf` file is a list of certnames or domain name globs (one per li
 Note that domain name globs do not function as normal globs: an asterisk can only represent one or more subdomains at the front of a certname that resembles a fully-qualified domain name. (That is, if your certnames don't look like FQDNs, you can't use `autosign.conf` to full effect.
 
 **Note:** Since any host can request any certname, autosigning with `autosign.conf` is essentially insecure. See [the reference page about certificate autosigning][autosigning] for more context.
-

@@ -125,5 +125,3 @@ Puedes [interpolar variables](http://docs.puppetlabs.com/es/hiera/variables.html
 La clase Puppet en la que debes buscar información.
 
 **Valor por defecto: data**
-
-

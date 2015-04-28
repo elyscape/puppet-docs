@@ -84,4 +84,3 @@ It's an otherwise uneventful day.
 [tutorial_profile_before]: ./images/baseline/tutorial_profile_before.png
 [tutorial_reject_user]: ./images/baseline/tutorial_reject_user.png
 [tutorial_overview]: ./images/baseline/tutorial_overview.png
-

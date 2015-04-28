@@ -51,5 +51,3 @@ Describes the errors you might receive when making RBAC service calls.
 
 ## [Configuration Options](./rbac_config.html)
 Describes RBAC configuration options for things, such as how long a password reset token remains valid or how long before a session will time out.
-
-

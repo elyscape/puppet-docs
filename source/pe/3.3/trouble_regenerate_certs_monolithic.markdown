@@ -113,4 +113,3 @@ Once an agent node's new certificate is signed, it will fetch it automatically w
 
 [confdir]: /puppet/3.6/reference/dirs_confdir.html#windows-systems
 [request_manager]: ./console_cert_mgmt.html
-

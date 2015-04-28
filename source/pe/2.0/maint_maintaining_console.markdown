@@ -95,4 +95,3 @@ To restore the console's database from a file called `production.sql` to your `p
 &larr; [Maintenance: Common Configuration Errors](./maint_common_config_errors.html) --- [Index](./) --- [Maintenance: Installing Additional Components](./maint_installing_additional.html) &rarr;
 
 * * *
-

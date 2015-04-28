@@ -52,4 +52,3 @@ For more details, see [the reference page about the environments endpoint.][env_
 
 [v2_api]: /references/3.6.latest/developer/file.http_api_index.html#V2_HTTP_API
 [env_endpoint]: /references/3.6.latest/developer/file.http_environments.html
-

@@ -112,4 +112,3 @@ Next
 ----
 
 At this point, Puppet is installed, but it isn't configured or running. You should now [do the post-install tasks](./post_install.html).
-

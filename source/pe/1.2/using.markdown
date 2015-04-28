@@ -122,4 +122,3 @@ Before running any of the rake tasks described in the [maintenance chapter of th
 
     # cd /opt/puppet/share/puppet-dashboard
     # export $PATH=/opt/puppet/bin:/opt/puppet/sbin:$PATH
-

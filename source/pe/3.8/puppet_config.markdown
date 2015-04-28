@@ -55,6 +55,3 @@ There are two methods to disable update checking (e.g. if your company policy fo
 * * *
 
 - [Next: Troubleshooting Puppet](./trouble_puppet.html)
-
-
-

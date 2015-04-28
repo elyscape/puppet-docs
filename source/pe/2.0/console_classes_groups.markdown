@@ -178,4 +178,3 @@ All of these tasks should be run as follows, replacing `<TASK>` with the task na
 &larr; [Console: Viewing Reports and Inventory Data](./console_reports.html) --- [Index](./) --- [Console: Live Management](./console_live.html) &rarr;
 
 * * *
-

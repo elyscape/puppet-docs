@@ -11,4 +11,3 @@ In Puppet Dashboard, every node is in one of six states:
 - <span style="font-family: Helvetica, Arial, Verdana; font-size: larger; color: #069;">Changed:</span> This node's last Puppet run was successful, and changes were made to bring the node into compliance.
 - <span style="font-family: Helvetica, Arial, Verdana; font-size: larger; color: #093;">Unchanged:</span> This node's last Puppet run was successful, and it was fully compliant; no changes were necessary.
 - <span style="font-family: Helvetica, Arial, Verdana; font-size: larger; color: #aaa;">Unreported:</span> Although Dashboard is aware of this node's existence, it has never submitted a Puppet report. It may be a newly-commissioned node, it may have never come online, or its copy of Puppet may not be configured correctly.
-

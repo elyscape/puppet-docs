@@ -147,4 +147,3 @@ Documentation Version
 ---------------------
 
 This release of the documentation was generated from revision {% gitrevision %} of the [puppet-docs Git repo](http://github.com/puppetlabs/puppet-docs) on {{ 'now' | date: "%B %d, %Y" }}.
-

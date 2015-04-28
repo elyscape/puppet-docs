@@ -249,4 +249,3 @@ The latter case will remove any permissions the Administrators group previously 
 To get out of this state, have Puppet execute the following (with an exec resource) to reset the file permissions:
 
     takeown /f c:/path/to/file.bat && icacls c:/path/to/file.bat /reset
-

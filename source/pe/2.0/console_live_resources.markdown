@@ -126,4 +126,3 @@ Note also that the UID of a user and the GIDs of its groups aren't cloned across
 &larr; [Console: Live Management](./console_live.html) --- [Index](./) --- [Console: Live Management: Controlling Puppet](./console_live_puppet.html) &rarr;
 
 * * *
-

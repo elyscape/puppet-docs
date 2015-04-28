@@ -183,4 +183,3 @@ Specifying a single wildcard will let any node access a mount point:
         allow *
 
 Note that the default behavior for custom mount points is equivalent to `deny *`.
-

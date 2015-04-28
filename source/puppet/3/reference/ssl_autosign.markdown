@@ -119,4 +119,3 @@ The API for policy executables is as follows:
 * **Exit status:** The executable must exit with a status of `0` if the certificate should be autosigned; it must exit with a non-zero status if it should not be autosigned.
     * The puppet master will treat all non-zero exit statuses as equivalent.
 * **Stdout and stderr:** Anything the executable emits on stdout or stderr will be copied to the puppet master's log output at the `debug` log level. Puppet will otherwise ignore the executable's output; only the exit code is considered significant.
-

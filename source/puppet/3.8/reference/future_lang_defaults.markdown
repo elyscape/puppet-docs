@@ -54,4 +54,3 @@ You can declare _global_ resource defaults in the [site manifest][sitemanifest] 
 Resource defaults declared in the local scope will override any defaults received from parent scopes.
 
 Overriding of resource defaults is **per attribute,** not per block of attributes. Thus, local and parent resource defaults that don't conflict with each other will be merged together.
-

@@ -249,4 +249,3 @@ Next
 ----
 
 Once the installer finishes, Puppet will be installed, running, and at least partially configured. You should now [look at the post-install tasks](./post_install.html) --- many of them don't apply to Windows nodes, but you will need to sign node certificates and you may want to configure some additional settings.
-

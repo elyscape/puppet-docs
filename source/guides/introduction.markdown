@@ -167,5 +167,3 @@ Seeing a few examples in action will greatly help in learning the system.
 
 For information about the Puppet language, see the latest
 [Puppet language reference](/puppet/latest/reference/lang_summary.html)
-
-

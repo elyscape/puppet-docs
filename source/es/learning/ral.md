@@ -189,4 +189,3 @@ El comando **puppet resource** puede ser útil para trabajos excepcionales, pero
 
 **Nota aparte**
 La VM de Aprende Puppet es un pequeño sistema de prueba y no tiene más que lo básico. Si tienes algunas máquinas de desarrollo que se parezcan más a tus servidores actuales, ¿por qué no [bajas Puppet Enterprise](http://info.puppetlabs.com/download-pe.html) y lo investigas? Sigue [la guía para comenzar](http://docs.puppetlabs.com/pe/latest/quick_start.html) para instalar un pequeño entorno, y luego intentar utilizar la consola para inspeccionar recursos de muchos sistemas de una sola vez.
-

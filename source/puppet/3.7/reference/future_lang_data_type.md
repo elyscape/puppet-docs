@@ -205,4 +205,3 @@ Position | Parameter        | Data Type | Default Value | Description
 * `Type` --- matches any data type, such as `Integer`, `String`, `Any`, or `Type`.
 * `Type[String]` --- matches the data type `String`, as well as any of its more specific subtypes like `String[3]` or `Enum["running", "stopped"]`.
 * `Type[Resource]` --- matches any `Resource` data type --- that is, any resource reference.
-

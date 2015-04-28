@@ -114,5 +114,3 @@ Note that this shortcut **does not** automatically request UAC elevation; just l
 ### Documentation
 
 This folder contains several links to the Puppet Labs website.
-
-

@@ -211,4 +211,3 @@ The workaround for this issue is:
 3. If there is no checksums.json, open the metadata.json file in your editor and delete the entire 'checksums' field.
 4. Run `puppet module changes <path to module>` to determine whether the fix was successful. A successful fix will return: `Notice: No modified files`. An unsuccessful fix will show modified files.
 5. Retry your upgrade/uninstall action.
-

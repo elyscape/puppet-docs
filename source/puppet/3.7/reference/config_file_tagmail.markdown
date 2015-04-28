@@ -65,4 +65,3 @@ The `tagmail.conf` file is series of lines. Each line should consists of:
 * A comma-separated list of email addresses
 
 The list of tags on a line defines the set of resources whose messages will be included in the mailing; each additional tag adds to the set, and each !negated tag subtracts from the set.
-

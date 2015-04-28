@@ -100,5 +100,3 @@ The following short manifest manages NTP. It uses [package][], [file][], and [se
       # /etc/puppet/modules/ntp/files/ntp.conf (in open source Puppet)
     }
 {% endhighlight %}
-
-

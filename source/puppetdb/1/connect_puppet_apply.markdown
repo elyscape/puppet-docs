@@ -134,4 +134,3 @@ Typically, you can specify the contents of [routes.yaml][routes_yaml] directly i
         cache: facter
 
 This will disable fact storage and prevent puppet apply from using stale facts.
-

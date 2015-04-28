@@ -413,4 +413,3 @@ Construyendo sobre el trabajo que has hecho dos capítulos atrás, crea un módu
 **Nota aparte:**
 
 Como ya sabes instalar módulos gratis de Puppet Forge, y cómo declarar las clases dentro de esos módulos, investiga e intenta encontrar módulos que puedan ser útiles en tu infraestructura; luego, [descarga gratis Puppet Enterprise](http://info.puppetlabs.com/download-pe.html), sigue [la guía de comienzo rápido](http://docs.puppetlabs.com/pe/latest/quick_start.html) para obtener un pequeño entorno instalado y luego intenta manejar servicios complejos en alguno de tus nodos de prueba.
-

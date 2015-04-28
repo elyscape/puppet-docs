@@ -83,4 +83,3 @@ It matches only the value `default`, and takes no parameters.
 ### Examples
 
 * `Variant[String, Default, Undef]` --- matches `undef`, `default`, or any string.
-

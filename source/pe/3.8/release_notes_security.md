@@ -172,8 +172,3 @@ The fix updated the manifest to use `puppet_enterprise::params::mco_logdir`, whi
 Due to this bug, the MCollective metadata cron job was unconditionally laid
 down during PE installation. This caused problems if invalid root crontabs were present. It would then trigger a bug that removed any unmanged cron entries. The fix adds a toggle that allowed the cron job to be unmanaged, to avoid triggering this bug. An exec was
 also added to ensure that the fact cache is present so that `pe-mcollective` can start.
-
-
-
-
-

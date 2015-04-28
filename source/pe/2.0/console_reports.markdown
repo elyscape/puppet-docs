@@ -97,4 +97,3 @@ You can add more facts to filter the search results further, and can change the 
 &larr; [Console: Navigating the Console](./console_navigating.html) --- [Index](./) --- [Console: Grouping and Classifying Nodes](./console_classes_groups.html) &rarr;
 
 * * *
-

@@ -44,4 +44,3 @@ Rake				                   | REST				| Description
 `db:create_user` | [POST /users](./rbac_users.html#post-users) | Creates a new user.
 `db:users:list` | [GET /users](./rbac_users.html#get-users) | Lists the current users.
 `db:users:remove[username]` | [PUT /users/:sid (is\_revoked:true)](./rbac_users.html#put-userssid) | If the user exists, sets the `is_revoked` flag to `true`.
-

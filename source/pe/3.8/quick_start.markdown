@@ -39,6 +39,3 @@ See [this guide](./quick_start_nc_rbac.html) for instructions.
 Follow these instructions for exercises in writing modules to help you become more familiar with Puppet modules and module development.
 
 Instructions are available for [Windows](./quick_writing_windows.html) and [*nix](./quick_writing_nix.html) users.
-
-
-

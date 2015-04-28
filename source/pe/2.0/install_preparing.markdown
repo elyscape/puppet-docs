@@ -72,4 +72,3 @@ Puppet Enterprise can be downloaded in tarballs specific to your OS version and 
 &larr; [Installing: System Requirements](./install_system_requirements.html) --- [Index](./) --- [Installing: Basic Installation](./install_basic.html) &rarr;
 
 * * *
-

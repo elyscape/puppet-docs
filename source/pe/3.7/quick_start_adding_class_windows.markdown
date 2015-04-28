@@ -63,4 +63,3 @@ In this example, we will create a group called __windows_example_ and add the `r
 -------
 
 Next: [Quick Start: Classifying Nodes and Assigning User Permissions](./quick_start_nc_rbac.html)
-

@@ -65,9 +65,3 @@ In this case, you can expect the following:
 > **Required user action**: After upgrading, add `environment.conf` in your code management systems, and update any tooling that manages `puppet.conf` to reflect these changes.
 
 > **Tip**: If you've been using the default settings, and would like to use environments other than `production`, follow the link at the beginning of this page for information about creating environments.
-
-
-
-
-
-

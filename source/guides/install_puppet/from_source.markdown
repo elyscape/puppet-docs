@@ -164,4 +164,3 @@ If you are running from source, it is likely because you need to stay up to date
 Be sure to stop any Puppet processes before doing this.
 
 You can also switch versions or branches of Puppet at any time by running `sudo git checkout <VERSION OR BRANCH>`.
-

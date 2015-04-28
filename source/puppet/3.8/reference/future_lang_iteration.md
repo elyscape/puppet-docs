@@ -141,4 +141,3 @@ You can also use iteration to transform data into more useful forms. For example
     }
     # returns {"key1"=>"first value", "key2"=>"second value", "key3"=>"third value"}
 {% endhighlight %}
-

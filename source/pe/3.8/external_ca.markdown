@@ -242,7 +242,3 @@ If you still don't see your agent node in live management, use NTP to verify tha
 | 23 | Agent cert  | `/etc/puppetlabs/puppet/ssl/certs`   | `<agent_node_fqdn>.pem`  | |
 | 24  | Agent private key  | `/etc/puppetlabs/puppet/ssl/private_keys`  | `<agent_node_fqdn>.pem`  |   |
 | 25  | Agent public key  | `/etc/puppetlabs/puppet/ssl/public_keys`  | `<agent_node_fqdn>.pem`   |   |
-
-
-
-

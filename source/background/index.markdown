@@ -20,4 +20,3 @@ This series of articles explains the foundations of Puppet's security model, whi
 - [What is TLS/SSL?](./ssl/tls_ssl.html)
 - [What is HTTPS?](./ssl/https.html)
 - [Appendix: Anatomy of a Certificate](./ssl/cert_anatomy.html)
-

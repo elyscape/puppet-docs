@@ -77,4 +77,3 @@ Puppet will act as though the whole directory were just one big manifest; for ex
 [parser]: /references/3.8.latest/configuration.html#parser
 
 > **Recommended:** If you're using the main manifest heavily instead of relying on an [ENC][], consider changing the `manifest` setting to `$confdir/manifests`. This lets you split up your top-level code into multiple files while [avoiding the `import` keyword][import_deprecation]. It will also match the behavior of [directory environments][environment].
-

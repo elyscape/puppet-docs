@@ -166,4 +166,3 @@ included stored reports on the puppet master (that is, if agent nodes were confi
     PATH=/opt/puppet/bin:$PATH REPORT_DIR={old reports directory} rake reports:import
 
 If you have a significant number of existing reports, this task can take some time, so plan accordingly.
-

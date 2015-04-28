@@ -124,5 +124,3 @@ Copyright
 ---------
 
 Copyright (c) 2009-2011 Puppet Labs. See LICENSE for details.
-
-

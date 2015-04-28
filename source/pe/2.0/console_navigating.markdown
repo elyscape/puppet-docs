@@ -65,4 +65,3 @@ Classes aren't automatically detected or validated; you have to enter a class's 
 &larr; [Console: Accessing the Console](./console_accessing.html) --- [Index](./) --- [Console: Viewing Reports and Inventory Data](./console_reports.html) &rarr;
 
 * * *
-

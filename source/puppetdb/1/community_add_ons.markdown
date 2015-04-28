@@ -28,4 +28,3 @@ canonical: "/puppetdb/latest/community_add_ons.html"
 * `pdbfactquery`
 * `pdbstatusquery`
 * `pdbquery`
-

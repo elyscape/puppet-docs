@@ -173,4 +173,3 @@ The values of settings are available as variables within puppet.conf, and you ca
 * `$confdir`
 * `$vardir`
 * `$environment` (When used on the puppet master, this always refers to the agent's environment, and should only be used in the `manifest` and `modulepath` settings. Use of this variable isn't technically deprecated yet, but it will be soon. See the [page on config file environments][conf_environments] for details, and the [page on directory environments][dir_environments] for the easier system that replaces it.)
-

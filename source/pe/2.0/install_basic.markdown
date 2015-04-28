@@ -209,4 +209,3 @@ When you purchased Puppet Enterprise, you should have been sent a `license.key` 
 &larr; [Installing: Preparing to Install](./install_preparing.html) --- [Index](./) --- [Installing: Upgrading](./install_upgrading.html) &rarr;
 
 * * *
-

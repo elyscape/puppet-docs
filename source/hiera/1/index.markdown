@@ -59,4 +59,3 @@ With Hiera, you can:
 This way, you only have to write down the _differences_ between nodes. When each node asks for a piece of data, it will get the specific value it needs.
 
 To decide which data sources can override which, Hiera uses a **configurable hierarchy.** This ordered list can include both **static** data sources (with names like "common") and **dynamic** ones (which can switch between data sources based on the node's name, operating system, and more).
-

@@ -229,4 +229,3 @@ In order to start over, you'll need to do the following:
 * Check whether a CSR for the node exists; it will be in `$ssldir/ca/requests/<name>.pem`. If it exists, delete it.
 
 After you've done that, you can start over.
-

@@ -134,6 +134,3 @@ In a multi-master environment, you want to make sure your manifests, modules, an
 - [r10K](https://forge.puppetlabs.com/zack/r10k)
 - Network File Systems (NFS)
 - Remote Sync (rysnc)
-
-
-

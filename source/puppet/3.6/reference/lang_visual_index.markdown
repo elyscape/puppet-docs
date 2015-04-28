@@ -311,4 +311,3 @@ This page can help you find syntax elements when you can't remember their names.
 {% endhighlight %}
 
 ↑ An [exported resource][export] declaration.
-

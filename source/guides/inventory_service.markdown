@@ -200,4 +200,3 @@ Edit puppet.conf on every other puppet master to contain the following:
         facts_terminus = inventory_service
         inventory_server = {designated inventory master; defaults to "puppet"}
         inventory_port = 8140
-

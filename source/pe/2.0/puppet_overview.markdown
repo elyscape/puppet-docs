@@ -50,4 +50,3 @@ If you need a node or group of nodes to retrieve a new configuration _now,_ use 
 &larr; [Console: Live Management: Advanced Tasks](./console_live_advanced.html) --- [Index](./) --- [Puppet: Your First Module](./puppet_first_module.html) &rarr;
 
 * * *
-

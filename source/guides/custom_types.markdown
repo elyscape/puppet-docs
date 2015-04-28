@@ -511,4 +511,3 @@ a bunch of class methods on the provider:
 
 Additionally, each feature gets a separate boolean method, so the
 above example would result in a paint? method on the provider.
-

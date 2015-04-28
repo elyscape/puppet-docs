@@ -141,5 +141,3 @@ The following HTTP and Puppet profiler metrics are available from the Puppet ser
 * `puppetlabs.<server-id>.compiler.init_server_facts`: a counter and a timer that tracks how much time is spent in the `init_server_facts` phase of catalog compilation
 * `puppetlabs.<server-id>.compiler.iterate_on_generators`: a counter and a timer that tracks how much time is spent in the `iterate_on_generators` phase of catalog compilation
 * `puppetlabs.<server-id>.compiler.set_node_params`: a counter and a timer that tracks how much time is spent in the `set_node_params` phase of catalog compilation
-
-

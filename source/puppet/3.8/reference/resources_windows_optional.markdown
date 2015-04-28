@@ -19,4 +19,3 @@ This is especially useful when managing Windows systems, because there are sever
 * [puppetlabs/powershell](https://forge.puppetlabs.com/puppetlabs/powershell) --- An alternate `exec` provider that can directly execute powershell commands.
 
 There are also other resource types on the Puppet Forge created by community members. The best way to find new resource types is by [searching for "windows" on the Puppet Forge](http://forge.puppetlabs.com/modules?sort=rank&q=windows&pop) and exploring the results.
-

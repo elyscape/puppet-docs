@@ -109,4 +109,3 @@ run:
     $ erb -x -T '-' -P mytemplate.erb | ruby -c
 
 The trim option specified corresponds to what Puppet uses.
-

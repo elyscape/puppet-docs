@@ -161,4 +161,3 @@ Position | Parameter        | Data Type | Default Value | Description
 The abstract [`Enum` type][enum] matches against a list of specific allowed string values.
 
 The abstract [`Pattern` type][pattern] matches against one or more regular expressions.
-

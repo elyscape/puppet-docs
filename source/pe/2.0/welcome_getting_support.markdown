@@ -105,4 +105,3 @@ As a Puppet Enterprise customer you are more than welcome to participate in our 
 &larr; [Welcome: Known Issues](./welcome_known_issues.html) --- [Index](./) --- [Installing: System Requirements](./install_system_requirements.html) &rarr;
 
 * * *
-

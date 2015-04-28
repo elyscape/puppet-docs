@@ -530,4 +530,3 @@ Weekly `scheduled_task` resources would attempt to set the trigger on every run,
 * [PUP-3310: Remove warning for copying owner/group to windows](https://tickets.puppetlabs.com/browse/PUP-3310)
 * [PUP-3292: Remove Modulefile support](https://tickets.puppetlabs.com/browse/PUP-3292)
 * [PUP-2804: Remove deprecation warnings introduced into Windows code during FFI](https://tickets.puppetlabs.com/browse/PUP-2804)
-

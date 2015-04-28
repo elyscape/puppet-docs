@@ -302,4 +302,3 @@ Syntax Checking
 ERB files are easy to syntax check. For a file mytemplate.erb, run
 
     erb -P -x -T '-' mytemplate.erb | ruby -c
-

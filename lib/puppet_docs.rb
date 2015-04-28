@@ -20,4 +20,3 @@ module PuppetDocs
   autoload :Reference,         "puppet_docs/reference"
 
 end
-

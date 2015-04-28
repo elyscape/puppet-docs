@@ -113,4 +113,3 @@ Admins have root access to the systems and therefore access to the whitelisted c
 ### Generate a User Password Reset Token
 
 When users forget passwords or lock themselves out of the console by attempting to log in with incorrect credentials too many times, you need to generate a password reset token. You can do this from the console or by using API calls. To generate a password reset token from the console, see the steps in the section, [Enable a User to Log in](./rbac_user_roles.html#enable-a-user-to-log-in). To learn more about using API calls to generate the token, see the [RBAC service password APIs](./rbac_passwords.html).
-

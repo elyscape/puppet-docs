@@ -43,4 +43,3 @@ For info about each type's behavior, see the main data type pages listed above. 
 For special abstract data types, which you can use to do more sophisticated or permissive type checking, see:
 
 * [Abstract Data Types](./future_lang_data_abstract.html)
-

@@ -175,4 +175,3 @@ A hash merge lookup assembles a value by merging the top-level keys of each hash
 Use the `--hash` option to do a hash merge lookup.
 
 If any of the values found in the data sources are strings or arrays, the `--hash` option will cause Hiera to return an error.
-

@@ -58,4 +58,3 @@ Then sign the certificate as usual on the master (`puppet cert sign {certname}`)
      This should let you operate under the new certname when you run puppet commands with the --certname {certname} option.
 
  [Next: Compliance Basics](./compliance_basics.html)
-

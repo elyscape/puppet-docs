@@ -130,4 +130,3 @@ As each agent runs for the first time, it will submit a certificate signing requ
 * Run `sudo /opt/puppetlabs/bin/puppet cert sign <NAME>` to sign a request.
 
 After an agent node's cert is signed, it will regularly fetch and apply configurations from the Puppet master server.
-

@@ -245,4 +245,3 @@ Defaults to `accounts::data`.
 ### `sudoers_path`
 
 The path to the `sudoers` file on this system. Defaults to `/etc/sudoers`.
-

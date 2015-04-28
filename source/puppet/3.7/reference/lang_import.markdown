@@ -87,5 +87,3 @@ Thus, if you use `import` statements, you must manually cause your files to be r
 
 * Restarting the Puppet master
 * Editing (or `touch`ing) site.pp to trigger a reload
-
-

@@ -212,4 +212,3 @@ To reload all of the relevant puppet master and Dashboard config files, restart 
     $ sudo /etc/init.d/pe-httpd restart
 
 {{ altnames }}
-

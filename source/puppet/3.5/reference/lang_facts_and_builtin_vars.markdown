@@ -159,4 +159,3 @@ These variables are set in every [local scope][scope] by the parser during compi
 
 * `$module_name` --- the name of the module that contains the current class or defined type.
 * `$caller_module_name` --- the name of the module in which the **specific instance** of the surrounding defined type was declared. This is only useful when creating versatile defined types which will be re-used by several modules.
-

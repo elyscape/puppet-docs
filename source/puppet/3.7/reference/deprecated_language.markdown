@@ -204,4 +204,3 @@ Search the `manifests` directories of your modules for any files ending in `.rb`
 The Ruby DSL sometimes behaved erratically. When we attempted to improve it, we realized it was too heavyweight for what our users actually needed, so we've implemented some of the most-used Ruby abilities --- such as [iteration](./experiments_lambdas.html) --- in the Puppet DSL.
 
 * [PUP-987: Remove Ruby DSL support](https://tickets.puppetlabs.com/browse/PUP-987)
-

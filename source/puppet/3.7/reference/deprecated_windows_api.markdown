@@ -91,4 +91,3 @@ The following methods of `Puppet::Util::Windows::Security` have been moved to th
 * `set_attributes`
 
 The old locations will still work for now, but will log deprecation warnings. The stubs will be removed in Puppet 4.0. ([Relevant section of code.](https://github.com/puppetlabs/puppet/blob/master/lib/puppet/util/windows/security.rb#L183-L201))
-

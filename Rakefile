@@ -348,4 +348,3 @@ task :deploy do
     # Rake::Task['vlad:release'].invoke
   end
 end
-

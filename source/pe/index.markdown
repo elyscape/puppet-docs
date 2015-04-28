@@ -25,4 +25,3 @@ Please select your version of Puppet Enterprise:
 * [Puppet Enterprise 3.0](./3.0)
 * [Puppet Enterprise 2.8](./2.8)
 * [Puppet Enterprise 2.7](./2.7)
-

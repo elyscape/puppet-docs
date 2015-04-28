@@ -53,4 +53,3 @@ automatically monitoring the web server:
         Nagios_host <<||>>
         Nagios_service <<||>>
     }
-

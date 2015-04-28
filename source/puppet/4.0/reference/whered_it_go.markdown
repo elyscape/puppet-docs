@@ -101,4 +101,3 @@ Some Other Directories Have Moved
 * The `rundir`, where the service PID files go, has moved:
     * On \*nix: `/var/run/puppetlabs`. (Puppet Server has a `puppetserver` directory in this directory.)
     * On Windows: `C:\ProgramData\PuppetLabs\puppet\var\run` --- this is the same as before, but it's now outside the main `vardir`.
-

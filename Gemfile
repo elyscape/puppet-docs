@@ -21,5 +21,3 @@ group(:unknown) do
   gem 'maruku'
   gem 'activerecord', '~>3'
 end
-
-

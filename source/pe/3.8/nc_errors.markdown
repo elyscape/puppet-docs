@@ -34,4 +34,3 @@ The `details` will contain `retrieved`, `schema`, and `error` keys, which have t
 Any endpoint where a resource identifier is supplied can produce a 404 Not Found error response if a resource with that identifier could not be found.
 All such 404 Not Found error responses have the same form.
 The `kind` will be "not-found", the `msg` will be "The resource could not be found.", and the `details` key will contain the URI of the request that resulted in this response.
-

@@ -310,4 +310,3 @@ We encourage you to publish your modules on the [Puppet Forge](http://forge.pupp
 `#puppet` on IRC
 
 [Puppet Users mailing list](https://groups.google.com/forum/#!forum/puppet-users)
-

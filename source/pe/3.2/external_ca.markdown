@@ -166,4 +166,3 @@ You should now see the master node in live management and be able to perform Pup
 Your node should now be able to do puppet agent runs, and its reports will appear in the console. If it is a new node, it may not appear in live management for up to 30 minutes. (You can accelerate this by letting Puppet run once, waiting a few minutes for the node to be added to the MCollective group in the console, and then running `puppet agent -t`. Once the )
 
 If you still don't see your agent node in live management, use NTP to verify that time is in sync across your PE deployment. (You should *always* do this anyway.)
-

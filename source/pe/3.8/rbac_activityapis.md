@@ -69,4 +69,3 @@ GET /v1/events.csv?service_id=classifier&subject_type=users&subject_id=kate
     Submit Time,Subject Type,Subject Id,Subject Name,Object Type,Object Id,Object Name,Type,What,Description,Message
     2014-07-17 13:08:09.985221,users,kate,Kate Gleason,node\_groups,2,Default Node Group,create,node,create\_node,Create Node
     2014-07-17 13:08:09.985221,users,kate,Kate Gleason,node\_groups,2,Default Node Group,create,node\_class,create\_node\_class,Create Node Class
-

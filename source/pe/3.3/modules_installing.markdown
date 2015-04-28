@@ -204,4 +204,3 @@ Error: Could not upgrade module 'puppetlabs-motd' (v1.0.0 -> latest)
 ~~~
 
 you can workaround it by upgrading or uninstalling using the `--ignore-changes` option.
-

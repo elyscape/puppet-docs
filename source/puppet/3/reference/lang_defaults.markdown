@@ -54,5 +54,3 @@ Overriding of resource defaults is **per attribute,** not per block of attribute
 Although Puppet 3 no longer does dynamic variable lookup, it still uses dynamic scope for resource defaults. [See here for a full description of scope rules][dynamic_scope].
 
 You can declare global resource defaults in the [site manifest][sitemanifest] outside any [node definition][node].
-
-

@@ -496,6 +496,3 @@ A variable can be omitted if another answer ensures that it won't be used (i.e. 
 
 `q_install`
 : _Y or N (Default: Y)_ --- Sets whether the installation should occur. Setting this to "n" is not considered useful for non-interactive installation.
-
-
-

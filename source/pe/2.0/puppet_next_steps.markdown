@@ -37,4 +37,3 @@ For more on Puppet Enterprise's console, see [the console section](./console_nav
 &larr; [Puppet: Assigning a Class to a Node](./puppet_classifying.html) --- [Index](./) --- [Orchestration: Overview](./orchestration_overview.html) &rarr;
 
 * * *
-

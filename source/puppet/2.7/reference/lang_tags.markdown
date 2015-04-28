@@ -119,4 +119,3 @@ Resource tags are available to custom report handlers and out-of-band report pro
 
 * [Processing Reports][reports]
 * [Report Format 2][report_format_2] (the report format used by Puppet 2.7)
-

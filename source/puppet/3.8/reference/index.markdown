@@ -33,4 +33,3 @@ This manual is split into several sections, which can be reached from the left s
 * Puppet uses its own configuration language. The [Language Summary](./lang_summary.html) gives some context and acts as a starting point for the language reference.
 * The [Visual Index to the Puppet Language](./lang_visual_index.html) can help you find the reference for a piece of syntax when you know what it looks like but don't know what it's called.
 * ["Modules"](./modules_fundamentals.html) explains how to organize your Puppet manifests, obtain pre-existing modules, and publish your own modules for public use.
-

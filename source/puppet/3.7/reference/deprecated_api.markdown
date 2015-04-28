@@ -217,4 +217,3 @@ You should find any calls to this method and replace them with `Puppet.lookup(:c
 This was part of a general cleanup of how environments are loaded and assigned.
 
 * [PUP-1735: Puppet::Node::Environment.current should reroute with deprecation warning](https://tickets.puppetlabs.com/browse/PUP-1735)
-

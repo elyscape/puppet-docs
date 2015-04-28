@@ -297,6 +297,3 @@ For more details about using Puppet on Windows, see:
 * * *
 
 - [Next: Upgrading](./install_upgrading.html)
-
-
-

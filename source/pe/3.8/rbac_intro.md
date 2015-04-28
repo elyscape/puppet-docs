@@ -40,7 +40,3 @@ For more information about using RBAC, see:
 * [Activity Service Endpoints](./rbac_activityapis.html)
 
 For information about classifying nodes, see [Grouping and Classifying Nodes](./console_classes_groups.html).
-
-
-
-

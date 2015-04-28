@@ -153,4 +153,3 @@ Una búsqueda de merge de hash arma un valor combinando las claves de nivel supe
 Usa la opción **--hash** para hacer una búsqueda de merge de hash.
 
 Si alguno de los valores encontrados en las fuentes de información es un string o un array, la opción  **--hash** hará que Hiera devuelva un error.
-

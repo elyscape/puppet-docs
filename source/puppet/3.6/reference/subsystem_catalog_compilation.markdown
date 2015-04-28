@@ -153,5 +153,3 @@ Classes can also declare other classes; if they do, Puppet will load and evaluat
 Finally, after Puppet has evaluated the main manifest and any classes it declared (and any classes _they_ declared), it will load from modules and evaluate any classes that were specified by the node object. Resources from those classes will be added to the catalog.
 
 If a matching node definition was found in step 3, these classes are evaluated **at node scope,** which means they can access any node-scope variables set by the main manifest. If no node definitions were present in the main manifest, they will be evaluated at top scope.
-
-

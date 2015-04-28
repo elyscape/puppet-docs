@@ -244,5 +244,3 @@ With a `deep` merge, you would get:
 In this case, deglitch.yaml was able to set the group because common.yaml didn't have a value for it, but where there was a conflict, like the uid, common won. Most users don't want this.
 
 Unfortunately none of these merge behaviors work with data bindings for automatic parameter lookup, because there's no way to specify the lookup type. So instead of any of the above results, automatic data binding lookups will only see results from `deglitch.yaml`. See [Bug #20199](https://projects.puppetlabs.com/issues/20199) to track progress on this.
-
-

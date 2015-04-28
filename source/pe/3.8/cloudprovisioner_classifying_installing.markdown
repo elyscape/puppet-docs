@@ -118,4 +118,3 @@ Alternatively, if your CA Puppet master has the `autosign` setting configured, i
 * * *
 
 - [Next: Sample Cloud Provisioning Workflow](./cloudprovisioner_workflow.html)
-

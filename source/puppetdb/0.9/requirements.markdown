@@ -77,4 +77,3 @@ Large-scale Recommendations
 -----
 
 For truly large installations, we recommend terminating SSL using Apache or Nginx instead of within PuppetDB itself. This permits much greater flexibility and control over bandwidth and clients. Instructions for configuring this are currently beyond the scope of this manual.
-

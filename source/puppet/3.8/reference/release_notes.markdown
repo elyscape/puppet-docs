@@ -101,6 +101,3 @@ In any of the Puppet subcommands that take the `--logdest` command line option, 
 * [PUP-4334: hiera_include stopped working](https://tickets.puppetlabs.com/browse/PUP-4334)
 * [PUP-4190: CLONE - Puppet device displays credentials in plain text when run manually](https://tickets.puppetlabs.com/browse/PUP-4190)
 * [PUP-4187: Backport Puppet should execute ruby.exe not cmd.exe when running as a Windows to Puppet 3.8](https://tickets.puppetlabs.com/browse/PUP-4187)
-
-
-

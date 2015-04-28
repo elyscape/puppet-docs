@@ -136,4 +136,3 @@ The general form of an exported resource collector is:
 Exported resource collectors exist only to import resources that were published by other nodes. To use them, you need to have catalog storage and searching (storeconfigs) enabled. See [Exported Resources][exported] for more details. To enable exported resources, follow the [installation instructions][puppetdb_install] and [Puppet configuration instructions][puppetdb_connect] in [the PuppetDB manual][puppetdb].
 
 Like normal collectors, exported resource collectors can be used with attribute blocks and chaining statements.
-

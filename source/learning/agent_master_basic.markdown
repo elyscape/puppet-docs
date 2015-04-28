@@ -210,5 +210,3 @@ You now know how to:
 * Use node definitions in site.pp to choose which classes go into a given node's catalog
 
 But there are some important details we've glossed over. In a future installment, we'll talk more about certificates and node classification.
-
-

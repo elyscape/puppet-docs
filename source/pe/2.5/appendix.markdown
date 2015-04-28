@@ -262,6 +262,3 @@ Man pages generated with the `puppet man` subcommand are not formatted as proper
 To improve the display of Puppet man pages, you can use your system `gem` command to install the `ronn` gem:
 
     $ sudo gem install ronn
-
-
-

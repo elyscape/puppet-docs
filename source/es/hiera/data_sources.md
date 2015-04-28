@@ -142,4 +142,3 @@ Cualquier string puede incluir cualquier número de [símbolos de interpolación
                         "password_allowed" : "no"
                       }
 	}
-

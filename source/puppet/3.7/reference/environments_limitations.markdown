@@ -39,5 +39,3 @@ When using the built-in YAML or JSON backends, it _is_ possible to separate your
 Nodes in one environment can accidentally collect resources that were exported from another environment, which causes problems --- either a compilation error due to identically titled resources, or creation and management of unintended resources.
 
 Right now, the only solution is to run multiple Puppet masters if you heavily use exported resources. We're working on making PuppetDB environment-aware, which will fix the problem in a more permanent way.
-
-

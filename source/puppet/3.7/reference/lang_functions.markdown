@@ -74,4 +74,3 @@ resource reference | `Puppet::Resource`
 number             | string
 array              | array
 hash               | hash
-

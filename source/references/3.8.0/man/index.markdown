@@ -66,5 +66,3 @@ These subcommands were needed for older functionality, and will be removed in a 
 
 - [puppet kick](./kick.html)
 - [puppet queue](./queue.html)
-
-

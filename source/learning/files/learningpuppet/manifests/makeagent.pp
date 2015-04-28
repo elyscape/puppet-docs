@@ -130,4 +130,3 @@ HOSTNAME=${newname}.localdomain
   class {'learningpuppet::resetexamples': deletemodules => $deletemodules}
 
 }
-

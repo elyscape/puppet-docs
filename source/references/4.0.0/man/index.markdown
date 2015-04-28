@@ -57,4 +57,3 @@ Most users can ignore these subcommands. They're only useful for certain niche w
 - [puppet resource_type](./resource_type.html)
 - [puppet secret_agent](./secret_agent.html)
 - [puppet status](./status.html)
-

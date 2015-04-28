@@ -165,4 +165,3 @@ You can [interpolate variables][interpolate] into the datadir using `%{variable}
 The Puppet class in which to look for data.
 
 **Default value:** `data`
-

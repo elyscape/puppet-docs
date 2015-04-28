@@ -67,5 +67,3 @@ Many query strings will contain characters like `[` and `]`, which must be URL-e
 If you do this with an endpoint that accepts `GET` requests, **you must also use the `-G` or `--get` option.** This is because `curl` defaults to `POST` requests when the `--data-urlencode` option is present.
 
     curl -G -H "Accept: application/json" 'http://localhost:8080/nodes' --data-urlencode 'query=["=", ["node", "active"], true]'
-
-

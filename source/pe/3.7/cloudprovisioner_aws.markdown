@@ -199,4 +199,3 @@ For example,
 * * *
 
 - [Next: Classifying Cloud Nodes and Remotely Installing Puppet](./cloudprovisioner_classifying_installing.html)
-

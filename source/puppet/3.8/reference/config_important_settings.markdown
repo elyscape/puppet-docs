@@ -191,4 +191,3 @@ These features configure add-ons and optional features.
 * [`ca`][ca] --- Whether to act as a CA. **There should only be one CA at a Puppet deployment.** If you're using [multiple Puppet masters][multi_master], you'll need to set `ca = false` on all but one of them.
 * [`ca_ttl`][ca_ttl] --- How long newly signed certificates should be valid for.
 * [`autosign`][autosign] --- Whether (and how) to autosign certificates. See [the autosigning page][ssl_autosign] for details.
-

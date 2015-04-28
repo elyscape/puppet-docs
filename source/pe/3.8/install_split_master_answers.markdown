@@ -114,4 +114,3 @@ These answers are optional.
 
 `q_puppetdb_plaintext_port`
 : **Integer** --- The port on which PuppetDB accepts plain-text HTTP connections (default port is 8080).
-

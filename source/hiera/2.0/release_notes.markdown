@@ -133,5 +133,3 @@ This release included some routine work to improve support on new platforms and 
 * [HI-285: Remove saucy from build_defaults.yaml](https://tickets.puppetlabs.com/browse/HI-285)
 * [HI-277: Remove sid and unstable from build_defaults](https://tickets.puppetlabs.com/browse/HI-277)
 * [HI-303: Add optional dependency deep_merge to Gemfile](https://tickets.puppetlabs.com/browse/HI-303)
-
-

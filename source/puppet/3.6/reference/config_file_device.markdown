@@ -27,4 +27,3 @@ The location of the `confdir` varies; it depends on the OS, Puppet distribution,
 The name of each section should be the name that will be used with puppet device to access the device.
 
 The body of the section should contain a `type` directive (the only current valid value is `cisco`) and a `url` directive (which should be an SSH URL to the device's management interface).
-

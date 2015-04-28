@@ -43,4 +43,3 @@ The [setting](/puppet/3.7/reference/environments_configuring.html#environmenttim
 There is a CPU cost to refresh the environment cache, so when tuning for performance we advise you set `environment_timeout`  to `unlimited`. This will generally improve catalog compilation times by never refreshing the environment cache. As mentioned in the linked docs you will need a way to flush this cache when you want Puppet code updates to take effect.
 
 You can also read more about [environments and their limitations](/puppet/3.7/reference/environments_limitations.html#environments:-limitations-of-environments).
-

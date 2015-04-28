@@ -226,5 +226,3 @@ By default, ActiveMQ is set up to use a dedicated thread for every destination. 
 * * *
 
 - [Next: Installing Additional Components](./config_installing_additional.html)
-
-

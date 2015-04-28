@@ -29,4 +29,3 @@ Short variable names should match the following regular expression:
 Qualified variable names should match the following regular expression:
 
     \A\$([a-z][a-z0-9_]*)?(::[a-z][a-z0-9_]*)*::[a-z0-9_][a-zA-Z0-9_]*\Z
-

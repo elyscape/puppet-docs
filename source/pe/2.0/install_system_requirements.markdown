@@ -52,4 +52,3 @@ Puppet Enterprise's hardware requirements depend on the roles a machine performs
 &larr; [Welcome: Getting Support](./welcome_getting_support.html) --- [Index](./) --- [Installing: Preparing to Install](./install_preparing.html) &rarr;
 
 * * *
-

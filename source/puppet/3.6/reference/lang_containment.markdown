@@ -139,4 +139,3 @@ In an example NTP module where service configuration is moved out into its own c
 {% endhighlight %}
 
 In this case, the `ntp::service` class will behave like it's contained by the `ntp` class. Resources like the timestamp `exec` can form relationships with the `ntp` class and be assured that no relevant resources will float out of order.
-

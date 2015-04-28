@@ -62,4 +62,3 @@ Limitations and Known Issues
 * Classes that [contain][containment] other classes (with either the `contain` function or the anchor pattern) can sometimes behave badly if declared with a run stage --- if the contained class is **only** declared by its container, it will work fine, but if it is also declared anywhere outside its container, it will often create a dependency cycle that will prevent the involved classes from being applied.
 
 Due to these limitations, **stages should only be used with the simplest of classes,** and only when absolutely necessary. Mass dependencies like package repositories are effectively the only valid use case.
-

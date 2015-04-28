@@ -142,4 +142,3 @@ Most users should be fine with the default. To get more performance from your pu
 - Rapidly changing dev environments should have short timeouts: a few seconds, or `0` if you don't want to wait.
 - Sparsely populated environments should have short-ish timeouts, which are just long enough to help out if a cluster of nodes all hit the master at once, but won't clog your RAM with a bunch of rarely used data. Three minutes is fine.
 - Extremely heterogeneous environments --- where you have a lot of modules and each node uses a different tiny subset --- will sometimes perform _worse_ with a long timeout. (This can cause excessive memory usage and garbage collection without giving back any performance boost.) Give these short timeouts of 5-10 seconds.
-

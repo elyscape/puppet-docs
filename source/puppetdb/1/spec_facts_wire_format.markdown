@@ -28,5 +28,3 @@ Fact names and values MUST be strings.
 
 The entire fact set is expected to be valid JSON, which mandates UTF-8
 encoding.
-
-

@@ -143,4 +143,3 @@ For **minor and bug fix releases,** you can often take a simpler path. This is n
 8. Do one of the following:
     * Upgrade Puppet and reactivate puppet agent on all of your production nodes.
     * Downgrade Puppet to a known-good version on your Puppet master and any test nodes.
-

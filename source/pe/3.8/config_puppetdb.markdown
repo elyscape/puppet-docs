@@ -19,4 +19,3 @@ This sets the maximum number of threads assigned to respond to HTTP and HTTPS re
 To increase the max threads for the PE console and console API, edit your Hiera default `.yaml` file with the following code:
 
 puppet_enterprise::puppetdb::jetty_ini::tk_jetty_max_threads: 150
-

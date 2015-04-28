@@ -110,5 +110,3 @@ During this walkthrough, you’ll run the Puppet agent interactively. By default
 
 ---------------
 Next: [Hello, World!](./quick_start_helloworld.html)
-
-

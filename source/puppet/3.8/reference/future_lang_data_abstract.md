@@ -266,4 +266,3 @@ Position | Parameter | Data Type | Default Value | Description
 -3 | Min count | `Integer` | 0 | The minimum number of arguments the lambda accepts. This parameter accepts the special value `default`, which will use its default value.
 -2 | Max count | `Integer` | infinity | The maximum number of arguments the lambda accepts. This parameter accepts the special value `default`, which will use its default value.
 -1 | Block type | `Type[Callable]` | none | The `block_type` of the lambda.
-

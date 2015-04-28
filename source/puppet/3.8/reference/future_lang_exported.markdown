@@ -116,4 +116,3 @@ To ensure uniqueness, every resource you export should include a substring uniqu
 ### Exported Resource Collectors
 
 Exported resource collectors do not collect normal or virtual resources. In particular, they cannot retrieve non-exported resources from other nodes' catalogs.
-

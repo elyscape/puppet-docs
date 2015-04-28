@@ -448,4 +448,3 @@ the puppet master and the puppet agent before running the configuration
 using the new custom type. The pluginsync feature will then
 synchronise the files and the new code will be loaded when both
 daemons are restarted.
-

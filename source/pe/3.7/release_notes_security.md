@@ -224,5 +224,3 @@ Before PE used `/var/lib/peadmin/.mcollective`, the pe_mcollective module laid d
 When upgrading from those earlier versions to a later version, on the master node, `/etc/puppetlabs/mcollective/client.cfg` is correctly removed by `pe_mcollective::client::peadmin`; however, on the console node `pe_mcollective::client::puppet_dashboard` did not remove that file.
 
 This meant that if you were coming from one of the older PE 2.x versions you had this file lying around on your console node that didn't actually configure anything. This has been fixed.
-
-

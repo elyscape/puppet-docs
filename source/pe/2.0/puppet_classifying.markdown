@@ -123,4 +123,3 @@ For some reason, `/etc/passwd` had a permissions mode of 0666, which meant anyon
 &larr; [Puppet: Your First Module](./puppet_first_module.html) --- [Index](./) --- [Puppet: Next Steps](./puppet_next_steps.html) &rarr;
 
 * * *
-

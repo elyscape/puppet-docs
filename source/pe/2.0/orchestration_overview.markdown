@@ -75,4 +75,3 @@ to the ActiveMQ server, which runs on the puppet master node. See the [notes on 
 &larr; [Puppet: Next Steps](./puppet_next_steps.html) --- [Index](./) --- [Orchestration: Usage and Examples](./orchestration_usage.html) &rarr;
 
 * * *
-

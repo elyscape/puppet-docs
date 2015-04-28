@@ -51,6 +51,3 @@ The process for installing a module is the same on both Windows and *nix operati
 --------
 
 Next: [Adding Classes to Puppet Agent Nodes (*nix)](./quick_start_adding_class_nix.html)
-
-
-

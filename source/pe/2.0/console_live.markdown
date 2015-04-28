@@ -91,4 +91,3 @@ Filtering by Puppet class can be the most powerful filtering tool on this page, 
 &larr; [Console: Grouping and Classifying Nodes](./console_classes_groups.html) --- [Index](./) --- [Console: Live Management: Managing Resources](./console_live_resources.html) &rarr;
 
 * * *
-

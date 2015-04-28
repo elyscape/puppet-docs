@@ -174,4 +174,3 @@ An environment can contain an `environment.conf` file, which can override values
 {% partial ./_environment_conf_settings.md %}
 
 See [the page on `environment.conf` for more details.][environment.conf]
-

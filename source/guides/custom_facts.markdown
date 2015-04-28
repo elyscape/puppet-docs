@@ -444,4 +444,3 @@ While external facts provide a mostly-equal way to create variables for Puppet, 
 * An external fact cannot internally reference another fact. However, due to parse order, you can reference an external fact from a ruby fact.
 * External executable facts are forked instead of executed within the same process.
 * Although we plan to allow distribution of external facts through Puppet's pluginsync capability, this is not yet supported. See [ticket #9546](https://projects.puppetlabs.com/issues/9546)
-

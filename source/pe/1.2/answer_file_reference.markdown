@@ -109,4 +109,3 @@ Allowed Variables In Answer Files
 
 `q_install`
 : _Y or N (Default: Y)_ --- Sets whether the installation should occur. Setting this to "n" is not considered useful for non-interactive installation.
-

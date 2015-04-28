@@ -79,4 +79,3 @@ However, there are also about nine extra configuration files --- things like [au
 
 - The main settings only support a few types of values. Some things just can't be configured without complex data structures, so they needed separate files. (Authorization rules and custom CSR attributes are in this category.)
 - Puppet currently doesn't allow extensions to add new settings to puppet.conf. This means some settings that _should_ be main settings (like the PuppetDB server) can't be.
-
