@@ -188,7 +188,7 @@ Go to https://cloud.google.com and sign in with your Google credentials.
 Click the **Create Project** button, and give your project a name. This creates your project in the Google Cloud Console. Some options for working with your project are displayed in the left navigation bar.
 
 In the left-hand navigation bar, click **APIs and auth** and then click **Registered Apps**.
- 
+
 Click the **REGISTER APP** button. Give your app a name--it can be whatever you like--and click **Native** as the platform.
 
 Click **Register**. Your app's page opens, and a CLIENT ID and CLIENT SECRET are provided. **Note** You'll need the ID and secret, so capture these for future reference.

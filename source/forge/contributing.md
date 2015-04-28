@@ -24,7 +24,7 @@ We want to keep it as easy as possible to contribute changes so that our modules
 
 * Make sure you have a [GitHub account](https://github.com/signup/free).
 * Submit [a ticket](https://jira.puppetlabs.com/browse/MODULES) for your issue, assuming one does not already exist.
-   * Read the [JIRA Guide](https://docs.puppetlabs.com/community/puppet_projects_workflow.html) to get started! 
+   * Read the [JIRA Guide](https://docs.puppetlabs.com/community/puppet_projects_workflow.html) to get started!
    * Please make sure to use the [Search](https://docs.puppetlabs.com/community/puppet_projects_workflow.html#search-for-duplicates) feature in JIRA to see if your issue has already been reported/addressed.
    * Please try to clearly describe the issue, including the steps to reproduce
    any bug.

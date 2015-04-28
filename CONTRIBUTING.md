@@ -18,7 +18,7 @@ Instead, please edit the text [in the Puppet source code](https://github.com/pup
 * For metaparameter.html, look in `lib/puppet/type.rb` and search for `newmetaparam(:NAME)`.
 * For report.html, look in `lib/puppet/reports/NAME.rb`.
 * For type.html, look in `lib/puppet/type/NAME.rb` or `lib/puppet/provider/NAME/PROVIDER.rb`.
-    * If you find something wrong with the **provider features** (the big tables with Xs in them), please just file a bug report instead; fixing them is kind of complicated. 
+    * If you find something wrong with the **provider features** (the big tables with Xs in them), please just file a bug report instead; fixing them is kind of complicated.
 
 ## Should I Also Edit the Old Frozen Versions?
 

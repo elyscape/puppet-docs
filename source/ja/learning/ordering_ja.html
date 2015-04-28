@@ -39,9 +39,9 @@ toc: false
    <li class="toc-lv3"><a href="#exercise-apache">Exercise: Apache ～ 例：Apache</a></li>
 </ol></li>
   <li class="toc-lv2"><a href="#next">Next ～ 次に</a></li>
-</ol></nav>   
-    
-    
+</ol></nav>
+
+
  <h2 id="disorder">Disorder ～ 順不同</h2>
 
 <p>前章のマニフェストを振り返ってみましょう。</p>
@@ -78,7 +78,7 @@ toc: false
 
 <blockquote>
   <h3 id="summary-of-this-page">Summary of This Page まとめ</h3>
-  
+
   <ul>
     <li>リソースの依存関係を<code>before</code>, <code>require</code>, <code>notify</code>, <code>subscribe</code>メタパラメータで組み込めるようになります。.</li>
     <li>リソースの外側に<code>-&gt;</code> と <code>~&gt;</code>  の連鎖する矢印(チェイニングアロー）を用いることでも、依存関係を宣言できます。</li>
@@ -314,13 +314,13 @@ toc: false
 
 <blockquote>
   <h3 id="exercise-apache">Exercise: Apache ～ 演習：Apache</h3>
-  
+
   <p>Apacheの<a href="http://docs.puppetlabs.com/references/latest/type.html#package">パッケージ</a>をインストールするマニフェストを作成してみましょう。そしてApacheの<a href="http://docs.puppetlabs.com/references/latest/type.html#package">サービス</a>が動作している事を確認してください。ホストOSのWebブラウザから接続してApache welcome pageが表示される事を証明しましょう。</p>
 
   <p><strong>追加課題：</strong>httpd.confを管理し、サービスに通知するようにしましょう。Apacheに特定バージョンを維持するように強制します。（メモ：これはOSのバージョン文字列のフォーマットを調べて、そのバージョンが有効になるようにします）。</p>
-  
+
   <p>ヒント：</p>
-  
+
   <ul>
     <li>従来のRed Hat系（あなたのVM）とDebian系のLinuxシステムでは、OSのAptもしくはYumリポジトリからパッケージがインストールされます。システムツールはパッケージをどのように見つけてインストールするか知っていますが（特定バージョンのパッケージに限定することすらできます）、Puppetが知るべきは<code>ensure => installed</code>だけです。パッケージがどこにあるかは必要ありません。</li>
     <li>パッケージおよび「serviceリソース」の名称はOSのネーミング規則に依存します。これはよくある話ですが、マニフェストを記述する前にそれぞれのローカル名称を調べる必要があるという事です。例えばApacheパッケージとサービスの名称はお使いのVMに乗っているCentOSではパッケージおよびサービスの名称は双方とも<code>httpd</code>です。</li>

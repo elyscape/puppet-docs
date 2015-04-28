@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Class: Puppet::Provider
-  
+
     &mdash; Documentation by YARD 0.8.7.3
-  
+
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../_index.html">Index (P)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Puppet.html" title="Puppet (module)">Puppet</a></span></span>
-     &raquo; 
+     &raquo;
     <span class="title">Provider</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,48 +64,48 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Class: Puppet::Provider
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
+
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
       <span class="inheritName"><span class='object_link'>Object</span></span>
-      
+
         <ul class="fullTree">
           <li><span class='object_link'>Object</span></li>
-          
+
             <li class="next">Puppet::Provider</li>
-          
+
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
-      
+
       </dd>
-    
-  
-  
-    
-  
-    
+
+
+
+
+
+
       <dt class="r2">Includes:</dt>
       <dd class="r2">Comparable, <span class='object_link'><a href="Util/Errors.html" title="Puppet::Util::Errors (module)">Util::Errors</a></span></dd>
-      
-    
-  
-  
-  
+
+
+
+
+
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/puppet/provider.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
+
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>An instance of a Provider is associated with one resource.</p>
@@ -159,482 +159,482 @@ class of Resource or a specific Type).</li>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
-  
-    
-  
-    
+
+
+
+
       <strong class="classes">Classes:</strong> <span class='object_link'><a href="Provider/CommandDefiner.html" title="Puppet::Provider::CommandDefiner (class)">CommandDefiner</a></span>
-    
-  
+
+
 </p>
 
   <h2>Constant Summary</h2>
-  
+
 
 
 
 
   <h2>Class Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
-    
-      
+
+
 <li class="public deprecated">
   <span class="summary_signature">
-    
-      <a href="#model-class_method" title="model (class method)">+ (???) <strong>model</strong> </a>
-    
 
-    
+      <a href="#model-class_method" title="model (class method)">+ (???) <strong>model</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-    
+
+
+
+
+
       <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
+
+
+
+
+
   <span class="deprecated note title">deprecated</span>
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>This attribute is available for backwards compatibility reasons.</p>
 </div></span>
-  
+
 </li>
 
-    
+
   </ul>
 
 
 
 
-  
+
     <h2>
       Class Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#command-class_method" title="command (class method)">+ (String) <strong>command</strong>(name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns the absolute path to the executable for the command referenced by the given name.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#commands-class_method" title="commands (class method)">+ <strong>commands</strong>(command_specs) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Confines this provider to be suitable only on hosts where the given commands are present.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#create_class_and_instance_method-class_method" title="create_class_and_instance_method (class method)">+ <strong>create_class_and_instance_method</strong>(name, &amp;block) </a>
-    
 
-    
+      <a href="#create_class_and_instance_method-class_method" title="create_class_and_instance_method (class method)">+ <strong>create_class_and_instance_method</strong>(name, &amp;block) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>This method is used to generate a method for a command.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#execfail-class_method" title="execfail (class method)">+ (Puppet::Util::Execution::ProcessOutput) <strong>execfail</strong>(*args) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Wraps execution of <span class='object_link'><a href="#execute-class_method" title="Puppet::Provider.execute (method)">Provider.execute</a></span> with mapping of exception to given exception (and output as argument).</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#execpipe-class_method" title="execpipe (class method)">+ (String) <strong>execpipe</strong>(*args) {|pipe| ... }</a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Executes the provided command with STDIN connected to a pipe, yielding the pipe object.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#execute-class_method" title="execute (class method)">+ (Puppet::Util::Execution::ProcessOutput) <strong>execute</strong>(*args) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Executes the desired command, and return the status and output.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#has_command-class_method" title="has_command (class method)">+ (Object) <strong>has_command</strong>(name, path) {|| ... }</a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a convenience method for invocation of a command.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public deprecated">
   <span class="summary_signature">
-    
-      <a href="#make_command_methods-class_method" title="make_command_methods (class method)">+ (Object) <strong>make_command_methods</strong>(name) </a>
-    
 
-    
+      <a href="#make_command_methods-class_method" title="make_command_methods (class method)">+ (Object) <strong>make_command_methods</strong>(name) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   <span class="deprecated note title">deprecated</span>
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Use <span class='object_link'><a href="#commands-class_method" title="Puppet::Provider.commands (method)">Provider.commands</a></span>, <span class='object_link'><a href="#optional_commands-class_method" title="Puppet::Provider.optional_commands (method)">Provider.optional_commands</a></span>, or <span class='object_link'><a href="#has_command-class_method" title="Puppet::Provider.has_command (method)">Provider.has_command</a></span> instead. This was not meant to be part of a public API</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#optional_commands-class_method" title="optional_commands (class method)">+ (Object) <strong>optional_commands</strong>(hash) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Defines optional commands.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#post_resource_eval-class_method" title="post_resource_eval (class method)">+ <strong>post_resource_eval</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  <span class="abstract note title">abstract</span>
-  
-  
 
-  
+
+
+
+
+  <span class="abstract note title">abstract</span>
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>This method may be implemented by a provider in order to perform any cleanup actions needed.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#prefetch-class_method" title="prefetch (class method)">+ <strong>prefetch</strong>(resource_hash) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  <span class="abstract note title">abstract</span>
-  
-  
 
-  
+
+
+
+
+  <span class="abstract note title">abstract</span>
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>This method may be implemented by a provider in order to pre-fetch resource properties.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
+
     <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#command-instance_method" title="#command (instance method)">- (String) <strong>command</strong>(name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns the absolute path to the executable for the command referenced by the given name.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#flush-instance_method" title="#flush (instance method)">- <strong>flush</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  <span class="abstract note title">abstract</span>
-  
-  
 
-  
+
+
+
+
+  <span class="abstract note title">abstract</span>
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>This method may be implemented by a provider in order to flush properties that has not been individually applied to the managed entity's current state.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h3 class="inherited">Methods included from <span class='object_link'>Util</span></h3>
   <p class="inherited"><span class='object_link'><a href="Util.html#exit_on_fail-class_method" title="Puppet::Util.exit_on_fail (method)">exit_on_fail</a></span>, <span class='object_link'><a href="Util.html#exit_on_fail-instance_method" title="Puppet::Util#exit_on_fail (method)">exit_on_fail</a></span>, <span class='object_link'><a href="Util.html#which-class_method" title="Puppet::Util.which (method)">which</a></span>, <span class='object_link'><a href="Util.html#which-instance_method" title="Puppet::Util#which (method)">which</a></span></p>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h3 class="inherited">Methods included from <span class='object_link'>Confiner</span></h3>
   <p class="inherited"><span class='object_link'><a href="Confiner.html#confine-instance_method" title="Puppet::Confiner#confine (method)">confine</a></span>, <span class='object_link'><a href="Confiner.html#confine_collection-instance_method" title="Puppet::Confiner#confine_collection (method)">confine_collection</a></span>, <span class='object_link'><a href="Confiner.html#suitable%3F-instance_method" title="Puppet::Confiner#suitable? (method)">suitable?</a></span></p>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="class_attr_details" class="attr_details">
     <h2>Class Attribute Details</h2>
-    
-      
+
+
       <span id=""></span>
       <div class="method_details first">
   <h3 class="signature first" id="model-class_method">
-  
+
     + (<tt>???</tt>) <strong>model</strong>  <span class="extras">(readonly)</span>&nbsp;<span class="deprecated note title">deprecated</span><span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -657,23 +657,23 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>???</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>A model kept for backwards compatibility.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -697,23 +697,23 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="command-class_method">
-  
-    + (<tt><span class='object_link'>String</span></tt>) <strong>command</strong>(name) 
-  
 
-  
+    + (<tt><span class='object_link'>String</span></tt>) <strong>command</strong>(name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the absolute path to the executable for the command referenced by the given name.</p>
@@ -722,47 +722,47 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the absolute path to the found executable for the command</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Puppet::DevError</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>if the name does not reference an existing command.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
-    
+
       <li><span class='object_link'><a href="Util.html#which-class_method" title="Puppet::Util.which (method)">Util.which</a></span></li>
-    
+
   </ul>
 
 </div><table class="source_code">
@@ -806,19 +806,19 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="commands-class_method">
-  
-    + <strong>commands</strong>(command_specs) 
-  
 
-  
+    + <strong>commands</strong>(command_specs)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
-    
+
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>It is preferred if the commands are not entered with absolute paths as this allows puppet
@@ -836,31 +836,31 @@ predicates.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>command_specs</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span>{<span class='object_link'>String</span> =&gt; <span class='object_link'>String</span>}</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>Map of name to command that the provider will
 be executing on the system. Each command is specified with a name and the path of the executable.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
-    
+
       <li><span class='object_link'><a href="#optional_commands-class_method" title="Puppet::Provider.optional_commands (method)">optional_commands</a></span></li>
-    
+
   </ul>
 
 </div><table class="source_code">
@@ -888,16 +888,16 @@ be executing on the system. Each command is specified with a name and the path o
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="create_class_and_instance_method-class_method">
-  
+
     + <strong>create_class_and_instance_method</strong>(name, &amp;block) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -910,7 +910,7 @@ be executing on the system. Each command is specified with a name and the path o
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -949,16 +949,16 @@ be executing on the system. Each command is specified with a name and the path o
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="execfail-class_method">
-  
-    + (<tt><span class='object_link'><a href="Util/Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>) <strong>execfail</strong>(*args) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Util/Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>) <strong>execfail</strong>(*args)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Wraps execution of <span class='object_link'><a href="#execute-class_method" title="Puppet::Provider.execute (method)">execute</a></span> with mapping of exception to given exception (and output as argument).</p>
@@ -967,40 +967,40 @@ be executing on the system. Each command is specified with a name and the path o
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Util/Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>output as specified by options</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>exception</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>under same conditions as <span class='object_link'><a href="#execute-class_method" title="Puppet::Provider.execute (method)">execute</a></span>, but raises the given <code>exception</code> with the output as argument</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1024,16 +1024,16 @@ be executing on the system. Each command is specified with a name and the path o
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="execpipe-class_method">
-  
+
     + (<tt><span class='object_link'>String</span></tt>) <strong>execpipe</strong>(*args) {|pipe| ... }
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Executes the provided command with STDIN connected to a pipe, yielding the
@@ -1052,128 +1052,128 @@ are connected together during execution.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>command</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>, <tt><span class='object_link'>Array</span>&lt;<span class='object_link'>String</span>&gt;</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the command to execute as one string, or as parts in an array.
 the parts of the array are joined with one separating space between each entry when converting to
 the command line string to execute.</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>failonfail</span>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>(true) if the execution should fail with Exception on failure or not.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Yields:</p>
 <ul class="yield">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>pipe</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>to a block executing a subprocess</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Yield Parameters:</p>
 <ul class="yieldparam">
-  
+
     <li>
-      
+
         <span class='name'>pipe</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>IO</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the opened pipe</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Yield Returns:</p>
 <ul class="yieldreturn">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the output to return</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a string with the output from the subprocess executed by the given block</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="ExecutionFailure.html" title="Puppet::ExecutionFailure (class)">Puppet::ExecutionFailure</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>if the executed chiled process did not exit with status == 0 and <code>failonfail</code> is
 <code>true</code>.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1197,19 +1197,19 @@ the command line string to execute.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="execute-class_method">
-  
-    + (<tt><span class='object_link'><a href="Util/Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>) <strong>execute</strong>(*args) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Util/Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>) <strong>execute</strong>(*args)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
-    
+
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>Unfortunately, the default behavior for failonfail and combine (since
@@ -1229,79 +1229,79 @@ def execute(command, options)</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>command</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Array</span>&lt;<span class='object_link'>String</span>&gt;</tt>, <tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the command to execute. If it is
 an Array the first element should be the executable and the rest of the
 elements should be the individual arguments to that executable.</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>options</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a Hash of options</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
-  
-    
-    
+
+
+
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Util/Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>output as specified by options</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="ExecutionFailure.html" title="Puppet::ExecutionFailure (class)">Puppet::ExecutionFailure</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>if the executed chiled process did not exit with status == 0 and <code>failonfail</code> is
 <code>true</code>.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1325,19 +1325,19 @@ elements should be the individual arguments to that executable.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="has_command-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>has_command</strong>(name, path) {|| ... }
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
-    
+
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>the name ´has_command´ looks odd in an API context, but makes more sense when seen in the internal
@@ -1355,82 +1355,82 @@ when it is invoked.</p>
   </div>
 </div>
 <div class="tags">
-  
+
   <div class="examples">
     <p class="tag_title">Examples:</p>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>Use it like this:</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='rubyid_has_command identifier id'>has_command</span><span class='lparen token'>(</span><span class='symbol val'>:echo</span><span class='comma token'>,</span> <span class='string val'>&quot;/bin/echo&quot;</span><span class='rparen token'>)</span>
 <span class='rubyid_def def kw'>def</span> <span class='rubyid_some_method identifier id'>some_method</span>
   <span class='rubyid_echo identifier id'>echo</span><span class='lparen token'>(</span><span class='string val'>&quot;arg 1&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;arg 2&quot;</span><span class='rparen token'>)</span>
 <span class='rubyid_end end kw'>end</span>
 </code></pre>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>. . . or like this</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='rubyid_has_command identifier id'>has_command</span><span class='lparen token'>(</span><span class='symbol val'>:echo</span><span class='comma token'>,</span> <span class='string val'>&quot;/bin/echo&quot;</span><span class='rparen token'>)</span> <span class='rubyid_do do kw'>do</span>
   <span class='rubyid_is_optional identifier id'>is_optional</span>
   <span class='rubyid_environment identifier id'>environment</span> <span class='symbol val'>:HOME</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;/var/tmp&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:PWD</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;/tmp&quot;</span>
 <span class='rubyid_end end kw'>end</span>
 </code></pre>
-    
+
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Symbol</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The name of the command (will become the name of the generated method that executes the command)</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>path</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The path to the executable for the command</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Yields:</p>
 <ul class="yield">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>A block that configures the command (see <span class='object_link'>Command</span>)</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1470,16 +1470,16 @@ when it is invoked.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="make_command_methods-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>make_command_methods</strong>(name) &nbsp;<span class="deprecated note title">deprecated</span><span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -1494,7 +1494,7 @@ when it is invoked.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1553,16 +1553,16 @@ when it is invoked.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="optional_commands-class_method">
-  
-    + (<tt><span class='object_link'>Object</span></tt>) <strong>optional_commands</strong>(hash) 
-  
 
-  
+    + (<tt><span class='object_link'>Object</span></tt>) <strong>optional_commands</strong>(hash)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Defines optional commands.
@@ -1578,31 +1578,31 @@ optional.
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>hash</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span>{<span class='object_link'>String</span> =&gt; <span class='object_link'>String</span>}</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>Named commands that the provider will
 be executing on the system. Each command is specified with a name and the path of the executable.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
-    
+
       <li><span class='object_link'><a href="#commands-class_method" title="Puppet::Provider.commands (method)">commands</a></span></li>
-    
+
   </ul>
 
 </div><table class="source_code">
@@ -1634,16 +1634,16 @@ be executing on the system. Each command is specified with a name and the path o
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="post_resource_eval-class_method">
-  
+
     + <strong>post_resource_eval</strong> &nbsp;<span class="abstract note title">abstract</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <div class="note abstract">
@@ -1660,21 +1660,21 @@ whether the resources are changed or not and even if resource failures occur.</p
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Since:</p>
 <ul class="since">
-  
+
     <li>
-      
-      
-      
-      
-        
+
+
+
+
+
         <div class='inline'><p>3.4.0</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1712,16 +1712,16 @@ whether the resources are changed or not and even if resource failures occur.</p
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="prefetch-class_method">
-  
+
     + <strong>prefetch</strong>(resource_hash) &nbsp;<span class="abstract note title">abstract</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <div class="note abstract">
@@ -1739,22 +1739,22 @@ fetched state (i.e. what is returned from the <span class='object_link'>instance
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>resources_hash</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span>&lt;{<span class='object_link'>String</span> =&gt; <span class='object_link'><a href="Resource.html" title="Puppet::Resource (class)">Puppet::Resource</a></span>}&gt;</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>map from name to resource of resources to prefetch</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 
@@ -1791,22 +1791,22 @@ fetched state (i.e. what is returned from the <span class='object_link'>instance
   </tr>
 </table>
 </div>
-    
+
   </div>
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="command-instance_method">
-  
-    - (<tt><span class='object_link'>String</span></tt>) <strong>command</strong>(name) 
-  
 
-  
+    - (<tt><span class='object_link'>String</span></tt>) <strong>command</strong>(name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the absolute path to the executable for the command referenced by the given name.</p>
@@ -1815,47 +1815,47 @@ fetched state (i.e. what is returned from the <span class='object_link'>instance
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the absolute path to the found executable for the command</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Puppet::DevError</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>if the name does not reference an existing command.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
-    
+
       <li><span class='object_link'><a href="Util.html#which-class_method" title="Puppet::Util.which (method)">Util.which</a></span></li>
-    
+
   </ul>
 
 </div><table class="source_code">
@@ -1879,16 +1879,16 @@ fetched state (i.e. what is returned from the <span class='object_link'>instance
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="flush-instance_method">
-  
+
     - <strong>flush</strong> &nbsp;<span class="abstract note title">abstract</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <div class="note abstract">
@@ -1903,7 +1903,7 @@ applied to the managed entity's current state.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1934,7 +1934,7 @@ applied to the managed entity's current state.</p>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

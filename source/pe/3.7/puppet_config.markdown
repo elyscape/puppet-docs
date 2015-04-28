@@ -46,7 +46,7 @@ There are two methods to disable update checking (e.g. if your company policy fo
 * If your platform uses systemd, you can disable updates by creating the following file:
 
     `/etc/puppetlabs/puppetserver/opt-out`
-    
+
   As long as this file is present, Puppet Server will not check in for updates. (Note that this method will work on all platforms, not just those using systemd.)
 
 

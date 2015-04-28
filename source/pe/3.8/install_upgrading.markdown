@@ -164,7 +164,7 @@ Please see [section on upgrading Puppet agents](#upgrade-agents).
 
 **Warning**: After upgrading to 3.8, you must pin your nodes the new PE groups. **This applies to both split and monolithic upgrades**.
 
-When upgrading, if these groups do not exist, or do not contain any classes, they will be created and configured but **no nodes will be pinned to them**. This helps prevent errors during the upgrade process, but you must manually pin the correct nodes to each group after you complete the upgrade process. 
+When upgrading, if these groups do not exist, or do not contain any classes, they will be created and configured but **no nodes will be pinned to them**. This helps prevent errors during the upgrade process, but you must manually pin the correct nodes to each group after you complete the upgrade process.
 
 The [preconfigured groups doc](./console_classes_groups_preconfigured_groups.html) has a list of groups and their classes that get installed on fresh upgrades, and it also clarifies which nodes should be pinned to which groups.
 

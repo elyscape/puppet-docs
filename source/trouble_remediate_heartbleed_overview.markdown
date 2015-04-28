@@ -15,7 +15,7 @@ description: "This page provides an overview of remediating the Heartbleed bug i
 
 ### Remediating the "Heartbleed" Bug
 
-While neither open source Puppet nor Puppet Enterprise (PE) shipped with a vulnerable version of OpenSSL, either may rely on vulnerable versions of OpenSSL that shipped as part of certain operating systems ([see the list of affected platforms][OS_list]). Consequently, Puppet Labs strongly recommends that organizations using PE or Puppet regenerate their Puppet public key infrastructure, including all certs and the certificate authority (CA). 
+While neither open source Puppet nor Puppet Enterprise (PE) shipped with a vulnerable version of OpenSSL, either may rely on vulnerable versions of OpenSSL that shipped as part of certain operating systems ([see the list of affected platforms][OS_list]). Consequently, Puppet Labs strongly recommends that organizations using PE or Puppet regenerate their Puppet public key infrastructure, including all certs and the certificate authority (CA).
 
 The steps required for a complete replacement remediation vary based on the architecture of your deployment and the version of PE you are running. Specifically, the steps differ depending on whether you have a monolithic architecture (master, console and db roles are all on one node) or a split architecture (master, console and db roles are on separate nodes) Make sure you choose the appropriate set of instructions:
 

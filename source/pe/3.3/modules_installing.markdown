@@ -72,12 +72,12 @@ If you have used a command line package manager tool (like `gem`, `apt-get`, or 
 
 In order to use the puppet module tool behind a proxy, you need to set the following:
 
-	export http_proxy=http://10.187.255.9:8080 
+	export http_proxy=http://10.187.255.9:8080
 	export https_proxy=http://10.187.255.9:8080
-	
+
 Alternatively, you can set these two proxy settings inside the `user` config section in the `puppet.conf` file: `http_proxy_host` and `http_proxy_port`. For more information, see [Configuration Reference](/references/latest/configuration.html).
 
-**Note:** Make sure to set these two proxy settings in the `user` section only. Otherwise, there can be adverse effects. 
+**Note:** Make sure to set these two proxy settings in the `user` section only. Otherwise, there can be adverse effects.
 
 
 Installing Modules
@@ -118,7 +118,7 @@ Make sure to use the `--ignore-dependencies` flag if you cannot currently reach 
 
 ### Installing PE Supported Modules
 
-PE 3.2 introduced [supported modules](http://forge.puppetlabs.com/supported), which  includes an additional field in the modules' metadata.json files to indicate compatibility with PE versions. The puppet module tool (PMT) has been updated to look for PE version requirements in the metadata. 
+PE 3.2 introduced [supported modules](http://forge.puppetlabs.com/supported), which  includes an additional field in the modules' metadata.json files to indicate compatibility with PE versions. The puppet module tool (PMT) has been updated to look for PE version requirements in the metadata.
 
 If you are running PE 3.2 or greater, please note that if a version of the module matches the installed version of PE, non-matching versions will be filtered out. The `--force` flag will prevent this filtering, and will either install the most recent version of the module if no version is specified or install the specified version. Note that the `--force` flag will ignore dependencies and checksums, as well as overwrite installed modules with the same modulename. The `--debug` flag will show whether a module is being filtered or not. If no PE version metadata is present in any version, all available versions of the module will be displayed.
 

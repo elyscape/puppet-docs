@@ -109,7 +109,7 @@ The **DNS** group will contain all the nodes in your deployment (including the P
 
    ![classification selection][classification_selector]
 
-2. In the **Node group name** field, name your group **DNS**. 
+2. In the **Node group name** field, name your group **DNS**.
 3. Click **Add group**.
 
    **Note**: Leave the **Parent name** and **Environment** values as their defaults (**default** and **production**, respectively).
@@ -117,10 +117,10 @@ The **DNS** group will contain all the nodes in your deployment (including the P
 4. From the __Classification page__, select the __DNS__ group, and click the __Rules_ tab.
 5. In the **Fact** field, enter "name" (without the quotes).
 6. From the **Operator** drop-down list, select **matches regex**.
-7. In the **Value** field, enter ".x" (without the quotes). 
+7. In the **Value** field, enter ".x" (without the quotes).
 8. Click **Add rule**.
 
-   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **DNS** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.) 
+   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **DNS** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.)
 
 **To add the** `resolver` **class to the DNS group**:
 

@@ -15,9 +15,9 @@ canonical: "/pe/latest/console_classes_groups.html"
 To start classifying your nodes, go to the PE console and click **Classification**. This takes you to a list of node groups. You can add new node groups here and make changes to existing node groups.
 
    ![viewing list of node groups][all_node_groups]
-   
+
 > **Important**
-> 
+>
 > The node classifier uses role-based access control (RBAC) to manage access to tasks. To check your access to the tasks described on this page, see the [RBAC documentation](./rbac_intro.html).
 
 ### Creating New Node Groups
@@ -26,10 +26,10 @@ To start classifying your nodes, go to the PE console and click **Classification
 <li>To add a new node group, in <strong>Classification</strong>, enter the following information in the empty fields at the top of the node group list:
 
 <dl>
-	<dt>Node group name</dt>		
+	<dt>Node group name</dt>
 		<dd>Enter a name that describes the function of the nodes in this node group. For example, "web servers."</dd>
 	<dt>Parent name</dt>
-		<dd>Node groups inherit classes, parameters, and variables from their parent node group. By default, the parent node group is the <strong>default</strong> node group. To specify a different parent node group, enter it here.</dd> 
+		<dd>Node groups inherit classes, parameters, and variables from their parent node group. By default, the parent node group is the <strong>default</strong> node group. To specify a different parent node group, enter it here.</dd>
 		<dd>You can avoid duplicating class assignments and save yourself a lot of time if you use node groups and their inheritance effectively. For example, if you have a class that needs to be assigned to all of a node group’s child node groups, then you can assign it once in the parent node group and avoid having to assign it multiple times at the child node group level.</dd>
 	<dt>Environment</dt>
 		<dd><p>The environment determines the classes and parameters that are available to the node group. Select the environment that you want to apply to this node group. If you haven’t <a href="/puppet/3.7/reference/environments.html">set up any environments</a> yet, you will only see the default <code>production</code> environment.</p>
@@ -48,7 +48,7 @@ To start classifying your nodes, go to the PE console and click **Classification
 [Deleting Node Groups](./console_classes_groups_making_changes.html#deleting-groups)
 
 
-### Adding Nodes to a Node Group 
+### Adding Nodes to a Node Group
 To apply a node group’s environment, classes, parameters, and variables to your nodes, you need to include the node in that node group. There are two ways to add nodes to a node group:
 
 1. Create rules that match node facts (dynamic)
@@ -65,17 +65,17 @@ When nodes no longer match the rules of a node group, the classification data fo
 
 **To add a rule:**
 
-1. In the **Classification** page, click **Rules**. 
+1. In the **Classification** page, click **Rules**.
 
-2. Select a **Fact**. 
+2. Select a **Fact**.
 
     When you click in the **Fact** field, a list of known facts appears. These are the facts that are stored in [PuppetDB](/puppetdb/2.2/#what-data). They include things like the operating system (`operatingsystem`), the amount of memory (`memorytotal`), and the primary IP address (`ipaddress`).
 
-    > **Tip:** The list of facts uses autosuggest with fuzzy matching. As you type a search string in **Fact**, the list filters to show facts that contain the search string anywhere within the fact name. In other words, if you are looking for `uptime_days`, you can simply type “time.” 
+    > **Tip:** The list of facts uses autosuggest with fuzzy matching. As you type a search string in **Fact**, the list filters to show facts that contain the search string anywhere within the fact name. In other words, if you are looking for `uptime_days`, you can simply type “time.”
 
-3. Specify an **Operator** and **Value** for the fact. 
+3. Specify an **Operator** and **Value** for the fact.
 
-    You can get really specific about the nodes that you want to match by setting **Operator** to **matches regex** or **does not match regex** and specifying a regular expression for **Value**.    
+    You can get really specific about the nodes that you want to match by setting **Operator** to **matches regex** or **does not match regex** and specifying a regular expression for **Value**.
 
     > **Note:** The **greater than**, **greater than or equal to**, **less than**, and **less than or equal to** operators can only be used with facts that have a numeric value.
 
@@ -86,13 +86,13 @@ When nodes no longer match the rules of a node group, the classification data fo
     &nbsp;&nbsp;&nbsp;"hostname"&nbsp;&nbsp;&nbsp;**matches regex**&nbsp;&nbsp;&nbsp;"web"
 
     If at any point you change the role of one of the web server nodes and remove “web” from the name, that node no longer matches the rule for being included in the **Web Servers** node group and will no longer be configured with the classes that have been applied by the node group.
-    
-4. Whenever you make a change in the node classifier, you need to commit the change. At the lower right of the page, click the commit button. 
 
-> **Note**: In the **Rules** tab, there is an option that let’s you select whether your nodes need to match **All** rules before they are added to the node group, or if they should be added when they match **Any** of the rules. 
+4. Whenever you make a change in the node classifier, you need to commit the change. At the lower right of the page, click the commit button.
+
+> **Note**: In the **Rules** tab, there is an option that let’s you select whether your nodes need to match **All** rules before they are added to the node group, or if they should be added when they match **Any** of the rules.
 
 #### Adding Nodes Statically
-If you have a node that needs to be in a node group regardless of the rules that have been specified for that node group, you can *pin* the node to the node group. A pinned node is not affected by rules and will remain in the node group until you manually remove it. Adding a pinned node essentially creates the rule `<the certname of your node>` **is** `<the certname>`, and includes this rule along with the other fact-based rules. 
+If you have a node that needs to be in a node group regardless of the rules that have been specified for that node group, you can *pin* the node to the node group. A pinned node is not affected by rules and will remain in the node group until you manually remove it. Adding a pinned node essentially creates the rule `<the certname of your node>` **is** `<the certname>`, and includes this rule along with the other fact-based rules.
 
 **To pin a node to a node group:**
 
@@ -106,24 +106,24 @@ If you have a node that needs to be in a node group regardless of the rules that
 
 ### Adding Classes to a Node Group
 
-The next thing you’ll want to do is add classes to your node group. [Classes][lang_classes] are the blocks of Puppet code used to configure your nodes and assign resources to them. To add a class to a group, first create the class in a module. You'll then need to install the module.  
+The next thing you’ll want to do is add classes to your node group. [Classes][lang_classes] are the blocks of Puppet code used to configure your nodes and assign resources to them. To add a class to a group, first create the class in a module. You'll then need to install the module.
 
-> #### Creating Puppet Classes 
+> #### Creating Puppet Classes
 >
 > Before you can add a class to a node group, you need to make the class available to the Puppet master. This means that the class must be located in an installed [module][modules]. There are two ways to get modules:
 >
 > 1. [Download modules from the Puppet Forge][forge]. In addition to the many public modules that are available, the Puppet Forge also provides supported modules and approved modules. Supported modules are rigorously tested with PE and are supported by Puppet Labs via the usual [support channels](http://puppetlabs.com/services/customer-support). Approved modules have passed PuppetLabs quality and reliability standards and are recommended by Puppet Labs for use with PE.
-> 
+>
 > 2. [Write your own classes][lang_classes], and put them in a [module][modules].
-> 
+>
 > **Tip:** If you are new to Puppet and have not written Puppet code before, [follow the Learning Puppet tutorial][learn], which walks you through the basics of Puppet code, classes, and modules.
 
 **To add a class to a node group:**
 
 1. On the **Classification** page, click the node group that you want to add the class to, and then click **Classes**.
 
-2. Under **Add new class**, click the **Class name** field. 
-   
+2. Under **Add new class**, click the **Class name** field.
+
    A list of classes appears. These are the classes that the Puppet master knows about and are available in the environment that you have set for the node group. The list filters as you type. Filtering is not limited to the start of a class name, you can also type substrings from anywhere within the class name. Select the class when it appears in the list.
 
 3. Click **Add class** and then click the commit button.
@@ -134,8 +134,8 @@ The next thing you’ll want to do is add classes to your node group. [Classes][
 >
 > 2. The [environment cache needs to refresh](/references/latest/configuration.html#environmenttimeout). (By default, the environment cache refreshes every 3 minutes.)
 >
-> To override the default refresh period and force the node classifier to retrieve the classes from the master immediately, click the **Refresh** button. 
-  
+> To override the default refresh period and force the node classifier to retrieve the classes from the master immediately, click the **Refresh** button.
+
 [Removing Classes From a Node Group](./console_classes_groups_making_changes.html#removing-classes-from-a-group)
 
 ### Defining the Data Used by Classes
@@ -143,24 +143,24 @@ You can use either parameters or variables to define the data used by classes. P
 
 #### Setting Class Parameters
 
-Classes will automatically use default parameters and values, or parameters and values inherited from parent node groups. However, if the nodes in a node group need to be an exception to the general case, you can override default and parent values by specifying new parameter values. 
+Classes will automatically use default parameters and values, or parameters and values inherited from parent node groups. However, if the nodes in a node group need to be an exception to the general case, you can override default and parent values by specifying new parameter values.
 
 **To add a parameter:**
 
-1. In **Classes**, click the **Parameter name** drop-down list under the appropriate class and select the parameter to add. The drop-down list shows all of the parameters that are available in the node group’s environment.  
+1. In **Classes**, click the **Parameter name** drop-down list under the appropriate class and select the parameter to add. The drop-down list shows all of the parameters that are available in the node group’s environment.
 
 2. When you select a parameter, the **Value** field is automatically populated with the default value. To change the value, type the new value in the **Value** field.
 
 > **Note**: Class parameters can be structured as JSON. If they cannot be parsed as JSON, they will be treated as strings.
-> 
+>
 > Specifically, class parameters can be specified using the following data types and syntax:
-> 
+>
 >    * Strings (e.g., "centos")
 >    * Booleans (e.g., true or false)
 >    * Numbers (e.g., 123)
 >    * Hashes (e.g., `{"a": 1}`
 >    * Arrays (e.g., ["1","2.3"]
-> 
+>
 > Regular expressions, resource references, and other keywords (such as ‘undef’) are not supported.
 
 [Editing Parameters](./console_classes_groups_making_changes.html#editing-parameters)
@@ -179,20 +179,20 @@ Variables set in the console become [top-scope variables available to all Puppet
 
 3. For **Key**, enter the name of the variable.
 
-4. For **Value**, enter the value that you want to assign to the variable. 
+4. For **Value**, enter the value that you want to assign to the variable.
 
 5. Click **Add variable**, and then click the commit button.
 
 > **Note**: Variables can be structured as JSON. If they cannot be parsed as JSON, they will be treated as strings.
-> 
+>
 > Specifically, variables can be specified using the following data types and syntax:
-> 
+>
 >    * Strings (e.g., "centos")
 >    * Booleans (e.g., true or false)
 >    * Numbers (e.g., 123)
 >    * Hashes (e.g., `{"a": 1}`
 >    * Arrays (e.g., ["1","2.3"]
-> 
+>
 > Regular expressions, resource references, and other keywords (such as ‘undef’) are not supported.
 
 > **Note:** Nodes can match multiple node groups, and node groups are not necessarily arranged in a strict hierarchy. It is therefore possible for two equal node groups to contribute conflicting values for variables and class parameters. Conflicting values will cause a Puppet run on an agent to fail.
@@ -207,10 +207,10 @@ Variables set in the console become [top-scope variables available to all Puppet
 
 1. To go to the node group details, on the **Classification** page, click the node group.
 
-2. Click **Matching nodes**. 
+2. Click **Matching nodes**.
 
-   You will see the number of nodes that match the node group’s rules, along with a list of the names of matching nodes. The matching nodes list is updated as rules are added, deleted, and edited. Don’t forget that [nodes must match rules in ancestor node groups](./console_classes_groups_inheritance.html#how-does-inheritance-work?) as well as the rules of the current node group before they are actually considered to be a matching node. 
-   
+   You will see the number of nodes that match the node group’s rules, along with a list of the names of matching nodes. The matching nodes list is updated as rules are added, deleted, and edited. Don’t forget that [nodes must match rules in ancestor node groups](./console_classes_groups_inheritance.html#how-does-inheritance-work?) as well as the rules of the current node group before they are actually considered to be a matching node.
+
 > **Note**: If you have not set any rules for this node group yet, there will not be any matching nodes.
 
 ### Viewing Node Information
@@ -220,7 +220,7 @@ Each node in a PE deployment has its own node details page in the PE console. Th
 <li>In the top navigation, click <strong>Nodes</strong>.</li>
 
 <li> From the list of nodes, click the specific node that you want to view.</li>
- 
+
 <dl>
 <dt>Member Groups</dt>
 <dd>Shows a list of node groups the node currently matches, based on the rules that have been specified for those node groups. Also shows the node group’s environment and parent node group.</dd>

@@ -34,7 +34,7 @@ Facter now supports RHEL 7, although it is currently limited to x86_64.
 
 **Facter DMG packages on OSX will attempt to load Facter from rbenv PATH and fail**
 
-The Facter DMG package on OSX was identifying the path to ruby with `/usr/bin/env ruby`, which would cause it to load Facter from the wrong path if rbenv was installed. The package now uses `/usr/bin/ruby`. 
+The Facter DMG package on OSX was identifying the path to ruby with `/usr/bin/env ruby`, which would cause it to load Facter from the wrong path if rbenv was installed. The package now uses `/usr/bin/ruby`.
 
 [FACT-182: Facter Does not run on OS X 10.9 Mavericks](https://tickets.puppetlabs.com/browse/FACT-182)
 
@@ -82,7 +82,7 @@ In preparation for pluginsync support for external facts, Facter needed a bit of
 This was a regression in Facter 1.7.3 --- Facter would fail and quit on systems where a network adapter was configured in a specific way.
 
 
-[Bug #23368: Executable external facts fail on Windows 2003](https://projects.puppetlabs.com/issues/23368) 
+[Bug #23368: Executable external facts fail on Windows 2003](https://projects.puppetlabs.com/issues/23368)
 
 This was a problem with file paths containing a space, which included the default directory for external facts under Windows 2003.
 
@@ -105,7 +105,7 @@ This was causing noisy logging everywhere.
 
 This release fixes several bugs where facts reported incorrect values on certain operating systems.
 
-[Bug #21604: Xen virtual fact doesn't work on Windows](https://projects.puppetlabs.com/issues/21604) 
+[Bug #21604: Xen virtual fact doesn't work on Windows](https://projects.puppetlabs.com/issues/21604)
 
 [Bug #16081: Facter reports bogus arch on AIX](https://projects.puppetlabs.com/issues/16081)
 

@@ -107,7 +107,7 @@ The following files in this directory need to be replaced:
 ###Replace the PuppetDB Certificates and Security Credentials
 
 1. (Optional—for split installs only) Refer to [Locating the Puppet Agent Certificate and Security Credentials](#locating-the-puppet-agent-certificate-and-security-credentials) and replace the puppet agent service files. These files will be copied to the PuppetDB SSL directory in the step 2.
-2. Refer to [Locating the PuppetDB Certificate and Security Credentials](#locating-the-puppetdb-certificate-and-security-credentials) and replace the files. 
+2. Refer to [Locating the PuppetDB Certificate and Security Credentials](#locating-the-puppetdb-certificate-and-security-credentials) and replace the files.
 3. Run `service pe-puppetdb restart`.
 4. Run puppet.
 
@@ -171,9 +171,9 @@ If you still don't see your agent node in live management, use NTP to verify tha
 
 ## PE Certificates and Security Credentials Quick Reference
 
-**Note**: This table is meant to be used as a quick reference of the certs and security credentials you'll need to replace. You'll need to follow the complete instructions in [Replacing the PE Certificate Authority and Security Crendentials](#replacing-the-pe-certificate-authority-and-security-credentials) to ensure all related tasks are performed correctly. 
+**Note**: This table is meant to be used as a quick reference of the certs and security credentials you'll need to replace. You'll need to follow the complete instructions in [Replacing the PE Certificate Authority and Security Crendentials](#replacing-the-pe-certificate-authority-and-security-credentials) to ensure all related tasks are performed correctly.
 
-| Order| Cert | Location | Filename | Notes | 
+| Order| Cert | Location | Filename | Notes |
 |---|---|---|---|---|
 | 1 | Master cert | `/etc/puppetlabs/puppet/ssl/certs` | `<puppet_master_fqdn>.ca.pem`  | On the puppet master, the certs and credentials for the master and agent are in the same location/file in each of these categories, so only one set are needed  |
 | 2  | Master private key | `/etc/puppetlabs/puppet/ssl/private_keys`   | `<puppet_master_fqdn>.ca.pem`	  |   |

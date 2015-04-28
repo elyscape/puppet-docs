@@ -17,9 +17,9 @@ This is a chapter of the [Puppet Dashboard 1.2 manual](./index.html).
 * **Using Dashboard**
 * [Rake API](./rake_api.html)
 
-* * * 
+* * *
 
-This chapter has not been written. However, similar documentation has been written for the Puppet Enterprise 2.0 console. The PE console is built on Puppet Dashboard and adds functionality, but the features they have in common are largely identical save for branding and cosmetic changes. 
+This chapter has not been written. However, similar documentation has been written for the Puppet Enterprise 2.0 console. The PE console is built on Puppet Dashboard and adds functionality, but the features they have in common are largely identical save for branding and cosmetic changes.
 
 The three chapters below document the features that Dashboard and the PE console have in common:
 
@@ -32,7 +32,7 @@ The three chapters below document the features that Dashboard and the PE console
 [c_class]: /pe/latest/console_classes_groups.html
 
 
-* * * 
+* * *
 
 #### Navigation
 

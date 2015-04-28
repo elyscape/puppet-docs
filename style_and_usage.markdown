@@ -5,7 +5,7 @@ This guide provides content style guidelines for use by all content creators at 
 
 ##Purpose
 
-* Establish consistency across all Puppet Labs content – As a company, we strive to have consistent voice, structure, terms, format and other style. This consistency makes navigating content and technology easier and more intuitive for users. 
+* Establish consistency across all Puppet Labs content – As a company, we strive to have consistent voice, structure, terms, format and other style. This consistency makes navigating content and technology easier and more intuitive for users.
 * Establish best practices for delivering the content that helps users solve problems.
 * Help bring new writers up to speed quickly, without guess work.
 
@@ -13,13 +13,13 @@ This guide provides content style guidelines for use by all content creators at 
 
 Writing for Our Audience
 ----
-As our user community grows, all content at Puppet Labs needs to shift to accommodate users who have less familiarity with config management, Puppet or Puppet Enterprise. 
+As our user community grows, all content at Puppet Labs needs to shift to accommodate users who have less familiarity with config management, Puppet or Puppet Enterprise.
 
 ##Writing for Users New to Puppet and PE
 
 * Be straightforward -- don’t rely on implication. Make direct statements. Use conjunctive adverbs to connect ideas and help to bridge connections: “first,” “second,” “and then,” “next,” “therefore,” “also,” etc.
 * Define things. If you’re working with a new feature, explicitly say what it is, and what problems it solves. Similarly, avoid jargon that will make new users feel excluded or frustrated.
-* Use the same terms to refer to the same things. For example, if you title a page “Grouping and Classifying Nodes,” use those terms in the contents of the page.  
+* Use the same terms to refer to the same things. For example, if you title a page “Grouping and Classifying Nodes,” use those terms in the contents of the page.
 * Focus on the tasks users need to perform. If you’re writing about a new feature, identify what the user will do with that feature, and provide tasks (see Tasks section) that explicitly step the user through each task. Don’t just tell them what to do, but how to do it.
 * Decide what information your users really want and need and provide that first. If you have time, and more information, then add extra pages for a deeper dive.
 * Provide breathing space (white space).
@@ -27,7 +27,7 @@ As our user community grows, all content at Puppet Labs needs to shift to accomm
 * Make content scannable.
 * Use examples. A lot of examples.
 * Use graphics and screenshots to provide another way of learning a thing.
-* Empower the user. Never condescend.  
+* Empower the user. Never condescend.
 
 ##Writing for Advanced Users
 Today’s junior IT worker is potentially tomorrow’s automation or operations architect. Users who solve problems feel more confident. They’re encouraged to try new things and grow their skills. Our documentation can support users from basic tasks through to the rich, heady high-level concepts that an expert craves and that we have in good supply.
@@ -54,43 +54,43 @@ Tone
 
 The following list is an attempt to capture our tone.
 
-* Strive to be friendly and authoritative. 
-* In addition to being friendly, be concise, but not terse. 
-* Make content scannable, but not to the point of skeletal. 
+* Strive to be friendly and authoritative.
+* In addition to being friendly, be concise, but not terse.
+* Make content scannable, but not to the point of skeletal.
 * Use present tense just about always.
-* Avoid passive voice, just about always. 
+* Avoid passive voice, just about always.
 
 No: The use of execs in your puppet manifests is not recommended.
 Yes: We recommend against the use of execs in your puppet manifests.
 
 Passive constructions are not more "formal" or "official" than active ones, and they don't suggest a culture of responsibility or ownership.
 
-* Use 2nd person just about always. 
+* Use 2nd person just about always.
 * Use “we” when you mean Puppet Labs. As in, “we recommend that you test Razor in a completely isolated environment.” Avoid we in steps. You or implied you, as in imperative voice, makes it clearer that the user should do something.
-* In cases where you must refer to users, use the terms “people” or “person” instead of “users” or “user” -- it’s friendlier. 
+* In cases where you must refer to users, use the terms “people” or “person” instead of “users” or “user” -- it’s friendlier.
 
 ##Inclusive Language
 
-Use gender-neutral, inclusive language. As a base guide, here are some  recommended guidelines from Sarah Lawrence College that mesh well with our preferred voice. 
+Use gender-neutral, inclusive language. As a base guide, here are some  recommended guidelines from Sarah Lawrence College that mesh well with our preferred voice.
 
 * As mentioned, use second person (you, your, yours), where possible and appropriate. Second person not only eliminates gender reference, but also makes the copy more personal and engaging.
 
-* Where second person is inappropriate or impractical—in a policy statement, for example—first try to rework the copy to eliminate singular gendered pronouns (he, she, him, her). Remove them altogether, use plural nouns and pronouns, or employ articles (a, an, the). Use non-gendered nouns as needed (student, person, individual, one), but try to do so sparingly to avoid excessive repetition and cumbersome structure. For example: 
+* Where second person is inappropriate or impractical—in a policy statement, for example—first try to rework the copy to eliminate singular gendered pronouns (he, she, him, her). Remove them altogether, use plural nouns and pronouns, or employ articles (a, an, the). Use non-gendered nouns as needed (student, person, individual, one), but try to do so sparingly to avoid excessive repetition and cumbersome structure. For example:
 
 	“By default, these CSRs must be manually signed by an admin user, using either the puppet cert command or the ‘node requests’ page of the Puppet Enterprise console.”
 
 * When absolutely unavoidable, use plural non-gendered pronouns (they, them, their) to replace singular gendered pronouns (he, she, him, her).
-	
+
 	Tip 1: Avoid conditional sentences introduced by if or when, which often require the use of pronouns: “When we ran this, the resources weren’t synced in the order we wrote them.”
 
-* Avoid sexist assumptions such as those found in turns of phrase like "simple enough for your Aunt Tillie to understand." or "the guys in the server room" when referring to sysadmins in general. 
+* Avoid sexist assumptions such as those found in turns of phrase like "simple enough for your Aunt Tillie to understand." or "the guys in the server room" when referring to sysadmins in general.
 
 	It goes without saying: We respect our subjects' preferred gender identities.
-	As a general note, think very carefully about the words and metaphors you use and what they might mean to different people. If something strikes you as potentially problematic, it probably is. If someone suggests to you that a particular word or turn of phrase might be offensive or hurtful, resist the urge to defend your choice on the basis of your good intentions, and instead think of another way to put it. 
+	As a general note, think very carefully about the words and metaphors you use and what they might mean to different people. If something strikes you as potentially problematic, it probably is. If someone suggests to you that a particular word or turn of phrase might be offensive or hurtful, resist the urge to defend your choice on the basis of your good intentions, and instead think of another way to put it.
 
 * Metaphors or analogies: can be tough to localize. Don’t feel like you can’t use them if it will help to illustrate a concept, but stick to comparisons that are relatively innocuous and universal.
 
-* Avoid terms that set a superior or patronizing tone, such as “clearly,” or “obviously.” This site does a nice job of explaining why: http://css-tricks.com/words-avoid-educational-writing/. 
+* Avoid terms that set a superior or patronizing tone, such as “clearly,” or “obviously.” This site does a nice job of explaining why: http://css-tricks.com/words-avoid-educational-writing/.
 
 * Be honest, but don't be negative about our products or about competitors.
 
@@ -119,7 +119,7 @@ Spell out Puppet Enterprise in H1s and 2s. This is especially important for H1s 
 * Page titles: For intro and concept heavy pages, use a descriptive noun phrase, such as * Beginner’s Guide to Modules, About Puppet Enterprise, Bare Metal Provisioning with Razor. If the page is about describing and providing steps in a process, make it a gerund, such as Installing Puppet Enterprise or Tuning and Scaling
 * **Task headings**: Start with an Imperative that signals that the content tells how to do something. For example, Classify a Node. Include Repos.
 * **Concepts and overview content**: Use a descriptive noun phrase.
-* In general, use title capitalization for headers, in particular, for H1s-H3s. If you are using a sentence or a question as a header, as in an FAQ, and particularly for lower level headings, you might find that sentence-style capitalization makes the most sense. This can be a judgement call, but particularly for the Docs site, we should default to title capitalization in most cases. 
+* In general, use title capitalization for headers, in particular, for H1s-H3s. If you are using a sentence or a question as a header, as in an FAQ, and particularly for lower level headings, you might find that sentence-style capitalization makes the most sense. This can be a judgement call, but particularly for the Docs site, we should default to title capitalization in most cases.
 * Only H2 and H3 appear in the TOC -- keep that in mind.
 
 Content Types
@@ -130,7 +130,7 @@ Some guidelines around content types:
 
 * Separate different types of content. If a page contains both concepts and steps to do something, for example, separate concepts from numbered steps sections. Don’t work in the concepts about the thing with the steps to complete a task with the thing.
 * Show how to do things (anticipate and answer questions, solve problems). Don’t give a tour of the UI.
-* If there are several ways to do something, choose the most common way and write that. You might need to get some insight on the most common way from your team, user research, etc. Users are in a hurry. They want us to guide them. If there are multiple ways, provide the way that’s most direct and expect some users to extrapolate a route at the thing from a different point of entry. 
+* If there are several ways to do something, choose the most common way and write that. You might need to get some insight on the most common way from your team, user research, etc. Users are in a hurry. They want us to guide them. If there are multiple ways, provide the way that’s most direct and expect some users to extrapolate a route at the thing from a different point of entry.
 
 	If for some reason it is important to describe more than one approach, then do so in a way that will be easily parsed by the user. For example, if there are several different steps in each way, then have two separate sets of steps. Don’t try to cram both in one set of steps. If just one step is a little different, though, you can provide that alternative in the same step with the main approach.
 
@@ -148,23 +148,23 @@ Some guidelines around content types:
 * FAQ/Decision/Troubleshooting
 
 ####Introductions
-Products, features, tools, libraries, etc. have their own sections in the documentation and need an introduction. An introduction might be the user’s first encounter with Puppet Labs documentation, so it should be welcoming (see Tone).  Each page of documentation should also have an introduction. The introduction might take up an entire page (if it's an introduction to a set of pages) or might be just a short paragraph. 
+Products, features, tools, libraries, etc. have their own sections in the documentation and need an introduction. An introduction might be the user’s first encounter with Puppet Labs documentation, so it should be welcoming (see Tone).  Each page of documentation should also have an introduction. The introduction might take up an entire page (if it's an introduction to a set of pages) or might be just a short paragraph.
 
 **Heading**: Descriptive noun phrase, such as Beginner’s Guide to Modules, About Puppet Enterprise, Bare Metal Provisioning with Razor.
 Recommended elements for introductions:
 
 * A greeting.
-	
+
 	For example:
 	“Welcome! This is the user’s guide for Puppet Enterprise 3.2.0.”
-	
+
 	Don’t overdo it with the welcome -- a message like this works best on the top-level pages for products or features, but might sound a little weird and forced further in (i.e., don’t say,  “Welcome to ‘Navigating the Console.’”).
 * Name and quick description or definition of the the application or feature that the section is about -- what it does, its purpose, etc.
 * Assumptions that the section is working with.
 * What the section or page of documentation will cover.
 * Links to related pages of documentation.
 	* Link text should be the title of the page, which will indicate what info that page contains.
-* Optional: as appropriate, you can segue into concepts or process overviews from intro sections. These two are generally appropriate for section introductions rather than product introductions.   
+* Optional: as appropriate, you can segue into concepts or process overviews from intro sections. These two are generally appropriate for section introductions rather than product introductions.
 
 ####Concepts
 These sections can be a natural extension of the introduction and go deeper into the feature or product. Consider the questions that a user might have and answer them here.
@@ -198,11 +198,11 @@ Not just what to do, but also how to do it. New users, even advanced sys admins 
 
 Depending on the users your content is targeting, tasks might be one of two types:
 
-* **Prescriptive** tasks teach how to do a thing a specific way, like those found in the PE Quick Start Guides. Prescriptive tasks are most helpful in introductory content for new users, or for situations like installing components, where there are specific choices that should be made depending on the install. 
+* **Prescriptive** tasks teach how to do a thing a specific way, like those found in the PE Quick Start Guides. Prescriptive tasks are most helpful in introductory content for new users, or for situations like installing components, where there are specific choices that should be made depending on the install.
 * **Recipe-style** tasks teach a process in a more general way, with the understanding that the user will have to make decisions based on their own particular IT and Puppet or PE infrastructures. The Beginner’s Guide to Modules provides a good example of recipe-style tasks.
-* 
+*
 #####When to Use Tasks
- 
+
 Create tasks for anything users do with the software. Installing and configuring software and features should be presented in tasks (often multiple tasks that make up a process). Any work performed with the applications should be presented in tasks. What are users trying to get done? What are users struggling to get done? What are their pain points and how does the software address those? These are tasks. It’s imperative that we provide steps that are easy to find, easy to read, easy to scan.
 
 #####Elements of Tasks

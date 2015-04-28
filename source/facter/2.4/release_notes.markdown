@@ -21,7 +21,7 @@ Changed external facts directory from `/opt/puppetlabs/agent/facts.d` to `/opt/p
 
 * Reduced calls to `ip link show` for performance. `Facter::Util:IP.get_interface_value` called `get_bonding_interface` for every possible value, which could have caused performance issues if many interfaces were being used.
 
-* Improved the speed of `puppetversion` in standalone Facter. There is no notable difference when calling Facter while Puppet is already running. Previously, running Facter with `--timing` showed that `puppetversion` was by far the slowest fact. This was not true when executed by Puppet, but gave the impression that Puppet is slow.  
+* Improved the speed of `puppetversion` in standalone Facter. There is no notable difference when calling Facter while Puppet is already running. Previously, running Facter with `--timing` showed that `puppetversion` was by far the slowest fact. This was not true when executed by Puppet, but gave the impression that Puppet is slow.
 
 ### Bugs
 

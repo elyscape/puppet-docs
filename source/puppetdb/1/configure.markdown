@@ -65,14 +65,14 @@ To use 1GB of memory:
 
 ### Configuring Logging
 
-Logging is configured with a log4j.properties file, whose location is defined with the [`logging-config`](#logging-config) setting. If you change the log settings while PuppetDB is running, it will apply the new settings without requiring a restart. 
+Logging is configured with a log4j.properties file, whose location is defined with the [`logging-config`](#logging-config) setting. If you change the log settings while PuppetDB is running, it will apply the new settings without requiring a restart.
 
 [See the log4j documentation][log4j] for more information about logging options.
 
 
 ### The PuppetDB Configuration File(s)
 
-PuppetDB is configured using an INI-style config format with several `[sections]`. This is very similar to the format used by Puppet. 
+PuppetDB is configured using an INI-style config format with several `[sections]`. This is very similar to the format used by Puppet.
 
 **Whenever you change PuppetDB's configuration settings, you must restart the service for the changes to take effect.**
 
@@ -118,7 +118,7 @@ You can edit the logging configuration file while PuppetDB is running, and it wi
 ### `resource-query-limit`
 
 The maximum number of legal results that a resource query can return.  If you issue a query that would result in more results than this value, the query will simply return an error.  (This can be used to prevent accidental queries that would yield huge numbers of results from consuming undesirable amounts of resources on the server.)
-  
+
 The default value is 20000.
 
 `[database]` Settings
@@ -128,7 +128,7 @@ The `[database]` section configures PuppetDB's database settings.
 
 PuppetDB can use either **a built-in HSQLDB database** or **a PostgreSQL database.** If no database information is supplied, an HSQLDB database at `<vardir>/db` will be used.
 
-> **FAQ: Why no MySQL or Oracle support?** 
+> **FAQ: Why no MySQL or Oracle support?**
 >
 > MySQL lacks several features that PuppetDB relies on; the most notable is recursive queries. We have no plans to ever support MySQL.
 >
@@ -141,7 +141,7 @@ To use an HSQLDB database at the default `<vardir>/db`, you can simply remove al
     classname = org.hsqldb.jdbcDriver
     subprotocol = hsqldb
     subname = file:</PATH/TO/DB>;hsqldb.tx=mvcc;sql.syntax_pgs=true
-  
+
 Replace `</PATH/TO/DB>` with the filesystem location in which you'd like to persist the database.
 
 Do not use the `username` or `password` settings.
@@ -187,7 +187,7 @@ If unset, auto-deactivation of nodes is disabled.
 ### `log-slow-statements`
 
 This sets the number of seconds before an SQL query is considered "slow." Slow SQL queries are logged as warnings, to assist in debugging and tuning. Note PuppetDB does not interrupt slow queries; it simply reports them after they complete.
-  
+
 The default value is 10 seconds. A value of 0 will disable logging of slow queries.
 
 
@@ -233,7 +233,7 @@ Every change to PuppetDB's data stores arrives via **commands** that are inserte
 ### `threads`
 
 This defines how many command processing threads to use. Each thread can process a single command at a time. [The number of threads can be tuned based on what you see in the performance dashboard.][dashboard]
-  
+
 This setting defaults to half the number of cores in your system.
 
 `[jetty]` (HTTP) Settings
@@ -284,7 +284,7 @@ If not supplied, PuppetDB uses standard HTTPS without any additional authorizati
 `[repl]` Settings
 -----
 
-The `[repl]` section configures remote runtime modification. 
+The `[repl]` section configures remote runtime modification.
 
 Enabling a remote [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) allows you to manipulate the behavior of PuppetDB at runtime. This should only be done for debugging purposes, and is thus disabled by default. An example configuration stanza:
 
@@ -301,7 +301,7 @@ Set to `true` to enable the REPL. Defaults to false.
 
 Either `nrepl` or `swank`.
 
-The _nrepl_ repl type opens up a socket you can connect to via telnet. 
+The _nrepl_ repl type opens up a socket you can connect to via telnet.
 
 The _swank_ type allows emacs' clojure-mode to connect directly to a running PuppetDB instance by using `M-x slime-connect`. This is much more user-friendly than telnet.
 

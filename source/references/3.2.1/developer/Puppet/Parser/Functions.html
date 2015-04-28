@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=c" />
 <title>
   Module: Puppet::Parser::Functions
-  
+
     &mdash; Documentation by YARD 0.8.4.1
-  
+
 </title>
 
   <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../../_index.html">Index (F)</a> &raquo;
     <span class='title'><span class='object_link'>Puppet</span></span> &raquo; <span class='title'><span class='object_link'><a href="../Parser.html" title="Puppet::Parser (module)">Parser</a></span></span>
-     &raquo; 
+     &raquo;
     <span class="title">Functions</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,25 +64,25 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Module: Puppet::Parser::Functions
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
-  
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/puppet/parser/functions.rb<span class="defines">,<br />
   lib/puppet/parser/functions/split.rb,<br /> lib/puppet/parser/functions/hiera.rb,<br /> lib/puppet/parser/functions/extlookup.rb,<br /> lib/puppet/parser/functions/hiera_hash.rb,<br /> lib/puppet/parser/functions/hiera_array.rb,<br /> lib/puppet/parser/functions/hiera_include.rb</span>
 </dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -96,11 +96,10 @@ class.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div>
   <h2>Constant Summary</h2>
-  
 
 
 
@@ -108,225 +107,226 @@ class.</p>
 
 
 
-  
+
+
     <h2>
       Class Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#arity-class_method" title="arity (class method)">+ (Integer) <strong>arity</strong>(name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Return the number of arguments a function expects.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#autoloader-class_method" title="autoloader (class method)">+ (Object) <strong>autoloader</strong> </a>
-    
 
-    
+      <a href="#autoloader-class_method" title="autoloader (class method)">+ (Object) <strong>autoloader</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Accessor for singleton autoloader.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#environment_module-class_method" title="environment_module (class method)">+ (Object) <strong>environment_module</strong>(env = nil) </a>
-    
 
-    
+      <a href="#environment_module-class_method" title="environment_module (class method)">+ (Object) <strong>environment_module</strong>(env = nil) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Get the module that functions are mixed into corresponding to an
 environment.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#function-class_method" title="function (class method)">+ (Symbol, false) <strong>function</strong>(name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Determine if a function is defined.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#newfunction-class_method" title="newfunction (class method)">+ (Hash) <strong>newfunction</strong>(name, options = {}, &amp;block) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Create a new Puppet DSL function.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#reset-class_method" title="reset (class method)">+ (Object) <strong>reset</strong> </a>
-    
 
-    
+      <a href="#reset-class_method" title="reset (class method)">+ (Object) <strong>reset</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Reset the list of loaded functions.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#rvalue%3F-class_method" title="rvalue? (class method)">+ (Boolean) <strong>rvalue?</strong>(name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Determine whether a given function returns a value.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
 
 
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
   <h3 class="inherited">Methods included from <span class='object_link'>Util</span></h3>
   <p class="inherited"><span class='object_link'><a href="../Util.html#exit_on_fail-class_method" title="Puppet::Util.exit_on_fail (method)">exit_on_fail</a></span>, <span class='object_link'><a href="../Util.html#exit_on_fail-instance_method" title="Puppet::Util#exit_on_fail (method)">exit_on_fail</a></span>, <span class='object_link'><a href="../Util.html#which-class_method" title="Puppet::Util.which (method)">which</a></span>, <span class='object_link'><a href="../Util.html#which-instance_method" title="Puppet::Util#which (method)">which</a></span></p>
 
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="arity-class_method">
-  
-    + (<tt>Integer</tt>) <strong>arity</strong>(name) 
-  
 
-  
+    + (<tt>Integer</tt>) <strong>arity</strong>(name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Return the number of arguments a function expects.</p>
@@ -337,41 +337,41 @@ environment.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Symbol</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the function</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Integer</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The arity of the function. See <span class='object_link'><a href="#newfunction-class_method" title="Puppet::Parser::Functions.newfunction (method)">newfunction</a></span> for
 the meaning of negative values.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -397,16 +397,16 @@ the meaning of negative values.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="autoloader-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>autoloader</strong> &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -419,7 +419,7 @@ the meaning of negative values.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -446,16 +446,16 @@ the meaning of negative values.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="environment_module-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>environment_module</strong>(env = nil) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -469,7 +469,7 @@ environment</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -502,16 +502,16 @@ environment</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="function-class_method">
-  
-    + (<tt><span class='object_link'>Symbol</span></tt>, <tt>false</tt>) <strong>function</strong>(name) 
-  
 
-  
+    + (<tt><span class='object_link'>Symbol</span></tt>, <tt>false</tt>) <strong>function</strong>(name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Determine if a function is defined</p>
@@ -522,41 +522,41 @@ environment</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Symbol</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the function</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Symbol</span></tt>, <tt>false</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The name of the function if it&#8217;s defined,
 otherwise false.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -608,16 +608,16 @@ otherwise false.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="newfunction-class_method">
-  
-    + (<tt><span class='object_link'>Hash</span></tt>) <strong>newfunction</strong>(name, options = {}, &amp;block) 
-  
 
-  
+    + (<tt><span class='object_link'>Hash</span></tt>) <strong>newfunction</strong>(name, options = {}, &amp;block)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Create a new Puppet DSL function.</p>
@@ -638,14 +638,14 @@ Functions</a></p>
   </div>
 </div>
 <div class="tags">
-  
+
   <div class="examples">
     <p class="tag_title">Examples:</p>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>Define a new Puppet DSL Function</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='rshft op'>&gt;&gt;</span> <span class='rubyid_Puppet constant id'>Puppet</span><span class='colon2 op'>::</span><span class='rubyid_Parser constant id'>Parser</span><span class='colon2 op'>::</span><span class='rubyid_Functions constant id'>Functions</span><span class='dot token'>.</span><span class='rubyid_newfunction identifier id'>newfunction</span><span class='lparen token'>(</span><span class='symbol val'>:double</span><span class='comma token'>,</span> <span class='symbol val'>:arity</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>1</span><span class='comma token'>,</span>
      <span class='symbol val'>:doc</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;Doubles an object, typically a number or string.&quot;</span><span class='comma token'>,</span>
      <span class='symbol val'>:type</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='symbol val'>:rvalue</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='rubyid_i identifier id'>i</span><span class='bitor op'>|</span> <span class='rubyid_i identifier id'>i</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='mult op'>*</span><span class='integer val'>2</span> <span class='rbrace token'>}</span>
@@ -653,11 +653,11 @@ Functions</a></p>
     <span class='symbol val'>:name=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;function_double&quot;</span><span class='comma token'>,</span>
     <span class='symbol val'>:doc=</span><span class='gt op'>&gt;</span><span class='string val'>&quot;Doubles an object, typically a number or string.&quot;</span><span class='rbrace token'>}</span>
 </code></pre>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>Invoke the double function from irb as is done in RSpec examples:</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='rshft op'>&gt;&gt;</span> <span class='rubyid_scope identifier id'>scope</span> <span class='assign token'>=</span> <span class='rubyid_Puppet constant id'>Puppet</span><span class='colon2 op'>::</span><span class='rubyid_Parser constant id'>Parser</span><span class='colon2 op'>::</span><span class='rubyid_Scope constant id'>Scope</span><span class='dot token'>.</span><span class='rubyid_new_for_test_harness identifier id'>new_for_test_harness</span><span class='lparen token'>(</span><span class='string val'>'example'</span><span class='rparen token'>)</span>
 <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='rubyid_Scope constant id'>Scope</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
 <span class='rshft op'>&gt;&gt;</span> <span class='rubyid_scope identifier id'>scope</span><span class='dot token'>.</span><span class='rubyid_function_double identifier id'>function_double</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
@@ -671,37 +671,37 @@ Functions</a></p>
 <span class='rshft op'>&gt;&gt;</span> <span class='rubyid_scope identifier id'>scope</span><span class='dot token'>.</span><span class='rubyid_function_double identifier id'>function_double</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='string val'>&quot;hello&quot;</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
 <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;hellohello&quot;</span>
 </code></pre>
-    
+
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Symbol</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the name of the function represented as a ruby Symbol.
 The <span class='object_link'><a href="#newfunction-class_method" title="Puppet::Parser::Functions.newfunction (method)">newfunction</a></span> method will define a Ruby method based on this name on
 the parser scope instance.</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>block</span>
-      
-      
+
+
         <span class='type'>(<tt>Proc</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the block provided to the <span class='object_link'><a href="#newfunction-class_method" title="Puppet::Parser::Functions.newfunction (method)">newfunction</a></span> method will be
 executed when the Puppet DSL function is evaluated during catalog
@@ -709,79 +709,79 @@ compilation.  The arguments to the function will be passed as an array to
 the first argument of the block.  The return value of the block will be
 the return value of the Puppet DSL function for <code>:rvalue</code> functions.</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>options</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span></tt>)</span>
-      
-      
+
+
         <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
+
+
         &mdash;
         <div class='inline'><p>a customizable set of options</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
-  
-    
-    
-    
-    
+
+
+
+
+
     <p class="tag_title">Options Hash (<tt>options</tt>):</p>
     <ul class="option">
-      
+
         <li>
           <span class="name">:type</span>
           <span class="type">(<tt>:rvalue</tt>, <tt>:statement</tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>:statement</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>the type of function.
 Either <code>:rvalue</code> for functions that return a value, or <code>:statement</code> for
 functions that do not return a value.</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:doc</span>
           <span class="type">(<tt><span class='object_link'>String</span></tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>''</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>the documentation for the function.
 This string will be extracted by documentation generation tools.</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:arity</span>
           <span class="type">(<tt>Integer</tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>-1</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>the
 <a href="http://en.wikipedia.org/wiki/Arity">arity</a> of the function.  When
 specified as a positive integer the function is expected to receive
@@ -793,30 +793,30 @@ minimum 3 arguments.  A function with the default arity of <code>-1</code> accep
 zero or more arguments.  A function with an arity of 2 must be provided
 with exactly two arguments, no more and no less.  Added in Puppet 3.1.0.</p>
 </div>
-          
+
         </li>
-      
+
     </ul>
-  
-    
-    
+
+
+
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>describing the function.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -912,16 +912,16 @@ with exactly two arguments, no more and no less.  Added in Puppet 3.1.0.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="reset-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>reset</strong> &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -934,7 +934,7 @@ with exactly two arguments, no more and no less.  Added in Puppet 3.1.0.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -973,16 +973,16 @@ with exactly two arguments, no more and no less.  Added in Puppet 3.1.0.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="rvalue?-class_method">
-  
-    + (<tt>Boolean</tt>) <strong>rvalue?</strong>(name) 
-  
 
-  
+    + (<tt>Boolean</tt>) <strong>rvalue?</strong>(name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Determine whether a given function returns a value.</p>
@@ -993,36 +993,36 @@ with exactly two arguments, no more and no less.  Added in Puppet 3.1.0.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Symbol</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the function</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1048,7 +1048,7 @@ with exactly two arguments, no more and no less.  Added in Puppet 3.1.0.</p>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

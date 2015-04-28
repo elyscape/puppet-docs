@@ -36,7 +36,7 @@ The baseline compliance plugin requires Puppet Dashboard 1.2 (or a pre-release t
 Puppet Dashboard and the baseline compliance plugin require the following system packages:
 
 * ruby
-* ruby(abi) 
+* ruby(abi)
 * rubygems
 * rubygem(rake)
 * make
@@ -45,7 +45,7 @@ Puppet Dashboard and the baseline compliance plugin require the following system
 Additionally, the following packages from the [EPEL](http://fedoraproject.org/wiki/EPEL) repository are required:
 
 * ruby-mysql
-* puppet 
+* puppet
 
 Additionally, you'll need to install the following library using Ruby's `gem` package command:
 

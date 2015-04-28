@@ -69,7 +69,7 @@ For more information, see:
 
 ### Puppet Server
 
-Puppet Server compiles configurations for any number of Puppet agents, using Puppet code and various other data sources. It provides the same services as the classic Puppet master application and is meant to replace an Apache/Passenger Puppet master stack. 
+Puppet Server compiles configurations for any number of Puppet agents, using Puppet code and various other data sources. It provides the same services as the classic Puppet master application and is meant to replace an Apache/Passenger Puppet master stack.
 
 Puppet Server has its own subcommand, `puppetserver`, which isn't prefaced by the usual `puppet` subcommand.
 

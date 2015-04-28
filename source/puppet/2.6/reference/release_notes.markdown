@@ -13,16 +13,16 @@ Puppet 2.6.18 is a **security release** addressing several vulnerabilities disco
 All users of Puppet 2.6.17 and earlier who cannot upgrade to the current version of Puppet, 3.1.1, are strongly encouraged to upgrade
 to 2.6.18.
 
-### 2.6.18 Downloads 
+### 2.6.18 Downloads
 
 * Source: <https://downloads.puppetlabs.com/puppet/puppet-2.6.18.tar.gz>
 * RPMs: <https://yum.puppetlabs.com/el> or `/fedora`
 * Debs: <https://apt.puppetlabs.com>
 
-See the Verifying Puppet Download section at:  
+See the Verifying Puppet Download section at:
 <http://puppetlabs.com/misc/download-options>
 
-Please report feedback via the Puppet Labs JIRA site, using an affected puppet version of 2.6.18:  
+Please report feedback via the Puppet Labs JIRA site, using an affected puppet version of 2.6.18:
 <https://tickets.puppetlabs.com/browse/PUP>
 
 ### 2.6.18 Changelog
@@ -173,7 +173,7 @@ This is a **security** release in the 2.6.x branch.
 
 http://puppetlabs.com/security/cve/cve-2012-1053/
 
-(\#12457, \#12458, \#12459) 
+(\#12457, \#12458, \#12459)
 A bug in Puppet gives unexpected and improper group privileges to execs and types/providers.
 When executing commands as a different user, Puppet leaves the forked
 process with Puppet’s own group permissions. Specifically:

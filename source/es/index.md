@@ -19,7 +19,7 @@ Puppet maneja tus servidores: Describes la configuración en un lenguaje declara
 
 [Mira el índice de la documentación Puppet aquí](http://docs.puppetlabs.com/puppet/), o ve directamente a una de las páginas más populares:
 
-+ [La serie de aprendizaje de Puppet](http://docs.puppetlabs.com/es/learning/introduction.html) es un tutorial guiado para usuarios nuevos, el cual incluye una VM gratuita para hacer ejercicios y experimentar, y puedas ir desde  *“¿Qué es esto?”* a un *“¡Puedo hacerlo!”* en sólo un par de horas. 
++ [La serie de aprendizaje de Puppet](http://docs.puppetlabs.com/es/learning/introduction.html) es un tutorial guiado para usuarios nuevos, el cual incluye una VM gratuita para hacer ejercicios y experimentar, y puedas ir desde  *“¿Qué es esto?”* a un *“¡Puedo hacerlo!”* en sólo un par de horas.
 + [La guía de instalación](http://docs.puppetlabs.com/guides/installation.html) te ayudará a instalar y configurar la versión actual de Puppet Open Source.
 + [El manual de referencia para Puppet 3.7](http://docs.puppetlabs.com/puppet/3.7/reference/)
 + [El manual de referencia para Puppet 3.6](http://docs.puppetlabs.com/puppet/3.6/reference/), [Puppet 3.5](http://docs.puppetlabs.com/puppet/3.5/reference/), [Puppet 3.0-3.4](http://docs.puppetlabs.com/puppet/3/reference/) y [Puppet 2.7](http://docs.puppetlabs.com/puppet/2.7/reference/).
@@ -29,7 +29,7 @@ Puppet maneja tus servidores: Describes la configuración en un lenguaje declara
 ##Puppet Enterprise
 Puppet Enterprise es Puppet y más; incluye soporte profesional, un stack de Puppet listo para producción, una consola web para analizar reportes y controlar tu infraestructura, poderosas features de orquestación, y herramientas para provisionar en la nube.
 
-Casi toda la documentación de Puppet también se aplica para Puppet Enterprise. Para más detalles sobre otras características de PE y su entorno de ejecución ligeramente distinto, mira a [la *Guía para el usuario* actual de PE](http://docs.puppetlabs.com/pe/latest/), o ve directamente a: 
+Casi toda la documentación de Puppet también se aplica para Puppet Enterprise. Para más detalles sobre otras características de PE y su entorno de ejecución ligeramente distinto, mira a [la *Guía para el usuario* actual de PE](http://docs.puppetlabs.com/pe/latest/), o ve directamente a:
 
 + [Requerimientos del sistema](http://docs.puppetlabs.com/pe/latest/install_system_requirements.html)
 + [Instrucciones para la instalación](http://docs.puppetlabs.com/pe/latest/install_basic.html) o [Instrucciones de actualización](http://docs.puppetlabs.com/pe/latest/install_upgrading.html)
@@ -49,7 +49,7 @@ MCollective es un poderoso framework de orquestación. Puedes ejecutar acciones 
 Nota: MCollective está incluído en PE, y nuevos plugins para los agentes aparecerán en el control de gestiones de la consola.
 
 ##Puppet Dashboard
-Puppet Dashboard es una consola web de código abierto para Puppet, la cual puede analizar reportes, chequear datos de inventario y clasificar nodos. 
+Puppet Dashboard es una consola web de código abierto para Puppet, la cual puede analizar reportes, chequear datos de inventario y clasificar nodos.
 [Mira el manual 1.2 de Dashboard](http://docs.puppetlabs.com/dashboard/manual/1.2/), o ve directo a:
 
 + [Instrucciones de instalación](http://docs.puppetlabs.com/dashboard/manual/1.2/bootstrapping.html)

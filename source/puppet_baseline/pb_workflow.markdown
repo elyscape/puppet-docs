@@ -6,11 +6,11 @@ title: "Baseline Plugin: Intro/Workflow"
 Puppet Dashboard Baseline Compliance Workflow
 ====
 
-<span style="font-size: 2em; font-weight: bold; color: red; background-color: #ff9;">This documentation does not refer to a released product.</span> 
+<span style="font-size: 2em; font-weight: bold; color: red; background-color: #ff9;">This documentation does not refer to a released product.</span>
 
 <span style="background-color: #ff9;">For documentation of the compliance features released in Puppet Enterprise 1.2, please see [the Puppet Enterprise manual](/pe/).</span>
 
-This chapter describes the baseline plugin's expected workflow and explains some key terms and concepts. 
+This chapter describes the baseline plugin's expected workflow and explains some key terms and concepts.
 
 #### Navigation
 
@@ -19,7 +19,7 @@ This chapter describes the baseline plugin's expected workflow and explains some
 * [Interface](./pb_interface.html)
 * [Internals](./pb_internals.html)
 
-* * * 
+* * *
 
 The Compliance Workflow Cycle
 ----
@@ -39,13 +39,13 @@ Concepts
 
 When using this workflow, Puppet audits the state of resources, rather than enforcing a desired state; it does not make changes to any audited resources. Instead, changes are to be made manually and reviewed for approval after the fact.
 
-After reviewing changes in the Dashboard interface, any approved changes will be considered the baseline state in future reports. Rejected changes will continue to be reported as non-baseline states until they are reverted manually on the affected machines. 
+After reviewing changes in the Dashboard interface, any approved changes will be considered the baseline state in future reports. Rejected changes will continue to be reported as non-baseline states until they are reverted manually on the affected machines.
 
 ### Resources and Attributes
 
-Any native Puppet resource type can be used in the baseline compliance workflow. As with similar compliance products, you can audit the content and metadata of files, but you can also audit user accounts, services, cron jobs, and anything for which a custom native type can be written. 
+Any native Puppet resource type can be used in the baseline compliance workflow. As with similar compliance products, you can audit the content and metadata of files, but you can also audit user accounts, services, cron jobs, and anything for which a custom native type can be written.
 
-Resources are audited by attribute --- you can choose one or more attributes you wish to audit, or audit all attributes of that resource. 
+Resources are audited by attribute --- you can choose one or more attributes you wish to audit, or audit all attributes of that resource.
 
 ### Manifests
 
@@ -59,15 +59,15 @@ Each node being audited for compliance will routinely report the states of its a
 
 Conceptually, a _baseline_ is a blessed inspect report for a single node: it lists the approved states for every audited resource on that node. Each node is associated with one and only one baseline, and nodes cannot share baselines. However, nodes with similar baselines can be grouped for convenience.
 
-Baselines are maintained by the baseline compliance plugin. They change over time as administrators approve changes to audited resources. 
+Baselines are maintained by the baseline compliance plugin. They change over time as administrators approve changes to audited resources.
 
 ### Groups
 
-Although nodes cannot share baselines, nodes in a Dashboard group can have similar changes approved or rejected en masse. 
+Although nodes cannot share baselines, nodes in a Dashboard group can have similar changes approved or rejected en masse.
 
-The groups used by the baseline plugin are the same groups Dashboard uses for classifying nodes. 
+The groups used by the baseline plugin are the same groups Dashboard uses for classifying nodes.
 
-* * * 
+* * *
 
 #### Navigation
 

@@ -9,7 +9,7 @@ Using Multiple Puppet Masters With Open Source Puppet
 
 To scale beyond a certain size, or for geographic distribution or disaster recovery, a deployment may warrant having more than one Puppet master. This document outlines options for open source Puppet deployments with multiple masters.
 
-> Note: This document is specific to open source Puppet, versions 2.7 through 3.2. If you're using Puppet Enterprise 3.7 or later, please use the [split installation guide][pe_split], then add [new Puppet masters][pe_add_master] or [additional ActiveMQ resources][pe_add_amq] to your deployment as needed. 
+> Note: This document is specific to open source Puppet, versions 2.7 through 3.2. If you're using Puppet Enterprise 3.7 or later, please use the [split installation guide][pe_split], then add [new Puppet masters][pe_add_master] or [additional ActiveMQ resources][pe_add_amq] to your deployment as needed.
 
 [pe_split]: /pe/latest/install_pe_split.html
 [pe_add_master]: /pe/latest/install_multimaster.html

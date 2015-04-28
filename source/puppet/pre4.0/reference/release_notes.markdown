@@ -10,7 +10,7 @@ These are the release notes for Puppet 4.0, released April 15 2015. There's a lo
 
 #### All-in-One Packaging
 
-The first thing you'll notice is that the packaging has changed pretty dramatically. Puppet had gotten complicated enough, and the systems it runs on diverse enough, that it became really difficult to provide the proverbial "one-click install" through our Linux-distribution style packaging. For Puppet 4, we've gone to an All-In-One package (which we refer to as "AIO", like a bad hand in Words With Friends), which includes Puppet 4, both Facter 2.4 and CFacter 0.4, the latest Hiera and Mcollective, as well Ruby 2.1.5, OpenSSL 1.0.0q, and our gem dependencies. The package installs into its own area in `/opt/puppetlabs` and is named `puppet-agent` so it will not auto-upgrade existing systems with the `puppet` package installed (it will, however, _replace_ them if you opt-in to the upgrade). 
+The first thing you'll notice is that the packaging has changed pretty dramatically. Puppet had gotten complicated enough, and the systems it runs on diverse enough, that it became really difficult to provide the proverbial "one-click install" through our Linux-distribution style packaging. For Puppet 4, we've gone to an All-In-One package (which we refer to as "AIO", like a bad hand in Words With Friends), which includes Puppet 4, both Facter 2.4 and CFacter 0.4, the latest Hiera and Mcollective, as well Ruby 2.1.5, OpenSSL 1.0.0q, and our gem dependencies. The package installs into its own area in `/opt/puppetlabs` and is named `puppet-agent` so it will not auto-upgrade existing systems with the `puppet` package installed (it will, however, _replace_ them if you opt-in to the upgrade).
 
 * [PUP-4003: Puppet 4.0.0 should update to MCO 2.8.0 and Hiera 2.0.0](https://tickets.puppetlabs.com/browse/PUP-4003)
 * [PUP-3848: Puppet 4.0.0 should update Ruby to 2.1.5 and Facter to 2.4.0](https://tickets.puppetlabs.com/browse/PUP-3848)
@@ -74,7 +74,7 @@ There's [extensive documentation on the changes](XXX_link_to_doc.html) in the fu
 
 ### BREAK: Directory Environments Replace Config File Environments
 
-Starting with Puppet 3.6, Directory Environments started taking over from Dynamic Environments as Puppet's mechanism for serving different versions of modules and code. In Puppet 4, they're the default and other environment support is gone. Read more about directory environments in the [environments section of the docs](XXX_link_to_environments.html). 
+Starting with Puppet 3.6, Directory Environments started taking over from Dynamic Environments as Puppet's mechanism for serving different versions of modules and code. In Puppet 4, they're the default and other environment support is gone. Read more about directory environments in the [environments section of the docs](XXX_link_to_environments.html).
 
 * [PUP-3268: Remove non-directory environment support](https://tickets.puppetlabs.com/browse/PUP-3268)
 * [PUP-3567: Remove current_environment check in Puppet::Indirector::Request#environment=](https://tickets.puppetlabs.com/browse/PUP-3567)
@@ -85,7 +85,7 @@ Starting with Puppet 3.6, Directory Environments started taking over from Dynami
 
 ### BREAK: Removed Puppet Kick, ActiveRecord, and Inventory Service
 
-There's been a lot of accumulated technical debt in Puppet's code base: old features which were deprecated but never removed, half-implemented experiments, and interested things that turned out to be really bad ideas. Almost 60,000 lines of code have been removed from the repository, comprising things like the pre-PuppetDB stored configs, `puppet kick`, and an unsupported CouchDB facts terminus. 
+There's been a lot of accumulated technical debt in Puppet's code base: old features which were deprecated but never removed, half-implemented experiments, and interested things that turned out to be really bad ideas. Almost 60,000 lines of code have been removed from the repository, comprising things like the pre-PuppetDB stored configs, `puppet kick`, and an unsupported CouchDB facts terminus.
 
 * [PUP-862: Remove deprecated items for the Puppet 4 release](https://tickets.puppetlabs.com/browse/PUP-862) the epic for a bunch of the above.
 * [PUP-2560: Remove inventory service on the master](https://tickets.puppetlabs.com/browse/PUP-2560)
@@ -309,7 +309,7 @@ Module authors who use the `prefetch` method in custom providers may want to be 
 
 ### Resource Type and Provider Improvements
 
-The biggest change in this category is [PUP-1073](https://tickets.puppetlabs.com/browse/PUP-1073), which implements a long-standing feature request. The Type docs have the details, but now you can, for example, have the same package name like "mysql" managed by two separate resources, one for the gem version and one for the RPM version. 
+The biggest change in this category is [PUP-1073](https://tickets.puppetlabs.com/browse/PUP-1073), which implements a long-standing feature request. The Type docs have the details, but now you can, for example, have the same package name like "mysql" managed by two separate resources, one for the gem version and one for the RPM version.
 
 * The [`yumrepo` type][type_yumrepo] now includes `assumeyes`, `deltarpm_percentage`, and `deltarpm_metadata_percentage` attributes. [PUP-3024: yumrepo: add setting deltarpm_percentage](https://tickets.puppetlabs.com/browse/PUP-3024), [PUP-2923: Add assumeyes attribute to yumrepo](https://tickets.puppetlabs.com/browse/PUP-2923)
 * [PUP-1413: Support touch command for augeas type](https://tickets.puppetlabs.com/browse/PUP-1413)
@@ -368,9 +368,9 @@ Thanks to Jasper Lievisse Adriaanse and Zach Leslie for these changes to help Pu
 
 #### On Windows
 
-On Windows, `group` resources now respect the `auth_membership` attribute, which lets you control whether `members` is the complete list of members or a minimum list of members. (Previously, Puppet ignored this attribute on Windows.) Note that the default value of this attribute has also changed; see the breaking changes section on resource types. 
+On Windows, `group` resources now respect the `auth_membership` attribute, which lets you control whether `members` is the complete list of members or a minimum list of members. (Previously, Puppet ignored this attribute on Windows.) Note that the default value of this attribute has also changed; see the breaking changes section on resource types.
 
-Weekly `scheduled_task` resources would attempt to set the trigger on every run, due to part of the trigger being compared to the wrong thing. This is fixed. 
+Weekly `scheduled_task` resources would attempt to set the trigger on every run, due to part of the trigger being compared to the wrong thing. This is fixed.
 
 * [PUP-2628: Ability to add a member to a group, instead of specifying the complete list](https://tickets.puppetlabs.com/browse/PUP-2628)
 * [PUP-3429: Weekly tasks always notify 'trigger changed'](https://tickets.puppetlabs.com/browse/PUP-3429)

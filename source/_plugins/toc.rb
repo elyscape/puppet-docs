@@ -50,7 +50,7 @@ module TocFilter
         }
       )
       hdepth = hlevel # Set the current depth.
-    } 
+    }
     print_toc_sublist(toc)
   end
   def print_toc_sublist(ary)
@@ -62,7 +62,7 @@ module TocFilter
       sublist_string << print_toc_sublist(header['sublist'])
       sublist_string << "</li>\n"
     }
-    
+
     sublist_string << "</ol>"
     sublist_string
   end

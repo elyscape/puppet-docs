@@ -10,7 +10,7 @@ canonical: "/puppet/latest/reference/experiments_cfacter.html"
 
 > **Warning:** This document describes an **experimental feature,** which is not officially supported. [See here for more information about experimental features in Puppet](./experiments_overview.html), especially if you are using Puppet Enterprise. Acceptance testing for Native Facter has been minimal, and we do not recommend using it in a production environment.
 
-Native Facter is a rewrite of Facter in C++. Native Facter does the same job that Facter does, but with better performance. 
+Native Facter is a rewrite of Facter in C++. Native Facter does the same job that Facter does, but with better performance.
 
 Requirements
 -----

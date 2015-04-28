@@ -20,7 +20,7 @@ Esto es el método de búsqueda por defecto de Hiera.
 
 Una **búsqueda de merge de arrays**  ensambla un valor de **todos** los niveles de coincidencia de la jerarquía.  Recupera **todos** los valores (string o array) para una clave determinada, luego los aplana en un array de valores únicos. Si la búsqueda prioritaria puede ser pensada como un patrón “por defecto con overrides”, la búsqueda de merge de arrays puede ser pensada como “por defecto con adiciones”.
 
-Por ejemplo, una jerarquía determinada de: 
+Por ejemplo, una jerarquía determinada de:
 
 	- web01.example.com
 	- common
@@ -29,7 +29,7 @@ Por ejemplo, una jerarquía determinada de:
 
 	# web01.example.com.yaml
 	mykey: one
-	
+
 	# common.yaml
 	mykey:
 		-	 two
@@ -82,7 +82,7 @@ Limitaciones:
 + Debes instalar el gem de Ruby **deep_merge** para que funcionen los merge en profundidad. Si esta opción no está disponible, Hiera recurrirá al comportamiento por defecto del merge nativo.
 + Esta configuración es global, no para cada búsqueda.
 
-#### Comportamientos del merge 
+#### Comportamientos del merge
 
 Hay tres comportamientos disponibles para el merge.
 
@@ -105,7 +105,7 @@ En un merge de hash **deep**, Hiera se comporta como lo descrito arriba, excepto
 Un caso típico de uso de hashes en Hiera es la construcción de una estructura de datos que se le pasa a la función **create_resources**. Este ejemplo implementa las siguientes reglas de negocio que dicen:
 
 1. El usuario ‘jen’ está definido sólo en el servidor ‘deglitch’
-2. El usuario ‘bob’ está definido en todos lados, pero tiene un *uid* diferente en ‘deglitch’ respecto de lo que recibe en otros servidores. 
+2. El usuario ‘bob’ está definido en todos lados, pero tiene un *uid* diferente en ‘deglitch’ respecto de lo que recibe en otros servidores.
 3. El usuario ‘ash’ está definido en todos lados con un ‘uid’ y un ‘shell’ consistentes.
 
 En hiera.yaml, enviamos una jerarquía de dos niveles:

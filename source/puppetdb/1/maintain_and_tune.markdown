@@ -38,13 +38,13 @@ E.g.: `http://puppetdb.example.com:8080/dashboard/index.html?height=240&pollingI
 
 ## Deactivate Decommissioned Nodes
 
-When you remove a node from your Puppet deployment, it should be marked as **deactivated** in PuppetDB. This will ensure that any resources exported by that node will stop appearing in the catalogs served to the remaining agent nodes. 
+When you remove a node from your Puppet deployment, it should be marked as **deactivated** in PuppetDB. This will ensure that any resources exported by that node will stop appearing in the catalogs served to the remaining agent nodes.
 
 * PuppetDB can automatically deactivate nodes that haven't checked in recently. To enable this, set the [`node-ttl-days` setting][ttl].
 * If you prefer to manually deactivate nodes, use the following command on your puppet master:
 
         $ sudo puppet node deactivate <node> [<node> ...]
-* Any deactivated node will be reactivated if PuppetDB receives new catalogs or facts for it. 
+* Any deactivated node will be reactivated if PuppetDB receives new catalogs or facts for it.
 
 Although deactivated nodes will be excluded from storeconfigs queries, their data is still preserved.
 
@@ -54,13 +54,13 @@ Although deactivated nodes will be excluded from storeconfigs queries, their dat
 
 PuppetDB's log file lives at `/var/log/pe-puppetdb/pe-puppetdb.log` (for PE users) or `/var/log/puppetdb/puppetdb.log` (for open source users). Check the log when you need to confirm that PuppetDB is working correctly or to troubleshoot visible malfunctions. If you have changed the logging settings, examine the [log4j.properties file][log4j] to find the log.
 
-The PuppetDB packages install a logrotate job in `/etc/logrotate.d/puppetdb`, which will keep the log from becoming too large. 
+The PuppetDB packages install a logrotate job in `/etc/logrotate.d/puppetdb`, which will keep the log from becoming too large.
 
 ## Tune the Max Heap Size
 
 Although we provide [rule-of-thumb memory recommendations][memrec], PuppetDB's RAM usage depends on several factors, so memory needs will vary depending on the number of nodes, frequency of Puppet runs, and amount of managed resources. 1000 nodes that check in once a day will require much less memory than if they check in every 30 minutes.
 
-So the best way to manage PuppetDB's max heap size is to estimate a ballpark figure, then [monitor the performance dashboard][dashboard] and [increase the heap size][configure_heap] if the "JVM Heap" metric keeps approaching the maximum. You may need to revisit your memory needs whenever your site grows substantially. 
+So the best way to manage PuppetDB's max heap size is to estimate a ballpark figure, then [monitor the performance dashboard][dashboard] and [increase the heap size][configure_heap] if the "JVM Heap" metric keeps approaching the maximum. You may need to revisit your memory needs whenever your site grows substantially.
 
 The good news is that memory starvation is actually not very destructive. It will cause `OutOfMemoryError` exceptions to appear in [the log](#view-the-log), but you can restart PuppetDB with a [larger memory allocation][configure_heap] and it'll pick up where it left off --- any requests successfully queued up in PuppetDB *will* get processed.
 

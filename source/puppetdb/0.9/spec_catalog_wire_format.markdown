@@ -137,7 +137,7 @@ This mirrors Puppet's `->` construct in terms of defining the source and the tar
                     ...}
     }
 
-All keys for `resource` are required. 
+All keys for `resource` are required.
 
 The `"aliases"` list must include all aliases
 for a resource beyond the title itself. This includes names in explicit `"alias"` parameters, or implied namevars of the type
@@ -145,7 +145,7 @@ itself.
 
 ## Differences from Current Wire Format
 
-1. The format is fully documented here. 
+1. The format is fully documented here.
 
 2.  Information that previously had to be deduced by the puppetmaster is now
 codified inside of the wire format. All possible aliases for a

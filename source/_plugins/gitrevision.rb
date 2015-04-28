@@ -11,13 +11,13 @@ class Gitrevision < Liquid::Tag
     super
     @treeish = treeish == '' ? 'HEAD' : treeish
   end
-  
+
   def render(context)
     Dir.chdir(context.registers[:site].source) do
       %x(git rev-parse #{@treeish}).strip
     end
   end
-  
+
 end
 
 Liquid::Template.register_tag('gitrevision', Gitrevision)

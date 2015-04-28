@@ -164,7 +164,7 @@ The keys allowed in this object are:
 
 #### `schema-violation`
 
-If any of the required keys are missing or the values of any of the defined keys do not match the required type, the server will return a 400 Bad Request response with the following keys: 
+If any of the required keys are missing or the values of any of the defined keys do not match the required type, the server will return a 400 Bad Request response with the following keys:
 
 * `kind`: "schema-violation"
 * `details`: an object that contains three keys:
@@ -175,9 +175,9 @@ If any of the required keys are missing or the values of any of the defined keys
 
 #### `malformed-request`
 
-If the request's body could not be parsed as JSON, the server will return a 400 Bad Request response with the following keys: 
+If the request's body could not be parsed as JSON, the server will return a 400 Bad Request response with the following keys:
 
-* `kind`: "malformed-request" 
+* `kind`: "malformed-request"
 * `details`: an object that contains two keys:
 
   * `body`: holds the request body that was received

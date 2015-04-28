@@ -16,7 +16,7 @@ Welcome to the writing modules section of the Quick Start Guide series. This doc
 
 ## Getting Started
 
-In the [Apache installation QSG](./quick_start_module_install_nix.html), you installed the latest version of the puppetlabs-apache module. However for the exercises in this guide, you'll need a specific version of the module---version 1.2.0. 
+In the [Apache installation QSG](./quick_start_module_install_nix.html), you installed the latest version of the puppetlabs-apache module. However for the exercises in this guide, you'll need a specific version of the module---version 1.2.0.
 
 To install this version, first remove the previous version of the Apache module if you have it installed. Navigate to `/etc/puppetlabs/puppet/environments/production/modules` and run `puppet module uninstall puppetlabs-apache`.
 

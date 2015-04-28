@@ -15,21 +15,21 @@ Here are some common problems that can cause an install to go awry.
 Users upgrading from PE 3.2.0 to a later version of 3.x (including 3.2.3) will see errors when attempting to download agent packages for platforms other than the master. After adding `pe_repo` classes to the master for desired agent packages, errors will be seen on the subsequent puppet run as PE attempts to access the requisite packages. The issue is caused by an incorrectly set parameter of the `pe_repo` class. It can be fixed as follows:
 
 1. In the console, navigate to the node page for each master node where you wish to add agent packages.
-2. On the master's node page, click __Edit__ and then, for the `pe_repo` parameter, click __Edit parameters__    
+2. On the master's node page, click __Edit__ and then, for the `pe_repo` parameter, click __Edit parameters__
 3. Next to the `base_path` parameter, click __Reset value__
 4. Save the parameter change and update the node.
 
-Once this has been done, you should now be able to add new agent platforms without issue. 
+Once this has been done, you should now be able to add new agent platforms without issue.
 
-### A Note about Changes to `puppet.conf` that Can Cause Issues During Upgrades 
+### A Note about Changes to `puppet.conf` that Can Cause Issues During Upgrades
 
-If you manage `puppet.conf` with Puppet or a third-party tool like Git or r10k, you may encounter errors after upgrading based on the following changes. Please assess these changes before upgrading.  
+If you manage `puppet.conf` with Puppet or a third-party tool like Git or r10k, you may encounter errors after upgrading based on the following changes. Please assess these changes before upgrading.
 
 * **`node_terminus` Changes**
 
-   In PE versions earlier than 3.2, node classification was configured with `node_terminus=exec`, located in `/etc/puppetlabs/puppet/puppet.conf`. This caused the puppet master to execute a custom shell script (`/etc/puppetlabs/puppet-dashboard/external_node`) which ran a curl command to retrieve data from the console. 
+   In PE versions earlier than 3.2, node classification was configured with `node_terminus=exec`, located in `/etc/puppetlabs/puppet/puppet.conf`. This caused the puppet master to execute a custom shell script (`/etc/puppetlabs/puppet-dashboard/external_node`) which ran a curl command to retrieve data from the console.
 
-   PE 3.2 changes node classification in `puppet.conf`; the new configuration is `node_terminus=console`. The `external_node` script is no longer available; thus, `node_terminus=exec` no longer works. 
+   PE 3.2 changes node classification in `puppet.conf`; the new configuration is `node_terminus=console`. The `external_node` script is no longer available; thus, `node_terminus=exec` no longer works.
 
    With this change, we have improved security, as the puppet master can now verify the console. The console certificate name is `pe-internal-dashboard`. The puppet master now finds the console by reading the contents of /`etc/puppetlabs/puppet/console.conf`, which provides the following:
 
@@ -38,9 +38,9 @@ If you manage `puppet.conf` with Puppet or a third-party tool like Git or r10k, 
       port=<console port>
       certificate_name=pe-internal-dashboard
 
-   This file tells the puppet master where to locate the console and what name it should expect the console to have. If you want to change the location of the console, you can edit `console.conf`, but **DO NOT** change the `certificate_name` setting. 
+   This file tells the puppet master where to locate the console and what name it should expect the console to have. If you want to change the location of the console, you can edit `console.conf`, but **DO NOT** change the `certificate_name` setting.
 
-   The rules for certificate-based authorization to the console are found in `/etc/puppetlabs/console-auth/certificate_authorization.yml` on the console node. By default, this file allows the puppet master read-write access to the console (based on it's certificate name) to request node data and submit report data. 
+   The rules for certificate-based authorization to the console are found in `/etc/puppetlabs/console-auth/certificate_authorization.yml` on the console node. By default, this file allows the puppet master read-write access to the console (based on it's certificate name) to request node data and submit report data.
 
 * **Reports Changes**
 
@@ -50,7 +50,7 @@ If you manage `puppet.conf` with Puppet or a third-party tool like Git or r10k, 
 
 When installing agents on a platform that is different from the puppet master platform, the agent install script attempts to connect to the internet to download the appropriate agent tarball after you classify the puppet master, as described in [Installing Agents Using PE Package Management](#installing-agents-using-pe-package-management).
 
-If your PE infrastructure does not have access to the outside internet, you will not be able to fully use the agent installation instructions.  Instead, you will need to [download](http://puppetlabs.com/misc/pe-files/agent-downloads) the appropriate agent tarball in advance and use the option below that corresponds to your deployment needs. 
+If your PE infrastructure does not have access to the outside internet, you will not be able to fully use the agent installation instructions.  Instead, you will need to [download](http://puppetlabs.com/misc/pe-files/agent-downloads) the appropriate agent tarball in advance and use the option below that corresponds to your deployment needs.
 
 * **Option 1**
 
@@ -96,7 +96,7 @@ Next, run the uninstaller script. [See the uninstallation instructions in this g
 After you have run the uninstaller, you can safely run the installer again.
 
 ###  Problems with PE when upgrading your OS
- 
+
 Upgrading your OS while PE is installed can cause problems with PE. To perform an OS upgrade, you'll need to uninstall PE, perform the OS upgrade, and then reinstall PE as follows:
 
 1. [Back up](/pe/latest/install_upgrading.html#before-upgrading-back-up-your-databases-and-other-pe-files) your databases and other PE files.
@@ -110,6 +110,6 @@ Upgrading your OS while PE is installed can cause problems with PE. To perform a
 5. Restore your backup.
 
 
-* * * 
+* * *
 
 - [Next: Troubleshooting Connections & Communications ](./trouble_comms.html)

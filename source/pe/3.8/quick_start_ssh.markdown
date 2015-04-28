@@ -83,10 +83,10 @@ In this procedure, you’ll create a simple group called, __ssh_example__, which
 4. Select the __ssh_example__ group, and click the __Rules__ tab.
 5. In the **Fact** field, enter "name" (without the quotes).
 6. From the **Operator** drop-down list, select **matches regex**.
-7. In the **Value** field, enter ".x" (without the quotes). 
+7. In the **Value** field, enter ".x" (without the quotes).
 8. Click **Add rule**.
 
-   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **NTP** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.) 
+   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **NTP** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.)
 
 ## Use the PE Console to Add Classes from the SSH Module
 
@@ -129,7 +129,7 @@ After you apply the `ssh` class and run Puppet, the public key for each agent no
    This will configure the nodes using the newly-assigned classes. Wait one or two minutes.
 
    **Important**: You need to run Puppet a second time due to the round-robin nature of the key sharing. In other words, the first server that ran on the first Puppet run was only able to share its key, but it was not also able to retrieve the keys from the other agents. It will collect the other keys on the second Puppet run.
-   
+
 ## Use the Puppet Enterprise Console Event Inspector to View Changes Made by the `ssh` Class
 
 
@@ -157,10 +157,10 @@ In the upper right corner of the detail pane is a link to a run report which con
 
 For more information about using the PE console event inspector, check out the [event inspector docs](./console_event_inspector).
 
- 
+
 ## Use the PE Console to Edit Root Login Parameters of the `ssh` Class
 
-With Puppet Enterprise you can edit or add class parameters directly in the PE console without needing to edit the module code directly. 
+With Puppet Enterprise you can edit or add class parameters directly in the PE console without needing to edit the module code directly.
 
 With Puppet Enterprise you can edit or add class parameters directly in the PE console without needing to edit the module code directly.
 

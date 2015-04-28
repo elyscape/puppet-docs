@@ -7,7 +7,7 @@ canonical: "/puppetdb/latest/index.html"
 [configure_heap]: ./configure.html#configuring-the-java-heap-size
 [tuning]: ./maintain_and_tune.html#monitor-the-performance-console
 
-Once installed and configured, PuppetDB will be a critical component of your Puppet deployment, and agent nodes will be unable to request catalogs if it becomes unavailable. In general, it should be run on a robust and reliable server, like any critical service. 
+Once installed and configured, PuppetDB will be a critical component of your Puppet deployment, and agent nodes will be unable to request catalogs if it becomes unavailable. In general, it should be run on a robust and reliable server, like any critical service.
 
 
 Basic Requirements
@@ -36,7 +36,7 @@ To take advantage of this, you should install PuppetDB on a server running one o
 Puppet Requirements
 -----
 
-Any puppet master you wish to connect to PuppetDB must be running **Puppet version 2.7.12** or higher. You will also need to install extra components on your puppet master(s) before they can speak to PuppetDB. 
+Any puppet master you wish to connect to PuppetDB must be running **Puppet version 2.7.12** or higher. You will also need to install extra components on your puppet master(s) before they can speak to PuppetDB.
 
 After installing PuppetDB, [see here to configure a puppet master to use it.](./connect_puppet.html)
 

@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Class: Puppet::Bindings
-  
+
     &mdash; Documentation by YARD 0.8.7.6
-  
+
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../Puppet.html" title="Puppet (module)">Puppet</a></span></span>
-     &raquo; 
+     &raquo;
     <span class="title">Bindings</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,42 +64,42 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Class: Puppet::Bindings
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
+
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
       <span class="inheritName"><span class='object_link'>Object</span></span>
-      
+
         <ul class="fullTree">
           <li><span class='object_link'>Object</span></li>
-          
+
             <li class="next">Puppet::Bindings</li>
-          
+
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
-      
+
       </dd>
-    
-  
-  
-    
+
+
+
+
       <dt class="r2">Extended by:</dt>
       <dd class="r2">Enumerable</dd>
-      
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/puppet/bindings.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -124,22 +124,22 @@ For all details see <span class='object_link'><a href="Pops/Binder/BindingsFacto
   </div>
 </div>
 <div class="tags">
-  
+
   <div class="examples">
     <p class="tag_title">Examples:</p>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>MyModule's lib/bindings/mymodule/default.rb</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='const'>Puppet</span><span class='op'>::</span><span class='const'>Bindings</span><span class='period'>.</span><span class='id identifier rubyid_newbindings'>newbindings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mymodule::default</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_bind'>bind</span><span class='period'>.</span><span class='id identifier rubyid_integer'>integer</span><span class='period'>.</span><span class='id identifier rubyid_named'>named</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>meaning of life</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span><span class='lparen'>(</span><span class='int'>42</span><span class='rparen'>)</span>
 <span class='kw'>end</span></code></pre>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>Using blocks</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='const'>Puppet</span><span class='op'>::</span><span class='const'>Bindings</span><span class='period'>.</span><span class='id identifier rubyid_newbindings'>newbindings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mymodule::default</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_bind'>bind</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_integer'>integer</span>
@@ -147,40 +147,39 @@ For all details see <span class='object_link'><a href="Pops/Binder/BindingsFacto
     <span class='id identifier rubyid_to'>to</span> <span class='int'>42</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></code></pre>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>MyModule's lib/bindings/mymodule/default.rb with scope</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='const'>Puppet</span><span class='op'>::</span><span class='const'>Bindings</span><span class='period'>.</span><span class='id identifier rubyid_newbindings'>newbindings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mymodule::default</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_scope'>scope</span><span class='op'>|</span>
   <span class='id identifier rubyid_bind'>bind</span><span class='period'>.</span><span class='id identifier rubyid_integer'>integer</span><span class='period'>.</span><span class='id identifier rubyid_named'>named</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>meaning of life</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_scope'>scope</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>::fqdn</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'> also think it is 42</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></code></pre>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>binding a puppet expression</p>
 </div></p>
-      
+
       <pre class="example code"><code>Puppet::Bindings.newbindings(&#39;mymodule::default&#39;) do |scope|
   bind.integer.named(&#39;meaning of life&#39;).to(puppet_string(&quot;${::fqdn} also think it is 42&quot;)
 end</code></pre>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>defining method to be used while creating bindings</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='const'>Puppet</span><span class='op'>::</span><span class='const'>Bindings</span><span class='period'>.</span><span class='id identifier rubyid_newbindings'>newbindings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mymodule::default</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='kw'>def</span> <span class='id identifier rubyid_square'>square</span><span class='lparen'>(</span><span class='id identifier rubyid_x'>x</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_x'>x</span> <span class='op'>*</span> <span class='id identifier rubyid_x'>x</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_bind'>bind</span><span class='period'>.</span><span class='id identifier rubyid_integer'>integer</span><span class='period'>.</span><span class='id identifier rubyid_named'>named</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>meaning of life squared</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span><span class='lparen'>(</span><span class='id identifier rubyid_square'>square</span><span class='lparen'>(</span><span class='int'>42</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></code></pre>
-    
+
   </div>
 
 
 </div>
   <h2>Constant Summary</h2>
-  
 
 
 
@@ -188,83 +187,84 @@ end</code></pre>
 
 
 
-  
+
+
     <h2>
       Class Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#get-class_method" title="get (class method)">+ (Proc, Puppet::Pops::Binder::Bindings::NamedBindings) <strong>get</strong>(name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns the named bindings with the given name, or nil if no such bindings have been registered.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#register-class_method" title="register (class method)">+ (Object) <strong>register</strong>(named_bindings) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Registers a named_binding under its name.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
 
 
-  
+
+
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="get-class_method">
-  
-    + (<tt>Proc</tt>, <tt><span class='object_link'><a href="Pops/Binder/Bindings/NamedBindings.html" title="Puppet::Pops::Binder::Bindings::NamedBindings (class)">Puppet::Pops::Binder::Bindings::NamedBindings</a></span></tt>) <strong>get</strong>(name) 
-  
 
-  
+    + (<tt>Proc</tt>, <tt><span class='object_link'><a href="Pops/Binder/Bindings/NamedBindings.html" title="Puppet::Pops::Binder::Bindings::NamedBindings (class)">Puppet::Pops::Binder::Bindings::NamedBindings</a></span></tt>) <strong>get</strong>(name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the named bindings with the given name, or nil if no such bindings have been registered.</p>
@@ -275,40 +275,40 @@ end</code></pre>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The fully qualified name of a binding to get</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Proc</tt>, <tt><span class='object_link'><a href="Pops/Binder/Bindings/NamedBindings.html" title="Puppet::Pops::Binder::Bindings::NamedBindings (class)">Puppet::Pops::Binder::Bindings::NamedBindings</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a Proc producing named bindings, or a named bindings directly</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -333,16 +333,16 @@ end</code></pre>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="register-class_method">
-  
-    + (<tt><span class='object_link'>Object</span></tt>) <strong>register</strong>(named_bindings) 
-  
 
-  
+    + (<tt><span class='object_link'>Object</span></tt>) <strong>register</strong>(named_bindings)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Registers a named_binding under its name</p>
@@ -353,22 +353,22 @@ end</code></pre>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>named_bindings</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Pops/Binder/Bindings/NamedBindings.html" title="Puppet::Pops::Binder::Bindings::NamedBindings (class)">Puppet::Pops::Binder::Bindings::NamedBindings</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The named bindings to register.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 
@@ -394,7 +394,7 @@ end</code></pre>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

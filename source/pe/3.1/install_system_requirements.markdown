@@ -10,7 +10,7 @@ Before installing Puppet Enterprise:
 * Ensure that your nodes are running a supported operating system.
 * Ensure that your puppet master and console servers are sufficiently powerful.
 * Ensure that your network, firewalls, and name resolution are configured correctly and all target servers are communicating.
-* Plan to install the puppet master server before the console server, and the console server before any agent nodes. If you are separating roles, install them in this order:  
+* Plan to install the puppet master server before the console server, and the console server before any agent nodes. If you are separating roles, install them in this order:
     1. Puppet Master
     2. Database Support/PuppetDB
     3. Console
@@ -71,7 +71,7 @@ Browser
 
  The following browsers are supported for use with the console:
 
-* Chrome: Current version 
+* Chrome: Current version
 * Firefox: Current version
 * Internet Explorer: 9 or higher
 * Safari: 5.1 and higher

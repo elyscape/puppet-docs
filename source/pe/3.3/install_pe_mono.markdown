@@ -5,7 +5,7 @@ subtitle: "Installing Puppet Enterprise: Monolithic"
 canonical: "/pe/latest/install_pe_mono.html"
 ---
 
-The following instructions are for installing a monolithic installation of PE. When you perform a monolithic installation of PE, the master, console, and PuppetDB components are all installed on the same machine. This type of installation is recommended for deployments up to 500 nodes. 
+The following instructions are for installing a monolithic installation of PE. When you perform a monolithic installation of PE, the master, console, and PuppetDB components are all installed on the same machine. This type of installation is recommended for deployments up to 500 nodes.
 
 See the [installation overview](./install_basic.html#downloading-puppet-enterprise) for instructions on downloading Puppet Enterprise.
 
@@ -16,13 +16,13 @@ See the [installation overview](./install_basic.html#downloading-puppet-enterpri
 >
 >- Make sure that DNS is properly configured on the machines you're installing PE on. All nodes must **know their own hostnames.** This can be done by properly configuring reverse DNS on your local DNS server, or by setting the hostname explicitly. Setting the hostname usually involves the `hostname` command and one or more configuration files, while the exact method varies by platform. In addition, all nodes must be able to **reach each other by name.** This can be done with a local DNS server, or by editing the `/etc/hosts` file on each node to point to the proper IP addresses.
 >
->- You can run the installer from a machine that is part of your PE deployment or from a machine that is outside your deployment. If you want to run the installer from a machine that is part of your deployment, we recommend you run it from the same node assigned the console component (in a split install). 
+>- You can run the installer from a machine that is part of your PE deployment or from a machine that is outside your deployment. If you want to run the installer from a machine that is part of your deployment, we recommend you run it from the same node assigned the console component (in a split install).
 >
 >- The machine you run the installer from must have the same OS/architecture as your PE deployment.
-> 
+>
 >- Please ensure that port 3000 is reachable on the machine you're running the installer from, as the web-based installer uses this port. You can close this port when the installation is complete. If you cannot connect directly to port 3000, we suggest [port forwarding (or "tunneling" to) the installer via SSH](#port-forwarding-to-the-installer).
 >
->- The web-based installer does not support sudo configurations with `Defaults targetpw` or `Defaults rootpw`. Make sure your `/etc/sudoers` file does not contain, or else comment out, those lines. 
+>- The web-based installer does not support sudo configurations with `Defaults targetpw` or `Defaults rootpw`. Make sure your `/etc/sudoers` file does not contain, or else comment out, those lines.
 >
 >- **For Debian Users**: If you gave the root account a password during the installation of Debian, sudo may not have been installed. In this case, you will need to either install PE as root, or install sudo on any node(s) on which you want to install PE.
 >
@@ -32,11 +32,11 @@ See the [installation overview](./install_basic.html#downloading-puppet-enterpri
 >
 >If you have a properly configured SSH agent with agent forwarding enabled, you don't need to perform any additional SSH configurations. Your SSH agent will be used by the installer.
 >
->If you have any kind of authentication security system in place (e.g., two factor authentication or RSA key prompting) you will need to temporarily disable that system when installing with the web-based installer. 
-> 
+>If you have any kind of authentication security system in place (e.g., two factor authentication or RSA key prompting) you will need to temporarily disable that system when installing with the web-based installer.
+>
 >If you're using SSH keys to authenticate across the nodes of your PE installation, the public key for the user account performing the installation must be included in the `authorized_keys` file for that user account on each node that you're installing a PE component on, including the machine from which you're running the installer. This applies to root or non-root users.
 >
->The web-based installer will prompt for the user account name, the SSH private key location, and the SSH passphrase for each node on which you're installing a PE component. 
+>The web-based installer will prompt for the user account name, the SSH private key location, and the SSH passphrase for each node on which you're installing a PE component.
 >
 >Please review the following authentication options:
 >
@@ -65,12 +65,12 @@ See the [installation overview](./install_basic.html#downloading-puppet-enterpri
 
 >**Warning**: Leave your terminal connection open until the installation is complete; otherwise, the installation will fail.
 
-### Monolithic Installation: Part 2 
+### Monolithic Installation: Part 2
 
 1. When prompted, accept the security request in your browser.
 
-   The web-based installation uses a default SSL certificate; you’ll have to add a security exception in order to access the web-based installer. This is safe to do. 
-   
+   The web-based installation uses a default SSL certificate; you’ll have to add a security exception in order to access the web-based installer. This is safe to do.
+
    You'll be taken to the installer start page.
 
 2. On the start page, click **Let's get started**.
@@ -78,43 +78,43 @@ See the [installation overview](./install_basic.html#downloading-puppet-enterpri
 4. Provide the following information about the puppet master server:
 
    a. **Puppet master FQDN**: provide the fully qualified domain name of the server you're installing PE on. It will be the name of the puppet master certificate. This FQDN must be resolvable from the machine on which you're running the installer.
-   
+
    b. **DNS aliases**: provide a comma-separated list of static, valid DNS names (default is "puppet"), so agents can trust the master if they contact it. You should make sure that this static list contains the DNS name or alias you’ll be configuring your agents to contact.
-   
+
    c. **SSH username**: provide the username to use when connecting to the puppet master. This field defaults to `root`.
-   
-   d. **SSH password**: (optional) provide the sudo password for the SSH username provided. 
-   
+
+   d. **SSH password**: (optional) provide the sudo password for the SSH username provided.
+
    e. **SSH key file path**: (optional) provide the absolute path to the SSH key on the machine you are performing the installation from.
-   
+
    f. **SSH key passphrase**: (optional) provide if your SSH key is protected with a passphrase.
-   
+
 5. Provide the following information about database support (PuppetDB, the console, and the console_auth databases):
-   
+
    a. **Install PostgreSQL for me**: (default) PE will install a PostgreSQL instance for the databases. This will use PE-generated default names and usernames for the databases. The passwords can be retrieved from `/etc/puppetlabs/installer/database_info.install` when the installation is complete.
-   
+
    b. **Use an Existing PostgreSQL instance**: if you already have a PostgreSQL instance you'd like to use, you'll need to provide the following information:
-   
+
    - the PostgreSQL server DNS name
-   
+
    - the port number used by the PostgreSQL server (default is 5432)
-   
+
    - the PuppetDB database username (default is "pe-puppetdb")
-   
+
    - the PuppetDB database password
-   
+
    - the console database name (default is "pe-console")
-   
+
    - the console database user name (default is "pe-console")
-   
+
    - the console database password
-   
+
    - the console authentication database name (default is "console_auth")
-   
+
    - the console authentication database user name (default is "console\_auth")
-   
+
    - the console authentication database password
-   
+
    >**Note**: You will also need to make sure the databases and users you've entered actually exist. The SQL commands you need will resemble the following:
    >
    >     CREATE TABLESPACE "pe-console" LOCATION '/opt/puppet/var/lib/pgsql/9.2/console';
@@ -127,25 +127,25 @@ See the [installation overview](./install_basic.html#downloading-puppet-enterpri
    >     CREATE DATABASE "pe-puppetdb" OWNER "pe-puppetdb" TABLESPACE "pe-puppetdb" ENCODING 'utf8' LC_CTYPE 'en_US.utf8' LC_COLLATE 'en_US.utf8' template template0;
    >
    > Consult the [PostgreSQL documentation](http://www.postgresql.org/docs/) for more info.
-   
+
 6. Provide the following information about the PE console administrator user:
-   
+
    a. **Console superuser email address**: provide the address you'll use to log in to the console as the administrator.
 
    b. **Console superuser password**: create a password for the console login; the password must be at least eight characters.
 
-7. Provide the following information about the PE console mail server: 
+7. Provide the following information about the PE console mail server:
 
-   - **SMTP hostname**: the console requires access to an SMTP server in order to email account information to users. If necessary, this can be changed after installation. 
+   - **SMTP hostname**: the console requires access to an SMTP server in order to email account information to users. If necessary, this can be changed after installation.
 
    To add more information about the SMTP host, select **Advanced SMTP options**. Here you can configure advanced SMTP options for setting the port, username, password, and whether or not to use TLS.
 
 8. Click **Submit**.
 
-9. On the confirm plan page, review the information you provided, and, if it looks correct, click **Continue**. 
+9. On the confirm plan page, review the information you provided, and, if it looks correct, click **Continue**.
 
    If you need to make any changes, click **Go Back** and make whatever changes are required.
-   
+
 10. On the validation page, the installer will verify various configuration elements (e.g., if SSH credentials are correct, if there is enough disk space, and if the OS is the same for the various components). If there aren't any outstanding issues, click **Deploy now**.
 
 At this point, PE will begin installing your deployment, and you can monitor the installation as it runs by toggling **Log View** and **Summary View** (top-right corner of page). If you notice any errors during the installation, check `/var/log/pe-installer/installer.log` on the machine from which you are running the installer.
@@ -163,7 +163,7 @@ Finally, click **Start using Puppet Enterprise** to [log into the console](./con
 >From a Linux machine:
 >
 >1. On the machine from which you're running the installer, run `ssh -L 3000:localhost:3000 jumphost.exmple.tld`
->2. Run the installer script as indicated in the instructions below. 
+>2. Run the installer script as indicated in the instructions below.
 >3. When prompted to enter the installer URL, instead navigate to `https://localhost:3000`.
 >
 >From a Windows machine:
@@ -171,11 +171,11 @@ Finally, click **Start using Puppet Enterprise** to [log into the console](./con
 >1. Open PuTTY, and select **Sessions**.
 >2. In the **Host Name** field, enter the FQDN of the host you want to run the installer from.
 >3. Select **Tunnels**.
->4. In the **Source Port** field, enter `3000`. 
+>4. In the **Source Port** field, enter `3000`.
 >5. In the **Destination** field, enter `localhost:3000`.
->6. Select **Local**. 
+>6. Select **Local**.
 >7. Click **Add**.
->8. Click **Open**. 
+>8. Click **Open**.
 >
 >When the installer asks you to launch the browser, use `https://localhost:3000`, and continue following the installation instructions.
 

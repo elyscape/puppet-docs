@@ -33,12 +33,12 @@ Puppet Labs supports the following browsers for use with the console:
 - Safari 4 and higher
 - Internet Explorer 9 and higher
 
-Although we plan to fully support Internet Explorer 8 in the near future, it currently stalls indefinitely when trying to load the console's live management page. Other browsers may or may not work, and have not been intensively tested with the console. 
+Although we plan to fully support Internet Explorer 8 in the near future, it currently stalls indefinitely when trying to load the console's live management page. Other browsers may or may not work, and have not been intensively tested with the console.
 
 Reaching the Console
 -----
 
-The console will be served as a website over SSL, on whichever port you chose when installing the console role. 
+The console will be served as a website over SSL, on whichever port you chose when installing the console role.
 
 Let's say your console server is `console.domain.com`. If you chose to use the default port of 443, you can omit the port from the URL and would reach the console by navigating to:
 
@@ -53,9 +53,9 @@ Note the **`https`** protocol handler --- you cannot reach the console over plai
 Accepting the Console's Certificate
 -----
 
-The console uses an SSL certificate created by your own local Puppet certificate authority. Since this authority is specific to your site, web browsers won't know it or trust it, and you'll have to add a security exception in order to access the console. 
+The console uses an SSL certificate created by your own local Puppet certificate authority. Since this authority is specific to your site, web browsers won't know it or trust it, and you'll have to add a security exception in order to access the console.
 
-**This is safe to do.** Your web browser will warn you that the console's identity hasn't been verified by one of the external authorities it knows of, but that doesn't mean it's untrustworthy: since you or another administrator at your site is in full control of which certificates the Puppet certificate authority signs, the authority verifying the site is _you._ 
+**This is safe to do.** Your web browser will warn you that the console's identity hasn't been verified by one of the external authorities it knows of, but that doesn't mean it's untrustworthy: since you or another administrator at your site is in full control of which certificates the Puppet certificate authority signs, the authority verifying the site is _you._
 
 ### Accepting the Certificate in Google Chrome or Chromium
 
@@ -77,13 +77,13 @@ Step 2:
 
 ### Accepting the Certificate in Apple Safari
 
-Click the "Continue" button on the warning dialog. 
+Click the "Continue" button on the warning dialog.
 
 ![Screenshot: Safari's untrusted cert dialog, with the continue button highlighted][cert_safari]
 
 ### Accepting the Certificate in Microsoft Internet Explorer
 
-Click the "Continue to this website (not recommended)" link on the warning page. 
+Click the "Continue to this website (not recommended)" link on the warning page.
 
 ![Screenshot: IE's untrusted cert page, with the continue link highlighted][cert_ie]
 
@@ -103,7 +103,7 @@ For security, the console requires a user name and password for access. Use the 
 
 ![Screenshot: a login dialog asking for credentials][login]
 
-Since the console is the main point of control for your infrastructure, you will probably want to decline your browser's offer to remember its password. 
+Since the console is the main point of control for your infrastructure, you will probably want to decline your browser's offer to remember its password.
 
 * * *
 

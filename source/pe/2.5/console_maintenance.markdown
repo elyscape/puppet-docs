@@ -5,7 +5,7 @@ subtitle: "Console Maintenance"
 canonical: "/pe/latest/maintain_console-db.html"
 ---
 
-If PE's console becomes sluggish or begins taking up too much space on disk, there are several maintenance tasks that can improve its performance. 
+If PE's console becomes sluggish or begins taking up too much space on disk, there are several maintenance tasks that can improve its performance.
 
 Restarting the Background Tasks
 -----
@@ -20,7 +20,7 @@ If the number of pending tasks appears to be growing linearly, the background ta
 
     $ sudo /etc/init.d/pe-puppet-dashboard-workers restart
 
-The number of pending tasks shown in the console should start decreasing rapidly after restarting the workers. 
+The number of pending tasks shown in the console should start decreasing rapidly after restarting the workers.
 
 
 Optimizing the Database
@@ -55,7 +55,7 @@ If you run the `reports:prune` task without any arguments, it will display furth
 Database backups
 ----------------
 
-Although you can back up and restore the console's database with any standard MySQL tools, the `db:raw:dump` and `db:raw:restore` rake tasks can simplify the process. 
+Although you can back up and restore the console's database with any standard MySQL tools, the `db:raw:dump` and `db:raw:restore` rake tasks can simplify the process.
 
 ### Dumping the Database
 
@@ -83,6 +83,6 @@ To restore the console's database from a file called `production.sql` to your `p
     FILE=production.sql db:raw:restore
 
 
-* * * 
+* * *
 
-- [Next: Puppet Overview](./puppet_overview.html) 
+- [Next: Puppet Overview](./puppet_overview.html)

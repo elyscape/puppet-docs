@@ -10,6 +10,6 @@ Section Title
 
 
 
-* * * 
+* * *
 
 - [Next: ](./foo.html)

@@ -9,7 +9,7 @@ canonical: "/pe/latest/accounts_user_type.html"
 The `accounts::user` Type
 =====
 
-This defined type manages a single user account. Many of its parameters echo those of the standard [`user` type](/references/2.6.9/type.html#user). Unlike the `user` type, it will also create and manage the user's home directory, create and manage a primary group with the same name as the user, manage a set of SSH public keys for the user, and optionally lock the user's account. 
+This defined type manages a single user account. Many of its parameters echo those of the standard [`user` type](/references/2.6.9/type.html#user). Unlike the `user` type, it will also create and manage the user's home directory, create and manage a primary group with the same name as the user, manage a set of SSH public keys for the user, and optionally lock the user's account.
 
 The `accounts::user` type can be used on all of the platforms supported by Puppet Enterprise.
 
@@ -20,12 +20,12 @@ The `accounts::user` type can be used on all of the platforms supported by Puppe
     class site::users {
       # Declaring a dependency: we require several shared groups from the site::groups class (see below).
       Class[site::groups] -> Class[site::users]
-      
-      # Setting resource defaults for user accounts: 
+
+      # Setting resource defaults for user accounts:
       Accounts::User {
         shell => '/bin/zsh',
       }
-      
+
       # Declaring our accounts::user resources:
       accounts::user {'puppet':
         locked  => true,
@@ -75,7 +75,7 @@ The `accounts::user` type can be used on all of the platforms supported by Puppe
         sshkeys => ['ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAwLBhQefRiXHSbVNZYKu2o8VWJjZJ/B4LqICXuxhiiNSCmL8j+5zE/VLPIMeDqNQt8LjKJVOQGZtNutW4OhsLKxdgjzlYnfTsQHp8+JMAOFE3BD1spVnGdmJ33JdMsQ/fjrVMacaHyHK0jW4pHDeUU3kRgaGHtX4TnC0A175BNTH9yJliDvddRzdKR4WtokNzqJU3VPtHaGmJfXEYSfun/wFfc46+hP6u0WcSS7jZ2WElBZ7gNO4u2Z+eJjFWS9rjQ/gNE8HHlvmN0IUuvdpKdBlJjzSiKZR+r/Bo9ujQmGY4cmvlvgmcdajM/X1TqP6p3OuouAk5QSPUlDRV91oEHw== nigel+moduledevkey@puppetlabs.com'],
       }
     }
-    
+
     # /etc/puppetlabs/puppet/modules/site/manifests/groups.pp
     class site::groups {
       Group { ensure => present, }
@@ -123,7 +123,7 @@ The user's uid number.  Must be specified numerically; defaults to being automat
 
 ### `gid`
 
-The gid of the primary group with the same name as the user; the `accounts::user` type will create and manage this group. Must be specified numerically; defaults to being automatically determined (`undef`). 
+The gid of the primary group with the same name as the user; the `accounts::user` type will create and manage this group. Must be specified numerically; defaults to being automatically determined (`undef`).
 
 ### `groups`
 
@@ -139,7 +139,7 @@ The user's password, in whatever encrypted format the local machine requires. Be
 
 ### `locked`
 
-Whether the user should be prevented from logging in; set this to `true` for system users and users whose login privileges have been revoked. Valid values are `true` and `false`; defaults to false. 
+Whether the user should be prevented from logging in; set this to `true` for system users and users whose login privileges have been revoked. Valid values are `true` and `false`; defaults to false.
 
 ### `sshkeys`
 

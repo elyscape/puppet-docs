@@ -49,7 +49,7 @@ title: Type Reference
   Resource types define features they can use, and providers can be tested to see
   which features they provide.
 
-    
+
 
 ----------------
 
@@ -267,7 +267,7 @@ provider
       domain, not in remote directories.
 
       If you wish to manage /etc/hosts on Mac OS X, then simply use the host
-      type as per other platforms.    Default for `operatingsystem` == `darwin`.  
+      type as per other platforms.    Default for `operatingsystem` == `darwin`.
 
 realname
 : The 'long' name of the computer record.
@@ -382,7 +382,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **crontab**:   Required binaries: `crontab`.    
+    * **crontab**:   Required binaries: `crontab`.
 
 special
 : A special value such as 'reboot' or 'annually'.
@@ -522,7 +522,7 @@ provider
         performing any interpolation. This is a safer and more predictable way
         to execute most commands, but prevents the use of globbing and shell
         built-ins (including control logic like "for" and "if" statements).
-        Default for `feature` == `posix`.  
+        Default for `feature` == `posix`.
     * **shell**:     Passes the provided command through `/bin/sh`; only available on
         POSIX systems. This allows the use of shell globbing and built-ins, and
         does not require that the path to a command be fully-qualified. Although
@@ -532,10 +532,10 @@ provider
 
         This provider closely resembles the behavior of the `exec` type
         in Puppet 0.25.x.
-    
+
     * **windows**: Execute external binaries directly, on Windows systems.
     This does not pass through a shell, or perform any interpolation, but
-    only directly calls the command with the arguments given.    Default for `operatingsystem` == `windows`.  
+    only directly calls the command with the arguments given.    Default for `operatingsystem` == `windows`.
 
 refresh
 : How to refresh this command.  By default, the exec is just
@@ -796,8 +796,8 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **posix**: Uses POSIX functionality to manage file's users and rights.    
-    * **windows**: Uses Microsoft Windows functionality to manage file's users and rights.    
+    * **posix**: Uses POSIX functionality to manage file's users and rights.
+    * **windows**: Uses Microsoft Windows functionality to manage file's users and rights.
 
 purge
 : Whether unmanaged files should be purged.  If you have a filebucket
@@ -1103,12 +1103,12 @@ provider
 
         Note that this provider will automatically generate a GID for you if you do
         not specify one, but it is a potentially expensive operation, as it
-        iterates across all existing groups to pick the appropriate next one.    
+        iterates across all existing groups to pick the appropriate next one.
     * **pw**: Group management via `pw`.
 
       Only works on FreeBSD.
 
-        Required binaries: `/usr/sbin/pw`.    Default for `operatingsystem` == `freebsd`.  
+        Required binaries: `/usr/sbin/pw`.    Default for `operatingsystem` == `freebsd`.
     * **windows_adsi**: Group management for Windows    Default for `operatingsystem` == `windows`.    Supported features: `manages_members`.
 
 system
@@ -1150,7 +1150,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **parsed**:     
+    * **parsed**:
 
 target
 : The file in which to store service information.  Only used by
@@ -1219,7 +1219,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **cisco**: Cisco switch/router provider for interface.    
+    * **cisco**: Cisco switch/router provider for interface.
 
 speed
 : Interface speed.  Valid values are `auto`.  Values can match `/^\d+/`.
@@ -1259,7 +1259,7 @@ provider
       Available providers are:
 
     * **k5login**: The k5login provider is the only provider for the k5login
-          type.    
+          type.
 
 
 
@@ -1335,7 +1335,7 @@ provider
 
     * **macauthorization**: Manage Mac OS X authorization database rules and rights.
 
-        Required binaries: `/usr/bin/security`, `/usr/bin/sw_vers`.    Default for `operatingsystem` == `darwin`.  
+        Required binaries: `/usr/bin/security`, `/usr/bin/sw_vers`.    Default for `operatingsystem` == `darwin`.
 
 rule
 : The rule(s) that this right refers to.
@@ -1384,7 +1384,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **aliases**:     
+    * **aliases**:
 
 recipient
 : Where email should be sent.  Multiple values
@@ -1431,7 +1431,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **mailman**:   Required binaries: `/var/lib/mailman/mail/mailman`, `list_lists`, `rmlist`, `newlist`.    
+    * **mailman**:   Required binaries: `/var/lib/mailman/mail/mailman`, `list_lists`, `rmlist`, `newlist`.
 
 webserver
 : The name of the host providing web archives and the administrative interface.
@@ -1628,7 +1628,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1650,7 +1650,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 target
 : The target.
@@ -1676,7 +1676,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1740,7 +1740,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -1787,7 +1787,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1815,7 +1815,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -1844,7 +1844,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1968,7 +1968,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2015,7 +2015,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2058,7 +2058,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2087,7 +2087,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2133,7 +2133,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2162,7 +2162,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2193,7 +2193,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2228,7 +2228,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2265,7 +2265,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2294,7 +2294,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2421,7 +2421,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2471,7 +2471,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2517,7 +2517,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2549,7 +2549,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2595,7 +2595,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2630,7 +2630,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2667,7 +2667,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2699,7 +2699,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2728,7 +2728,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2765,7 +2765,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2791,7 +2791,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -3389,7 +3389,7 @@ provider
       Available providers are:
 
     * **win32_taskscheduler**: This uses the win32-taskscheduler gem to provide support for
-        managing scheduled tasks on Windows.    Default for `operatingsystem` == `windows`.  
+        managing scheduled tasks on Windows.    Default for `operatingsystem` == `windows`.
 
 trigger
 : This is a hash defining the properties of the trigger used
@@ -3470,7 +3470,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **getsetsebool**: Manage SELinux booleans using the getsebool and setsebool binaries.  Required binaries: `/usr/sbin/setsebool`, `/usr/sbin/getsebool`.    
+    * **getsetsebool**: Manage SELinux booleans using the getsebool and setsebool binaries.  Required binaries: `/usr/sbin/setsebool`, `/usr/sbin/getsebool`.
 
 value
 : Whether the the SELinux boolean should be enabled or disabled.  Valid values are `on`, `off`.
@@ -3507,7 +3507,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **semodule**: Manage SELinux policy modules using the semodule binary.  Required binaries: `/usr/sbin/semodule`.    
+    * **semodule**: Manage SELinux policy modules using the semodule binary.  Required binaries: `/usr/sbin/semodule`.
 
 selmoduledir
 : The directory to look for the compiled pp module file in.
@@ -3869,7 +3869,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **parsed**: Parse and generate authorized_keys files for SSH.    
+    * **parsed**: Parse and generate authorized_keys files for SSH.
 
 target
 : The absolute filename in which to store the SSH key. This
@@ -3917,7 +3917,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **parsed**: Parse and generate host-wide known hosts files for SSH.    
+    * **parsed**: Parse and generate host-wide known hosts files for SSH.
 
 target
 : The file in which to store the ssh key.  Only used by
@@ -4269,7 +4269,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **cisco**: Cisco switch/router provider for vlans.    
+    * **cisco**: Cisco switch/router provider for vlans.
 
 
 
@@ -4450,7 +4450,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **solaris**: Provider for Solaris zfs.  Required binaries: `/usr/sbin/zfs`.    Default for `operatingsystem` == `solaris`.  
+    * **solaris**: Provider for Solaris zfs.  Required binaries: `/usr/sbin/zfs`.    Default for `operatingsystem` == `solaris`.
 
 quota
 : The quota property. Valid values are `<size>`, `none`.
@@ -4580,7 +4580,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **solaris**: Provider for Solaris Zones.  Required binaries: `/usr/sbin/zonecfg`, `/usr/sbin/zoneadm`.    Default for `operatingsystem` == `solaris`.  
+    * **solaris**: Provider for Solaris Zones.  Required binaries: `/usr/sbin/zonecfg`, `/usr/sbin/zoneadm`.    Default for `operatingsystem` == `solaris`.
 
 realhostname
 : The actual hostname of the zone.
@@ -4659,7 +4659,7 @@ provider
     discover the appropriate provider for your platform.
       Available providers are:
 
-    * **solaris**: Provider for Solaris zpool.  Required binaries: `/usr/sbin/zpool`.    Default for `operatingsystem` == `solaris`.  
+    * **solaris**: Provider for Solaris zpool.  Required binaries: `/usr/sbin/zpool`.    Default for `operatingsystem` == `solaris`.
 
 raid_parity
 : Determines parity when using the `raidz` parameter.

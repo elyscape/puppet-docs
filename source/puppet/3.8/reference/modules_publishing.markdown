@@ -179,7 +179,7 @@ The version requirement in a dependency isn't limited to a single version; you c
 
 #####DEPRECATED
 
-* `versionRequirement`--- Another way of specifying `version_requirement`, `versionRequirement` was never officially supported and is slated for removal in Puppet 4. Please use `version_requirement` as noted above instead. 
+* `versionRequirement`--- Another way of specifying `version_requirement`, `versionRequirement` was never officially supported and is slated for removal in Puppet 4. Please use `version_requirement` as noted above instead.
 
 ###Operating system compatibility in metadata.json
 

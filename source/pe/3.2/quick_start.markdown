@@ -23,7 +23,7 @@ In this first part, follow along to learn how to:
 
 ####  Quick Start Part Two: Developing Modules
 
-For part two, you'll build on your knowledge of PE and  learn about module development . You can choose from either [the Linux track](./quick_writing_nix) or [the Windows track](./quick_writing_windows). 
+For part two, you'll build on your knowledge of PE and  learn about module development . You can choose from either [the Linux track](./quick_writing_nix) or [the Windows track](./quick_writing_windows).
 
 In part two, you'll learn about:
 
@@ -78,7 +78,7 @@ For this walk-through, you will create a simple deployment where the puppet mast
     * You will need the **email address and console password** it requests in order to use the console; **choose something memorable.**
     * None of the **other passwords** are relevant to this quick start guide. **Choose something random.**
     * For purposes of this walkthrough, when prompted for an SMTP server you can enter `localhost` or other inert text. Otherwise, you can **accept the default responses for every other question** by hitting enter.
-     
+
 The installer will then install and configure Puppet Enterprise. It may also need to install additional packages from your OS's repository. **This process may take up to 10-15 minutes.**
 
 > You have now installed the puppet master node. As indicated by the installer, the puppet master node is also an agent node, and can configure itself the same way it configures the other nodes in a deployment. Stay logged in as root for further exercises.
@@ -94,8 +94,8 @@ The installer will then install and configure Puppet Enterprise. It may also nee
     * **Install** the puppet agent role by answering "Yes" in the installer script. The cloud provisioner role is optional and is not used in this exercise.
     * Make sure that the unique "certname" matches the hostname you chose for this node. (For example, `agent1.example.com`.)
     * **Accept the default responses for every other question** by hitting enter.
-    
-The installer will then install and configure the Puppet Enterprise agent. 
+
+The installer will then install and configure the Puppet Enterprise agent.
 
 **Note**: In a production environment there are other ways to install agents that are faster and easier. For more information, see the [complete installation instructions](./install_basic.html).
 
@@ -133,7 +133,7 @@ During this walkthrough, we will be running the puppet agent interactively. By d
 1. **On the agent node,** log in as root and run `puppet agent --test` on the command line. This will trigger a single puppet run on the agent with verbose logging.
 
    > **Note**: If you receive a `-bash: puppet: command not found` error, run `export PATH=/usr/local/sbin:/usr/local/bin:$PATH`, then try again. This error can appear when the `/usr/local/bin` directory is not present in the root user's `$PATH` by default.
-      
+
 2. Note the long string of log messages, which should end with `notice: Finished catalog run in [...] seconds`.
 
 
@@ -145,9 +145,9 @@ During this walkthrough, we will be running the puppet agent interactively. By d
 [console_nav]: ./console_navigating.html
 
 
-1. Click __Nodes__ in the primary navigation bar. 
+1. Click __Nodes__ in the primary navigation bar.
    You'll see various UI elements, which show a summary of recent puppet runs and their status. Notice that the master and any agent nodes appear in the list of nodes:
-   
+
    ![The console front page](./images/quick/front.png)
 
 2. **Explore the console**. Note that if you click on a node to view its details, you can see its recent history, the Puppet classes it receives, and a very large list of inventory information about it. [See here for more information about navigating the console.][console_nav]
@@ -231,7 +231,7 @@ Puppet classes are **distributed in the form of modules**. You can save time by 
 
 ### Installing a Forge Module
 
-We will install a Puppet Enterprise supported module: `puppetlabs-ntp`. While you can use any module available on the Forge, PE customers can take advantage of [supported modules](http://forge.puppetlabs.com/supported) which are supported, tested, and maintained by Puppet Labs. 
+We will install a Puppet Enterprise supported module: `puppetlabs-ntp`. While you can use any module available on the Forge, PE customers can take advantage of [supported modules](http://forge.puppetlabs.com/supported) which are supported, tested, and maintained by Puppet Labs.
 
 1. **On your control workstation**, point your browser to [http://forge.puppetlabs.com/puppetlabs/ntp](http://forge.puppetlabs.com/puppetlabs/ntp). This is the Forge listing for a module that installs, configures, and manages the ntp service.
 
@@ -242,8 +242,8 @@ We will install a Puppet Enterprise supported module: `puppetlabs-ntp`. While yo
         puppetlabs-ntp   NTP Module                                                  @puppetlabs   ntp aix
         saz-ntp          UNKNOWN                                                     @saz          ntp OEL
         thias-ntp        Network Time Protocol...                                    @thias        ntp ntpd
-        warriornew-ntp   ntp setup                                                   @warriornew   ntp 
-        
+        warriornew-ntp   ntp setup                                                   @warriornew   ntp
+
    We want `puppetlabs-ntp`, which is the PE supported ntp module. You can view detailed info about the module in the "Read Me" on the Forge page you just visited: <http://forge.puppetlabs.com/puppetlabs/ntp>.
 
 4. Install the module by running `puppet module install puppetlabs-ntp`:
@@ -253,7 +253,7 @@ We will install a Puppet Enterprise supported module: `puppetlabs-ntp`. While yo
         Notice: Installing -- do not interrupt ...
         /etc/puppetlabs/puppet/modules
         └── puppetlabs-ntp (v3.0.1)
-        
+
 > You have just installed a Puppet module. All of the classes in it are now available to be added to the console and assigned to nodes.
 
 There are many more modules, including PE supported modules, on [the Forge](http://forge.puppetlabs.com). In part two of this guide you'll learn more about modules, including customizing and writing your own modules on either  [Windows](./quick_writing_windows) or [*nix](./quick_writing_nix) platforms.
@@ -291,7 +291,7 @@ Every module contains one or more **classes**. [Classes](../puppet/3/reference/l
 
 8. Finally, restart the ntp service.
 
-> Puppet is now managing NTP on the nodes in the __default__ group. So, for example, if you forget to restart the NTP service on one of those nodes after running `ntpdate`, PE will automatically restart it on the next puppet run. 
+> Puppet is now managing NTP on the nodes in the __default__ group. So, for example, if you forget to restart the NTP service on one of those nodes after running `ntpdate`, PE will automatically restart it on the next puppet run.
 
 #### Setting Class Parameters
 
@@ -307,9 +307,9 @@ You can use the console to set the values of the class parameters of nodes by se
 
 
   The grey text that appears as values for some parameters is the default value, which can be either a literal value or a Puppet variable. You can restore this value with the __Reset value__ control that appears next to the value after you have entered a custom value.
-    
+
   ![the NTP parameters list][ntp-params]
-    
+
 For more information, see the page on [classifying nodes with the console](./console_classes_groups.html).
 
 ### Viewing Changes with Event Inspector
@@ -330,7 +330,7 @@ You can keep clicking to drill down and see more detail. You can click the previ
 
 ![Event detail][EI-detail]
 
-If PE was unable to apply this class, the information would tell you exactly what piece of code you need to fix. In this case, you can see that PE is now managing NTP. 
+If PE was unable to apply this class, the information would tell you exactly what piece of code you need to fix. In this case, you can see that PE is now managing NTP.
 
 In the upper right corner of the detail pane is a link to a run report which contains information about the puppet run that made the change, including metrics about the run, logs, and more information. Visit the [reports page](./console_reports.html#reading-reports) for more information.
 
@@ -362,7 +362,7 @@ To learn about these workflows, continue to part two of this quick start guide.
 
 Puppet Labs offers many opportunities for learning and training, from formal certification courses to guided on-line lessons. We've noted a few below; head over to the [learning Puppet page](https://puppetlabs.com/learn) to discover more.
 
-* [Learning Puppet](/learning/) is a series of exercises on various core topics on deploying and using PE.  It includes the [Learning Puppet VM](http://info.puppetlabs.com/download-learning-puppet-VM.html) which provides PE pre-installed and configured on VMware and VirtualBox virtualization platforms. 
+* [Learning Puppet](/learning/) is a series of exercises on various core topics on deploying and using PE.  It includes the [Learning Puppet VM](http://info.puppetlabs.com/download-learning-puppet-VM.html) which provides PE pre-installed and configured on VMware and VirtualBox virtualization platforms.
 * The Puppet Labs workshop contains a series of self-paced, online lessons that cover a variety of topics on Puppet basics. You can sign up at the [learning page](https://puppetlabs.com/learn).
 * To explore the rest of the PE user's manual, use the sidebar at the top of this page, or [return to the index](./index.html).
 

@@ -5,7 +5,7 @@ subtitle: "Split Puppet Enterprise Install, Console Answer File Reference"
 canonical: "/pe/latest/install_split_console_answers.html"
 ---
 
-The following example answers can be used to perform an automated split installation of PE on the node assigned to the console component. 
+The following example answers can be used to perform an automated split installation of PE on the node assigned to the console component.
 
 A .txt file version can be found in the `answers` directory of the PE installer tarball.
 
@@ -15,7 +15,7 @@ See the [Answer File Overview](./install_answer_file_reference.html) and [Instal
 >
 > 1. Puppet master
 > 2. Puppet DB and database support (which includes the console database)
-> 3. The PE console 
+> 3. The PE console
 
 ### Global Answers
 
@@ -90,7 +90,7 @@ These answers are generally needed if you are installing the Puppet master compo
 `q_puppet_enterpriseconsole_database_name=console`
 : **String** --- The database the console will use. Note that if you are not installing the database support component, this database must already exist on the PostgreSQL server.
 
-`q_puppet_enterpriseconsole_database_user=console` 
+`q_puppet_enterpriseconsole_database_user=console`
 : **String** --- The PostgreSQL user the console will use. Note that if you are not installing the database support component, this user must already exist on the PostgreSQL server and must be able to edit the console’s database.
 
 `q_puppet_enterpriseconsole_database_password=<your password>`

@@ -7,11 +7,11 @@ canonical: "/pe/latest/config_nc.html"
 
 ### Pruning the Node Classifier Database
 
-The size of the node classifier database increases over time as PE runs and agents continue to check in. PE periodically prunes node check-ins from the node classifier database to prevent it from becoming too large. The pruning process runs every 24 hours (and each time pe-console-services starts or is restarted), and it deletes node check-in history that is older than the default of seven days. 
+The size of the node classifier database increases over time as PE runs and agents continue to check in. PE periodically prunes node check-ins from the node classifier database to prevent it from becoming too large. The pruning process runs every 24 hours (and each time pe-console-services starts or is restarted), and it deletes node check-in history that is older than the default of seven days.
 
 To change the default number of days:
 
-1. In the PE console, navigate to the **Classification** page. 
+1. In the PE console, navigate to the **Classification** page.
 2. Click the **PE Console** group.
 3. In the **PE Console** group page, click the **Classes** tab.
 4. Locate the `puppet_enterprise::profile::console` class, and from the Parameter drop-down list, select `classifier_prune_threshold`.

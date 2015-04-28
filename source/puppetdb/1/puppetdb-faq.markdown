@@ -27,7 +27,7 @@ Partially. Use with `puppet apply` requires some special configuration, and due 
 
 There are several related causes for this (such as the common error of installing PuppetDB before the puppet agent has run for the first time), but they all boil down to PuppetDB being unable to read your truststore.jks or keystore.jks file. The truststore file contains the certificate for your certificate authority, and is used by PuppetDB to authenticate clients. The keystore file contains the key and certificate PuppetDB uses to identify itself to clients.
 
-The locations of these files are set with the `keystore` and `truststore` options. For most users, these options are configured in the *jetty.ini* config file (if you are not using Puppet's default packages, or if you have modified the location of config data, you just need to find the section used for jetty configuration). 
+The locations of these files are set with the `keystore` and `truststore` options. For most users, these options are configured in the *jetty.ini* config file (if you are not using Puppet's default packages, or if you have modified the location of config data, you just need to find the section used for jetty configuration).
 
 There should also be settings for `key-password` and `trust-password`. Make sure the keystore.jks and truststore.jks files are where the config says they should be, and that they're readable by the user PuppetDB runs as (puppetdb for an open source installation, pe-puppetdb for a Puppet Enterprise installation). Additionally, you can verify that the password is correct using `keytool -keystore /path/to/keystore.jks` and and entering the `key-password`. Similarly, you can use `keytool -keystore /path/to/truststore.jks` to verify the truststore.
 
@@ -49,4 +49,4 @@ browser, and your browser doesn't trust PuppetDB. In this case, you'll need to g
 
 Either of these issues can also be solved through clever and judicious use of proxies, although the details of that are left as an exercise to the reader.
 
-* * * 
+* * *

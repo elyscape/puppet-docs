@@ -13,7 +13,7 @@ canonical: "/pe/latest/console_navigating_live_mgmt.html"
 Live Management: Advanced Tasks
 =====
 
-Use the advanced tasks tab to invoke actions from any MCollective agent installed on your nodes. 
+Use the advanced tasks tab to invoke actions from any MCollective agent installed on your nodes.
 
 ![The advanced tasks page][live_advanced_main]
 

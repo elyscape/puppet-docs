@@ -12,7 +12,7 @@ This is the user's guide for Puppet Enterprise 2.0. Use the **navigation to the 
 - **Welcome to Puppet Enterprise**
 
     Introductory info about the components and organization of Puppet Enterprise.
-    
+
     - [Getting Started](./welcome_getting_started.html)
     - [Components and Roles](./welcome_roles.html)
     - [New Features and Release Notes](./welcome_whats_new.html)
@@ -21,7 +21,7 @@ This is the user's guide for Puppet Enterprise 2.0. Use the **navigation to the 
 - **Installing Puppet Enterprise**
 
     Installation and upgrade instructions, and a short tour of PE's files, users, and services.
-    
+
     - [System Requirements](./install_system_requirements.html)
     - [Preparing to Install](./install_preparing.html)
     - [Basic Installation](./install_basic.html)
@@ -53,7 +53,7 @@ This is the user's guide for Puppet Enterprise 2.0. Use the **navigation to the 
 - **Orchestration For New PE Users**
 
     A whirlwind introduction to orchestration; after reading this section, you will be able to invoke orchestration agents from the command-line client.
-    
+
     - [Overview](./orchestration_overview.html)
     - [Usage and Examples](./orchestration_usage.html)
 - **Cloud Provisioning**
@@ -70,7 +70,7 @@ This is the user's guide for Puppet Enterprise 2.0. Use the **navigation to the 
     - [Man Page: puppet node](./cloudprovisioner_man_node.html)
 - **The Compliance Workflow**
 
-    A guide to PE's compliance and auditing workflow. 
+    A guide to PE's compliance and auditing workflow.
 
     - [Basics and UI](./compliance_basics.html)
     - [Using the Compliance Workflow](./compliance_using.html)

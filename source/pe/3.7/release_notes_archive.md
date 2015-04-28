@@ -17,9 +17,9 @@ This page contains information about security fixes, bug fixes, and new features
 
 This section provides Puppet Enterprise (PE) 3.7.2 release information.
 
-## New Features 
+## New Features
 
-PE 3.7.2 introduced the following new features and improvements. 
+PE 3.7.2 introduced the following new features and improvements.
 
 ### RBAC Can Query an Entire Base DN For Users and Groups
 
@@ -69,7 +69,7 @@ Vector AV:L/AC:L/Au:S/C:P/I:N/A:N/E:U/RL:OF/RC:C
 
 This issue affects PE 2.x and 3.x, Facter 1.6.0 - 2.4.0, and CFacter 0.2.0 and earlier. It's resolved in PE 3.7.2 and CFacter 0.3.0.
 
-## Bug Fixes 
+## Bug Fixes
 
 PE 3.7.2 contains a number of performance and documentation improvements, in addition to the fixes that are highlighted below.
 
@@ -130,9 +130,9 @@ The following issues were also fixed for PE 3.7.2
 ## Puppet Enterprise 3.7.1 (12/16/14)
 This section provides PE 3.7.1 release information.
 
-## New Features 
+## New Features
 
-PE 3.7.1 introduced the following new features and improvements. 
+PE 3.7.1 introduced the following new features and improvements.
 
 ### SLES 12 Support (all components)
 
@@ -197,7 +197,7 @@ CVE-2014-7829:
 Upstream CVSS v2 Score: 5.0
 Vector: AV:N/AC:L/Au:N/C:P/I:N/A:N
 
-## Bug Fixes 
+## Bug Fixes
 
 #### puppet_enterprise Module Was Missing Values for Several PuppetDB Attributes
 
@@ -224,7 +224,7 @@ This has been fixed. Now, the agent certname is used to figure out the PuppetDB 
 ## Puppet Enterprise 3.7.0 (11/11/14)
 This section provides PE 3.7.0 release information.
 
-## New Features 
+## New Features
 
 PE 3.7.0 introduced the following new features and improvements.
 
@@ -333,7 +333,7 @@ Puppet 3.7.2, Puppet-Server 0.3.0, PuppetDB 2.2, MCollective 2.6.1
 
 Users of Puppet Enterprise 3.3 who cannot upgrade can follow the remediation instructions in our [impact assessment](http://puppetlabs.com/blog/impact-assessment-sslv3-vulnerability-poodle-attack).
 
-## Bug Fixes 
+## Bug Fixes
 
 #### `/etc/puppetlabs/mcollective/client.cfg` Is Left Behind on Console Node After Upgrade
 

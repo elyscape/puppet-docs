@@ -20,7 +20,7 @@ Si estás usando Hiera para Puppet, debes instalarlo **en tus servidores puppet 
 Instala el paquete **hiera** usando Puppet, o el gestor de paquetes estandar del sistema.
 
 > **Nota**: Quizás primero necesites [habilitar los repositorios de paquetes de Puppet Labs](http://docs.puppetlabs.com/guides/puppetlabs_package_repositories.html)
-	
+
 	$ sudo puppet resource package hiera ensure=installed
 
 Si tu sistema no tiene paquetes nativos de Hiera disponibles, quizás necesites instalarlos como un Gem de Ruby.

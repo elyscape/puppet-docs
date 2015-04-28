@@ -30,7 +30,7 @@ CVSS v2 score: 5.2 Vector (AV:L/AC:M/Au:S/C:C/I:C/A:C/E:POC/RL:OF/RC:C)
 
 *[CVE-2014-3249 Information leakage](http://puppetlabs.com/security/cve/cve-2014-3249)*
 
-Assessed Risk Level: Low. Unauthenticated users could hide and unhide nodes in the console and get a list of facts for a node. 
+Assessed Risk Level: Low. Unauthenticated users could hide and unhide nodes in the console and get a list of facts for a node.
 
 CVSS v2 score: 3.9 Vector (AV:N/AC:L/Au:N/C:P/I:N/A:N/E:POC/RL:OF/RC:C)
 
@@ -50,17 +50,17 @@ The variation in score is because `mod_log_config` is enabled by default on RHEL
 
 *[CVE-2013-6438 Apache vulnerability in `mod_dav` module could allow denial of service attacks via DAV WRITE requests](http://puppetlabs.com/security/cve/cve-2013-6438)*
 
-Assessed Risk Level: medium. For Apache versions earlier than 2.4.8, the `dav_xml_get_cdata` function in `main/util.c` in the `mod_dav` module does not properly remove leading spaces could allow remote attackers to cause a denial of service attack via a crafted DAV WRITE request. 
+Assessed Risk Level: medium. For Apache versions earlier than 2.4.8, the `dav_xml_get_cdata` function in `main/util.c` in the `mod_dav` module does not properly remove leading spaces could allow remote attackers to cause a denial of service attack via a crafted DAV WRITE request.
 
 CVSS v2 score: 4.0 with v2 Vector (AV:N/AC:H/Au:N/C:N/I:N/A:C/E:U/RL:OF/RC:C)
 
 #### A Note about the Heartbleed Bug
 
-We want to emphasize that Puppet Enterprise does not need to be patched for Heartbleed.  
+We want to emphasize that Puppet Enterprise does not need to be patched for Heartbleed.
 
 No version of Puppet Enterprise has been shipped with a vulnerable version of OpenSSL, so Puppet Enterprise is not itself vulnerable to the security bug known as Heartbleed, and does not require a patch from Puppet Labs.
 
-However, some of your Puppet Enterprise-managed nodes could be running operating systems that include OpenSSL versions 1.0.1 or 1.0.2, and both of these are vulnerable to the Heartbleed bug. Since tools included in Puppet Enterprise, such as PuppetDB and the Console, make use of SSL certificates we believe the safest, most secure method for assuring the security of your Puppet-managed infrastructure is to regenerate your certificate authority and all OpenSSL certificates. 
+However, some of your Puppet Enterprise-managed nodes could be running operating systems that include OpenSSL versions 1.0.1 or 1.0.2, and both of these are vulnerable to the Heartbleed bug. Since tools included in Puppet Enterprise, such as PuppetDB and the Console, make use of SSL certificates we believe the safest, most secure method for assuring the security of your Puppet-managed infrastructure is to regenerate your certificate authority and all OpenSSL certificates.
 
 We have outlined the remediation procedure to help make it an easy and fail-safe process. You’ll find the details here: Remediation for [Recovering from the Heartbleed Bug](/trouble_remediate_heartbleed_overview.html).
 
@@ -92,13 +92,13 @@ Several minor bugs in puppet core have been fixed in this release.
 
 Assessed Risk Level: medium. Ruby on Rails is vulnerable to headers containing an invalid MIME type that allows attackers to issue  denial of service through memory consumption, which leads to excessive caching. This has been fixed in PE 2.8.4.
 
-*[CVE-2013-4491 XSS vulnerability in Ruby on Rails](http://puppetlabs.com/security/cve/cve-2013-4491)* 
+*[CVE-2013-4491 XSS vulnerability in Ruby on Rails](http://puppetlabs.com/security/cve/cve-2013-4491)*
 
 Assed Risk Level: medium. An XXS vulnerability in the translation helper allows remote attackers to add web script or HTML that triggers generation of a fallback string in the i18n gem. This has been fixed in PE 2.8.4.
 
 *[CVE-2013-4363 Algorithmic Complexity Vulnerability in RubyGems](http://puppetlabs.com/security/cve/cve-2013-4363)*
 
-Assessed Risk Level: low. RubyGems validates versions with a regular expression that is vulnerable to attackers causing denial of service through CPU consumption. This is resolved in PE 2.8.4. 
+Assessed Risk Level: low. RubyGems validates versions with a regular expression that is vulnerable to attackers causing denial of service through CPU consumption. This is resolved in PE 2.8.4.
 **Note:** This vulnerability was due to an incomplete fix for CVE-2013-4287.
 
 *[CVE-2013-4164 Heap overflow in floating point parsing in RubyGems](http://puppetlabs.com/security/cve/cve-2013-4164)*

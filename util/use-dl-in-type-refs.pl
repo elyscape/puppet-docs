@@ -32,7 +32,7 @@ while (<>) {
     else {
         print $_;
     }
-    
+
     # Once we're past the frontmatter:
     if ($in_a_type == 0 and m/^----+\s*$/) {
         $in_a_type = 1;

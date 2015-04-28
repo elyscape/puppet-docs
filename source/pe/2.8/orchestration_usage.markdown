@@ -118,7 +118,7 @@ command returns facts and classes, among other information:
        Total Processor Time: 1.34 seconds
        System Time: 0.59 seconds
      Agents:
-       discovery       package         puppetd        
+       discovery       package         puppetd
        puppetral       rpcutil         service
      Configuration Management Classes:
        default                        helloworld
@@ -190,16 +190,16 @@ nodes in the deployment:
 
     [ =================================================> ] 2 / 2
 
-    agent.example.com                      
+    agent.example.com
     Status: Resource was created
     Resource:
-      {"exported"=>false, 
+      {"exported"=>false,
        "title"=>"/bin/bash -c 'echo Hello > /tmp/hello'",
        "parameters"=>{:returns=>:notrun},
        "tags"=>["exec"],
        "type"=>"Exec"}
 
-     puppetmaster.example.com              
+     puppetmaster.example.com
      Status: Resource was created
      Resource:
        {"exported"=>false,
@@ -332,6 +332,6 @@ deployment:
      Finished processing 2 / 2 hosts in 137.86 ms
 
 
-* * * 
+* * *
 
-- [Next: Cloud Provisioning Overview](./cloudprovisioner_overview.html) 
+- [Next: Cloud Provisioning Overview](./cloudprovisioner_overview.html)

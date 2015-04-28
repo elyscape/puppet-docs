@@ -15,7 +15,7 @@ PostgreSQL is Taking Up Too Much Space
 PostgreSQL should have `autovacuum=on` set by default. If you're having memory issues from the database growing too large and unwieldy, make sure this setting did not get turned off. PE also includes a rake task for keeping the databases in good shape. The [console maintenance page](./maintain_console-db.html#optimizing-the-database) has the details.
 
 PostgreSQL Buffer Memory Causes PE Install to Fail
-------- 
+-------
 
 In some cases, when installing PE on machines with large amounts of RAM, the PostgreSQL database will use more shared buffer memory than is available and will not be able to start. This will prevent PE from installing correctly. The following error will be present in `/var/log/pe-postgresql/pgstartup.log`:
 
@@ -29,7 +29,7 @@ Use the following commands to set the new kernel settings:
     sysctl -w kernel.shmmax=<your shmmax calculation>
     sysctl -w kernel.shmall=<your shmall calculation>
 
-Alternatively, you can also report the issue to the [Puppet Labs customer support portal](https://support.puppetlabs.com/access/unauthenticated). 
+Alternatively, you can also report the issue to the [Puppet Labs customer support portal](https://support.puppetlabs.com/access/unauthenticated).
 
 Recovering from a Lost Console Admin Password
 -----
@@ -46,7 +46,7 @@ You can now log in to the console as the user you just created, and use the norm
 `Puppet resource` Generates Ruby Errors After Connecting `puppet apply` to PuppetDB
 -----
 
-Users who wish to use `puppet apply` (typically in deployments running masterless puppet), need to get it working with PuppetDB. If they do so by modifying `puppet.conf` to add the parameters `storeconfigs_backend = puppetdb` and `storeconfigs = true` in both the [main] and [master] sections), then `puppet resource` will cease to function and will display a Ruby run error. To avoid this, the correct way to get `puppet apply` connected to PuppetDB is to modify `/etc/puppetlabs/puppet/routes.yaml ` to correctly define the behavior of `puppet apply` without affecting other functions. The PuppetDB manual has [complete information and code samples](/puppetdb/1.5/connect_puppet_apply.html).  
+Users who wish to use `puppet apply` (typically in deployments running masterless puppet), need to get it working with PuppetDB. If they do so by modifying `puppet.conf` to add the parameters `storeconfigs_backend = puppetdb` and `storeconfigs = true` in both the [main] and [master] sections), then `puppet resource` will cease to function and will display a Ruby run error. To avoid this, the correct way to get `puppet apply` connected to PuppetDB is to modify `/etc/puppetlabs/puppet/routes.yaml ` to correctly define the behavior of `puppet apply` without affecting other functions. The PuppetDB manual has [complete information and code samples](/puppetdb/1.5/connect_puppet_apply.html).
 
 The Console Has Too Many Pending Tasks
 -----
@@ -59,7 +59,7 @@ The console either does not have enough worker processes, or the worker processe
 Old "Pending Tasks" Never Expire
 -----
 
-In earlier versions of PE 3.x, failed delayed jobs did not get properly deleted. If a report for a job failed to upload (due to a problem with the report itself), a pending task would be displayed in the console in perpetuity. This has been fixed in PE 3.1. The "Background Tasks" pane in the console (upper left corner) now displays a red alert icon when a report fails to upload. Clicking the icon displays a view with information about the failure and a backtrace. You can stop the reports from showing the alert by marking them as read with the "Mark all as read" button. 
+In earlier versions of PE 3.x, failed delayed jobs did not get properly deleted. If a report for a job failed to upload (due to a problem with the report itself), a pending task would be displayed in the console in perpetuity. This has been fixed in PE 3.1. The "Background Tasks" pane in the console (upper left corner) now displays a red alert icon when a report fails to upload. Clicking the icon displays a view with information about the failure and a backtrace. You can stop the reports from showing the alert by marking them as read with the "Mark all as read" button.
 
 Note, however, that this will not remove old failed/delayed jobs. You can clean these out by running `/opt/puppet/bin/bundle exec rails runner 'Delayed::Job.delete_all("attempts >= 3")'` on the console node. This command should be run from `/opt/puppet/share/puppet-dashboard`.
 
@@ -85,14 +85,14 @@ To fix this:
           console_hostname: console.example.com
 
     Change its value if necessary. If you are serving the console on a port other than 443, be sure to add the port. (For example: `console.example.com:3000`)
-    
+
 Correcting Broken URLs in the Console
 ----------------
 
 Starting with PE 3.0 and later, group names with periods in them (e.g., group.name) will generate a "page doesn't exist" error. To remove broken groups, you can use the following nodegroup:del rake task:
 
 	$ sudo /opt/puppet/bin/rake -f /opt/puppet/share/puppet-dashboard/Rakefile RAILS_ENV=production nodegroup:del name={bad.group.name.here}
-	
+
 After you remove the broken group names, you can create new groups with valid names and re-add your nodes as needed.
 
 * * *

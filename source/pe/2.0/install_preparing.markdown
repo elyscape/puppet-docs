@@ -17,7 +17,7 @@ Preparing to Install
 Planning
 -----
 
-Before anything else, decide in advance which server will fill the role of puppet master. This should be a robust dedicated server with accurate timekeeping and at least 1 GB of RAM. 
+Before anything else, decide in advance which server will fill the role of puppet master. This should be a robust dedicated server with accurate timekeeping and at least 1 GB of RAM.
 
 You must also decide whether the puppet master server will also be filling the console role. In general, we recommend installing the master and the console together.
 
@@ -54,7 +54,7 @@ Before installing Puppet Enterprise, you must [download it from the Puppet Labs 
 
 ### Choosing Your Installer Tarball
 
-Puppet Enterprise can be downloaded in tarballs specific to your OS version and architecture, or as a universal tarball. Although the universal tarball is simpler to use, it is roughly ten times the size of a version-specific tarball, and may prove unwieldy depending on your installation plan. 
+Puppet Enterprise can be downloaded in tarballs specific to your OS version and architecture, or as a universal tarball. Although the universal tarball is simpler to use, it is roughly ten times the size of a version-specific tarball, and may prove unwieldy depending on your installation plan.
 
 #### Available Tarballs
 

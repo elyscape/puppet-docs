@@ -22,7 +22,7 @@ The console's account system sends verification emails to new users, and require
 
 ### Allowing Global Unauthenticated Access
 
->**Important**: Do not enable global unauthenticated access alongside third-party authentication services. 
+>**Important**: Do not enable global unauthenticated access alongside third-party authentication services.
 
 To allow anonymous, read-only access to the console, do the following:
 
@@ -39,7 +39,7 @@ Next, in `/etc/puppetlabs/console-auth/cas_client_config.yml`, edit the `session
 Configuring the Console to Use a Custom SSL Certificate
 -------
 
-Full instructions are available [here](./custom_console_cert.html).  
+Full instructions are available [here](./custom_console_cert.html).
 
 
 Configuring Third-Party Authentication Services
@@ -123,7 +123,7 @@ authorization:
 
 ### Configuring `rubycas-server/config.yml`
 
-The `/etc/puppetlabs/rubycas-server/config.yml` file is used to configure RubyCAS to use external authentication services. As before, you will need to un-comment the section for the third-party service you wish to enable and configure it as necessary. 
+The `/etc/puppetlabs/rubycas-server/config.yml` file is used to configure RubyCAS to use external authentication services. As before, you will need to un-comment the section for the third-party service you wish to enable and configure it as necessary.
 
 >**Note**: If you are upgrading to PE 3.2.x or later, `rubycas-server/config.yml` will not contain the commented sections for the third-party services. We've provided the commented sections below, which you can copy and paste into `rubycas-server/config.yaml` after you upgrade.
 
@@ -150,7 +150,7 @@ The values for the listed keys are LDAP and ActiveDirectory standards. If you ar
     #      port: 8080
     #      username: nil
     #      password: nil
-    # 
+    #
     # Note that as with all authenticators, it is possible to use the Google·
     # authenticator alongside other authenticators. For example, CAS can first
     # attempt to validate the account with Google, and if that fails, fall back
@@ -172,7 +172,7 @@ The values for the listed keys are LDAP and ActiveDirectory standards. If you ar
     #    password_column: password
     #
     #
-    
+
 #### ActiveDirectory Authetication
 
     # === ActiveDirectory Authentication ===========================================
@@ -188,7 +188,7 @@ The values for the listed keys are LDAP and ActiveDirectory standards. If you ar
     # Note that the auth_user parameter must be the user's CN (Common Name).
     # In Active Directory, the CN is genarally the user's full name, which is usually
     # NOT the same as their username (sAMAccountName).
-    # 
+    #
     # For example:
     #
     #
@@ -218,7 +218,7 @@ The values for the listed keys are LDAP and ActiveDirectory standards. If you ar
     #      encryption: simple_tls
     #    extra_attributes: cn, mail
     #
-    # It is possible to authenticate against Active Directory without the 
+    # It is possible to authenticate against Active Directory without the
     # authenticator user, but this requires that users type in their CN as
     # the username rather than typing in their sAMAccountName. In other words
     # users will likely have to authenticate by typing their full name,
@@ -226,8 +226,8 @@ The values for the listed keys are LDAP and ActiveDirectory standards. If you ar
     # omit the auth_user and auth_password values in the above example.
     #
     #
-    
-#### LDAP Authentication 
+
+#### LDAP Authentication
 
     # === LDAP Authentication ======================================================
     #
@@ -277,7 +277,7 @@ The values for the listed keys are LDAP and ActiveDirectory standards. If you ar
     #
     # Note that the above functionality is somewhat limited by client compatibility.
     # See the SQL authenticator notes above for more info.
-    
+
 #### Custom Authentication
 
     # === Custom Authentication ====================================================
@@ -304,9 +304,9 @@ The values for the listed keys are LDAP and ActiveDirectory standards. If you ar
     #    option_a: foo
     #    another_option: yeeha
     #
-    
-#### Multiple Authenticators    
-    
+
+#### Multiple Authenticators
+
     # === Multiple Authenticators ==================================================
     #
     # If you need to have more than one source for authentication, such as an LDAP·
@@ -384,7 +384,7 @@ By default, a new installation of PE will serve the console on port 443. However
 4. Edit `/etc/puppetlabs/rubycas-server/config.yml ` on the puppet master server, and change the `console_base_url` to use your preferred port.
 5. Make sure to allow access to the new port in your system's firewall rules.
 6. Start the `pe-httpd` service: `sudo /etc/init.d/pe-httpd start`.
-        
+
 Configuring the Console Location
 ------
 
@@ -394,7 +394,7 @@ By default, the puppet master finds the console by reading the contents of `/etc
  		server = <console hostname>
  		port = <console port>
  		certificate_name = pe-internal-dashboard
- 	
+
  To change the location of the console, you'll need to specify the console hostname, port, and certificate name.
 
 

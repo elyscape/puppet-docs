@@ -15,7 +15,7 @@ PostgreSQL is Taking Up Too Much Space
 PostgreSQL should have `autovacuum=on` set by default. If you're having memory issues from the database growing too large and unwieldy, make sure this setting did not get turned off. PE also includes a rake task for keeping the databases in good shape. The [console maintenance page](./maintain_console-db.html#optimizing-the-database) has the details.
 
 PostgreSQL Buffer Memory Causes PE Install to Fail
-------- 
+-------
 
 In some cases, when installing PE on machines with large amounts of RAM, the PostgreSQL database will use more shared buffer memory than is available and will not be able to start. This will prevent PE from installing correctly. The following error will be present in `/var/log/pe-postgresql/pgstartup.log`:
 
@@ -29,7 +29,7 @@ Use the following commands to set the new kernel settings:
     sysctl -w kernel.shmmax=<your shmmax calculation>
     sysctl -w kernel.shmall=<your shmall calculation>
 
-Alternatively, you can also report the issue to the [Puppet Labs customer support portal](https://support.puppetlabs.com/access/unauthenticated). 
+Alternatively, you can also report the issue to the [Puppet Labs customer support portal](https://support.puppetlabs.com/access/unauthenticated).
 
 Recovering from a Lost Console Admin Password
 -----
@@ -73,14 +73,14 @@ To fix this:
           console_hostname: console.example.com
 
     Change its value if necessary. If you are serving the console on a port other than 443, be sure to add the port. (For example: `console.example.com:3000`)
-    
+
 Correcting Broken URLs in the Console
 ----------------
 
 Starting with PE 3.0 and later, group names with periods in them (e.g., group.name) will generate a "page doesn't exist" error. To remove broken groups, you can use the following nodegroup:del rake task:
 
 	$ sudo /opt/puppet/bin/rake -f /opt/puppet/share/puppet-dashboard/Rakefile RAILS_ENV=production nodegroup:del name={bad.group.name.here}
-	
+
 After you remove the broken group names, you can create new groups with valid names and re-add your nodes as needed.
 
 * * *

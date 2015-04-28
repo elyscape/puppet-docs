@@ -5,7 +5,7 @@ subtitle: "Grouping and Classifying Nodes"
 canonical: "/pe/latest/console_classes_groups.html"
 ---
 
-Groups, classes, and parameters are used to control which Puppet configurations your nodes receive. 
+Groups, classes, and parameters are used to control which Puppet configurations your nodes receive.
 
 **NOTE** To use the console to control node configuration, you must be logged in as a read-write or admin level user. Read-only users can only view node configuration data, they cannot modify it.
 
@@ -20,7 +20,7 @@ Add parameters by clicking the edit button in a node view (or group view) and ty
 
 ![Adding a parameter][classes_add_parameter]
 
-Parameters can only be strings, not arrays or hashes. 
+Parameters can only be strings, not arrays or hashes.
 
 Classes
 -----
@@ -54,7 +54,7 @@ Assign classes by clicking the edit button in a node view (or group view). Start
 
 Defining wrapper classes in a "site" module can help you use the console more effectively, and may be mandatory if you use [parameterized classes][paramclass] heavily.
 
-Most Puppet modules are written so each class manages a logical chunk of configuration. This means any node's configuration could be composed of dozens of Puppet classes. Although you can add these dozens of classes to the console, it's often better to create a module called `site` and populate it with super-classes, which declare all of the smaller classes a given _type_ of machine will need. 
+Most Puppet modules are written so each class manages a logical chunk of configuration. This means any node's configuration could be composed of dozens of Puppet classes. Although you can add these dozens of classes to the console, it's often better to create a module called `site` and populate it with super-classes, which declare all of the smaller classes a given _type_ of machine will need.
 
 There are many ways to compose these classes; which one you choose depends on how your own collection of modules works. Some possibilities:
 
@@ -74,7 +74,7 @@ Nodes can belong to many groups, and inherit classes and parameters from all of 
 
 ### Adding a New Group
 
-Use the "add group" button in the console's sidebar, then enter the group's name and any classes or parameters you want to assign. 
+Use the "add group" button in the console's sidebar, then enter the group's name and any classes or parameters you want to assign.
 
 ![The add group button][classes_group_button]
 
@@ -82,7 +82,7 @@ Use the "add group" button in the console's sidebar, then enter the group's name
 
 ### Adding Nodes to a Group
 
-You can change the membership of a group from both node views and group views. Click the edit button and use the "groups" or "nodes" fields, as needed. These fields will offer auto-completions the same way the classes field does. 
+You can change the membership of a group from both node views and group views. Click the edit button and use the "groups" or "nodes" fields, as needed. These fields will offer auto-completions the same way the classes field does.
 
 ![Adding groups to a node][classes_groups_to_node]
 
@@ -94,7 +94,7 @@ This works identically to assigning classes and parameters to a single node. Use
 
 ### The Default Group
 
-The console automatically adds every node to a group called `default`. Use this group for any classes you need assigned to every single node. 
+The console automatically adds every node to a group called `default`. Use this group for any classes you need assigned to every single node.
 
 Nodes are added to the default group by a periodic background task, so it may take several minutes after a node first checks in before it joins the group.
 
@@ -168,6 +168,6 @@ All of these tasks should be run as follows, replacing `<TASK>` with the task na
 [classes_typingclass]: ./images/console/classes_typingclass.png
 
 
-* * * 
+* * *
 
 - [Next: Live Management](./console_live.html)

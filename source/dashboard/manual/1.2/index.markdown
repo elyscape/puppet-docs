@@ -11,7 +11,7 @@ This is the manual for Puppet Dashboard 1.2.
 Overview
 --------
 
-Puppet Dashboard is a web interface for Puppet. It can view and analyze Puppet reports, assign Puppet classes and parameters to nodes, and view inventory data and backed-up file contents. 
+Puppet Dashboard is a web interface for Puppet. It can view and analyze Puppet reports, assign Puppet classes and parameters to nodes, and view inventory data and backed-up file contents.
 
 Chapters
 --------

@@ -13,12 +13,12 @@ canonical: "/pe/latest/cloudprovisioner_classifying_installing.html"
 Classifying New Nodes and Remotely Installing PE
 =====
 
-In addition to the provisioning actions described in the prior chapters, Puppet Enterprise includes actions for adding nodes to a pre-existing console group and remotely installing Puppet Enterprise on new nodes. 
+In addition to the provisioning actions described in the prior chapters, Puppet Enterprise includes actions for adding nodes to a pre-existing console group and remotely installing Puppet Enterprise on new nodes.
 
 Classifying nodes
 -----------------
 
-Once you have created virtual machines or instances, you can add them to a group in the console right from the command line. This has the same effect as [adding nodes to a group with the console's web interface](./console_classes_groups.html#grouping-nodes), but can be more convenient if you're already at the command line and have the node's name ready at hand. 
+Once you have created virtual machines or instances, you can add them to a group in the console right from the command line. This has the same effect as [adding nodes to a group with the console's web interface](./console_classes_groups.html#grouping-nodes), but can be more convenient if you're already at the command line and have the node's name ready at hand.
 
 To classify nodes and add them to a console group, use the `puppet node classify` command.
 
@@ -65,7 +65,7 @@ Installing Puppet
 
 Use the `puppet node install` command to install Puppet Enterprise (or open-source Puppet) onto new nodes.
 
-    $ puppet node install --keyfile=~/.ssh/mykey.pem --login=root ec2-50-19-207-181.compute-1.amazonaws.com 
+    $ puppet node install --keyfile=~/.ssh/mykey.pem --login=root ec2-50-19-207-181.compute-1.amazonaws.com
     notice: Waiting for SSH response ...
     notice: Waiting for SSH response ... Done
     notice: Installing Puppet ...
@@ -77,7 +77,7 @@ With the command's options, we specify:
 * An SSH key to log in with (`--keyfile`) --- the `install` action uses SSH to connect to the host, and needs an SSH key. For VMware, this key should be loaded onto the template you used to create your virtual machine. For Amazon EC2, it should be the private key from the key pair you used to create the instance.
 * The local user account to log in as (`--login`).
 
-As the command's argument, we specify the name of the node we're installing Puppet Enterprise on. 
+As the command's argument, we specify the name of the node we're installing Puppet Enterprise on.
 
 For the default installation, the `install` action uses packages
 provided by Puppet Labs and stored in Amazon S3 storage.  You can also specify

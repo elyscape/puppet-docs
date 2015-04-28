@@ -29,7 +29,7 @@ Para comenzar, no necesitarás separar VMs agente y master, esta VM puede cumpli
 	+ [Recursos y la RAL](http://docs.puppetlabs.com/es/learning/ral.html): Aprende sobre los bloques fundamentales de construcción de la configuración de sistemas.
 	+ [Manifiestos](http://docs.puppetlabs.com/es/learning/manifests.html): Comienza a controlar tu sistema escribiendo código “real” de Puppet.
 	+ [Orden](http://docs.puppetlabs.com/es/learning/ordering.html): Aprende sobre las dependencias y eventos de refresh, controla las relaciones entre recursos, y descubre el patrón de diseño fundamental de Puppet.
-	+ [Variables, condicionales y facts](http://docs.puppetlabs.com/es/learning/variables.html): Haz a tus manifiestos más versátiles leyendo la información del sistema. 
+	+ [Variables, condicionales y facts](http://docs.puppetlabs.com/es/learning/variables.html): Haz a tus manifiestos más versátiles leyendo la información del sistema.
 	+ [Módulos y clases (parte uno)](http://docs.puppetlabs.com/es/learning/modules1.html): Comienza a construir tus manifiestos en módulos autocontenidos.
 	+ [Templates](http://docs.puppetlabs.com/es/learning/templates.html): Utiliza ERB para hacer tus archivos de configuración tan flexibles como tus manifiestos.
 	+ [Clases parametrizadas (Módulos, parte dos)](http://docs.puppetlabs.com/es/learning/modules2.html): Aprende cómo pasar parámetros a clases y hacer más adaptables tus módulos.

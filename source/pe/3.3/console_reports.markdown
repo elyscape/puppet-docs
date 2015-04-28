@@ -5,7 +5,7 @@ subtitle: "Viewing Reports and Inventory Data"
 canonical: "/pe/latest/console_reports.html"
 ---
 
-When nodes fetch their configurations from the puppet master, they send back inventory data and a report of their run. These end up in the console, where you can view them in that node's detail page. 
+When nodes fetch their configurations from the puppet master, they send back inventory data and a report of their run. These end up in the console, where you can view them in that node's detail page.
 
 
 Node States

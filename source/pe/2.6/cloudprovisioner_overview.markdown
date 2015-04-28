@@ -34,6 +34,6 @@ The `clean` action may also be useful when decommissioning nodes.
 
 All of the cloud provisioning tools are powered by [Fog, the Ruby cloud services library](https://github.com/fog/fog). Fog is automatically installed on any machine receiving the cloud provisioner role.
 
-* * * 
+* * *
 
 - [Next: Installing and Configuring Cloud Provisioner](./cloudprovisioner_configuring.html)

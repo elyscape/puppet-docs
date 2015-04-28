@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Class: Puppetx::Puppet::Hiera2Backend
-  
+
     &mdash; Documentation by YARD 0.8.7
-  
+
 </title>
 
   <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../../_index.html">Index (H)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Puppetx.html" title="Puppetx (module)">Puppetx</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Puppet.html" title="Puppetx::Puppet (module)">Puppet</a></span></span>
-     &raquo; 
+     &raquo;
     <span class="title">Hiera2Backend</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -65,37 +65,37 @@
 
     <div id="content"><h1>Class: Puppetx::Puppet::Hiera2Backend
   <span class="abstract note title">Abstract</span>
-  
-  
+
+
 </h1>
 
 <dl class="box">
-  
+
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
       <span class="inheritName"><span class='object_link'>Object</span></span>
-      
+
         <ul class="fullTree">
           <li><span class='object_link'>Object</span></li>
-          
+
             <li class="next">Puppetx::Puppet::Hiera2Backend</li>
-          
+
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
-      
+
       </dd>
-    
-  
-  
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">lib/puppetx/puppet/hiera2_backend.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -118,7 +118,7 @@ hash should be produced.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div>
 
@@ -127,57 +127,57 @@ hash should be produced.</p>
 
 
 
-  
+
     <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#read_data-instance_method" title="#read_data (instance method)">- (Hash&lt;String, Object&gt;, Hash&lt;Symbol, Object&gt;) <strong>read_data</strong>(directory, file_name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Produces a hash with data read from the file in the given directory having the given file_name (with extensions appended under the discretion of this backend).</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
+
 
 
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="read_data-instance_method">
-  
-    - (<tt><span class='object_link'>Hash</span>&lt;<span class='object_link'>String</span>, <span class='object_link'>Object</span>&gt;</tt>, <tt><span class='object_link'>Hash</span>&lt;<span class='object_link'>Symbol</span>, <span class='object_link'>Object</span>&gt;</tt>) <strong>read_data</strong>(directory, file_name) 
-  
 
-  
+    - (<tt><span class='object_link'>Hash</span>&lt;<span class='object_link'>String</span>, <span class='object_link'>Object</span>&gt;</tt>, <tt><span class='object_link'>Hash</span>&lt;<span class='object_link'>Symbol</span>, <span class='object_link'>Object</span>&gt;</tt>) <strong>read_data</strong>(directory, file_name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Produces a hash with data read from the file in the given
@@ -193,68 +193,68 @@ not return nil.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>directory</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the path to the directory containing the file to read</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>file_name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the file name (without extension) that should be read</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span>&lt;<span class='object_link'>String</span>, <span class='object_link'>Object</span>&gt;</tt>, <tt><span class='object_link'>Hash</span>&lt;<span class='object_link'>Symbol</span>, <span class='object_link'>Object</span>&gt;</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the produced hash with data, may be empty if there was no file</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>NotImplementedError</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -278,7 +278,7 @@ not return nil.</p>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

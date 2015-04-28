@@ -123,7 +123,7 @@ With the above definitions, neither of the msg resources will be
 applied to a node unless it realizes them, e.g.:
 
     realize( Msg[test1], Msg[test2] )
-    
+
 Remember that when referencing an instance of a namespaced defined type, or when specifying such a defined type for the collection syntax, you have to capitalize all segments of the type's name (e.g. `Apache::Vhost['wordpress']` or `Apache::Vhost <| |>`).
 
 Keep in mind that resources inside virtualized define-based

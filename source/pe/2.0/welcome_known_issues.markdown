@@ -15,7 +15,7 @@ canonical: "/pe/latest/release_notes.html"
 Known Issues in Puppet Enterprise 2.0
 =====
 
-As we discover them, this page will be updated with known issues in each maintenance release of Puppet Enterprise 2.0. If you find new problems yourself, please file bugs in Puppet [here][puppetissues] and bugs specific to Puppet Enterprise [here][peissues]. 
+As we discover them, this page will be updated with known issues in each maintenance release of Puppet Enterprise 2.0. If you find new problems yourself, please file bugs in Puppet [here][puppetissues] and bugs specific to Puppet Enterprise [here][peissues].
 
 To find out which of these issues you are affected by, run `/opt/puppet/bin/puppet --version`, the output of which will look something like `2.7.9 (Puppet Enterprise 2.0.1)`. To upgrade to a newer version of Puppet Enterprise, see the [chapter on upgrading](./install_upgrading.html).
 
@@ -26,7 +26,7 @@ To find out which of these issues you are affected by, run `/opt/puppet/bin/pupp
 Issues Still Outstanding
 -----
 
-The following issues affect the currently shipped version of PE and all prior releases in the 2.0.x series, unless otherwise stated. 
+The following issues affect the currently shipped version of PE and all prior releases in the 2.0.x series, unless otherwise stated.
 
 ### Upgrades May Fail With MySQL Errors
 
@@ -38,23 +38,23 @@ Several users have encountered failures when upgrading to PE 2.0.3, and there ha
 
 The upgrader's output in these cases resembles the following:
 
-    (in /opt/puppet/share/puppet-dashboard) 
-    == AddReportForeignKeyConstraints: migrating ================================= 
-    Going to delete orphaned records from metrics, report_logs, resource_statuses, resource_events 
-    Preparing to delete from metrics 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from metrics 
+    (in /opt/puppet/share/puppet-dashboard)
+    == AddReportForeignKeyConstraints: migrating =================================
+    Going to delete orphaned records from metrics, report_logs, resource_statuses, resource_events
+    Preparing to delete from metrics
+    2012-01-27 17:51:31: Deleting 0 orphaned records from metrics
     Deleting 100% |###################################################################| Time: 00:00:00
-    Preparing to delete from report_logs 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from report_logs 
+    Preparing to delete from report_logs
+    2012-01-27 17:51:31: Deleting 0 orphaned records from report_logs
     Deleting 100% |###################################################################| Time: 00:00:00
-    Preparing to delete from resource_statuses 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_statuses 
+    Preparing to delete from resource_statuses
+    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_statuses
     Deleting 100% |###################################################################| Time: 00:00:00
-    Preparing to delete from resource_events 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_events 
+    Preparing to delete from resource_events
+    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_events
     Deleting 100% |###################################################################| Time: 00:00:00
-    -- execute("ALTER TABLE reports ADD CONSTRAINT fk_reports_node_id FOREIGN KEY (node_id) REFERENCES nodes(id) ON DELETE CASCADE;") 
-    rake aborted! 
+    -- execute("ALTER TABLE reports ADD CONSTRAINT fk_reports_node_id FOREIGN KEY (node_id) REFERENCES nodes(id) ON DELETE CASCADE;")
+    rake aborted!
     An error has occurred, all later migrations canceled:
     Mysql::Error: Can't create table 'console.#sql-328_ff6' (errno: 121): ALTER TABLE reports ADD CONSTRAINT fk_reports_node_id FOREIGN KEY (node_id) REFERENCES nodes(id) ON DELETE CASCADE;
     (See full trace by running task with --trace)
@@ -62,7 +62,7 @@ The upgrader's output in these cases resembles the following:
     !! ERROR: Cancelling installation
     ===================================================================================
 
-The cause of these failures is still under investigation, but it appears to involve a too-small lock table, which is governed by the `innodb_buffer_pool_size` setting in the MySQL server configuration. 
+The cause of these failures is still under investigation, but it appears to involve a too-small lock table, which is governed by the `innodb_buffer_pool_size` setting in the MySQL server configuration.
 
 #### Workaround
 
@@ -83,11 +83,11 @@ Until the upgrader can handle these cases by itself, we recommend the following:
  # clients (those using the mysqlclient10 compatibility package).
  old_passwords=1
 +innodb_buffer_pool_size = 80M
- 
+
  # Disabling symbolic-links is recommended to prevent assorted security risks;
  # to do so, uncomment this line:
  # symbolic-links=0
- 
+
  [mysqld_safe]
  log-error=/var/log/mysqld.log
  pid-file=/var/run/mysqld/mysqld.pid
@@ -98,7 +98,7 @@ Until the upgrader can handle these cases by itself, we recommend the following:
         $ sudo /etc/init.d/mysqld restart
 * Perform a normal upgrade of Puppet Enterprise on the console server.
 
-**If you have already suffered a failed upgrade:** 
+**If you have already suffered a failed upgrade:**
 
 * On your database server, log into the MySQL client as either the root user or the console user:
 
@@ -106,14 +106,14 @@ Until the upgrader can handle these cases by itself, we recommend the following:
         Enter password: <password>
 * Execute the following SQL statements:
 
-        USE console 
-        ALTER TABLE reports DROP FOREIGN KEY fk_reports_node_id; 
-        ALTER TABLE resource_events DROP FOREIGN KEY fk_resource_events_resource_status_id; 
-        ALTER TABLE resource_statuses DROP FOREIGN KEY fk_resource_statuses_report_id; 
-        ALTER TABLE report_logs DROP FOREIGN KEY fk_report_logs_report_id; 
+        USE console
+        ALTER TABLE reports DROP FOREIGN KEY fk_reports_node_id;
+        ALTER TABLE resource_events DROP FOREIGN KEY fk_resource_events_resource_status_id;
+        ALTER TABLE resource_statuses DROP FOREIGN KEY fk_resource_statuses_report_id;
+        ALTER TABLE report_logs DROP FOREIGN KEY fk_report_logs_report_id;
         ALTER TABLE metrics DROP FOREIGN KEY fk_metrics_report_id;
 * Edit the MySQL config file and restart the MySQL server, as described above.
-* Re-run the upgrader, which should now finish successfully. 
+* Re-run the upgrader, which should now finish successfully.
 
 For more information about the lock table size, [see this MySQL bug report](http://bugs.mysql.com/bug.php?id=15667).
 
@@ -121,7 +121,7 @@ For more information about the lock table size, [see this MySQL bug report](http
 
 ([Issue #12813](https://projects.puppetlabs.com/issues/12813))
 
-This issue was introduced in PE 2.0.3. 
+This issue was introduced in PE 2.0.3.
 
 On Linode instances, and possibly other Xen platforms, Facter prints the following harmless but annoying messages to STDERR every time Puppet runs:
 
@@ -137,7 +137,7 @@ index e617359..94b10c5 100644
 +++ /opt/puppet/lib/ruby/site_ruby/1.8/facter/virtual.rb
 @@ -89,7 +89,7 @@ Facter.add("virtual") do
      end
- 
+
      if result == "physical"
 -      output = Facter::Util::Resolution.exec('lspci')
 +      output = Facter::Util::Resolution.exec('lspci 2>/dev/null')
@@ -167,11 +167,11 @@ The installer in PE 2.0 does not currently check for DNS misconfiguration. Such 
 
 ### Internet Explorer 8 Can't Access Live Management Features
 
-The console's [live management](./console_live.html) page doesn't load in Internet Explorer 8. Although we are working on supporting IE8, you should currently use another browser (such as Internet Explorer 9 or Google Chrome) to access PE's live management features. 
+The console's [live management](./console_live.html) page doesn't load in Internet Explorer 8. Although we are working on supporting IE8, you should currently use another browser (such as Internet Explorer 9 or Google Chrome) to access PE's live management features.
 
 ### Dynamic Man Pages are Incorrectly Formatted
 
-Man pages generated with the `puppet man` subcommand are not formatted as proper man pages, and are instead displayed as Markdown source text. This is a purely cosmetic issue, and the pages are still fully readable. 
+Man pages generated with the `puppet man` subcommand are not formatted as proper man pages, and are instead displayed as Markdown source text. This is a purely cosmetic issue, and the pages are still fully readable.
 
 Issues Affecting PE 2.0.2
 -----
@@ -180,13 +180,13 @@ Issues Affecting PE 2.0.2
 
 This issue was fixed in PE 2.0.3.
 
-On Linux systems where the pciutils, pmtools, or dmidecode packages are not installed, the `virtual`, `is_virtual`, `manufacturer`, `productname`, and `serialnumber` facts are frequently inaccurate. In PE 2.0.3 and later, these facts are kept accurate by requiring the necessary packages from the OS's repository. 
+On Linux systems where the pciutils, pmtools, or dmidecode packages are not installed, the `virtual`, `is_virtual`, `manufacturer`, `productname`, and `serialnumber` facts are frequently inaccurate. In PE 2.0.3 and later, these facts are kept accurate by requiring the necessary packages from the OS's repository.
 
 ### Security Issue: Group IDs Leak to Forked Processes (CVE-2012-1053)
 
 This issue was fixed in PE 2.0.3. It affected PE versions between 1.0 and 2.0.2.
 
-When executing commands as a different user, Puppet leaves the forked process with Puppet's own group permissions. Specifically: 
+When executing commands as a different user, Puppet leaves the forked process with Puppet's own group permissions. Specifically:
 
 * Puppet's primary group (usually root) is always present in a process's supplementary groups.
 * When an `exec` resource has a specified `user` attribute but not a `group` attribute, Puppet will set its effective GID to Puppet's own GID (usually root).
@@ -194,7 +194,7 @@ When executing commands as a different user, Puppet leaves the forked process wi
 
 This causes any untrusted code executed by a Puppet exec resource to be given unexpectedly high permissions. [See here][gid_release] for more details, including hotfixes for previous versions of PE.
 
-This vulnerability has a CVE identifier of [CVE-2012-1053][gid_cve]. 
+This vulnerability has a CVE identifier of [CVE-2012-1053][gid_cve].
 
 [gid_release]: http://puppetlabs.com/security/cve/cve-2012-1053/
 [gid_cve]: http://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2012-1053
@@ -203,11 +203,11 @@ This vulnerability has a CVE identifier of [CVE-2012-1053][gid_cve].
 
 This issue was fixed in PE 2.0.3. It affected PE versions between 1.0 and 2.0.2.
 
-If a user's `.k5login` file is a symlink, Puppet will overwrite the link's target when managing that user's login file with the k5login resource type. This allows local privilege escalation by linking a user's `.k5login` file to root's `.k5login` file. 
+If a user's `.k5login` file is a symlink, Puppet will overwrite the link's target when managing that user's login file with the k5login resource type. This allows local privilege escalation by linking a user's `.k5login` file to root's `.k5login` file.
 
 [See here][k5login_release] for more details, including hotfixes for previous versions of PE.
 
-This vulnerability has a CVE identifier of [CVE-2012-1054][k5login_cve]. 
+This vulnerability has a CVE identifier of [CVE-2012-1054][k5login_cve].
 
 [k5login_release]: http://puppetlabs.com/security/cve/cve-2012-1054/
 [k5login_cve]: http://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2012-1054
@@ -249,7 +249,7 @@ Due to a packaging error, the puppet help subcommand malfunctions on Debian and 
 
     puppet help cert list
     err: RubyGem version error: excon(0.6.5 not ~> 0.7.3)
-    
+
     err: Try 'puppet help help help' for usage
 
 
@@ -260,7 +260,7 @@ Issues Affecting PE 2.0.0
 
 This issue was fixed in PE 2.0.1.
 
-The versions of Apache and OpenSSL used in PE 2.0.0 suffer from memory corruption under any enterprise Linux 6 system (RHEL, CentOS, Oracle Linux, and Scientific Linux) later than version 6.0. This would cause dramatic failures during installation on these OS versions. 
+The versions of Apache and OpenSSL used in PE 2.0.0 suffer from memory corruption under any enterprise Linux 6 system (RHEL, CentOS, Oracle Linux, and Scientific Linux) later than version 6.0. This would cause dramatic failures during installation on these OS versions.
 
 ### Ruby 1.8.7 Patchlevel 302 is Vulnerable to a Denial of Service Attack
 
@@ -284,14 +284,14 @@ This issue was fixed in PE 2.0.1.
 
 The upstream Puppet Dashboard code used in PE's web console was found to be vulnerable to cross-site scripting attacks due to insufficient sanitization of user input. [See here][dashboard_xss] for more details, including hotfixes for previous versions of PE.
 
-This vulnerability has a CVE identifier of [CVE-2012-0891][dashxss_cve]. 
+This vulnerability has a CVE identifier of [CVE-2012-0891][dashxss_cve].
 
 [dashboard_xss]: http://puppetlabs.com/security/cve/cve-2012-0891/
 [dashxss_cve]: http://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2012-0891
 
 ### Installer Cannot Detect or Recover From a Misconfigured Firewall
 
-This issue was fixed in PE 2.0.1, which will detect and warn of firewall misconfigurations. 
+This issue was fixed in PE 2.0.1, which will detect and warn of firewall misconfigurations.
 
 The installer in PE 2.0.0 may fail and leave the PE software in an undefined state if your firewall doesn't allow access to the [required ports](./install_preparing.html#firewall-configuration). If your installation fails due to firewall issues, you should follow [the instructions in the troubleshooting section of this guide][failed_install].
 
@@ -299,9 +299,9 @@ The installer in PE 2.0.0 may fail and leave the PE software in an undefined sta
 
 This issue was fixed in PE 2.0.1, and the upgrade process will delete any orphaned data that remains in your console database without requiring any additional user action.
 
-The console's historical node reports can be deleted periodically to control disk usage; this is usually done by [creating a cron job for the `reports:prune` rake task](./maint_maintaining_console.html#cleaning-old-reports). However, in PE 2.0.0, this task [leaves behind orphaned records in the database][resource_statuses]. 
+The console's historical node reports can be deleted periodically to control disk usage; this is usually done by [creating a cron job for the `reports:prune` rake task](./maint_maintaining_console.html#cleaning-old-reports). However, in PE 2.0.0, this task [leaves behind orphaned records in the database][resource_statuses].
 
-If you aren't at risk of running out of disk space, simply upgrade to Puppet Enterprise 2.0.1 or later at your leisure. 
+If you aren't at risk of running out of disk space, simply upgrade to Puppet Enterprise 2.0.1 or later at your leisure.
 
 If you _are_ about to run out of disk, and cannot immediately upgrade PE on your console server, you can:
 
@@ -314,7 +314,7 @@ If you _are_ about to run out of disk, and cannot immediately upgrade PE on your
         RAILS_ENV=production \
         reports:prune:orphaned
 
-    This task will have to be run after every time you run the `reports:prune` task, until you are able to upgrade to an unaffected version of Puppet Enterprise. 
+    This task will have to be run after every time you run the `reports:prune` task, until you are able to upgrade to an unaffected version of Puppet Enterprise.
 
 [updated_task]: https://raw.github.com/puppetlabs/puppet-dashboard/3652aca542671059cdb88e1408efff64cc3cb878/lib/tasks/prune_reports.rake
 [resource_statuses]: http://projects.puppetlabs.com/issues/6717
@@ -327,11 +327,11 @@ Answer files created when installing PE 2.0.0 are saved as world- and group-read
 
 ### The Uninstaller Script is Not Shipped With PE
 
-This issue was fixed in PE 2.0.1, which includes the uninstaller. 
+This issue was fixed in PE 2.0.1, which includes the uninstaller.
 
 [uninstaller]: ./files/puppet-enterprise-uninstaller
 
-The Puppet Enterprise uninstaller script was not included with PE 2.0. Although it is included in subsequent PE releases, you can [download it here][uninstaller]. 
+The Puppet Enterprise uninstaller script was not included with PE 2.0. Although it is included in subsequent PE releases, you can [download it here][uninstaller].
 
 Before you can use it, you must move the uninstaller script into the directory which contains the installer script. The uninstaller and the installer _must_ be in the same directory. Once it is in place, you can make the uninstaller executable and run it:
 
@@ -365,9 +365,9 @@ A quirk in Solaris's cron implementation prevents the compliance reporting job f
 
 ### Libraries Provided by PE Aren't Namespaced on RPM-based Systems
 
-This issue was fixed in PE 2.0.1. 
+This issue was fixed in PE 2.0.1.
 
-On RPM-based systems, some of the libraries provided by PE 2.0.0's packages are not namespaced. This can block proper dependency resolution when installing software that expects the system-provided versions of those libraries. 
+On RPM-based systems, some of the libraries provided by PE 2.0.0's packages are not namespaced. This can block proper dependency resolution when installing software that expects the system-provided versions of those libraries.
 
 * * *
 

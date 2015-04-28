@@ -5,7 +5,7 @@ subtitle: "Complete Answer File Reference"
 canonical: "/pe/latest/install_complete_answer_file_reference.html"
 ---
 
-The following doc provides a comprehensive list of all possible answers that can be used in an answer file. 
+The following doc provides a comprehensive list of all possible answers that can be used in an answer file.
 
 A .txt file version can be found in the `answers` directory of the PE installer tarball.
 
@@ -75,7 +75,7 @@ These answers are always needed.
 : **Y or N** --- This is a silent install option, default is N. When set to Y, the installer will skip master verification which allows the user to deploy agents when they know the master won't be available.
 
 `q_puppet_agent_first_run`
-: **Y or N** --- Controls whether or not the Puppet agent should run after being installed. 
+: **Y or N** --- Controls whether or not the Puppet agent should run after being installed.
 
 ### Puppet Master Answers
 
@@ -105,8 +105,8 @@ These answers are generally needed if you are installing the Puppet master role.
   * the number of nodes licensed and the number of nodes used
 
   If you wish to disable update checks (e.g. if your company policy forbids transmitting this information), you will need to set this to `n`. You can also disable checking after installation by editing the `/etc/puppetlabs/installer/answers.install` file.
-  
-  If you have a platform that uses systemd (currently RHEL-7 and SLES-12 only), there are additional steps to [disable update checking](./puppet_config.html#disabling-update-checking). 
+
+  If you have a platform that uses systemd (currently RHEL-7 and SLES-12 only), there are additional steps to [disable update checking](./puppet_config.html#disabling-update-checking).
 
 `q_tarball_server`
 : **String** --- The location from which PE agent tarballs will be downloaded before installation. Note that agent tarballs are only available for certain operating systems. For details, see [the PE installation instructions](./install_basic.html)
@@ -145,7 +145,7 @@ These answers are generally needed if you are installing the console role.
 `q_puppet_enterpriseconsole_database_password`
 : **String** --- The password for the console's PostgreSQL user.
 
-`q_public_hostname` 
+`q_public_hostname`
 : **String** ---   A publicly accessible hostname where the console can be accessed if the host name resolves  to a private interface (e.g., Amazon EC2). This is set automatically by the installer on EC2 nodes, but can be set manually in environments with multiple hostnames.
 
 `q_backup_and_purge_old_database_directory`
@@ -195,28 +195,28 @@ These answers are only needed if you are installing the database support role.
 : **Integer** --- The port on which PuppetDB accepts plain-text HTTP connections (default port is 8080).
 
 `q_classifier_database_name`
-: **String** --- The database the node classifier will use. 
+: **String** --- The database the node classifier will use.
 
 `q_classifier_database_password`
-: **String** --- The password for the node classifier root user. 
+: **String** --- The password for the node classifier root user.
 
 `q_classifier_database_user`
 : **String** --- The root user name for the node classifier.
 
 `q_rbac_database_name`
-: **String** --- The database the RBAC service will use. 
+: **String** --- The database the RBAC service will use.
 
 `q_rbac_database_password`
 : **String** --- The password for the RBAC service root user.
 
 `q_rbac_database_user`
-: **String** --- The root user name for the RBAC service. 
+: **String** --- The root user name for the RBAC service.
 
 `q_activity_database_name`
-: **String** --- The database the activity service will use. 
-  
+: **String** --- The database the activity service will use.
+
 `q_activity_database_password`
-: **String** --- The password for the activity service root user. 
+: **String** --- The password for the activity service root user.
 
 `q_activity_database_user`
 : **String** --- The root user name for the activity service.

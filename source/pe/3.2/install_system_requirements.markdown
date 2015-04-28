@@ -10,7 +10,7 @@ Before installing Puppet Enterprise:
 * Ensure that your nodes are running a supported operating system.
 * Ensure that your puppet master and console servers are sufficiently powerful.
 * Ensure that your network, firewalls, and name resolution are configured correctly and all target servers are communicating.
-* Plan to install the puppet master server before the console server, and the console server before any agent nodes. If you are separating roles, install them in this order:  
+* Plan to install the puppet master server before the console server, and the console server before any agent nodes. If you are separating roles, install them in this order:
     1. Puppet Master
     2. Database Support/PuppetDB
     3. Console
@@ -51,17 +51,17 @@ AIX                          | 5.3, 6.1, & 7.1                         | Power  
 Hardware
 -----
 
-Puppet Enterprise's hardware requirements depend on the type of installation you have and on the function a machine performs. 
+Puppet Enterprise's hardware requirements depend on the type of installation you have and on the function a machine performs.
 
 ### Monolithic (all-in-one) Installation
 
-Monolithic installs are suitable for deployments up to 500 nodes. We recommend that your hardware meets the following: 
+Monolithic installs are suitable for deployments up to 500 nodes. We recommend that your hardware meets the following:
 
 - The **puppet master**, **PE console**, and **PuppetDB** node: at least 4-8 processor cores, 8 GB RAM
 - All machines require very accurate timekeeping
 - **Puppet agent** nodes: any hardware able to run the supported operating system
 - For `/var/`, at least 1 GB of free space for each PE component on a given node
-- For PE-installed PostgreSQL, at least 100 GB of free space in `/opt/` for data gathering 
+- For PE-installed PostgreSQL, at least 100 GB of free space in `/opt/` for data gathering
 - For no PE-installed PostgreSQL, `/opt/` needs at least 1 GB of disk space available
 
 ### Split Installation
@@ -80,7 +80,7 @@ Browser
 
  The following browsers are supported for use with the console:
 
-* Chrome: Current version 
+* Chrome: Current version
 * Firefox: Current version
 * Internet Explorer: 9 or higher
 * Safari: 5.1 and higher
@@ -167,7 +167,7 @@ pmtools | libapr-util1   | libapr-util1  |                          |
 cron      | libxslt | curl          |                          |
 libxml2  | curl           |               |                          |
 net-tools | libjpeg        |               |                          |
-libxslt      | | | | 
+libxslt      | | | |
 
  <br>
 
@@ -236,12 +236,12 @@ The PE AIX implementation supports the NIM, BFF, and RPM package providers. Chec
 
 ***Solaris***
 
-Solaris support is agent only. 
+Solaris support is agent only.
 
 For Solaris 10, the following packages are required:
 
   * SUNWgccruntime
-  * SUNWzlib 
+  * SUNWzlib
   * In some instances, bash may not be present on Solaris systems. It needs to be installed before running the PE installer. Install it via the media used to install the OS or via CSW if that is present on your system. (CSWbash or SUNWbash are both suitable.)
 
 For Solaris 11 the following packages are required:

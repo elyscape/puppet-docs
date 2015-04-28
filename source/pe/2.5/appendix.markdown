@@ -55,7 +55,7 @@ The Puppet Enterprise installer will now check for an installation of MySQL. If 
 
 #### Update: Support Added for New Platforms and Browsers.
 
-Puppet Enterprise now supports Ubuntu Precise and SLES 11 SP2. In addition, the console now works correctly in IE8. 
+Puppet Enterprise now supports Ubuntu Precise and SLES 11 SP2. In addition, the console now works correctly in IE8.
 
 #### Update: New Version of ActiveMQ
 
@@ -155,7 +155,7 @@ The telnet connection type for managing network devices opened a NET::Telnet con
 Known Issues
 -----
 
-As we discover them, this page will be updated with known issues in Puppet Enterprise 2.5.x. Fixed issues will be removed from this list and noted above in the release notes. If you find new problems yourself, please file bugs in Puppet [here][puppetissues] and bugs specific to Puppet Enterprise [here][peissues]. 
+As we discover them, this page will be updated with known issues in Puppet Enterprise 2.5.x. Fixed issues will be removed from this list and noted above in the release notes. If you find new problems yourself, please file bugs in Puppet [here][puppetissues] and bugs specific to Puppet Enterprise [here][peissues].
 
 To find out which of these issues you are affected by, run `/opt/puppet/bin/puppet --version`, the output of which will look something like `2.7.12 (Puppet Enterprise 2.5.0)`. To upgrade to a newer version of Puppet Enterprise, see the [chapter on upgrading](./install_upgrading.html).
 
@@ -163,11 +163,11 @@ To find out which of these issues you are affected by, run `/opt/puppet/bin/pupp
 [puppetissues]: https://tickets.puppetlabs.com/secure/CreateIssue!default.jspa
 
 
-The following issues affect the currently shipped version of PE and all prior releases in the 2.x.x series, unless otherwise stated. 
+The following issues affect the currently shipped version of PE and all prior releases in the 2.x.x series, unless otherwise stated.
 
 ### Issues with Compliance UI
 
-There are two issues related to incorrect Compliance UI behavior: 
+There are two issues related to incorrect Compliance UI behavior:
 
 *     Rejecting a difference by clicking (-) results in an erroneous display. (Google Chrome only; fix is tentatively targeted for PE 2.6.)
 *     The user account pull-down menu in the top level compliance tab ceases to function after a host report has been selected.
@@ -188,7 +188,7 @@ The Rack::Cas::Client class does not log any data. (Note that the RubyCAS-client
 
 An inadequate default MySQL buffer pool size setting can interfere with upgrades to Puppet Enterprise console servers.
 
-**The PE 2.5 upgrader will check for this bad setting.** If you are affected, it will warn you and give you a chance to abort the upgrade. 
+**The PE 2.5 upgrader will check for this bad setting.** If you are affected, it will warn you and give you a chance to abort the upgrade.
 
 If you see this warning, you should:
 
@@ -198,23 +198,23 @@ If you see this warning, you should:
 
 If you have attempted to upgrade your console server without following these instructions, it is possible for the upgrade to fail. The upgrader's output in these cases resembles the following:
 
-    (in /opt/puppet/share/puppet-dashboard) 
-    == AddReportForeignKeyConstraints: migrating ================================= 
-    Going to delete orphaned records from metrics, report_logs, resource_statuses, resource_events 
-    Preparing to delete from metrics 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from metrics 
+    (in /opt/puppet/share/puppet-dashboard)
+    == AddReportForeignKeyConstraints: migrating =================================
+    Going to delete orphaned records from metrics, report_logs, resource_statuses, resource_events
+    Preparing to delete from metrics
+    2012-01-27 17:51:31: Deleting 0 orphaned records from metrics
     Deleting 100% |###################################################################| Time: 00:00:00
-    Preparing to delete from report_logs 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from report_logs 
+    Preparing to delete from report_logs
+    2012-01-27 17:51:31: Deleting 0 orphaned records from report_logs
     Deleting 100% |###################################################################| Time: 00:00:00
-    Preparing to delete from resource_statuses 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_statuses 
+    Preparing to delete from resource_statuses
+    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_statuses
     Deleting 100% |###################################################################| Time: 00:00:00
-    Preparing to delete from resource_events 
-    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_events 
+    Preparing to delete from resource_events
+    2012-01-27 17:51:31: Deleting 0 orphaned records from resource_events
     Deleting 100% |###################################################################| Time: 00:00:00
-    -- execute("ALTER TABLE reports ADD CONSTRAINT fk_reports_node_id FOREIGN KEY (node_id) REFERENCES nodes(id) ON DELETE CASCADE;") 
-    rake aborted! 
+    -- execute("ALTER TABLE reports ADD CONSTRAINT fk_reports_node_id FOREIGN KEY (node_id) REFERENCES nodes(id) ON DELETE CASCADE;")
+    rake aborted!
     An error has occurred, all later migrations canceled:
     Mysql::Error: Can't create table 'console.#sql-328_ff6' (errno: 121): ALTER TABLE reports ADD CONSTRAINT fk_reports_node_id FOREIGN KEY (node_id) REFERENCES nodes(id) ON DELETE CASCADE;
     (See full trace by running task with --trace)
@@ -230,14 +230,14 @@ If you have suffered a failed upgrade, you can fix it by doing the following:
         Enter password: <password>
 * Execute the following SQL statements:
 
-        USE console 
-        ALTER TABLE reports DROP FOREIGN KEY fk_reports_node_id; 
-        ALTER TABLE resource_events DROP FOREIGN KEY fk_resource_events_resource_status_id; 
-        ALTER TABLE resource_statuses DROP FOREIGN KEY fk_resource_statuses_report_id; 
-        ALTER TABLE report_logs DROP FOREIGN KEY fk_report_logs_report_id; 
+        USE console
+        ALTER TABLE reports DROP FOREIGN KEY fk_reports_node_id;
+        ALTER TABLE resource_events DROP FOREIGN KEY fk_resource_events_resource_status_id;
+        ALTER TABLE resource_statuses DROP FOREIGN KEY fk_resource_statuses_report_id;
+        ALTER TABLE report_logs DROP FOREIGN KEY fk_report_logs_report_id;
         ALTER TABLE metrics DROP FOREIGN KEY fk_metrics_report_id;
 * [Follow the instructions for increasing the `innodb_buffer_pool_size`](./config_advanced.html#increasing-the-mysql-buffer-pool-size) and restart the MySQL server.
-* Re-run the upgrader, which should now finish successfully. 
+* Re-run the upgrader, which should now finish successfully.
 
 For more information about the lock table size, [see this MySQL bug report](http://bugs.mysql.com/bug.php?id=15667).
 
@@ -250,14 +250,14 @@ Due to [an upstream bug in Apache](https://issues.apache.org/bugzilla/show_bug.c
 After using `puppet cert revoke` or `puppet cert clean` to revoke a certificate, restart the service by running:
 
     $ sudo /etc/init.d/pe-httpd restart
-    
+
     ### Internet Explorer 8 Can't Access Live Management Features
 
-The console's [live management](./console_live.html) page doesn't load in Internet Explorer 8. Although we are working on supporting IE8, you should currently use another browser (such as Internet Explorer 9 or Google Chrome) to access PE's live management features. 
+The console's [live management](./console_live.html) page doesn't load in Internet Explorer 8. Although we are working on supporting IE8, you should currently use another browser (such as Internet Explorer 9 or Google Chrome) to access PE's live management features.
 
 ### Dynamic Man Pages are Incorrectly Formatted
 
-Man pages generated with the `puppet man` subcommand are not formatted as proper man pages, and are instead displayed as Markdown source text. This is a purely cosmetic issue, and the pages are still fully readable. 
+Man pages generated with the `puppet man` subcommand are not formatted as proper man pages, and are instead displayed as Markdown source text. This is a purely cosmetic issue, and the pages are still fully readable.
 
 To improve the display of Puppet man pages, you can use your system `gem` command to install the `ronn` gem:
 

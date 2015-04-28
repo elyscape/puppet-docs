@@ -14,7 +14,7 @@ the boundaries of what Puppet can do or who don't understand why
 they are seeing a particular error. It can also help those who are
 hoping to extend Puppet beyond its current abilities.
 
-* * * 
+* * *
 
 ## High Level
 

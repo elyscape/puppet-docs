@@ -45,11 +45,11 @@ The console uses an SSL certificate created by your own local Puppet certificate
 
 ### Accepting the Certificate in Google Chrome or Chromium
 
-Step 1: 
+Step 1:
 
 ![Screenshot: Chrome showing an untrusted cert warning, with the 'Proceed anyway' button highlighted][cert_chrome1]
 
-Step 2: 
+Step 2:
 
 ![Screenshot: Chrome showing an untrusted cert warning, with the 'Proceed to IP address' button highlighted][cert_chrome2]
 

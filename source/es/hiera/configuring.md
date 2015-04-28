@@ -14,8 +14,8 @@ Hiera usa diferentes ubicaciones para archivos de configuración, dependiendo de
 ### Desde Puppet
 Por defecto, el archivo de configuración es **$confdir/hiera.yaml**, que generalmente es uno de estos:
 
-+ **/etc/puppet/hiera.yaml** en Puppet *open source* \*nix 
-+ **/etc/puppetlabs/puppet/hiera.yaml** en Puppet Enterprise \*nix 
++ **/etc/puppet/hiera.yaml** en Puppet *open source* \*nix
++ **/etc/puppetlabs/puppet/hiera.yaml** en Puppet Enterprise \*nix
 + **[COMMON_APPDATA]( http://docs.puppetlabs.com/windows/installing.html#the-commonappdata-folder )\PuppetLabs\puppet\etc\hiera.yaml** en Windows
 
 En Puppet 3 o superior, puedes especificar un archivo de configuración diferente con [la opción de configuración **hiera_config**](http://docs.puppetlabs.com/references/latest/configuration.html#hieraconfig) en **puppet.conf**. En Puppet 2.x, no puedes especificar un archivo de configuración diferente, pero sí puedes crear un link simbólico de **$confdir/hiera.yaml** a un archivo diferente.
@@ -38,7 +38,7 @@ Puedes especificar un archivo de configuración diferente, o un *hash* de config
 La configuración de Hiera debe ser un hash [YAML](http://www.yaml.org/YAML_for_ruby.html). El archivo debe ser YAML válido, pero puede no contener información.
 Cada clave de alto nivel en el hash **debe ser un símbolo Ruby con un prefijo de dos puntos (:)**. Las configuraciones disponibles están en una lista debajo, en [“Configuraciones Globales”](http://docs.puppetlabs.com/es/hiera/configuring.html#global-settings) y [“Configuraciones específicas para backends”](http://docs.puppetlabs.com/es/hiera/configuring.html#backend-specific-settings).
 
-### Ejemplo de archivo de configuración 
+### Ejemplo de archivo de configuración
 
 	---
 	:backends:

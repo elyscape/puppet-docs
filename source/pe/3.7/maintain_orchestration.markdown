@@ -10,6 +10,6 @@ Section Title
 
 
 
-* * * 
+* * *
 
 - [Next: Troubleshooting the Installer](./trouble_install.html)

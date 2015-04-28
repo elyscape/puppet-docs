@@ -62,7 +62,7 @@ Read the [README](http://github.com/puppetlabs/puppet-docs/blob/master/README.ma
 and [README_WRITING](http://github.com/puppetlabs/puppet-docs/blob/master/README_WRITING.markdown)
 files in the puppet-docs source to learn more about how our documentation works;
 read the [documentation style and usage guide](http://github.com/puppetlabs/puppet-docs/blob/master/style_and_usage.markdown)
-for the project's language conventions. 
+for the project's language conventions.
 
 ### Make Your Edits
 
@@ -73,7 +73,7 @@ provide passing tests that cover your changes.
 
 ### Preview Your Changes
 
-Before committing any changes or submitting a patch, you should preview your changes. The [README](http://github.com/puppetlabs/puppet-docs/blob/master/README.markdown) provides information on how to set up the correct tools to run a local server that will allow you to preview all your changes as they'll appear on the website. 
+Before committing any changes or submitting a patch, you should preview your changes. The [README](http://github.com/puppetlabs/puppet-docs/blob/master/README.markdown) provides information on how to set up the correct tools to run a local server that will allow you to preview all your changes as they'll appear on the website.
 
 ### Commit and Push/Patch
 

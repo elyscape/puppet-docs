@@ -166,7 +166,7 @@ If the node group was successfully created, the server will return a 303 See Oth
 
 #### `schema-violation`
 
-If any of the required keys are missing or the values of any of the defined keys do not match the required type, the server will return a 400 Bad Request response with the following keys: 
+If any of the required keys are missing or the values of any of the defined keys do not match the required type, the server will return a 400 Bad Request response with the following keys:
 
 * `kind`: "schema-violation"
 * `details`: an object that contains three keys:
@@ -177,9 +177,9 @@ If any of the required keys are missing or the values of any of the defined keys
 
 #### `malformed-request`
 
-If the request's body could not be parsed as JSON, the server will return a 400 Bad Request response with the following keys: 
+If the request's body could not be parsed as JSON, the server will return a 400 Bad Request response with the following keys:
 
-* `kind`: "malformed-request" 
+* `kind`: "malformed-request"
 * `details`: an object that contains two keys:
 
   * `body`: holds the request body that was received
@@ -268,7 +268,7 @@ See above for a complete description of a node group object.
 A 400 Bad Request response will be returned if the request's node group object contains the `id` key, and its value differs from the UUID specified in the request's path. The response object will have the following keys:
 
 * `kind`: "conflicting-ids"
-* `details`: Contains an object that has two keys: 
+* `details`: Contains an object that has two keys:
 
   * `submitted`: contains the ID submitted in the request's body
   * `fromUrl`: contains the ID taken from the request's URL

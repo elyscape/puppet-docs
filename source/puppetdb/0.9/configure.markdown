@@ -7,7 +7,7 @@ canonical: "/puppetdb/latest/configure.html"
 Configuring the Java Heap Size
 -----
 
-Unlike most of PuppetDB's settings, the JVM heap size is specified on the command line. If you installed PuppetDB from packages or used the `rake install` installation method, you can change this setting in the init script's configuration file. 
+Unlike most of PuppetDB's settings, the JVM heap size is specified on the command line. If you installed PuppetDB from packages or used the `rake install` installation method, you can change this setting in the init script's configuration file.
 
 The location of this file varies by platform and by the package used to install:
 
@@ -28,7 +28,7 @@ To use 1GB of memory:
 The PuppetDB Configuration File(s)
 -----
 
-PuppetDB is configured using an INI-style config file with several `[sections]`. This is very similar to the format used by Puppet. 
+PuppetDB is configured using an INI-style config file with several `[sections]`. This is very similar to the format used by Puppet.
 
 **Whenever you change settings in the configuration file, you must restart PuppetDB before the changes will take effect.**
 
@@ -92,7 +92,7 @@ We currently support two configurations: a built-in HSQLDB database, and Postgre
       classname = org.hsqldb.jdbcDriver
       subprotocol = hsqldb
       subname = file:/path/to/db;hsqldb.tx=mvcc;sql.syntax_pgs=true
-  
+
   Replace `/path/to/db` with a filesystem location in which you'd like to persist the database.
 
 #### PostgreSQL DB Settings
@@ -117,7 +117,7 @@ Ensure you can log in by running:
       subname = //<host>:<port>/<database>
 
   Replace `<host>` with the DB server's hostname. Replace `<port>` with the port on which PostgreSQL is listening. Replace `<database>` with the name of the database you've created for use with PuppetDB.
-  
+
   It's possible to use SSL to protect connections to the database. The [PostgreSQL JDBC docs](http://jdbc.postgresql.org/documentation/head/ssl.html) indicate how to do this. Be sure to add `ssl=true` to the `subname` parameter.
 
 `username`
@@ -139,7 +139,7 @@ Every change to PuppetDB's data stores comes in via commands that are inserted i
 `threads`
 
 : How many command processing threads to use. Each thread can process a single command at a time. [The number of threads can be tuned based on what you see in the performance console.](./maintain_and_tune.html#monitor-the-performance-console)
-  
+
   This setting defaults to half the number of cores in your system.
 
 ### `[jetty]` (HTTP)
@@ -186,7 +186,7 @@ The `[jetty]` section configures HTTP for PuppetDB.
 
 ### `[repl]` (Remote Runtime Modification)
 
-The `[repl]` section configures remote runtime modification. 
+The `[repl]` section configures remote runtime modification.
 
 Enabling a remote [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) allows you to manipulate the behavior of PuppetDB at runtime. This should only be done for debugging purposes, and is thus disabled by default. An example configuration stanza:
 
@@ -203,8 +203,8 @@ Enabling a remote [REPL](http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93
 
 : Either `nrepl` or `swank`.
 
-  The _nrepl_ repl type opens up a socket you can connect to via telnet. 
-  
+  The _nrepl_ repl type opens up a socket you can connect to via telnet.
+
   The _swank_ type allows emacs' clojure-mode to connect directly to a running PuppetDB instance by using `M-x slime-connect`. This is much more user-friendly than telnet.
 
 `port`

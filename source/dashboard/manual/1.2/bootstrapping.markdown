@@ -64,13 +64,13 @@ Dashboard is distributed with the version of Rails it uses, as well as most of i
 
 On most OSes, you'll be able to install all of these easily with the OS's package tools.
 
-*Note:* Puppet supplies Ruby 1.8.7 packages for Enterprise Linux 5 and its variants in order meet the Ruby versioning requirement for Dashboard. Also note, these packages *replace* existing Ruby packages in your system.  
+*Note:* Puppet supplies Ruby 1.8.7 packages for Enterprise Linux 5 and its variants in order meet the Ruby versioning requirement for Dashboard. Also note, these packages *replace* existing Ruby packages in your system.
 
 #### Installing Dependencies Under Ubuntu 10.04 LTS
 
 Due to issues with Ubuntu 10.04 LTS's version of Ruby, you can install most dependencies from packages but must manually build `gem`. Additionally, if you encounter performance issues, you may wish to manually upgrade your version of Ruby to patch level 299 or higher.
 
-These instructions assume a fresh install of the OS, and may differ depending on its current configuration. The commands must be run from one of the standard shells, preferably `bash`, `dash`, or `zsh`. 
+These instructions assume a fresh install of the OS, and may differ depending on its current configuration. The commands must be run from one of the standard shells, preferably `bash`, `dash`, or `zsh`.
 
 1. Install the operating system packages:
 
@@ -92,7 +92,7 @@ These instructions assume a fresh install of the OS, and may differ depending on
 
 3. Create `gem` as an alternative name for the `gem1.8` command:
 
-        update-alternatives --install /usr/bin/gem gem /usr/bin/gem1.8 1 
+        update-alternatives --install /usr/bin/gem gem /usr/bin/gem1.8 1
 
 Installing Puppet Dashboard
 ------------
@@ -101,13 +101,13 @@ Your three options for installing Dashboard are to use the Puppet Labs package r
 
 ### Installing from Packages
 
-The best way to install Dashboard is with Puppet Labs' official package repositories. This will automatically handle Dashboard's dependencies, and will make for easier upgrades when new versions are released. 
+The best way to install Dashboard is with Puppet Labs' official package repositories. This will automatically handle Dashboard's dependencies, and will make for easier upgrades when new versions are released.
 
-When installing from packages, Dashboard will be installed in `/usr/share/puppet-dashboard`, and the `puppet-dashboard` user and group will own the files; this user will be automatically created if it doesn't exist. 
+When installing from packages, Dashboard will be installed in `/usr/share/puppet-dashboard`, and the `puppet-dashboard` user and group will own the files; this user will be automatically created if it doesn't exist.
 
 #### Enabling the Repository
 
-Before installing, [follow the instructions here](/guides/puppetlabs_package_repositories.html) to enable the Puppet Labs package repository for your system. 
+Before installing, [follow the instructions here](/guides/puppetlabs_package_repositories.html) to enable the Puppet Labs package repository for your system.
 
 #### Installing Dashboard
 
@@ -122,7 +122,7 @@ On Debian-based systems, install Puppet Dashboard via Apt:
 
 ### Installing from Git
 
-If you're unable to use the Dashboard packages on your system, the next best way to install Dashboard is from the Puppet Labs Git repo. In the directory where you want Dashboard installed (we suggest `/opt/` or `/usr/share/`), run: 
+If you're unable to use the Dashboard packages on your system, the next best way to install Dashboard is from the Puppet Labs Git repo. In the directory where you want Dashboard installed (we suggest `/opt/` or `/usr/share/`), run:
 
     git clone git://github.com/puppetlabs/puppet-dashboard.git
     cd puppet-dashboard
@@ -136,7 +136,7 @@ If you haven't installed Dashboard from a package, **you must create a user and 
 
 ### Installing from Source Tarballs
 
-If you prefer not to use Git, you can simply download the most recent release of Puppet Dashboard and extract it into your install location: 
+If you prefer not to use Git, you can simply download the most recent release of Puppet Dashboard and extract it into your install location:
 
     wget http://puppetlabs.com/downloads/dashboard/puppet-dashboard-1.2.0.tar.gz
     tar -xzvf puppet-dashboard-1.2.0.tar.gz
@@ -153,30 +153,30 @@ Dashboard needs a `config/database.yml` file and a `config/settings.yml` file. I
 
 ### `database.yml`
 
-The database settings file is located at `config/database.yml`, and an example file can be found at `config/database.yml.example`. This file should be a YAML hash with one key for each of the standard Rails environments: production, development, and test. 
+The database settings file is located at `config/database.yml`, and an example file can be found at `config/database.yml.example`. This file should be a YAML hash with one key for each of the standard Rails environments: production, development, and test.
 
 * The "production" environment gives the best performance, and should be used most of the time by most users. **Rails does not consider production its default environment,** and you **must specify it manually** with the `RAILS_ENV` environment variable when running any rake tasks or starting a WEBrick server.
-* The "development" environment gives worse performance, but yields better logging and error reporting when something goes wrong. 
+* The "development" environment gives worse performance, but yields better logging and error reporting when something goes wrong.
 * The "test" environment is only used for running Dashboard's automated tests, and should never be used by most users.
 
 You will likely only ever be using the production environment. **You may wish to use the same database for the production and development environments,** as this can remove the pain of having to specify `RAILS_ENV=production` for every rake task and gives you the option of running a temporary instance with the same data in the development environment (if you ever need to collect detailed error messages, for example). **You should not use the same database for the test environment,** as it gets destroyed every time the tests are run.
 
-Each environment in the `database.yml` file should be a hash with keys for `database`, `username`, `password`, `encoding`, and `adapter`. At the moment, `adapter` can only be `mysql`, and `encoding` should always be `utf8`. 
+Each environment in the `database.yml` file should be a hash with keys for `database`, `username`, `password`, `encoding`, and `adapter`. At the moment, `adapter` can only be `mysql`, and `encoding` should always be `utf8`.
 
-Do not give Dashboard the keys to MySQL's `root` user account --- [create a new database user](#creating-and-configuring-a-mysql-database) for it (preferably named "dashboard") and choose a secure password. 
+Do not give Dashboard the keys to MySQL's `root` user account --- [create a new database user](#creating-and-configuring-a-mysql-database) for it (preferably named "dashboard") and choose a secure password.
 
 Since the `database.yml` file has to contain Dashboard's database user and password in cleartext, you should set its mode to 660 (or some other world-unreadable mode). If you've created the file while logged in as a normal user, be sure to chown it to the Dashboard user.
 
 ### `settings.yml`
 
-The general settings file should be a YAML hash. When first configuring Dashboard, you should simply make a copy of `settings.yml.example`, as it's unlikely that you'll need to change any settings yet. (Although you may wish to change `date_format`, `custom_logo_url`, or `no_longer_reporting_cutoff`.) 
+The general settings file should be a YAML hash. When first configuring Dashboard, you should simply make a copy of `settings.yml.example`, as it's unlikely that you'll need to change any settings yet. (Although you may wish to change `date_format`, `custom_logo_url`, or `no_longer_reporting_cutoff`.)
 
 Creating and Configuring a MySQL Database
 --------
 
 Dashboard needs a user, a password, and at least one database. Create these using the names and passwords you chose in your `database.yml` file.
 
-This will require that you use some external MySQL administration utility;[^rakedbcreate] in the standard command-line `mysql` client, the commands will look something like this: 
+This will require that you use some external MySQL administration utility;[^rakedbcreate] in the standard command-line `mysql` client, the commands will look something like this:
 
     CREATE DATABASE dashboard CHARACTER SET utf8;
     CREATE USER 'dashboard'@'localhost' IDENTIFIED BY 'my_password';
@@ -224,7 +224,7 @@ This will start a Dashboard instance on port 3000 using the "production" environ
 * You must specify the environment manually if you're using anything other than "development".
 
 
-Running under WEBrick isn't feasible for production use, since it can't handle concurrent requests, but it can be useful when first getting Dashboard and Puppet configured. If you'd rather skip straight to a production-ready deployment, see [the relevant section below][passenger]. 
+Running under WEBrick isn't feasible for production use, since it can't handle concurrent requests, but it can be useful when first getting Dashboard and Puppet configured. If you'd rather skip straight to a production-ready deployment, see [the relevant section below][passenger].
 
 [passenger]: #serving-dashboard-with-passenger-and-apache
 
@@ -232,11 +232,11 @@ Running under WEBrick isn't feasible for production use, since it can't handle c
 Configuring Puppet
 ---------
 
-Puppet Dashboard has two main functions: report viewer/analyzer, and node classifier. Puppet can use either of these functions or both of them. Once you have puppet configured, you'll need to restart puppet master. 
+Puppet Dashboard has two main functions: report viewer/analyzer, and node classifier. Puppet can use either of these functions or both of them. Once you have puppet configured, you'll need to restart puppet master.
 
 ### Using Dashboard for Reports
 
-For Dashboard to receive reports, there are two requirements: 
+For Dashboard to receive reports, there are two requirements:
 
 * All agent nodes have to be configured to submit reports to the master.
 * The master has to be configured to send reports to Dashboard.
@@ -270,7 +270,7 @@ To use Dashboard's ENC, you'll need to set the puppet master's `node_terminus` a
 
 ### Testing Puppet's Connection to Dashboard
 
-After restarting puppet master, you can run one of your puppet agents with `puppet agent --test` to check whether the configuration is correct. The agent should be able to retrieve its catalog and complete its run, and when you reload the Dashboard UI in your web browser, you should see "1 pending task" under the "Background Tasks" heading in the upper left corner. 
+After restarting puppet master, you can run one of your puppet agents with `puppet agent --test` to check whether the configuration is correct. The agent should be able to retrieve its catalog and complete its run, and when you reload the Dashboard UI in your web browser, you should see "1 pending task" under the "Background Tasks" heading in the upper left corner.
 
 ![1 pending task](./images/background_tasks_pending.png)
 
@@ -293,7 +293,7 @@ In most configurations, you should run exactly as many workers as the machine ha
 
 #### Monitoring the Monitor
 
-For additional reliability, you might want to use a standard service monitoring tool like [god](http://god.rubyforge.org/), [monit](http://mmonit.com/monit/), or [runit](http://smarden.org/runit/) to supervise the `script/delayed_job` monitor. You can also look into other ways to run `delayed_job` workers, as it's becoming a fairly standard component in the Rails world. 
+For additional reliability, you might want to use a standard service monitoring tool like [god](http://god.rubyforge.org/), [monit](http://mmonit.com/monit/), or [runit](http://smarden.org/runit/) to supervise the `script/delayed_job` monitor. You can also look into other ways to run `delayed_job` workers, as it's becoming a fairly standard component in the Rails world.
 
 ### Using the `jobs:work` Rake Task
 
@@ -304,7 +304,7 @@ We don't recommend using rake-started workers for production, but they can be us
 Running Dashboard in a Production-Quality Server
 -----------
 
-Although you may have tested Dashboard using the included WEBrick server script, you'll need to deploy in a production-quality server like [Apache](http://httpd.apache.org) with [Passenger][] or [Nginx](http://nginx.org) with [Passenger][], [Thin](http://code.macournoyer.com/thin/), or [Unicorn](http://unicorn.bogomips.org/) before rolling out Dashboard to your entire site. Instructions follow for running Dashboard under Apache with Passenger, but as Dashboard is a fairly standard Rails application, instructions for using any popular backend should be easily adaptable. 
+Although you may have tested Dashboard using the included WEBrick server script, you'll need to deploy in a production-quality server like [Apache](http://httpd.apache.org) with [Passenger][] or [Nginx](http://nginx.org) with [Passenger][], [Thin](http://code.macournoyer.com/thin/), or [Unicorn](http://unicorn.bogomips.org/) before rolling out Dashboard to your entire site. Instructions follow for running Dashboard under Apache with Passenger, but as Dashboard is a fairly standard Rails application, instructions for using any popular backend should be easily adaptable.
 
 [passenger]: http://www.modrails.com
 [pass-guide]: http://www.modrails.com/documentation/Users%20guide%20Apache.html
@@ -318,18 +318,18 @@ Once Passenger is enabled, copy Dashboard's example vhost from `ext/passenger/da
 
 * **The port on which to serve Dashboard.** This defaults to 80, but if you want to serve it on Puppet's preferred port of 3000, you'll need to change the opening tag of the vhost definition block to `<VirtualHost *:3000>` and insert a `Listen 3000` directive above it.
 * **The subdomain you'll be serving Dashboard from,** which is generally just the fully-qualified domain name of this machine. Put this in the `ServerName` directive.
-* **The location of Dashboard's `public` directory,** which should go in both the `DocumentRoot` directive and the `<Directory>` block opening tag. 
-* **Your preferred log file locations,** which go in the `ErrorLog` and `CustomLog` directives. 
-* **The paths to Passenger, `mod_passenger`, and Ruby.** But before you tweak these, scan the rest of Apache's config files: if you installed Passenger from a vendor package, it probably already inserted a global config file to make sure it's loaded, in which case you can safely comment out the first three lines of this vhost config. Otherwise, point the `LoadModule`, `PassengerRoot`, and `PassengerRuby` directives at the top of the file to the correct files and directories. 
+* **The location of Dashboard's `public` directory,** which should go in both the `DocumentRoot` directive and the `<Directory>` block opening tag.
+* **Your preferred log file locations,** which go in the `ErrorLog` and `CustomLog` directives.
+* **The paths to Passenger, `mod_passenger`, and Ruby.** But before you tweak these, scan the rest of Apache's config files: if you installed Passenger from a vendor package, it probably already inserted a global config file to make sure it's loaded, in which case you can safely comment out the first three lines of this vhost config. Otherwise, point the `LoadModule`, `PassengerRoot`, and `PassengerRuby` directives at the top of the file to the correct files and directories.
 
-If you prefer to roll your own vhost config, see the [Passenger user's guide][pass-guide] and note that: 
+If you prefer to roll your own vhost config, see the [Passenger user's guide][pass-guide] and note that:
 
 * The `DocumentRoot` should point to Dashboard's `public` directory, which needs to allow all access and have the `MultiViews` option turned off.
-* Passenger will need either the per-server `RailsAutoDetect` directive set to `On` (which is its default state), or a `RailsBaseURI` directive in the vhost definition. 
+* Passenger will need either the per-server `RailsAutoDetect` directive set to `On` (which is its default state), or a `RailsBaseURI` directive in the vhost definition.
 
 Once Dashboard's vhost config is properly configured, simply restart Apache and test that Puppet can communicate with Dashboard, as described above.
 
-* * * 
+* * *
 
 #### Navigation
 

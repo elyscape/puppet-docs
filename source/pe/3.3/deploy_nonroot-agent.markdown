@@ -5,7 +5,7 @@ subtitle: "Running PE Agents without Root Privileges"
 canonical: "/pe/latest/deploy_nonroot-agent.html"
 ---
 
-**Warning**: This information is currently out-of-date for this version of Puppet Enterprise. We are working on an update and will publish it as soon as possible. 
+**Warning**: This information is currently out-of-date for this version of Puppet Enterprise. We are working on an update and will publish it as soon as possible.
 
 **IMPORTANT**: these procedures assume some degree of experience with Puppet Enterprise (PE). If you are new to PE, we strongly recommend you work through the [Quick Start Guide](./quick_start.html) and some of our other educational resources before attempting to implement non-root agent capability.
 
@@ -49,7 +49,7 @@ To properly configure non-root agent access, you will need to:
 
 4. By default, the `pe-puppet` service runs automatically as a root user, so it needs to be disabled. As a root user on the agent node, stop the service by running `puppet resource service pe-puppet ensure=stopped enable=false`.
 
-5. Disable the MCollective service on the agent node. **As a root user**, run `puppet resource service pe-mcollective ensure=stopped enable=false`. 
+5. Disable the MCollective service on the agent node. **As a root user**, run `puppet resource service pe-mcollective ensure=stopped enable=false`.
 
    >**Tip**: If you wish to use `su - nonrootuser` to switch between accounts, make sure to use the `-` (`-l` in some unix variants) argument so that full login privileges are correctly granted. Otherwise you may see "permission denied" errors when trying to apply a catalog.
 
@@ -99,7 +99,7 @@ If you need to run agents without admin privileges on nodes running a Windows OS
 
 3. While still connected as **an admin user**, disable the pe-puppet service with `puppet resource service pe-puppet ensure=stopped enable=false`.
 
-4. While still connected as **an admin user**, disable the pe-mcollective service with `puppet resource service pe-mcollective ensure=stopped enable=false`. 
+4. While still connected as **an admin user**, disable the pe-mcollective service with `puppet resource service pe-mcollective ensure=stopped enable=false`.
 
 5. Log out of the Windows agent machine and log back in as the non-admin user, and then run the following command:
 

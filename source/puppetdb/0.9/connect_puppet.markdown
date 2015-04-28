@@ -10,10 +10,10 @@ canonical: "/puppetdb/latest/connect_puppet_master.html"
 
 > Note: Your site's puppet master(s) must be running Puppet 2.7.12 or later to use PuppetDB.
 
-After PuppetDB is installed and running, you should configure your puppet master(s) to use it. A properly configured puppet master will do the following: 
+After PuppetDB is installed and running, you should configure your puppet master(s) to use it. A properly configured puppet master will do the following:
 
 * Send every node's catalog to PuppetDB
-* Send every node's facts to PuppetDB 
+* Send every node's facts to PuppetDB
 * Query PuppetDB when compiling node catalogs that collect [exported resources](/guides/exported_resources.html)
 * Query PuppetDB when responding to [inventory service](/guides/inventory_service.html) requests
 
@@ -21,12 +21,12 @@ Follow all of the instructions below **on your puppet master server(s).**
 
 ## Step 1: Install Plugins
 
-Currently, puppet masters need extra Ruby plugins in order to use PuppetDB. Unlike custom facts or functions, these cannot be loaded from a module, and must be installed in Puppet's main source directory. 
+Currently, puppet masters need extra Ruby plugins in order to use PuppetDB. Unlike custom facts or functions, these cannot be loaded from a module, and must be installed in Puppet's main source directory.
 
 ### For PE Users
 
 * [Enable the Puppet Labs repo](/guides/puppetlabs_package_repositories.html#puppet-enterprise-repositories).
-* Install the `pe-puppetdb-terminus` package. 
+* Install the `pe-puppetdb-terminus` package.
     * On Debian and Ubuntu: run `sudo apt-get install pe-puppetdb-terminus`
     * On EL or Fedora: run `sudo yum install pe-puppetdb-terminus`
 
@@ -34,7 +34,7 @@ Currently, puppet masters need extra Ruby plugins in order to use PuppetDB. Unli
 ### For Open Source Users
 
 * [Enable the Puppet Labs repo](/guides/puppetlabs_package_repositories.html#open-source-repositories).
-* Install the `puppetdb-terminus` package. 
+* Install the `puppetdb-terminus` package.
     * On Debian and Ubuntu: run `sudo apt-get install puppetdb-terminus`
     * On EL or Fedora: run `sudo yum install puppetdb-terminus`
 
@@ -49,7 +49,7 @@ If your puppet master isn't running Puppet from a supported package, you will ne
 
 ### Locate Puppet's Config Directory
 
-Find your puppet master's config directory by running `sudo puppet config print confdir`. It will usually be at either `/etc/puppet/` or `/etc/puppetlabs/puppet/`. 
+Find your puppet master's config directory by running `sudo puppet config print confdir`. It will usually be at either `/etc/puppet/` or `/etc/puppetlabs/puppet/`.
 
 You will need to edit (or create) three files in this directory:
 
@@ -62,7 +62,7 @@ The [puppetdb.conf][puppetdb_conf] file will probably not exist yet. Create it, 
     port = 8081
 
 * PuppetDB's port for secure traffic defaults to 8081.
-* PuppetDB's port for insecure traffic defaults to 8080, but doesn't accept connections by default. 
+* PuppetDB's port for insecure traffic defaults to 8080, but doesn't accept connections by default.
 
 If no puppetdb.conf file exists, the following default values will be used:
 
@@ -77,11 +77,11 @@ To enable PuppetDB for the inventory service and saved catalogs/exported resourc
       storeconfigs = true
       storeconfigs_backend = puppetdb
 
-> Note: If you previously set the `thin_storeconfigs` or `async_storeconfigs` settings to `true`, you should delete them at this time. The old queuing mechanism will interfere with performance, and thinned catalogs are no longer necessary. Likewise, if you previously used the puppet queue/puppetqd daemon, you should now disable it. 
+> Note: If you previously set the `thin_storeconfigs` or `async_storeconfigs` settings to `true`, you should delete them at this time. The old queuing mechanism will interfere with performance, and thinned catalogs are no longer necessary. Likewise, if you previously used the puppet queue/puppetqd daemon, you should now disable it.
 
 ### Edit routes.yaml
 
-The [routes.yaml][routes_yaml] file will probably not exist yet. Create it if necessary, and edit it to contain the following: 
+The [routes.yaml][routes_yaml] file will probably not exist yet. Create it if necessary, and edit it to contain the following:
 
     ---
     master:

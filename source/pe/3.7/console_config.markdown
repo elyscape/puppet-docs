@@ -37,10 +37,10 @@ To increase the max threads for the PE console and console API, edit your defaul
 > **Note**: This setting is only available in PE 3.7.2 and later.
 
 ### Tuning Java Args for the PE Console
- 
+
 You can increase the JVM (Java Virtual Machine) memory that is allocated to Java services running on the PE console. This memory allocation is known as the Java heap size.
 
-Instructions for using the PE console to increase the Jave heap size are detailed on on the [Configuring Java Arguments for PE](/config_java_args.html#pe-console-service) page. 
+Instructions for using the PE console to increase the Jave heap size are detailed on on the [Configuring Java Arguments for PE](/config_java_args.html#pe-console-service) page.
 
 ## Tuning the PostgreSQL Buffer Pool Size
 
@@ -57,12 +57,12 @@ The PE console uses a [`delayed_job`](https://github.com/collectiveidea/delayed_
 
 You can increase the number of workers by editing a class in the **PE Console** group.
 
-1. In the PE console, navigate to the **Classification** page. 
+1. In the PE console, navigate to the **Classification** page.
 2. Click the **PE Console** group.
-3. In the **PE Console** group page, click the **Classes** tab. 
-4. Locate the **puppet_enterprise::profile::console** class, and from the **Parameter** drop-down list, select **delayed_job_workers**. 
-5. In the **Value** field, enter 2. 
-6. Click **Add parameter**, and then the **Commit change** button. 
+3. In the **PE Console** group page, click the **Classes** tab.
+4. Locate the **puppet_enterprise::profile::console** class, and from the **Parameter** drop-down list, select **delayed_job_workers**.
+5. In the **Value** field, enter 2.
+6. Click **Add parameter**, and then the **Commit change** button.
 
 
 ## Changing the Console's Port

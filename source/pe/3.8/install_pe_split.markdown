@@ -203,7 +203,7 @@ If you plan on managing more than 1500 nodes, follow these split install instruc
    >
           sudo -u postgres sh
           psql puppetdb -c 'create extension pg_trgm'
-          exit  
+          exit
 
 9. Provide the following information about the PE console administrator user:
 

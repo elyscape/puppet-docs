@@ -63,7 +63,7 @@ canonical: "/pe/latest/puppet_assign_configurations.html"
 Summary
 -----
 
-As we've established, **classes** are named chunks of Puppet code that generally manage a fairly limited piece of configuration. Classes can be assigned directly to nodes.  
+As we've established, **classes** are named chunks of Puppet code that generally manage a fairly limited piece of configuration. Classes can be assigned directly to nodes.
 
 Each node's complete configuration will be composed of many classes. Puppet Enterprise (PE) provides several facilities for choosing which classes will be assigned to which nodes, as well as for configuring those classes. This page describes the basic concepts of assigning and configuring classes, and details each available source of class and configuration data in Puppet Enterprise.
 

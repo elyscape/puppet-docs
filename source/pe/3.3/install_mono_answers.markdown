@@ -5,7 +5,7 @@ subtitle: "Monolithic Puppet Enterprise Install Answer File Reference"
 canonical: "/pe/latest/install_mono_answers.html"
 ---
 
-The following answers can be used to perform an automated monolithic (all-in-one) installation of PE. 
+The following answers can be used to perform an automated monolithic (all-in-one) installation of PE.
 
 A .txt file version can be found in the `answers` directory of the PE installer tarball.
 
@@ -36,7 +36,7 @@ These answers are always needed.
 : **Y** or **N** --- Whether to install the puppet master component.
 
 `q_all_in_one_install=y`
-: **Y** or **N** --- Whether or not the installation is an all-in-one installation, (i.e., are PuppetDB and the console also being installed on this node). 
+: **Y** or **N** --- Whether or not the installation is an all-in-one installation, (i.e., are PuppetDB and the console also being installed on this node).
 
 `q_puppet_cloud_install=n`
 : **Y** or **N** --- Whether to install the cloud provisioner component.

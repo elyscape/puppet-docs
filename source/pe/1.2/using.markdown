@@ -71,7 +71,7 @@ Teaching the use of Puppet and MCollective is currently outside the scope of thi
 [lg]: /puppet/latest/reference/lang_summary.html
 [lp]: /learning/
 [mco]: /mcollective/index.html
-[docs]: 
+[docs]:
 
 Enabling MCollective
 -----

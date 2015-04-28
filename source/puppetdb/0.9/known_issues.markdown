@@ -17,7 +17,7 @@ Minor Issues
 
 ### PuppetDB does not restart after running Redhat Package Manager
 
-This is [issue #15075][rpm]. Running RPM will correctly stop PuppetDB if it is enabled, but fails to restart it. You will need to manually restart PuppetDB. Please comment on the bug report if you have any additional information. 
+This is [issue #15075][rpm]. Running RPM will correctly stop PuppetDB if it is enabled, but fails to restart it. You will need to manually restart PuppetDB. Please comment on the bug report if you have any additional information.
 
 [rpm]: http://projects.puppetlabs.com/issues/15075
 

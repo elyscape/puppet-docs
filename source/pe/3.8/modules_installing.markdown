@@ -73,36 +73,36 @@ If you have used a command line package manager tool (like `gem`, `apt-get`, or 
 
 In order to use the Puppet module tool behind a proxy, you need to set the following:
 
-	export http_proxy=http://10.187.255.9:8080 
+	export http_proxy=http://10.187.255.9:8080
 	export https_proxy=http://10.187.255.9:8080
-	
+
 Alternatively, you can set these two proxy settings inside the `user` config section in the `puppet.conf` file: `http_proxy_host` and `http_proxy_port`. For more information, see [Configuration Reference](/references/latest/configuration.html).
 
->**Note:** Make sure to set these two proxy settings in the `user` section only. Otherwise, there can be adverse effects. 
+>**Note:** Make sure to set these two proxy settings in the `user` section only. Otherwise, there can be adverse effects.
 
 
 Installing Modules
 -----
 
-The `puppet module install` action will install a module and all of its dependencies. 
+The `puppet module install` action will install a module and all of its dependencies.
 
 ### Modulepath
 
 #### On a fresh installation of Puppet Enterprise 3.8
 
-If you have freshly installed Puppet Enterprise (PE) 3.8, using `puppet module install` will, by default, install your modules in /etc/puppetlabs/puppet/environments/production/modules. 
+If you have freshly installed Puppet Enterprise (PE) 3.8, using `puppet module install` will, by default, install your modules in /etc/puppetlabs/puppet/environments/production/modules.
 
 You can change the default location via the [modulepath](https://docs.puppetlabs.com/puppet/3.8/reference/dirs_modulepath.html#configuring-the-modulepath), which will vary depending on whether you are using different environments.
 
 #### On an upgrade of PE 3.8
 
-If you have upgraded to PE 3.8 from an earlier version of PE, using `puppet module install` will, by default, install your modules in /etc/puppetlabs/puppet/modules. **However** if you specified a different default path in your earlier version of PE, the upgrader will respect that. 
+If you have upgraded to PE 3.8 from an earlier version of PE, using `puppet module install` will, by default, install your modules in /etc/puppetlabs/puppet/modules. **However** if you specified a different default path in your earlier version of PE, the upgrader will respect that.
 
 >**A note about installing**
 >
->As of Puppet 3.6, if any module in either your /etc/puppetlabs/puppet/modules or /etc/puppetlabs/puppet/environments/production directory has incorrect versioning (anything other than major.minor.patch), attempting to install the module (or upgrade it) will result in the following warning. 
+>As of Puppet 3.6, if any module in either your /etc/puppetlabs/puppet/modules or /etc/puppetlabs/puppet/environments/production directory has incorrect versioning (anything other than major.minor.patch), attempting to install the module (or upgrade it) will result in the following warning.
 >
->~~~ 
+>~~~
 >Warning: module (/Users/youtheuser/.puppet/modules/module) has an invalid version number (0.1). The version has been set to 0.0.0. If you are the maintainer for this module, please update the metadata.json with a valid Semantic Version (http://semver.org).
 ~~~
 >
@@ -149,8 +149,8 @@ Puppet Enterprise 3.8 supports modules built exclusively for you, the PE user. T
 * Use the [Puppet module tool](#using-the-module-tool).
 * Install the module on a properly licensed Puppet node.
 * Have internet access on the node you are using to download the module.
-    
-Once you've run `puppet module install puppetlabs-modulename` you can move the installed module to the directory, server, or version control system (VCS) repository of your choice. 
+
+Once you've run `puppet module install puppetlabs-modulename` you can move the installed module to the directory, server, or version control system (VCS) repository of your choice.
 
 You might also choose to run `puppet module install puppetlabs-modulename` and then  run `puppet module build` to build the newly-installed module so you can move the pkg/*.tar.gz wherever you choose. Once the tar.gz file is moved, run `puppet module install` against it. As long as the node you've moved it to has internet access, this second run of `puppet module install` will bring in any publicly available dependencies, such as puppetlabs-stdlib.
 
@@ -205,7 +205,7 @@ Use the module tool's *`upgrade` action* to upgrade an installed module to the l
 
 ### Managing Puppet Enterprise Modules
 
-If you want to manage a Puppet Enterprise module with [librarian-puppet](https://github.com/rodjek/librarian-puppet) or [r10k](https://github.com/puppetlabs/r10k), you must [install the module](#installing-puppet-enterprise-modules) and then commit the module to your version control repository. 
+If you want to manage a Puppet Enterprise module with [librarian-puppet](https://github.com/rodjek/librarian-puppet) or [r10k](https://github.com/puppetlabs/r10k), you must [install the module](#installing-puppet-enterprise-modules) and then commit the module to your version control repository.
 
 When it comes time to upgrade your Puppet Enterprise module, much like with installation, you must:
 

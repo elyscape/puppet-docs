@@ -135,7 +135,7 @@ Continue to the next step, where you'll replace the PuppetDB certs.
 ###Replace the PuppetDB Certificates and Security Credentials
 
 1. (Optional—for split installs only) Refer to [Locating the Puppet Agent Certificate and Security Credentials](#locating-the-puppet-agent-certificate-and-security-credentials) and replace the puppet agent service files. These files will be copied to the PuppetDB SSL directory in the step 2.
-2. Refer to [Locating the PuppetDB Certificate and Security Credentials](#locating-the-puppetdb-certificate-and-security-credentials) and replace the files. 
+2. Refer to [Locating the PuppetDB Certificate and Security Credentials](#locating-the-puppetdb-certificate-and-security-credentials) and replace the files.
 3. Run `service pe-puppetdb restart`.
 4. Run puppet.
 

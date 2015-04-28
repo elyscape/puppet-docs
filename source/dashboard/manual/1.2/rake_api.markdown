@@ -17,7 +17,7 @@ This is a chapter of the [Puppet Dashboard 1.2 manual](./index.html).
 * [Using Dashboard](./using.html)
 * **Rake API**
 
-* * * 
+* * *
 
 
 Rake API
@@ -80,7 +80,7 @@ All of these tasks should be run as follows, replacing `<TASK>` with the task na
 : Replace the classes assigned to a node group. Classes must be specified as a comma-separated list.
 
 
-* * * 
+* * *
 
 #### Navigation
 

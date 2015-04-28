@@ -205,18 +205,18 @@ else {
 </div>
 <blockquote>
   <h3 id="aside-beware-of-the-fake-false">余談：文字列の”false”には気を付けて！</h3>
-  
+
   <p>前述の例では、<code>str2bool("$is_virtual")</code>という新しいコードが出てきます。.</p>
-  
+
   <p><code>if</code>文の条件は真偽値であるtrueかfalseとして解決される必要があります。しかし、全てのfactsは<a href="http://docs.puppetlabs.com/puppet/latest/reference/lang_datatypes.html#strings">文字列</a>であり、さらに全ての空ではない文字列は（文字列“false”であっても）trueとして評価されます。そのためfactsが返す文字列の“false”はPuppetでブール値のfalseとして扱えるように変換する必要があります。</p>
-  
+
   <p>このようなケースでは：</p>
-  
+
   <ul>
     <li>変数をダブルクォートで囲います。もしその変数が何らかの理由により実際に真偽値を含んでいた時（普通はありませんが）、文字列に変換されます。</li>
     <li>文字列を<code>str2bool</code>関数に通すことで、真偽値っぽいものを本物のtrue値もしくはfalse値に変換します。</li>
     </ul>
-  
+
   <p><code>str2bool</code><a href="http://docs.puppetlabs.com/puppet/latest/reference/lang_functions.html">関数(英文)</a>は<a href="http://forge.puppetlabs.com/puppetlabs/stdlib">puppetlabs/stdlib(英文)</a>モジュールの一部で、Puppet Enterpriseに含まれています。オープンソース版のPuppetを利用している場合は、<code>sudo puppet module install puppetlabs/stdlib</code>を実行することでインストールできます。</p>
 
   <p>代わりに<code>$is_virtual == 'true'</code>という式を使うこともできます。<code>is_virtual</code> factsがtrueであればtrueを返し、それ以外はfalseを返します。</p>

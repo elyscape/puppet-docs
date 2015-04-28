@@ -291,7 +291,7 @@ Esto te permite declarar una clase de manera segura en varios lugares. Si alguna
 
 	    class {'ntp':}
 
-Se comportan de forma diferente, actúan más como recursos que como la función **include**. 
+Se comportan de forma diferente, actúan más como recursos que como la función **include**.
 
 ¿Recuerdas que vimos que no puedes declarar el mismo recurso más de una vez? Lo mismo se puede decir de las declaraciones de clase tipo recurso. Si Puppet intenta evaluar una, y la clase ya ha sido declarada, fallará la compilación con un error.
 
@@ -401,7 +401,7 @@ El subcomando **puppet module** maneja estos prefijos de nombre de usuario autom
 
 ## Ejercicios
 ### Ejercicio: Otra vez Apache
-Construyendo sobre el trabajo que has hecho dos capítulos atrás, crea un módulo Apache y una clase que asegure que Apache está instalado, en ejecución y manejando su archivo de configuración. 
+Construyendo sobre el trabajo que has hecho dos capítulos atrás, crea un módulo Apache y una clase que asegure que Apache está instalado, en ejecución y manejando su archivo de configuración.
 
 **Trabajo extra**: Haz que Puppet maneje la carpeta DocumentRoot, coloque una página 404 customizada y un index.html por defecto en ese lugar. También puedes utilizar declaraciones condicionales para establecer cualquier archivo o nombres paquete/servicio que puedan variar según el sistema operativo. Si no quieres investigar los nombres utilizados por otros sistemas operativos, puedes hacer que la clase falle si no se utiliza en CentOS.
 

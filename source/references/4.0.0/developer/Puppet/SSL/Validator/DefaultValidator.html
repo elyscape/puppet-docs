@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Class: Puppet::SSL::Validator::DefaultValidator
-  
+
     &mdash; Documentation by YARD 0.8.7.6
-  
+
 </title>
 
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../../../_index.html">Index (D)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../Puppet.html" title="Puppet (module)">Puppet</a></span></span> &raquo; <span class='title'><span class='object_link'>SSL</span></span> &raquo; <span class='title'><span class='object_link'><a href="../Validator.html" title="Puppet::SSL::Validator (class)">Validator</a></span></span>
-     &raquo; 
+     &raquo;
     <span class="title">DefaultValidator</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../../../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../../../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../../../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,38 +64,38 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Class: Puppet::SSL::Validator::DefaultValidator
-  
-  
+
+
   <span class="private note title">Private</span>
 </h1>
 
 <dl class="box">
-  
+
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
       <span class="inheritName"><span class='object_link'>Object</span></span>
-      
+
         <ul class="fullTree">
           <li><span class='object_link'>Object</span></li>
-          
+
             <li class="next">Puppet::SSL::Validator::DefaultValidator</li>
-          
+
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
-      
+
       </dd>
-    
-  
-  
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">lib/puppet/ssl/validator/default_validator.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -112,11 +112,10 @@ If there is no CA information known, then no verification is performed</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div>
   <h2>Constant Summary</h2>
-  
 
 
 
@@ -124,209 +123,210 @@ If there is no CA information known, then no verification is performed</p>
 
 
 
-  
+
+
     <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#call-instance_method" title="#call (instance method)">- (Boolean) <strong>call</strong>(preverify_ok, store_context) </a>
-    
 
-    
+      <a href="#call-instance_method" title="#call (instance method)">- (Boolean) <strong>call</strong>(preverify_ok, store_context) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Performs verification of the SSL connection and collection of the certificates for use in constructing the error message if the verification failed.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#has_authz_peer_cert-instance_method" title="#has_authz_peer_cert (instance method)">- (Boolean) <strong>has_authz_peer_cert</strong>(peer_certs, authz_certs) </a>
-    
 
-    
+      <a href="#has_authz_peer_cert-instance_method" title="#has_authz_peer_cert (instance method)">- (Boolean) <strong>has_authz_peer_cert</strong>(peer_certs, authz_certs) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Checks if the set of peer_certs contains at least one certificate issued by a certificate listed in authz_certs.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (DefaultValidator) <strong>initialize</strong>(ssl_configuration = Puppet::SSL::Configuration.new(                                         Puppet[:localcacert], {                                           :ca_auth_file  =&gt; Puppet[:ssl_client_ca_auth]                                         }), ssl_host = Puppet::SSL::Host.localhost) </a>
-    
 
-    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (DefaultValidator) <strong>initialize</strong>(ssl_configuration = Puppet::SSL::Configuration.new(                                         Puppet[:localcacert], {                                           :ca_auth_file  =&gt; Puppet[:ssl_client_ca_auth]                                         }), ssl_host = Puppet::SSL::Host.localhost) </a>
+
+
+
   </span>
-  
-  
+
+
     <span class="note title constructor">constructor</span>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Creates a new DefaultValidator, optionally with an SSL Configuration and SSL Host.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#reset%21-instance_method" title="#reset! (instance method)">- (Object) <strong>reset!</strong> </a>
-    
 
-    
+      <a href="#reset%21-instance_method" title="#reset! (instance method)">- (Object) <strong>reset!</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Resets this validator to its initial validation state.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#setup_connection-instance_method" title="#setup_connection (instance method)">- <strong>setup_connection</strong>(connection) </a>
-    
 
-    
+      <a href="#setup_connection-instance_method" title="#setup_connection (instance method)">- <strong>setup_connection</strong>(connection) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Registers the instance's call method with the connection.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#ssl_certificates_are_present%3F-instance_method" title="#ssl_certificates_are_present? (instance method)">- (Boolean) <strong>ssl_certificates_are_present?</strong> </a>
-    
 
-    
+      <a href="#ssl_certificates_are_present%3F-instance_method" title="#ssl_certificates_are_present? (instance method)">- (Boolean) <strong>ssl_certificates_are_present?</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#valid_peer%3F-instance_method" title="#valid_peer? (instance method)">- (Boolean) <strong>valid_peer?</strong> </a>
-    
 
-    
+      <a href="#valid_peer%3F-instance_method" title="#valid_peer? (instance method)">- (Boolean) <strong>valid_peer?</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Validates the peer certificates against the authorized certificates.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
+
 
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
-  
+
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
-  
+
     - (<tt><span class='object_link'><a href="" title="Puppet::SSL::Validator::DefaultValidator (class)">DefaultValidator</a></span></tt>) <strong>initialize</strong>(ssl_configuration = Puppet::SSL::Configuration.new(
                                         Puppet[:localcacert], {
                                           :ca_auth_file  =&gt; Puppet[:ssl_client_ca_auth]
                                         }), ssl_host = Puppet::SSL::Host.localhost) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -341,44 +341,44 @@ If there is no CA information known, then no verification is performed</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>ssl_configuration</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Puppet::SSL::Configuration</span></tt>)</span>
-      
-      
+
+
         <em class="default">(defaults to: <tt>Puppet::SSL::Configuration.new(
                                         Puppet[:localcacert], {
                                           :ca_auth_file  =&gt; Puppet[:ssl_client_ca_auth]
                                         })</tt>)</em>
-      
-      
+
+
         &mdash;
         <div class='inline'><p>(a default configuration) ssl_configuration the SSL configuration to use</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>ssl_host</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Puppet::SSL::Host</span></tt>)</span>
-      
-      
+
+
         <em class="default">(defaults to: <tt>Puppet::SSL::Host.localhost</tt>)</em>
-      
-      
+
+
         &mdash;
         <div class='inline'><p>(Puppet::SSL::Host.localhost) the SSL host to use</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 
@@ -418,23 +418,23 @@ If there is no CA information known, then no verification is performed</p>
   </tr>
 </table>
 </div>
-  
+
 </div>
 
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="call-instance_method">
-  
+
     - (<tt>Boolean</tt>) <strong>call</strong>(preverify_ok, store_context) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -464,57 +464,57 @@ class is intended to be used.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>preverify_ok</span>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>indicates whether the verification of the
 certificate in question was passed (preverify_ok=true)</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>store_context</span>
-      
-      
+
+
         <span class='type'>(<tt>OpenSSL::X509::StoreContext</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>holds the X509 store context
 for the chain being verified.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>false if the peer is invalid, true otherwise.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -613,16 +613,16 @@ for the chain being verified.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="has_authz_peer_cert-instance_method">
-  
+
     - (<tt>Boolean</tt>) <strong>has_authz_peer_cert</strong>(peer_certs, authz_certs) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -636,19 +636,19 @@ by a certificate listed in authz_certs</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -679,16 +679,16 @@ by a certificate listed in authz_certs</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="reset!-instance_method">
-  
+
     - (<tt><span class='object_link'>Object</span></tt>) <strong>reset!</strong> &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -701,7 +701,7 @@ by a certificate listed in authz_certs</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -725,16 +725,16 @@ by a certificate listed in authz_certs</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="setup_connection-instance_method">
-  
+
     - <strong>setup_connection</strong>(connection) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -749,22 +749,22 @@ by a certificate listed in authz_certs</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>connection</span>
-      
-      
+
+
         <span class='type'>(<tt>Net::HTTP</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The connection to validate</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 
@@ -806,16 +806,16 @@ by a certificate listed in authz_certs</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="ssl_certificates_are_present?-instance_method">
-  
+
     - (<tt>Boolean</tt>) <strong>ssl_certificates_are_present?</strong> &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -828,19 +828,19 @@ by a certificate listed in authz_certs</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -863,16 +863,16 @@ by a certificate listed in authz_certs</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="valid_peer?-instance_method">
-  
+
     - (<tt>Boolean</tt>) <strong>valid_peer?</strong> &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -885,19 +885,19 @@ by a certificate listed in authz_certs</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -944,7 +944,7 @@ by a certificate listed in authz_certs</p>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

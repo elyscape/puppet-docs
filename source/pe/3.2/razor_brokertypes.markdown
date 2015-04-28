@@ -23,7 +23,7 @@ The broker type is closely tied to the configuration management system that the 
 			"broker-type": "puppet-pe"
 		}
 
-3. Save `broker.json` to `install.erb` in the `sample.broker` directory. 
+3. Save `broker.json` to `install.erb` in the `sample.broker` directory.
 
 4. If your broker type requires additional configuration data, add a `configuration.yaml` file to your `sample.broker` directory.
 

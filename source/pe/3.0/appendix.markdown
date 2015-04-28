@@ -113,7 +113,7 @@ Many of the constituent components of Puppet Enterprise have been upgraded. Name
 
 The live management cloning tool is deprecated and has been removed in PE 3.0. We are continuing to improve resource inspection and interactive orchestration commands in the console. In general, we recommend managing resources with Puppet manifests instead of one-off commands.
 
-If you are using cloning, you can achieve a similar workflow by using `puppet resource` or [the puppetral plugin's `find` action](./orchestration_actions.html#find) to learn the details of resources on individual host. Then, you can use that info to write or append to a manifest. 
+If you are using cloning, you can achieve a similar workflow by using `puppet resource` or [the puppetral plugin's `find` action](./orchestration_actions.html#find) to learn the details of resources on individual host. Then, you can use that info to write or append to a manifest.
 
 
 #### Removal of Compliance
@@ -162,9 +162,9 @@ This issue only affects PE 3.0 and later.
 
 In some cases, when installing PE on machines with large amounts of RAM, the PostgreSQL database will use more shared buffer memory than is available and will not be able to start. This will prevent PE from installing correctly. For more information and a suggested workaround, refer to [Troubleshooting the Console and Database](./trouble_console-db.html#postgresql-memory-buffer-causes-pe-install-to-fail).
 
-### MCollective `server.cfg` File May Have Wrong Owner Permissions on Windows Agents 
+### MCollective `server.cfg` File May Have Wrong Owner Permissions on Windows Agents
 
-In some cases, `server.cfg`, managed by the pe-mcollective module, may have file owner permissions set to "Administrator" instead of "Administrators", which will prevent MCollective from functioning correctly. If this happens, you will need to manually change the file permissions for this file. 
+In some cases, `server.cfg`, managed by the pe-mcollective module, may have file owner permissions set to "Administrator" instead of "Administrators", which will prevent MCollective from functioning correctly. If this happens, you will need to manually change the file permissions for this file.
 
 On Windows 2008 and 7 agents, you can locate this file at `C:\PROGRAMDATA\PuppetLabs\mcollective\etc\server.cfg`.
 

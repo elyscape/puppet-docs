@@ -42,7 +42,7 @@ Así:
 	    require => User[$user],
 	  }
 	}
-	
+
 	user {'nick':
 	  ensure     => present,
 	  managehome => true,
@@ -93,10 +93,10 @@ Si hay un recurso singleton que tiene que existir para que cualquier instancia d
 
 + Colocar ese recurso en una clase
 + Dentro de una definición de tipo, utiliza **include** para declarar esa clase.
-+ También dentro de la definición de tipo, utiliza algo como lo que veremos a continuación para establecer una orden de dependencias: 
++ También dentro de la definición de tipo, utiliza algo como lo que veremos a continuación para establecer una orden de dependencias:
 
 > \# Asegúrate que la compilación falle si 'myclass' no se declara:
-> 
+>
 > Class['myclass'] -> Apache::Vhost["$title"]
 
 Establecer relaciones de orden en el nivel de clase generalmente es mejor que pedir directamente uno de los recursos dentro de ella.
@@ -108,7 +108,7 @@ Los tipos definidos pueden ser cargados automáticamente como las clases, y en c
 
 Quizás ya sabías esto que hablamos antes, pero: cuando haces una [referencia de recurso](http://docs.puppetlabs.com/puppet/latest/reference/lang_datatypes.html#resource-references) a una instancia de un tipo definido, tienes que **capitalizar cada [segmento de namespace](http://docs.puppetlabs.com/puppet/latest/reference/lang_namespaces.html)** en el nombre de tipo. Es decir que a una instancia del tipo **foo::bar::baz** se debe hacer referencia como ** Foo::Bar::Baz['mybaz']**.
 
-## Ejemplo: Vhosts de Apache 
+## Ejemplo: Vhosts de Apache
 
 No es que mi macro *.plan* no sea genial, pero pongámonos serios por un minuto. Recuerdas el [módulo Apache](http://docs.puppetlabs.com/es/learning/modules1.html#exercises) de hace unos capítulos atrás? Vamos a extenderlo para poder declarar vhosts fácilmente. Este ejemplo de código lo tomamos prestado del [módulo puppetlabs-apache](https://github.com/puppetlabs/puppetlabs-apache).
 
@@ -118,7 +118,7 @@ No es que mi macro *.plan* no sea genial, pero pongámonos serios por un minuto.
 	    #
 	    # Parámetros:
 	    # - El $port en que se va a configurar el host
-	    # - El $docroot provee la variable DocumentationRoot 
+	    # - El $docroot provee la variable DocumentationRoot
 	    # - La opción $template especifica si utilizar el template por defecto o el override
 	    # - El $priority del sitio
 	    # - El $serveraliases del sitio
@@ -126,7 +126,7 @@ No es que mi macro *.plan* no sea genial, pero pongámonos serios por un minuto.
 	    # - El $vhost_name para un nombre basado en virtualhosting, asumiendo por defecto *
 	    #
 	    # Acciones:
-	    # - Instalar Virtual Hosts de Apache 
+	    # - Instalar Virtual Hosts de Apache
 	    #
 	    # Requiere:
 	    # - La clase Apache
@@ -148,7 +148,7 @@ No es que mi macro *.plan* no sea genial, pero pongámonos serios por un minuto.
 	        $options       = "Indexes FollowSymLinks MultiViews",
 	        $vhost_name    = '*'
 	      ) {
-	
+
 	      include apache
 
 	      # Debajo hay una expresión pre-2.6.5 para tener un parámetro por defecto para el título,
@@ -185,7 +185,7 @@ No es que mi macro *.plan* no sea genial, pero pongámonos serios por un minuto.
 	    # El template por defecto en el módulo puppetlabs-apache
 	    # Manajado por Puppet
 	    # ************************************
-	
+
 	    Listen <%= port %>
 	    NameVirtualHost <%= vhost_name %>:<%= port %>
 	    <VirtualHost <%= vhost_name %>:<%= port %>>
@@ -223,7 +223,7 @@ Y, siempre y cuando exista el directorio, podrás acceder inmediatamente al vhos
 
 	# curl http://puppet:8081
 
-En cierto modo, esto es sólo un poco más sofisticado que el primer ejemplo, pero sigue siendo un solo recurso **file**. El uso de templates lo hace MUCHO más poderoso y ya has visto todo el tiempo que ahorra; puedes hacerlo más práctico mientras más tipos construyas: una vez que tengas un tipo customizado que maneje reglas de firewall, por ejemplo, puedes agregar algo *así* a la definición: 
+En cierto modo, esto es sólo un poco más sofisticado que el primer ejemplo, pero sigue siendo un solo recurso **file**. El uso de templates lo hace MUCHO más poderoso y ya has visto todo el tiempo que ahorra; puedes hacerlo más práctico mientras más tipos construyas: una vez que tengas un tipo customizado que maneje reglas de firewall, por ejemplo, puedes agregar algo *así* a la definición:
 
 	firewall {"0100-INPUT ACCEPT $port":
 	    jump  => 'ACCEPT',
@@ -231,7 +231,7 @@ En cierto modo, esto es sólo un poco más sofisticado que el primer ejemplo, pe
 	    proto => 'tcp'
 	}
 
-## Ejercicios 
+## Ejercicios
 
 Tómate un minuto para hacer algunos tipos definidos más para acostumbrarte a modelar grupos de recursos repetibles.
 

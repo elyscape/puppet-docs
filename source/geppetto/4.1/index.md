@@ -40,7 +40,7 @@ In the image above, you can see some of the most common work areas (this descrip
 
 * You can edit your code in the **Editor**. Geppetto takes advantage of Eclipse's editing capabilities, like syntax highlighting, content assistance, and error tracing and debugging for your Puppet code.
 
-* You can quickly find the elements of your classes in the **Outline** view, which shows a tree version of the code you're editing. 
+* You can quickly find the elements of your classes in the **Outline** view, which shows a tree version of the code you're editing.
 
 * You can create your own tasks, as well as automatically create tasks from code comments, in the **Tasks** view.
 
@@ -178,7 +178,7 @@ All Puppet modules include a metadata file, which contains high-level informatio
 
 If you create a module using Geppetto's Project Wizard, you will have access to the same metadata editor through the metadata.json.
 
-If you have pulled a module from the [Puppet Forge](forge.puppetlabs.com) or a Git/SVN repo, you can edit the metadata via metadata.json. Upon pulling a module from the Puppet Forge, Geppetto will open the metadata.json in the editor automatically. 
+If you have pulled a module from the [Puppet Forge](forge.puppetlabs.com) or a Git/SVN repo, you can edit the metadata via metadata.json. Upon pulling a module from the Puppet Forge, Geppetto will open the metadata.json in the editor automatically.
 
 
 ####Deriving Metadata.json from Deprecated Modulefile

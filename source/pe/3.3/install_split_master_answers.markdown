@@ -5,7 +5,7 @@ subtitle: "Split Puppet Enterprise Install, Puppet Master Answer File Reference"
 canonical: "/pe/latest/install_split_console_answers.html"
 ---
 
-The following answers can be used as a baseline to perform an automated split installation of PE on the node assigned to the puppet master component. 
+The following answers can be used as a baseline to perform an automated split installation of PE on the node assigned to the puppet master component.
 
 A .txt file version can be found in the `answers` directory of the PE installer tarball.
 
@@ -15,7 +15,7 @@ See the [Answer File Overview](./install_answer_file_reference.html) and the sec
 >
 > 1. Puppet master
 > 2. Puppet DB and database support (which includes the console database)
-> 3. The PE console 
+> 3. The PE console
 
 ### Global Answers
 These answers are always needed.

@@ -4,8 +4,8 @@ title: "Puppet 3.x to 4.x Server Upgrades"
 canonical: "/puppet/4.0/reference/upgrade_server.html"
 ---
 
-This guide is for sites which have all master-related functions (puppetmaster, certificate authority, file server) on one 
-system. 
+This guide is for sites which have all master-related functions (puppetmaster, certificate authority, file server) on one
+system.
 
 ## Overview
 
@@ -13,15 +13,15 @@ The steps to start serving a Puppet 4 server are:
 
 1. Install the puppet-agent-1.0 and puppetserver-2.0 packages for your operating system.
 1. Copy your certificate authority files to the new filesystem location (`/etc/puppetlabs/puppet/ssl`)
-2. Migrate your code (modules + manifests + hiera) to the new location and directory structure (`/etc/puppetlabs/code`) 
+2. Migrate your code (modules + manifests + hiera) to the new location and directory structure (`/etc/puppetlabs/code`)
    and prepare the server for Directory Environments.
-3. Transfer any custom settings that were in your previous puppet.conf to `/etc/puppetlabs/puppet/puppet.conf`; do not 
+3. Transfer any custom settings that were in your previous puppet.conf to `/etc/puppetlabs/puppet/puppet.conf`; do not
    simply copy the file in-place as many older settings are removed or their defaults have changed.
 4. Start running your puppetmaster under Puppet Server 2.0 (if you were previously using Apache)
 
-While it is possible to do an in-place upgrade over a running Puppet 3.x server, we recommend that you set up a new VM 
-or physical system to start fresh, and migrate only those pieces of data which are required to ensure continuity of your 
-infrastructure such as modules and certificates. That way, your existing Puppet masters continue to run as-is and 
+While it is possible to do an in-place upgrade over a running Puppet 3.x server, we recommend that you set up a new VM
+or physical system to start fresh, and migrate only those pieces of data which are required to ensure continuity of your
+infrastructure such as modules and certificates. That way, your existing Puppet masters continue to run as-is and
 rollback becomes much simpler.
 
 ## Install packages
@@ -31,11 +31,11 @@ package, then install the puppetserver package (which will automatically add the
 
 ## Set up SSL
 
-On the 3.x master installation, find the SSL directory tree and copy it into the new location: 
-`/etc/puppetlabs/puppet/ssl`. We recommend using `rsync -a` if you're setting up a new master server, as this will 
+On the 3.x master installation, find the SSL directory tree and copy it into the new location:
+`/etc/puppetlabs/puppet/ssl`. We recommend using `rsync -a` if you're setting up a new master server, as this will
 preserve the permissions on the files, which SSL is picky about.
 
-If this is a new host, you'll also need to generate a certificate for it, so that it will be able to answer requests 
+If this is a new host, you'll also need to generate a certificate for it, so that it will be able to answer requests
 from agents. Once the puppet-agent package is installed and the CA files are in place, run
 
     /opt/puppetlabs/bin/puppet cert generate --dns_alt_names=puppet,puppet.mydomain myhostname.mydomain
@@ -43,9 +43,9 @@ from agents. Once the puppet-agent package is installed and the CA files are in 
 ## Migrate code
 
 One of the big changes in Puppet 4 is its standardization on Directory Environments. There's an in-depth document
-on [configuration settings for directory 
-environments](/puppet/latest/reference/environments_configuring.html#global-settings-for-configuring-environments) but 
-the defaults have been adjusted for Puppet 4 so very little configuration should be necessary for most people. Out of 
+on [configuration settings for directory
+environments](/puppet/latest/reference/environments_configuring.html#global-settings-for-configuring-environments) but
+the defaults have been adjusted for Puppet 4 so very little configuration should be necessary for most people. Out of
 the box, the puppet-agent's directory structure will look like this:
 
     /etc/puppetlabs/code
@@ -64,7 +64,7 @@ If you're not using r10k, or not using environments at all, you can simply put y
 
 ## Transfer custom settings
 
-The default settings written into the newer, slimmer puppet.conf should work pretty well for most people. If your old puppet.conf had settings related to environments (especially static "config file environments" that use the `[environmentname]` stanzas in puppet.conf, these will either become global (such as adjusting `basemodulepath` [as described here](/puppet/latest/reference/environments_configuring.html#basemodulepath]) or move into an environment-specific config file, [documented in the environment.conf section](/puppet/3.7/reference/environments_creating.html#the-environmentconf-file). 
+The default settings written into the newer, slimmer puppet.conf should work pretty well for most people. If your old puppet.conf had settings related to environments (especially static "config file environments" that use the `[environmentname]` stanzas in puppet.conf, these will either become global (such as adjusting `basemodulepath` [as described here](/puppet/latest/reference/environments_configuring.html#basemodulepath]) or move into an environment-specific config file, [documented in the environment.conf section](/puppet/3.7/reference/environments_creating.html#the-environmentconf-file).
 
 Read through the [Puppet 4 Release Notes](release_notes.html) for more detail on other settings which were removed or whose defaults may have changed.
 

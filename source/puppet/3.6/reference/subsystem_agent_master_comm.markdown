@@ -31,7 +31,7 @@ This flow diagram illustrates the pattern of agent-side checks and HTTPS request
 
 1. Does the agent have a private key at `$ssldir/private_keys/<name>.pem`?
     * If no, generate one.
-2. Does the agent have a copy of the CA certificate at `$ssldir/certs/ca.pem`? 
+2. Does the agent have a copy of the CA certificate at `$ssldir/certs/ca.pem`?
     * If no, fetch it. (Unverified GET request to `/certificate/ca`. Since the agent is retrieving the foundation for all future trust over an untrusted link, this could be vulnerable to MITM attacks, but it's also just a convenience; you can make this step unnecessary by distributing the CA cert as part of your server provisioning process, so that agents never ask for a CA cert over the network. If you do this, an attacker could temporarily deny Puppet service to brand new nodes, but would be unable to take control of them with a rogue puppet master.)
 3. Does the agent have a signed certificate at `$ssldir/certs/<name>.pem`?
     * If yes, skip the following section and continue to "request node object."

@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Module: Puppet::Pops::Binder::BindingsFactory
-  
+
     &mdash; Documentation by YARD 0.8.7.3
-  
+
 </title>
 
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../../../_index.html">Index (B)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../Puppet.html" title="Puppet (module)">Puppet</a></span></span> &raquo; <span class='title'><span class='object_link'>Pops</span></span> &raquo; <span class='title'><span class='object_link'>Binder</span></span>
-     &raquo; 
+     &raquo;
     <span class="title">BindingsFactory</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../../../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../../../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../../../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,23 +64,23 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Module: Puppet::Pops::Binder::BindingsFactory
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
-  
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/puppet/pops/binder/bindings_factory.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -170,36 +170,35 @@ need to chain the methods calls, they can instead be made in sequence - e.g.</p>
   </div>
 </div>
 <div class="tags">
-  
+
   <div class="examples">
     <p class="tag_title">Examples:</p>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>Create a NamedBinding with content</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='const'>Puppet</span><span class='op'>::</span><span class='const'>Pops</span><span class='op'>::</span><span class='const'>Binder</span><span class='op'>::</span><span class='const'>BindingsFactory</span><span class='period'>.</span><span class='id identifier rubyid_named_bindings'>named_bindings</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mymodule::mybindings</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
   <span class='id identifier rubyid_bind'>bind</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>foo</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span><span class='lparen'>(</span><span class='int'>42</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_bind'>bind</span><span class='period'>.</span><span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>site url</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>http://www.example.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span>
 <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='lparen'>(</span><span class='rparen'>)</span></code></pre>
-    
+
   </div>
 
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
-  
-    
-  
-    
+
+
+
+
       <strong class="classes">Classes:</strong> <span class='object_link'><a href="BindingsFactory/BindingsBuilder.html" title="Puppet::Pops::Binder::BindingsFactory::BindingsBuilder (class)">BindingsBuilder</a></span>, <span class='object_link'><a href="BindingsFactory/BindingsContainerBuilder.html" title="Puppet::Pops::Binder::BindingsFactory::BindingsContainerBuilder (class)">BindingsContainerBuilder</a></span>, <span class='object_link'><a href="BindingsFactory/MultibindingsBuilder.html" title="Puppet::Pops::Binder::BindingsFactory::MultibindingsBuilder (class)">MultibindingsBuilder</a></span>
-    
-  
+
+
 </p>
 
   <h2>Constant Summary</h2>
-  
 
 
 
@@ -207,382 +206,383 @@ need to chain the methods calls, they can instead be made in sequence - e.g.</p>
 
 
 
-  
+
+
     <h2>
       Class Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#evaluating_producer-class_method" title="evaluating_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>evaluating_producer</strong>(expression) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates an evaluating producer that evaluates a puppet expression.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#first_found_producer-class_method" title="first_found_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>first_found_producer</strong>(*producers) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a first-found producer that looks up from a given series of keys.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#hash_lookup_producer-class_method" title="hash_lookup_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>hash_lookup_producer</strong>(type, name, key) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a Hash lookup producer that looks up a hash value, and then a key in the hash.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#instance_producer-class_method" title="instance_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>instance_producer</strong>(class_name, *args) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates an instance producer An instance producer creates a new instance of a class.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#layered_bindings-class_method" title="layered_bindings (class method)">+ (Puppet::Pops::Binder::Bindings::LayeredBindings) <strong>layered_bindings</strong>(*named_layers) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Create a LayeredBindings.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#literal_producer-class_method" title="literal_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>literal_producer</strong>(value) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a literal/constant producer.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#lookup_producer-class_method" title="lookup_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>lookup_producer</strong>(type, name) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a Producer that looks up a value.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#named_bindings-class_method" title="named_bindings (class method)">+ (Object) <strong>named_bindings</strong>(name, &amp;block) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a named binding container, the top bindings model object.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#named_layer-class_method" title="named_layer (class method)">+ (Object) <strong>named_layer</strong>(name, *bindings) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a NamedLayer.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#non_caching_producer-class_method" title="non_caching_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>non_caching_producer</strong>(producer) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a non caching producer.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#producer_producer-class_method" title="producer_producer (class method)">+ (Puppet::Pops::Binder::Bindings::ProducerDescriptor) <strong>producer_producer</strong>(producer) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Creates a producer producer.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#puppet_expression-class_method" title="puppet_expression (class method)">+ (Puppet::Pops::Model::Expression) <strong>puppet_expression</strong>(string, source_file) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Parses and produces a puppet expression from the given string.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#puppet_string-class_method" title="puppet_string (class method)">+ (Puppet::Pops::Model::Expression) <strong>puppet_string</strong>(string, source_file) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Parses and produces a puppet string expression from the given string.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#safe_named_bindings-class_method" title="safe_named_bindings (class method)">+ (Object) <strong>safe_named_bindings</strong>(name, scope, &amp;block) </a>
-    
 
-    
+      <a href="#safe_named_bindings-class_method" title="safe_named_bindings (class method)">+ (Object) <strong>safe_named_bindings</strong>(name, scope, &amp;block) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>This variant of <span class='object_link'><a href="#named_bindings-class_method" title="Puppet::Pops::Binder::BindingsFactory.named_bindings (method)">BindingsFactory.named_bindings</a></span> evaluates the given block as a method on an anonymous class, thus, if the block defines methods or do something with the class itself, this does not pollute the base class (BindingsContainerBuilder).</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
+
 
 
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="evaluating_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>evaluating_producer</strong>(expression) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>evaluating_producer</strong>(expression)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates an evaluating producer that evaluates a puppet expression.
@@ -594,53 +594,53 @@ as a puppet string. See methods <span class='object_link'><a href="#puppet_expre
   </div>
 </div>
 <div class="tags">
-  
+
   <div class="examples">
     <p class="tag_title">Examples:</p>
-    
-      
+
+
         <p class="example_title"><div class='inline'><p>producing a puppet expression</p>
 </div></p>
-      
+
       <pre class="example code"><code><span class='id identifier rubyid_expr'>expr</span> <span class='op'>=</span> <span class='id identifier rubyid_puppet_string'>puppet_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Interpolated $fqdn</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='kw'>__FILE__</span><span class='rparen'>)</span></code></pre>
-    
+
   </div>
 <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>expression</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Puppet::Pops::Model::Expression</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a puppet DSL expression as producer by the eparser.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer descriptor</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -667,16 +667,16 @@ as a puppet string. See methods <span class='object_link'><a href="#puppet_expre
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="first_found_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>first_found_producer</strong>(*producers) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>first_found_producer</strong>(*producers)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a first-found producer that looks up from a given series of keys. The first found looked up
@@ -688,40 +688,40 @@ value will be produced.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>producers</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Array</span>&lt;<span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span>&gt;</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the producers to consult in given order</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer descriptor</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -748,16 +748,16 @@ value will be produced.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="hash_lookup_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>hash_lookup_producer</strong>(type, name, key) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>hash_lookup_producer</strong>(type, name, key)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a Hash lookup producer that looks up a hash value, and then a key in the hash.</p>
@@ -768,70 +768,70 @@ value will be produced.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>type</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="../Types/PObjectType.html" title="Puppet::Pops::Types::PObjectType (class)">Puppet::Pops::Types::PObjectType</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the type to lookup (i.e. a Hash of some key/value type).</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the name to lookup</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>key</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Object</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the key to lookup in the looked up hash (type should comply with given key type).</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer description</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -862,16 +862,16 @@ value will be produced.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="instance_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>instance_producer</strong>(class_name, *args) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>instance_producer</strong>(class_name, *args)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates an instance producer
@@ -886,55 +886,55 @@ is called.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>class_name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the name of the class</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>args</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Object</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>arguments to the class' <code>new</code> method.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer description</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -963,16 +963,16 @@ is called.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="layered_bindings-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/LayeredBindings.html" title="Puppet::Pops::Binder::Bindings::LayeredBindings (class)">Puppet::Pops::Binder::Bindings::LayeredBindings</a></span></tt>) <strong>layered_bindings</strong>(*named_layers) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/LayeredBindings.html" title="Puppet::Pops::Binder::Bindings::LayeredBindings (class)">Puppet::Pops::Binder::Bindings::LayeredBindings</a></span></tt>) <strong>layered_bindings</strong>(*named_layers)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Create a LayeredBindings. This is used by the bindings system to create a model of all given layers.</p>
@@ -983,40 +983,40 @@ is called.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>named_layers</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/NamedLayer.html" title="Puppet::Pops::Binder::Bindings::NamedLayer (class)">Puppet::Pops::Binder::Bindings::NamedLayer</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>one or more named layers</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/LayeredBindings.html" title="Puppet::Pops::Binder::Bindings::LayeredBindings (class)">Puppet::Pops::Binder::Bindings::LayeredBindings</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the constructed layered bindings.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1043,16 +1043,16 @@ is called.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="literal_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>literal_producer</strong>(value) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>literal_producer</strong>(value)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a literal/constant producer</p>
@@ -1063,40 +1063,40 @@ is called.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>value</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Object</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the value to produce</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer description</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1123,16 +1123,16 @@ is called.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="lookup_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>lookup_producer</strong>(type, name) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>lookup_producer</strong>(type, name)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a Producer that looks up a value.</p>
@@ -1143,55 +1143,55 @@ is called.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>type</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="../Types/PObjectType.html" title="Puppet::Pops::Types::PObjectType (class)">Puppet::Pops::Types::PObjectType</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the type to lookup</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>name</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the name to lookup</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer description</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1220,16 +1220,16 @@ is called.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="named_bindings-class_method">
-  
-    + (<tt><span class='object_link'>Object</span></tt>) <strong>named_bindings</strong>(name, &amp;block) 
-  
 
-  
+    + (<tt><span class='object_link'>Object</span></tt>) <strong>named_bindings</strong>(name, &amp;block)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a named binding container, the top bindings model object.
@@ -1242,7 +1242,7 @@ Unwrap the built result when done.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1272,16 +1272,16 @@ Unwrap the built result when done.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="named_layer-class_method">
-  
-    + (<tt><span class='object_link'>Object</span></tt>) <strong>named_layer</strong>(name, *bindings) 
-  
 
-  
+    + (<tt><span class='object_link'>Object</span></tt>) <strong>named_layer</strong>(name, *bindings)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a NamedLayer. This is used by the bindings system to create a model of the layers.</p>
@@ -1290,7 +1290,7 @@ Unwrap the built result when done.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1318,16 +1318,16 @@ Unwrap the built result when done.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="non_caching_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>non_caching_producer</strong>(producer) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>non_caching_producer</strong>(producer)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a non caching producer</p>
@@ -1338,40 +1338,40 @@ Unwrap the built result when done.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>producer</span>
-      
-      
+
+
         <span class='type'>(<tt>Puppet::Pops::Binder::Bindings::Producer</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the producer to make non caching</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer description</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1398,16 +1398,16 @@ Unwrap the built result when done.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="producer_producer-class_method">
-  
-    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>producer_producer</strong>(producer) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>) <strong>producer_producer</strong>(producer)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Creates a producer producer</p>
@@ -1418,40 +1418,40 @@ Unwrap the built result when done.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>producer</span>
-      
-      
+
+
         <span class='type'>(<tt>Puppet::Pops::Binder::Bindings::Producer</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer producing a Producer.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Bindings/ProducerDescriptor.html" title="Puppet::Pops::Binder::Bindings::ProducerDescriptor (class)">Puppet::Pops::Binder::Bindings::ProducerDescriptor</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a producer description</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1478,16 +1478,16 @@ Unwrap the built result when done.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="puppet_expression-class_method">
-  
-    + (<tt><span class='object_link'>Puppet::Pops::Model::Expression</span></tt>) <strong>puppet_expression</strong>(string, source_file) 
-  
 
-  
+    + (<tt><span class='object_link'>Puppet::Pops::Model::Expression</span></tt>) <strong>puppet_expression</strong>(string, source_file)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Parses and produces a puppet expression from the given string.</p>
@@ -1498,55 +1498,55 @@ Unwrap the built result when done.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>string</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>puppet source e.g. "1 + 2"</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>source_file</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the source location, typically <code>__File__</code></p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Puppet::Pops::Model::Expression</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>an expression (that can be bound)</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1569,16 +1569,16 @@ Unwrap the built result when done.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="puppet_string-class_method">
-  
-    + (<tt><span class='object_link'>Puppet::Pops::Model::Expression</span></tt>) <strong>puppet_string</strong>(string, source_file) 
-  
 
-  
+    + (<tt><span class='object_link'>Puppet::Pops::Model::Expression</span></tt>) <strong>puppet_string</strong>(string, source_file)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Parses and produces a puppet string expression from the given string.
@@ -1593,55 +1593,55 @@ parsed.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>string</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>puppet source e.g. "On node ${fqdn}"</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>source_file</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the source location, typically <code>__File__</code></p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Puppet::Pops::Model::Expression</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>an expression (that can be bound)</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1664,16 +1664,16 @@ parsed.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="safe_named_bindings-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>safe_named_bindings</strong>(name, scope, &amp;block) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -1688,7 +1688,7 @@ the base class (BindingsContainerBuilder).</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1740,7 +1740,7 @@ the base class (BindingsContainerBuilder).</p>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

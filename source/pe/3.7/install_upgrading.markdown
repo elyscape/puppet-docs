@@ -54,14 +54,14 @@ Lastly, the script will summarize the upgrade plan and ask you to go ahead and p
 
 The upgrade script will run and provide detailed information as to what it installs, what it updates and what it replaces. It will preserve existing certificates and `puppet.conf` files.
 
-> **Notes**: 
+> **Notes**:
 >
 > - The new node classifier and role-based access control (RBAC) will be installed as part of the PE console.
 > - If necessary, after upgrading, see the instructions for [Disabling/Enabling Live Management During an Upgrade](#disablingenabling-live-management-during-an-upgrade).
 
 ### Classify PE Groups
 
-Please see [section on classifying PE groups](#classify-the-new-pe-groups) below.  
+Please see [section on classifying PE groups](#classify-the-new-pe-groups) below.
 
 ### Upgrade Puppet Agents
 
@@ -136,13 +136,13 @@ Depending on your answer, the `disable_live_management` setting in `/etc/puppetl
 
 ### Classify PE Groups
 
-Please see [section on classifying PE groups](#classify-the-new-pe-groups) below.  
+Please see [section on classifying PE groups](#classify-the-new-pe-groups) below.
 
 ### Upgrade Puppet Agents
 
 Please see [section on upgrading Puppet agents](#upgrade-agents).
 
-## Classify the New PE Groups 
+## Classify the New PE Groups
 
 **Warning**: After upgrading to 3.7.x from 3.3, you must classify the new PE groups. **This applies to both split and monolithic upgrades.
 

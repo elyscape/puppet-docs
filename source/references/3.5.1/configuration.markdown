@@ -157,7 +157,7 @@ The binder configuration file. Puppet reads this file on each request to configu
 If set to nil (the default), a $confdir/binder_config.yaml is optionally loaded. If it does not exists, a default configuration
 is used. If the setting :binding_config is specified, it must reference a valid and existing yaml file.
 
-- *Default*: 
+- *Default*:
 
 ### bucketdir
 
@@ -244,7 +244,7 @@ The CA public key.
 
 How to store cached catalogs. Valid values are 'json', 'msgpack' and 'yaml'. The agent application defaults to 'json'.
 
-- *Default*: 
+- *Default*:
 
 ### catalog_format
 
@@ -1004,7 +1004,7 @@ extension indicating the cache format is added automatically.
 
 The directory in which to store log files
 
-- *Default*: 
+- *Default*:
 
 ### manage_internal_file_permissions
 
@@ -1118,7 +1118,7 @@ Windows path separator is ';'.)
 The name of the application, if we are running as one.  The
 default is essentially $0 without the path or `.rb`.
 
-- *Default*: 
+- *Default*:
 
 ### node_cache_terminus
 
@@ -1126,7 +1126,7 @@ How to store cached nodes.
 Valid values are (none), 'json', 'msgpack', 'yaml' or write only yaml ('write_only_yaml').
 The master application defaults to 'write_only_yaml', all others to none.
 
-- *Default*: 
+- *Default*:
 
 ### node_name
 
@@ -1328,7 +1328,7 @@ values.  The priority can also be specified as an integer value and
 will be passed as is, e.g. -5.  Puppet must be running as a privileged
 user in order to increase scheduling priority.
 
-- *Default*: 
+- *Default*:
 
 ### privatedir
 
@@ -1520,7 +1520,7 @@ This should match how often the hosts report back to the server. This setting ca
 
 Where Puppet PID files are kept.
 
-- *Default*: 
+- *Default*:
 
 ### runinterval
 
@@ -1619,7 +1619,7 @@ considered authentic unless they possess a certificate issued by an authority
 listed in this file.  If this setting has no value then the Puppet master's CA
 certificate (localcacert) will be used.
 
-- *Default*: 
+- *Default*:
 
 ### ssl_client_header
 
@@ -1657,7 +1657,7 @@ considered authentic unless they possess a certificate issued by an authority
 listed in this file.  If this setting has no value then the Puppet master's CA
 certificate (localcacert) will be used.
 
-- *Default*: 
+- *Default*:
 
 ### ssldir
 

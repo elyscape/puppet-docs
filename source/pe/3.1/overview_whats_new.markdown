@@ -35,7 +35,7 @@ The puppet agent can now be installed on nodes running RHEL 4. Support is only f
 
 * *License Availability*
 
-The console UI now displays how many licenses you are currently using and how many are available, so you'll know exactly how much capacity you have to expand your deployment. In addition, the "active license" count is now determined by the number of active nodes known to puppetdb rather than by the number of un-revoked certs. The [console navigation page](console_navigating.html) has more information. 
+The console UI now displays how many licenses you are currently using and how many are available, so you'll know exactly how much capacity you have to expand your deployment. In addition, the "active license" count is now determined by the number of active nodes known to puppetdb rather than by the number of un-revoked certs. The [console navigation page](console_navigating.html) has more information.
 
 * *Support for Google Compute Engine*
 

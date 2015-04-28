@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2.6.3 References 
+title: 2.6.3 References
 ---
 
 # 2.6.3 References

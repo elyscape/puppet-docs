@@ -26,7 +26,7 @@ You can use the following command-line flags to change the uninstaller's behavio
 : Purge additional files. With this flag, the uninstaller will also remove all configuration files, modules, manifests, certificates, and the home directories of any users created by the PE installer. This will also remove the Puppet Labs public GPG key used for package verification.
 
 `-d`
-: Also remove any databases created during installation. 
+: Also remove any databases created during installation.
 
 `-h`
 : Display a help message.
@@ -53,10 +53,10 @@ You can use the following command-line flags to change the uninstaller's behavio
 Thus, to remove every trace of PE from a system, you would run:
 
     $ sudo ./puppet-enterprise-uninstaller -d -p
-    
+
 Note that if you plan to reinstall any PE role on a node you've run an uninstall on, you may need to run `puppet cert clean <node name>` on the master in order to remove any orphaned certificates from the node.
 
 
-* * * 
+* * *
 
 - [Next: Automated Installation](./install_automated.html)

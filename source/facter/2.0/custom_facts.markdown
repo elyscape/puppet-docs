@@ -262,7 +262,7 @@ Each step in the resolution then gets its own `chunk` statement with an arbitrar
     chunk(:one) do
         'Chunk one returns this. '
     end
-    
+
     chunk(:two) do
         'Chunk two returns this.'
     end
@@ -312,7 +312,7 @@ to restrict access so that only Administrators can write to the
 directory.
 
 In a module (recommended):
-    
+
     <MODULEPATH>/<MODULE>/facts.d/
 
 On Unix/Linux/Mac OS X:

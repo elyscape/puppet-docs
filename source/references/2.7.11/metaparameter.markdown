@@ -13,8 +13,8 @@ title: Metaparameter Reference
 
 
 # Metaparameters
-    
-Metaparameters are parameters that work with any resource type; they are part of the 
+
+Metaparameters are parameters that work with any resource type; they are part of the
 Puppet framework itself rather than being part of the implementation of any
 given instance.  Thus, any defined metaparameter can be used with any instance
 in your manifest, including defined components.
@@ -224,7 +224,7 @@ Stages can only be set on classes, not individual resources.  This will
 fail:
 
     file { '/foo': stage => 'pre', ensure => file }
-    
+
 
 ### subscribe
 

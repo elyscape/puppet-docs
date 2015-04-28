@@ -55,7 +55,7 @@ Imagina una configuración de sistema como una colección de muchas unidades at�
 
 Cualquiera de estos recursos es muy similar a un grupo de recursos relacionados:
 
-+ Cada archivo tiene una ruta y un owner 
++ Cada archivo tiene una ruta y un owner
 + Cada usuario tiene un nombre, un UID y un grupo
 
 La implementación podría diferir, por ejemplo, necesitas un comando para iniciar o detener un servicio en Windows y uno diferente si es en Linux, e incluso entre las distribuciones de Linux hay algunas diferencias. Pero, conceptualmente, en ambas inicias o paras un servicio, independientemente de lo que tipees en la consola.

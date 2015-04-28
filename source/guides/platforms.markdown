@@ -35,14 +35,14 @@ Linux
 
 - SUSE Linux Enterprise Server, version 11 and higher
 - Gentoo Linux
-- Mandriva Corporate Server 4 
+- Mandriva Corporate Server 4
 - ArchLinux
 
 BSD
 ---
 
-- FreeBSD 4.7 and later 
-- OpenBSD 4.1 and later 
+- FreeBSD 4.7 and later
+- OpenBSD 4.1 and later
 
 Other Unix
 ----------

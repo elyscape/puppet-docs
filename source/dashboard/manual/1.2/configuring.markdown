@@ -17,7 +17,7 @@ This is a chapter of the [Puppet Dashboard 1.2 manual](./index.html).
 * [Using Dashboard](./using.html)
 * [Rake API](./rake_api.html)
 
-* * * 
+* * *
 
 Overview
 --------
@@ -67,9 +67,9 @@ Then, edit Dashboard's `config/settings.yml` to set `enable_inventory_service` t
 
 ### Enabling the Filebucket Viewer
 
-With the filebucket viewer, Dashboard can display the contents of different file versions when you click on MD5 checksums in reports. 
+With the filebucket viewer, Dashboard can display the contents of different file versions when you click on MD5 checksums in reports.
 
-**Requirements:** To use the filebucket viewer, you must be using Puppet 2.6.5 or later  and your agent nodes must be configured to back up all files to a remote filebucket; this is done in your puppet master's `site.pp` manifest, where you must define a filebucket resource named "main"... 
+**Requirements:** To use the filebucket viewer, you must be using Puppet 2.6.5 or later  and your agent nodes must be configured to back up all files to a remote filebucket; this is done in your puppet master's `site.pp` manifest, where you must define a filebucket resource named "main"...
 
     filebucket { "main":
       server => "{your puppet master}",
@@ -80,11 +80,11 @@ With the filebucket viewer, Dashboard can display the contents of different file
 
     File { backup => "main" }
 
-If you are using inspect reports for a compliance workflow, you must also set `archive_files = true` in each agent's `puppet.conf`. 
+If you are using inspect reports for a compliance workflow, you must also set `archive_files = true` in each agent's `puppet.conf`.
 
 
 
-Once the site manifest has been properly configured, edit Dashboard's `config/settings.yml` to set `use_file_bucket_diffs` to `true` and point `file_bucket_server` and `file_bucket_port` to your puppet master. Restart Dashboard, and you should be able to view the contents of any file mentioned in a report by clicking on its MD5 checksum. Diffs are not currently enabled, but will appear in a future version of Dashboard. 
+Once the site manifest has been properly configured, edit Dashboard's `config/settings.yml` to set `use_file_bucket_diffs` to `true` and point `file_bucket_server` and `file_bucket_port` to your puppet master. Restart Dashboard, and you should be able to view the contents of any file mentioned in a report by clicking on its MD5 checksum. Diffs are not currently enabled, but will appear in a future version of Dashboard.
 
 
 Security
@@ -93,7 +93,7 @@ Security
 As Dashboard provides access to sensitive information and can make changes to your Puppet-managed infrastructure, you'll need some way to restrict access to it. Dashboard does not yet provide authentication or authorization, so you'll need to use external tools to secure it. Some options include:
 
 * **Host firewalling** --- The Dashboard server's firewall (e.g. `iptables`) can be used to limit which hosts can access the port Dashboard runs on.
-* **`stunnel` or `ssh` tunneling** --- You can use tunneling to provide an encrypted connection between hosts, e.g. if the Puppet Master and Puppet Dashboard are running on separate hosts. It can also allow you to access the web interface from a workstation once you've restricted access by IP. 
+* **`stunnel` or `ssh` tunneling** --- You can use tunneling to provide an encrypted connection between hosts, e.g. if the Puppet Master and Puppet Dashboard are running on separate hosts. It can also allow you to access the web interface from a workstation once you've restricted access by IP.
 * **HTTP Basic Authentication** --- When serving Dashboard via Apache, you can require a username and password to access its URLs by setting authentication rules for `/` in Dashboard's vhost configuration:
 
         <Location "/">
@@ -106,13 +106,13 @@ As Dashboard provides access to sensitive information and can make changes to yo
           Require valid-user
         </Location>
 
-    Notice that you need to leave an access exception for your puppet master(s). Although it's possible to configure Puppet to use a password when connecting to Dashboard (by [adding a username and password](http://en.wikipedia.org/wiki/URI_scheme#Generic_syntax) to Puppet's `reporturl` and the URL used by the `external_nodes` script), this currently requires patching Puppet's `http` report handler; see [issue 7173](http://projects.puppetlabs.com/issues/7173) for more details. 
-* **HTTPS (SSL) Encryption** --- When serving Dashboard via Apache, you can encrypt traffic between Puppet and the Dashboard. Using this requires a set of signed certificates from the puppet master --- see [generating certs and connecting to the puppet master](#generating-certs-and-connecting-to-the-puppet-master) for how to obtain them. The example configuration in `ext/passenger/dashboard-vhost.conf` includes a commented-out vhost configured to use SSL. You may need to change the Apache directives `SSLCertificateFile`, `SSLCertificateKeyFile`, `SSLCACertificateFile`, and `SSLCARevocationFile` to the paths of the files created by the `cert` rake tasks. 
+    Notice that you need to leave an access exception for your puppet master(s). Although it's possible to configure Puppet to use a password when connecting to Dashboard (by [adding a username and password](http://en.wikipedia.org/wiki/URI_scheme#Generic_syntax) to Puppet's `reporturl` and the URL used by the `external_nodes` script), this currently requires patching Puppet's `http` report handler; see [issue 7173](http://projects.puppetlabs.com/issues/7173) for more details.
+* **HTTPS (SSL) Encryption** --- When serving Dashboard via Apache, you can encrypt traffic between Puppet and the Dashboard. Using this requires a set of signed certificates from the puppet master --- see [generating certs and connecting to the puppet master](#generating-certs-and-connecting-to-the-puppet-master) for how to obtain them. The example configuration in `ext/passenger/dashboard-vhost.conf` includes a commented-out vhost configured to use SSL. You may need to change the Apache directives `SSLCertificateFile`, `SSLCertificateKeyFile`, `SSLCACertificateFile`, and `SSLCARevocationFile` to the paths of the files created by the `cert` rake tasks.
 
     If you have Dashboard set up to use HTTPS, you'll need to add an `https` prefix to the `DASHBOARD_URL` in the `external_node` script and potentially correct the port number (443, by default). You may also need to change the `CERT_PATH`, `PKEY_PATH`, and `CA_PATH` variables if your puppet master's hostname is not `puppet` or if your ssldir is not `/etc/puppet/ssl`.
-    
-    In order for reporting to work correctly via SSL, you will have to be running puppet master via Passenger or some other app server/webserver combination that can handle SSL; reporting to an SSL Dashboard is not supported when running puppet master under WEBrick. You'll also have to change the `reporturl` setting in `puppet.conf` to start with "https" instead of "http". 
-    
+
+    In order for reporting to work correctly via SSL, you will have to be running puppet master via Passenger or some other app server/webserver combination that can handle SSL; reporting to an SSL Dashboard is not supported when running puppet master under WEBrick. You'll also have to change the `reporturl` setting in `puppet.conf` to start with "https" instead of "http".
+
     **This information may be outdated, and is currently being checked for accuracy.**
 
 Performance
@@ -142,15 +142,15 @@ To install a plugin from source, rather than a package, you'll have to know the 
 
     $ sudo -u puppet-dashboard rake puppet:plugin:install PLUGIN=name RAILS_ENV=production
 
-[^pluginenv]: `Puppet:plugin:install` runs `db:migrate` at the end. If you run in multiple environments regularly, you'll need to run `rake db:migrate` again for each additional one. 
+[^pluginenv]: `Puppet:plugin:install` runs `db:migrate` at the end. If you run in multiple environments regularly, you'll need to run `rake db:migrate` again for each additional one.
 
-After this, the plugin should be available and functioning. If you've been using Git to install and upgrade Dashboard, it should leave all plugin files untouched the next time you upgrade. 
+After this, the plugin should be available and functioning. If you've been using Git to install and upgrade Dashboard, it should leave all plugin files untouched the next time you upgrade.
 
 ### Uninstalling Plugins
 
-This section will be filled in at a later date. 
+This section will be filled in at a later date.
 
-* * * 
+* * *
 
 #### Navigation
 

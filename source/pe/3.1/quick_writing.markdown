@@ -66,7 +66,7 @@ This exercise will modify the desktop shortcut being managed on your Windows nod
       }
 
     }
-    
+
 {% endhighlight %}
 
 For more on resource declarations, see the [manifests chapter of Learning Puppet](/learning/manifests.html) or the [resources page of the language reference](/puppet/3/reference/lang_resources.html). For more about how file paths with backslashes work in manifests for Windows, see the page on [writing manifests for Windows](/windows/writing.html).
@@ -240,11 +240,11 @@ For more information about writing classes, refer to the following documentation
 
 ### Analyzing Your Changes With Event Inspector
 
-**On the console,** load the event inspector by clicking "Events" in the main nav bar. Note the summary pane on the left is showing change events for Classes, Nodes, and Resources. Explore these changes by clicking on "With Changes" in each group. 
+**On the console,** load the event inspector by clicking "Events" in the main nav bar. Note the summary pane on the left is showing change events for Classes, Nodes, and Resources. Explore these changes by clicking on "With Changes" in each group.
 
 ![Change Event Summary][event_change_summary-node]
 
-For example, if you click "Nodes... With Changes", you can see that two nodes, agent1.example.com and master.example.com, had successful changes to resources. Two resources were changed on master (specifically, the crontab and passwd files in `/etc/`).  If you drill down further by clicking on one of the changes, you can see the specifics of the change event. Under "Event location" you can see which manifest generated the change, down to the specific line number where the setting is defined. 
+For example, if you click "Nodes... With Changes", you can see that two nodes, agent1.example.com and master.example.com, had successful changes to resources. Two resources were changed on master (specifically, the crontab and passwd files in `/etc/`).  If you drill down further by clicking on one of the changes, you can see the specifics of the change event. Under "Event location" you can see which manifest generated the change, down to the specific line number where the setting is defined.
 
 ![Details of the Change Event][change_event_detail]
 
@@ -259,7 +259,7 @@ To view the run report that logs the puppet run which generated the change, clic
 [report_tabs]: ./images/quick/report_tabs.png
 [report_log]: ./images/quick/report_log.png
 
-> You have explored a change event brought about by applying classes created by a new module. You now know how to discover how changes take place, what effects those changes have, and how to find the exact cause of those changes. 
+> You have explored a change event brought about by applying classes created by a new module. You now know how to discover how changes take place, what effects those changes have, and how to find the exact cause of those changes.
 >
 > With this knowledge, you have the basics of how to analyze Puppet events with Event Inspector, which will allow you to monitor and troubleshoot in the future. For more details, look at the [event inspector documentation](./console_event-inspector).
 

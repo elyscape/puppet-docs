@@ -6,7 +6,7 @@ canonical: "/pe/latest/maintain_console-db.html"
 ---
 
 
-If PE's console becomes sluggish or begins taking up too much disk space, there are several maintenance tasks that can improve its performance. 
+If PE's console becomes sluggish or begins taking up too much disk space, there are several maintenance tasks that can improve its performance.
 
 Restarting the Background Tasks
 -----
@@ -21,7 +21,7 @@ If the number of pending tasks appears to be growing linearly, the background ta
 
     $ sudo /etc/init.d/pe-puppet-dashboard-workers restart
 
-The number of pending tasks shown in the console should start decreasing rapidly after restarting the workers. 
+The number of pending tasks shown in the console should start decreasing rapidly after restarting the workers.
 
 
 Optimizing the Database
@@ -81,13 +81,13 @@ The console uses a database user account to access its PostgreSQL database. If t
 4. Start the `pe-httpd` service on the console server:
 
         $ sudo /etc/init.d/pe-httpd start
-        
+
 You will use the same procedure to change the console_auth database user's password, except you will need to edit both the `/opt/puppet/share/console-auth/db/database.yml` and `/opt/puppet/share/rubycas-server/config.yml` files.
 
 The same procedure is also used for the PuppetDB user's password, except you'll edit `/etc/puppetlabs/puppetdb/conf.d/database.ini` and will restart the `pe-puppetdb` service.
 
 
 
-* * * 
+* * *
 
-- [Next: Troubleshooting the Installer](./trouble_install.html) 
+- [Next: Troubleshooting the Installer](./trouble_install.html)

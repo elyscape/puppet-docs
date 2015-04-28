@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Module: Puppet::Util::Execution
-  
+
     &mdash; Documentation by YARD 0.8.7.6
-  
+
 </title>
 
   <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../../_index.html">Index (E)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../Puppet.html" title="Puppet (module)">Puppet</a></span></span> &raquo; <span class='title'><span class='object_link'>Util</span></span>
-     &raquo; 
+     &raquo;
     <span class="title">Execution</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,23 +64,23 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Module: Puppet::Util::Execution
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
-  
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/puppet/util/execution.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -93,21 +93,20 @@ in classes that needs to execute system commands.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
-  
-    
-  
-    
+
+
+
+
       <strong class="classes">Classes:</strong> <span class='object_link'><a href="Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">ProcessOutput</a></span>
-    
-  
+
+
 </p>
 
   <h2>Constant Summary</h2>
-  
 
 
 
@@ -115,209 +114,210 @@ in classes that needs to execute system commands.</p>
 
 
 
-  
+
+
     <h2>
       Class Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#execfail-class_method" title="execfail (class method)">+ (Object) <strong>execfail</strong>(command, exception) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Wraps execution of <span class='object_link'><a href="#execute-class_method" title="Puppet::Util::Execution.execute (method)">Execution.execute</a></span> with mapping of exception to given exception (and output as argument).</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#execpipe-class_method" title="execpipe (class method)">+ (String) <strong>execpipe</strong>(command, failonfail = true) {|pipe| ... }</a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>The command can be a simple string, which is executed as-is, or an Array, which is treated as a set of command arguments to pass through.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#execute-class_method" title="execute (class method)">+ (Puppet::Util::Execution::ProcessOutput) <strong>execute</strong>(command, options = NoOptionsSpecified) </a>
-    
 
-    
+
+
       (also: util_execute)
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+  </span>
+
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Executes the desired command, and return the status and output.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="private ">
   <span class="summary_signature">
-    
+
       <a href="#execute_posix-class_method" title="execute_posix (class method)">+ (Object) <strong>execute_posix</strong>(command, options, stdin, stdout, stderr) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
 
-  
+
+
+
+  <span class="note title private">private</span>
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>This is private method.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="private ">
   <span class="summary_signature">
-    
+
       <a href="#execute_windows-class_method" title="execute_windows (class method)">+ (Object) <strong>execute_windows</strong>(command, options, stdin, stdout, stderr) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
 
-  
+
+
+
+  <span class="note title private">private</span>
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>This is private method.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#ruby_path-class_method" title="ruby_path (class method)">+ (String) <strong>ruby_path</strong> </a>
-    
 
-    
+      <a href="#ruby_path-class_method" title="ruby_path (class method)">+ (String) <strong>ruby_path</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>Returns the path to the ruby executable (available via Config object, even if it's not in the PATH... so this is slightly safer than just using Puppet::Util.which).</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="private ">
   <span class="summary_signature">
-    
+
       <a href="#wait_for_output-class_method" title="wait_for_output (class method)">+ (Object) <strong>wait_for_output</strong>(stdout) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  <span class="note title private">private</span>
-  
-  
-  
 
-  
+
+
+
+  <span class="note title private">private</span>
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>This is private method.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
+
 
 
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="execfail-class_method">
-  
-    + (<tt><span class='object_link'>Object</span></tt>) <strong>execfail</strong>(command, exception) 
-  
 
-  
+    + (<tt><span class='object_link'>Object</span></tt>) <strong>execfail</strong>(command, exception)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Wraps execution of <span class='object_link'><a href="#execute-class_method" title="Puppet::Util::Execution.execute (method)">execute</a></span> with mapping of exception to given exception (and output as argument).</p>
@@ -326,23 +326,23 @@ in classes that needs to execute system commands.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>exception</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>under same conditions as <span class='object_link'><a href="#execute-class_method" title="Puppet::Util::Execution.execute (method)">execute</a></span>, but raises the given <code>exception</code> with the output as argument</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -371,16 +371,16 @@ in classes that needs to execute system commands.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="execpipe-class_method">
-  
+
     + (<tt><span class='object_link'>String</span></tt>) <strong>execpipe</strong>(command, failonfail = true) {|pipe| ... }
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>The command can be a simple string, which is executed as-is, or an Array,
@@ -396,140 +396,140 @@ pipe.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>command</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>, <tt><span class='object_link'>Array</span>&lt;<span class='object_link'>String</span>&gt;</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the command to execute as one string,
 or as parts in an array. The parts of the array are joined with one
 separating space between each entry when converting to the command line
 string to execute.</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>failonfail</span>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
+
+
         <em class="default">(defaults to: <tt>true</tt>)</em>
-      
-      
+
+
         &mdash;
         <div class='inline'><p>(true) if the execution should fail with
 Exception on failure or not.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 <p class="tag_title">Yields:</p>
 <ul class="yield">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>pipe</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>to a block executing a subprocess</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Yield Parameters:</p>
 <ul class="yieldparam">
-  
+
     <li>
-      
+
         <span class='name'>pipe</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>IO</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the opened pipe</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Yield Returns:</p>
 <ul class="yieldreturn">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the output to return</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>a string with the output from the subprocess executed by
 the given block</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="../ExecutionFailure.html" title="Puppet::ExecutionFailure (class)">Puppet::ExecutionFailure</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>if the executed chiled process did not
 exit with status == 0 and <code>failonfail</code> is <code>true</code>.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
   <p class="tag_title">See Also:</p>
   <ul class="see">
-    
+
       <li>for `mode` values</li>
-    
+
   </ul>
 
 </div><table class="source_code">
@@ -612,23 +612,23 @@ exit with status == 0 and <code>failonfail</code> is <code>true</code>.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="execute-class_method">
-  
-    + (<tt><span class='object_link'><a href="Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>) <strong>execute</strong>(command, options = NoOptionsSpecified) 
-  
 
-  
+    + (<tt><span class='object_link'><a href="Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>) <strong>execute</strong>(command, options = NoOptionsSpecified)
+
+
+
     <span class="aliases">Also known as:
     <span class="names"><span id='util_execute-class_method'>util_execute</span></span>
     </span>
-  
 
-  
+
+
 </h3><div class="docstring">
   <div class="discussion">
-    
+
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>Unfortunately, the default behavior for failonfail and combine (since
@@ -648,208 +648,208 @@ def execute(command, options)</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>command</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Array</span>&lt;<span class='object_link'>String</span>&gt;</tt>, <tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the command to execute. If it is
 an Array the first element should be the executable and the rest of the
 elements should be the individual arguments to that executable.</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>options</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span></tt>)</span>
-      
-      
+
+
         <em class="default">(defaults to: <tt>NoOptionsSpecified</tt>)</em>
-      
-      
+
+
         &mdash;
         <div class='inline'><p>a Hash of options</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
-  
-    
-    
-    
-    
+
+
+
+
+
     <p class="tag_title">Options Hash (<tt>options</tt>):</p>
     <ul class="option">
-      
+
         <li>
           <span class="name">:failonfail</span>
           <span class="type">(<tt>Boolean</tt>)</span>
           <span class="default">
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>if this value is set to true, then this method will raise an error if the
 command is not executed successfully.</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:uid</span>
           <span class="type">(<tt>Integer</tt>, <tt><span class='object_link'>String</span></tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>nil</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>the user id of the user that the process should be run as</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:gid</span>
           <span class="type">(<tt>Integer</tt>, <tt><span class='object_link'>String</span></tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>nil</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>the group id of the group that the process should be run as</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:combine</span>
           <span class="type">(<tt>Boolean</tt>)</span>
           <span class="default">
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>sets whether or not to combine stdout/stderr in the output</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:stdinfile</span>
           <span class="type">(<tt><span class='object_link'>String</span></tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>nil</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>sets a file that can be used for stdin. Passing a string for stdin is not currently
 supported.</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:squelch</span>
           <span class="type">(<tt>Boolean</tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>true</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>if true, ignore stdout / stderr completely.</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:override_locale</span>
           <span class="type">(<tt>Boolean</tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>true</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>by default (and if this option is set to true), we will temporarily override
 the user/system locale to "C" (via environment variables LANG and LC_*) while we are executing the command.
 This ensures that the output of the command will be formatted consistently, making it predictable for parsing.
 Passing in a value of false for this option will allow the command to be executed using the user/system locale.</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:custom_environment</span>
           <span class="type">(<tt><span class='object_link'>Hash</span>&lt;{<span class='object_link'>String</span> =&gt; <span class='object_link'>String</span>}&gt;</tt>)</span>
           <span class="default">
-            
+
               &mdash; default:
               <tt>{}</tt>
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>a hash of key/value pairs to set as environment variables for the duration
 of the command.</p>
 </div>
-          
+
         </li>
-      
+
     </ul>
-  
+
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="Execution/ProcessOutput.html" title="Puppet::Util::Execution::ProcessOutput (class)">Puppet::Util::Execution::ProcessOutput</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>output as specified by options</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="../ExecutionFailure.html" title="Puppet::ExecutionFailure (class)">Puppet::ExecutionFailure</a></span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>if the executed chiled process did not exit with status == 0 and <code>failonfail</code> is
 <code>true</code>.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1012,16 +1012,16 @@ of the command.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="execute_posix-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>execute_posix</strong>(command, options, stdin, stdout, stderr)  <span class="extras">(private)</span>&nbsp;<span class="note title private">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -1034,7 +1034,7 @@ of the command.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1134,16 +1134,16 @@ of the command.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="execute_windows-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>execute_windows</strong>(command, options, stdin, stdout, stderr)  <span class="extras">(private)</span>&nbsp;<span class="note title private">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -1156,7 +1156,7 @@ of the command.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1192,16 +1192,16 @@ of the command.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="ruby_path-class_method">
-  
+
     + (<tt><span class='object_link'>String</span></tt>) <strong>ruby_path</strong> &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -1215,23 +1215,23 @@ it's not in the PATH... so this is slightly safer than just using Puppet::Util.w
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the path to the Ruby executable</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -1258,16 +1258,16 @@ it's not in the PATH... so this is slightly safer than just using Puppet::Util.w
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="wait_for_output-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>wait_for_output</strong>(stdout)  <span class="extras">(private)</span>&nbsp;<span class="note title private">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -1280,7 +1280,7 @@ it's not in the PATH... so this is slightly safer than just using Puppet::Util.w
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -1344,7 +1344,7 @@ it's not in the PATH... so this is slightly safer than just using Puppet::Util.w
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

@@ -70,7 +70,7 @@ For this procedure, you're going to add the `helloworld` classes to a node group
 
    ![classification selection][classification_selector]
 
-2. In the **Node group name** field, name your group **HelloWorld**. 
+2. In the **Node group name** field, name your group **HelloWorld**.
 3. Click **Add group**.
 
    **Note**: Leave the **Parent name** and **Environment** values as their defaults (**default** and **production**, respectively).
@@ -78,10 +78,10 @@ For this procedure, you're going to add the `helloworld` classes to a node group
 4. From the __Classification page__, select the __HelloWorld__ group, and click the __Rules_ tab.
 5. In the **Fact** field, enter "name" (without the quotes).
 6. From the **Operator** drop-down list, select **matches regex**.
-7. In the **Value** field, enter ".x" (without the quotes). 
+7. In the **Value** field, enter ".x" (without the quotes).
 8. Click **Add rule**.
 
-   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **HelloWorld** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.) 
+   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **HelloWorld** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.)
 
 **To add the** `helloworld` **classes to the NTP group**:
 
@@ -93,7 +93,7 @@ For this procedure, you're going to add the `helloworld` classes to a node group
 
 4. Click __Add class__.
 
-5. Repeat steps 3 and 4 to add the `helloworld::motd` class. 
+5. Repeat steps 3 and 4 to add the `helloworld::motd` class.
 
 5. Click the **Commit change** button.
 

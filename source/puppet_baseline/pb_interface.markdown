@@ -6,11 +6,11 @@ title: "Baseline Plugin: Interface"
 Puppet Dashboard Baseline Plugin --- Interface and Usage
 =========
 
-<span style="font-size: 2em; font-weight: bold; color: red; background-color: #ff9;">This documentation does not refer to a released product.</span> 
+<span style="font-size: 2em; font-weight: bold; color: red; background-color: #ff9;">This documentation does not refer to a released product.</span>
 
 <span style="background-color: #ff9;">For documentation of the compliance features released in Puppet Enterprise 1.2, please see [the Puppet Enterprise manual](/pe/).</span>
 
-This chapter describes the compliance plugin UI and demonstrates its use. 
+This chapter describes the compliance plugin UI and demonstrates its use.
 
 #### Navigation
 
@@ -19,12 +19,12 @@ This chapter describes the compliance plugin UI and demonstrates its use.
 * Interface
 * [Internals](./pb_internals.html)
 
-* * * 
+* * *
 
 Compliance Pages
 -----
 
-The baseline compliance pages are all reached from the "Compliance" link in Dashboard's header menu. 
+The baseline compliance pages are all reached from the "Compliance" link in Dashboard's header menu.
 
 ![compliance_link][]
 
@@ -36,14 +36,14 @@ Every compliance page shows information for a single day, and contains a date ch
 
 ![main_summary][]
 
-The main summary page (`baseline/compliance`) shows a single day's comparison results, with aggregate summaries for grouped nodes and individual summaries for groupless nodes. 
+The main summary page (`baseline/compliance`) shows a single day's comparison results, with aggregate summaries for grouped nodes and individual summaries for groupless nodes.
 
 
 ### Individual Node Page
 
 ![individual_node][]
 
-Individual node pages show one node's off-baseline inspection results for a single day. You can accept or reject changes from this page. 
+Individual node pages show one node's off-baseline inspection results for a single day. You can accept or reject changes from this page.
 
 Links to groupless nodes are displayed on the main summary page. To see the individual details of a node which is in at least one group, use the "Individual Differences" tab from its group page.
 
@@ -53,11 +53,11 @@ Links to groupless nodes are displayed on the main summary page. To see the indi
 
 ![group_individual][]
 
-Group pages show the collected differences for a group of nodes. Two tabs are available: You can use the "Common Differences" tab to approve and reject aggregate changes en masse, or you can use the "Individual Differences" tab to access node pages and act individually. 
+Group pages show the collected differences for a group of nodes. Two tabs are available: You can use the "Common Differences" tab to approve and reject aggregate changes en masse, or you can use the "Individual Differences" tab to access node pages and act individually.
 
 Groups are one of Dashboard's core constructs, and nodes can be added to and removed from groups with Dashboard's standard node view.
 
-Although Dashboard allows groups to contain other groups, a compliance group page will only list nodes that are direct children of that group. 
+Although Dashboard allows groups to contain other groups, a compliance group page will only list nodes that are direct children of that group.
 
 Changes to Core Dashboard Pages
 -----
@@ -66,34 +66,34 @@ The compliance plugin also adds new content and controls to Dashboard's core gro
 
 ![core_group_page][]
 
-Each group page will now have a compliance summary in its node information section. Additionally, the core group pages will have a control for generating [custom reports](#<# customreports #>). 
+Each group page will now have a compliance summary in its node information section. Additionally, the core group pages will have a control for generating [custom reports](#<# customreports #>).
 
 ![core_group_custom_report][]
 
 Reviewing Changes
 -----
 
-To audit changes, first scan the day's node and group summaries to see which nodes have unreviewed changes. 
+To audit changes, first scan the day's node and group summaries to see which nodes have unreviewed changes.
 
 ![summary_with_differences][]
 
-Once you've seen the overview, you can navigate to any pages with unreviewed changes. If there are any unreviewed changes on previous days, there will be a warning next to the date changer drop-down, and the drop-down will note which days aren't fully reviewed. 
+Once you've seen the overview, you can navigate to any pages with unreviewed changes. If there are any unreviewed changes on previous days, there will be a warning next to the date changer drop-down, and the drop-down will note which days aren't fully reviewed.
 
 ![date_changer_with_unreviewed][]
 
-Changes can be accepted or rejected. Accepted changes will become part of the baseline for the next day's comparisons. Rejecting a change does nothing, and if the change isn't reverted, it will appear as a difference again on the next day's comparisons. 
+Changes can be accepted or rejected. Accepted changes will become part of the baseline for the next day's comparisons. Rejecting a change does nothing, and if the change isn't reverted, it will appear as a difference again on the next day's comparisons.
 
-When accepting multiple days' changes to the same resource, the change most recently accepted by the user will win. 
+When accepting multiple days' changes to the same resource, the change most recently accepted by the user will win.
 
 ### Reviewing Individual Nodes
 
-Changes to individual nodes are straightforward to review: navigate to the node's page, view each change, and use the green plus and red minus buttons when you've decided whether the change was legitimate. 
+Changes to individual nodes are straightforward to review: navigate to the node's page, view each change, and use the green plus and red minus buttons when you've decided whether the change was legitimate.
 
 ![accept_and_reject_buttons][]
 
-Each change is displayed in a table of attributes, with the approved state on the left and the inspected state on the right. If you have enabled filebucket viewing, you'll see links for viewing the original and modified contents of any changed files, as well as a "differences" link for showing the exact changes. 
+Each change is displayed in a table of attributes, with the approved state on the left and the inspected state on the right. If you have enabled filebucket viewing, you'll see links for viewing the original and modified contents of any changed files, as well as a "differences" link for showing the exact changes.
 
-You can also accept or reject all of the day's changes to this node at once with the controls below the node's summary. Note that rejecting all changes is "safe," since it makes no edits to the node's baseline; if you reject all changes without then manually reverting them, you're effectively deferring a decision on them to the next day. 
+You can also accept or reject all of the day's changes to this node at once with the controls below the node's summary. Note that rejecting all changes is "safe," since it makes no edits to the node's baseline; if you reject all changes without then manually reverting them, you're effectively deferring a decision on them to the next day.
 
 ### Reviewing Groups
 
@@ -103,13 +103,13 @@ If you've collected similar nodes into Dashboard groups, you can greatly speed u
 
 ![group_same_change][]
 
-If the same change was made on several nodes in a group, you can accept or reject them as a unit. If you need to accept this change on only some nodes, you'll need to do so from the individual node pages. 
+If the same change was made on several nodes in a group, you can accept or reject them as a unit. If you need to accept this change on only some nodes, you'll need to do so from the individual node pages.
 
 #### Different changes to the same resource
 
 ![group_different_changes][]
 
-If different changes were made to the same resource on several nodes, the changes will be grouped for easy comparison. You can accept or reject each of these sub-groups of changes individually. 
+If different changes were made to the same resource on several nodes, the changes will be grouped for easy comparison. You can accept or reject each of these sub-groups of changes individually.
 
 #### Convergence of differing baselines
 
@@ -124,9 +124,9 @@ The compliance plugin can also generate custom reports which compare an entire g
 
 ![core_group_custom_report][]
 
-Custom reports can only  be generated from Dashboard's core group pages. To generate a report, choose which baseline to compare against and press the generate button; the report will be queued and a progress indicator will display. (The indicator is static HTML rather than AJAX, so reload the page periodically until the report is finished.) 
+Custom reports can only  be generated from Dashboard's core group pages. To generate a report, choose which baseline to compare against and press the generate button; the report will be queued and a progress indicator will display. (The indicator is static HTML rather than AJAX, so reload the page periodically until the report is finished.)
 
-Once generated, custom reports can be viewed from Dashboard's core group pages, the main compliance page, and the compliance group pages. 
+Once generated, custom reports can be viewed from Dashboard's core group pages, the main compliance page, and the compliance group pages.
 
 ![custom_report_core_group_link][]
 
@@ -134,7 +134,7 @@ Once generated, custom reports can be viewed from Dashboard's core group pages, 
 
 ![custom_report_compliance_main_link][]
 
-A custom report is split into a "Common Differences" tab and an "Individual Differences" tab. This is very similar to the layout of the group compliance review pages, and should  be read in the same fashion; the only difference is that all comparisons are to a single baseline instead of per-node baselines. 
+A custom report is split into a "Common Differences" tab and an "Individual Differences" tab. This is very similar to the layout of the group compliance review pages, and should  be read in the same fashion; the only difference is that all comparisons are to a single baseline instead of per-node baselines.
 
 ![custom_report_common][]
 
@@ -153,7 +153,7 @@ This brief walkthrough shows a compliance workflow auditing the state of the fol
 
 ![tutorial_summary][]
 
-On Thursday morning, the admin notices unreviewed changes in a group of three nodes and a pair of ungrouped nodes. She checks the group first. 
+On Thursday morning, the admin notices unreviewed changes in a group of three nodes and a pair of ungrouped nodes. She checks the group first.
 
 ![tutorial_group][]
 
@@ -161,7 +161,7 @@ There, she notices that a user was completely deleted from all three nodes, and 
 
 ![tutorial_reject_user][]
 
-...and manually SSHes to the affected nodes to re-instate the account. 
+...and manually SSHes to the affected nodes to re-instate the account.
 ![tutorial_group_reject_user_nodes_link][]
 
 ![tutorial_group_reject_user_nodes][]
@@ -174,13 +174,13 @@ Then she takes a look at the file. It looks like two nodes had the ctime and mti
 
 ![tutorial_profile_before][] ![tutorial_profile_after][]
 
-That's not OK. It looks like someone was trying to resolve a DNS problem or something, but that's definitely not how she wants this machine configured. She rejects and manually reverts, and makes a note to find out what the problem they were trying to fix was. 
+That's not OK. It looks like someone was trying to resolve a DNS problem or something, but that's definitely not how she wants this machine configured. She rejects and manually reverts, and makes a note to find out what the problem they were trying to fix was.
 
-Next, the admin moves on to the individual nodes. 
+Next, the admin moves on to the individual nodes.
 
 ![tutorial_osprey][]
 
-On the osprey server, something has stopped crond, which is definitely not good, and someone has made an edit to `/etc/syslog.conf`. She rejects the cron stoppage and restarts it, then checks the diff on the syslog config: 
+On the osprey server, something has stopped crond, which is definitely not good, and someone has made an edit to `/etc/syslog.conf`. She rejects the cron stoppage and restarts it, then checks the diff on the syslog config:
 
     7c7
     < *.info;mail.none;authpriv.none;cron.none      /var/log/messages
@@ -227,7 +227,7 @@ The next day, the admin's fixes to the syslog.conf and profile files on the vari
 [tutorial_reject_user]: ./images/tutorial_reject_user.png
 [tutorial_summary]: ./images/tutorial_summary.png
 
-* * * 
+* * *
 
 #### Navigation
 

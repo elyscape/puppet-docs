@@ -12,7 +12,7 @@ PuppetDB requires a relatively small amount of maintenance and tuning. You shoul
 
 ## Deactivate Decommissioned Nodes
 
-When you remove a node from your Puppet deployment, you should tell PuppetDB to deactivate it. This will ensure that any resources exported by that node will stop appearing in the catalogs served to the remaining agent nodes. 
+When you remove a node from your Puppet deployment, you should tell PuppetDB to deactivate it. This will ensure that any resources exported by that node will stop appearing in the catalogs served to the remaining agent nodes.
 
 The PuppetDB plugins installed on your puppet master(s) include a `deactivate` action for the `node` face. On your puppet master, run:
 
@@ -51,13 +51,13 @@ E.g.: `http://puppetdb.example.com:8080/dashboard/index.html?height=240&pollingI
 
 PuppetDB's log file lives at `/var/log/pe-puppetdb/pe-puppetdb.log` (for PE users) or `/var/log/puppetdb/puppetdb.log` (for open source users). Check the log when you need to confirm that PuppetDB is working correctly or troubleshoot visible malfunctions.
 
-The PuppetDB packages install a logrotate job in `/etc/logrotate.d/puppetdb`, which will keep the log from becoming too large. 
+The PuppetDB packages install a logrotate job in `/etc/logrotate.d/puppetdb`, which will keep the log from becoming too large.
 
 ## Tune the Max Heap Size
 
 Although we provide [rule-of-thumb memory recommendations][memrec], PuppetDB's RAM usage depends on several factors, and everyone's memory needs will be different depending on their number of nodes, frequency of Puppet runs, and amount of managed resources. 1000 nodes that check in once a day will require much less memory than if they check in every 30 minutes.
 
-So the best way to manage PuppetDB's max heap size is to guess a ballpark figure, then [monitor the performance console](#monitor-the-performance-console) and [increase the heap size][configure_heap] if the "JVM Heap" metric keeps approaching the maximum. You may need to revisit your memory needs whenever your site grows substantially. 
+So the best way to manage PuppetDB's max heap size is to guess a ballpark figure, then [monitor the performance console](#monitor-the-performance-console) and [increase the heap size][configure_heap] if the "JVM Heap" metric keeps approaching the maximum. You may need to revisit your memory needs whenever your site grows substantially.
 
 The good news is that memory starvation is actually not very destructive. It will cause `OutOfMemoryError` exceptions to appear in [the log](#view-the-log), but you can restart PuppetDB with a [larger memory allocation][configure_heap] and it'll pick up where it left off --- any requests successfully queued up in PuppetDB *will* get processed.
 

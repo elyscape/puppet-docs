@@ -54,18 +54,18 @@ If necessary, you can install stdlib after installing/upgrading by running `pupp
 
 If your Puppet master uses a proxy server to access the internet, you may not be able to download the `pe_repo` packages for the agent. In the case that you're using a proxy, follow this workaround:
 
-**Tip**: The following steps should be performed on your Puppet master (and, if you have a large environment installation, on all your compile masters as well). 
+**Tip**: The following steps should be performed on your Puppet master (and, if you have a large environment installation, on all your compile masters as well).
 
-1. From your Puppet master, navigate to `/etc/sysconfig/`, and create a file called `pe-puppet`. 
+1. From your Puppet master, navigate to `/etc/sysconfig/`, and create a file called `pe-puppet`.
 2. In `pe-puppet` add the following lines:
 
        export http_proxy ...
        export https_proxy ...
-     
-3. Save and exit the file. 
+
+3. Save and exit the file.
 4. Restart the pe-puppet service with the following commands:
 
-       puppet resource service pe-puppet ensure=stopped 
+       puppet resource service pe-puppet ensure=stopped
        puppet resource service pe-puppet ensure=running
 
 ### PuppetDB Behind a Load Balancer Causes Puppet Server Errors
@@ -164,7 +164,7 @@ After updating the gems, you need to restart the Puppet master with `service pe-
 
 If you run Puppet Server behind a proxy, the `puppetserver gem install` command will fail. Instead you can install the gems as follows:
 
-1. Use [rubygems.org](https://rubygems.org/pages/download#formats) to search for and download the gem you want to install, and transfer that gem to your Puppet master. 
+1. Use [rubygems.org](https://rubygems.org/pages/download#formats) to search for and download the gem you want to install, and transfer that gem to your Puppet master.
 2. Run `/opt/puppet/bin/puppetserver gem install --local <PATH to GEM>`.
 
 ### A Note About Gems with Native (C) Extensions for JRuby on the Puppet Server
@@ -189,11 +189,11 @@ In some cases (especially for RHEL 7 installations) if the `/tmp` directory is m
     Nov 12 17:46:12 fqdn.com java[56495]: Cannot run on Microsoft Windows without the win32-process, win32-dir and win32-service gems: Win32API only supported on win32
     Nov 12 17:46:12 fqdn.com java[56495]: Puppet::Error: Cannot determine basic system flavour
 
-To work around this issue, you can either mount the `/tmp` directory without `noexec`, or you can choose a different directory to use as the temporary directory for the Puppet Server process. 
+To work around this issue, you can either mount the `/tmp` directory without `noexec`, or you can choose a different directory to use as the temporary directory for the Puppet Server process.
 
 If you want to use a directory other than `/tmp`, you can add an extra argument to the `$java_args` parameter of the `puppet_enterprise::profile::master` class using the PE console. Add `{"Djava.io.tmpdir=/var/tmp":""}` as the value for the `$java_args` parameter. Refer to [Editing Parameters](./console_classes_groups_making_changes.html#editing-parameters) for instructions on editing parameters in the console.
 
-Note that whether you use `/tmp` or a different directory, you’ll need to set the permissions of the directory to `1777`. This allows the Puppet Server JRuby process to write a file to `/tmp` and then execute it. 
+Note that whether you use `/tmp` or a different directory, you’ll need to set the permissions of the directory to `1777`. This allows the Puppet Server JRuby process to write a file to `/tmp` and then execute it.
 
 ### No Config Reload Requests
 
@@ -240,7 +240,7 @@ To re-index and vacuum the console database, you can use the following PostgreSQ
 
 #### Node Classifier Returns Activity Service Error When Importing a Large Number of Groups
 
-In PE 3.7, an error indicating that the "index row size exceeds maximum" is returned when importing a large number of groups (for example, when upgrading a large environment to PE 3.7). This error is returned even if the import was successful. 
+In PE 3.7, an error indicating that the "index row size exceeds maximum" is returned when importing a large number of groups (for example, when upgrading a large environment to PE 3.7). This error is returned even if the import was successful.
 
 ### PE Console Doesn't Display Parent Group Rules
 
@@ -250,15 +250,15 @@ Matching nodes aren’t showing up.
 
 ### Newly Created Node Group Does Not Appear in List of Parents
 
-When you create a new node group in the console, then immediately create another new node group and try to select the first node group as the parent, the first node group does not appear in the list of selectable names in the **Parent name** drop-down list. The first node group will appear if you reload the page. 
- 
+When you create a new node group in the console, then immediately create another new node group and try to select the first node group as the parent, the first node group does not appear in the list of selectable names in the **Parent name** drop-down list. The first node group will appear if you reload the page.
+
 ### Can Only Accept Or Reject One Node at a Time
 
-In PE 3.7.2, if you have multiple node requests pending, you can accept/reject one node, but if you then try to accept/reject subsequent nodes a 403 Forbidden error is returned. This means that if you want to accept/reject node requests one at a time, you have to refresh the page after each time you accept/reject a node request. 
+In PE 3.7.2, if you have multiple node requests pending, you can accept/reject one node, but if you then try to accept/reject subsequent nodes a 403 Forbidden error is returned. This means that if you want to accept/reject node requests one at a time, you have to refresh the page after each time you accept/reject a node request.
 
 ### Node Classifier Ignores Facts That Are False
 
-When creating node matching rules in PE 3.7, the node classifier ignores all facts with a boolean value of `false`. For example, if you create a rule like `is_virtual` `is` `false`, the rule will never match a node. To avoid this problem, rewrite the rule to be `is_virtual` `is not` `true`. 
+When creating node matching rules in PE 3.7, the node classifier ignores all facts with a boolean value of `false`. For example, if you create a rule like `is_virtual` `is` `false`, the rule will never match a node. To avoid this problem, rewrite the rule to be `is_virtual` `is not` `true`.
 
 ### Important Factors in Connecting to an External Directory Service
 
@@ -282,15 +282,15 @@ When there are over 500 nodes pinned to a node group, a **Load All Nodes** butto
 
 ### Not All Environments Are Listed in the PE Console
 
-When the classifier service encounters an environment that has code that will not compile, it marks the environment as deleted. If you later correct the code in the environment, the classifier service does not remove the deleted flag. 
+When the classifier service encounters an environment that has code that will not compile, it marks the environment as deleted. If you later correct the code in the environment, the classifier service does not remove the deleted flag.
 
 To manually remove the deleted flag for an environment named "test" for example, in the command line, type:
 
     su - pe-postgres -s /bin/bash -c "/opt/puppet/bin/psql -d 'pe-classifier' -c \"UPDATE environments SET deleted = 'f' WHERE name = 'test';\""
 
-### Querying the Nodes Endpoint of the Classifier Service Can Exhaust Memory 
+### Querying the Nodes Endpoint of the Classifier Service Can Exhaust Memory
 
-If a large number of nodes is returned when querying the `v1/nodes` endpoint of the classifier service API, the pe-console-services process may exhaust the memory and return a 500 error. 
+If a large number of nodes is returned when querying the `v1/nodes` endpoint of the classifier service API, the pe-console-services process may exhaust the memory and return a 500 error.
 
 To resolve this, you can manually remove the node check-ins. To remove node check-ins that are older than one week for example, in the command line, type:
 
@@ -314,7 +314,7 @@ Support for SLES 12 will be added in a future release.
 
 ### Nodes Can Be Pinned an Infinite Number of Times
 
-When pinning a node to a node group in the PE console, if you pin the node multiple times, the console does not resolve this to a single entry. For example, if you pin the same node to a node group ten times and commit it, the console will show that you have ten nodes all with the same node name. 
+When pinning a node to a node group in the PE console, if you pin the node multiple times, the console does not resolve this to a single entry. For example, if you pin the same node to a node group ten times and commit it, the console will show that you have ten nodes all with the same node name.
 
 ### Safari Certificate Handling May Prevent Console Access
 

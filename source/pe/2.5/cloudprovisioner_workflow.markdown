@@ -10,7 +10,7 @@ Tom is a sysadmin for CloudWidget.com, a company that provides web-based applica
  1. A web front-end load balancer
  2. A pool of application servers behind the load balancer
  3. A database server that serves the application servers
- 
+
  All of these nodes are virtual machines running on a VMware ESX server. The nodes are all currently being managed with Puppet Enterprise. Using PE, the application servers have all been assigned to a group which applies a class `cloudwidget_appserv`.
 
 CloudWidget is growing rapidly and so Tom is not surprised when he checks his inbox and finds several messages from users complaining about sluggish performance. He checks his monitoring tool and sure enough the load is too high on his application servers and performance is suffering. It's time to add a new node to the application server pool to help better distribute the load.
@@ -39,6 +39,6 @@ At this point we have:
 The CloudWidget infrastructure is now scaled and running at acceptable loads. Tom leans back and takes a sip of his coffee. It's still hot.
 
 
-* * * 
+* * *
 
-- [Next: Troubleshooting Cloud Provisioner](./cloudprovisioner_troubleshooting.html) 
+- [Next: Troubleshooting Cloud Provisioner](./cloudprovisioner_troubleshooting.html)

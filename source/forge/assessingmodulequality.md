@@ -34,17 +34,17 @@ Then scroll down the page and you will see information about the results of the 
 
 ![Quality score details][qualityscoredetail]
 
-You can click **View full results...** for even more detailed information on the scores for each section. It is possible that a module will have a perfect Code Quality score, in which case there may not be additional results to view. Otherwise, you will see some combination of the below flags: 
+You can click **View full results...** for even more detailed information on the scores for each section. It is possible that a module will have a perfect Code Quality score, in which case there may not be additional results to view. Otherwise, you will see some combination of the below flags:
 
 ![Quality flags][qualityflags]
 
 ###Quality Flags
 
 #####Error
-An error flag indicates a severe problem with the module. The flag will be appended to the line causing the issue, which could be anything from a critical bug to a failure to follow a high-priority [best practice](styleguide). If you are the module's author, an error flag negatively impacts your score most heavily. 
+An error flag indicates a severe problem with the module. The flag will be appended to the line causing the issue, which could be anything from a critical bug to a failure to follow a high-priority [best practice](styleguide). If you are the module's author, an error flag negatively impacts your score most heavily.
 
 #####Warning
-A warning flag notes a general problem with the module. The flag will be appended to the line in module causing the issue, which could be nonconformance with [best practices](styleguide) or other smaller issue in the module's structure or code. If you are the module's author, a warning flag will negatively impact your score, but is weighted less heavily than an error. 
+A warning flag notes a general problem with the module. The flag will be appended to the line in module causing the issue, which could be nonconformance with [best practices](styleguide) or other smaller issue in the module's structure or code. If you are the module's author, a warning flag will negatively impact your score, but is weighted less heavily than an error.
 
 #####Notice
 A notice flag indicates something in the module that warrants attention. The notice flag is used for both positive and negative things of note, and as such does not impact the module's score.
@@ -64,7 +64,7 @@ Or you will see that it has had no change.
 
 ###Validating Your Module's Score
 
-If you have written a module and would like to know what its quality score will be before you upload it to the Forge, we designed the rating evaluations to be reproducible. 
+If you have written a module and would like to know what its quality score will be before you upload it to the Forge, we designed the rating evaluations to be reproducible.
 
 ####Code Quality
 To reproduce the Code Quality score, you will need to install puppet lint and then run it from the module's root.
@@ -76,7 +76,7 @@ puppet-lint `find ./manifests -name *.pp`
 ~~~
 
 ####Puppet Compatibility
-To reproduce the Puppet Compatibility score, you will need to run `puppet parser` from the module's root against the latest release for a specific version of Puppet. 
+To reproduce the Puppet Compatibility score, you will need to run `puppet parser` from the module's root against the latest release for a specific version of Puppet.
 
 If you are using Puppet 2.7+:
 

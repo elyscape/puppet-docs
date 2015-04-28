@@ -9,17 +9,17 @@ canonical: "/pe/latest/overview_about_pe.html"
 Overview
 =====
 
-What Is Puppet Enterprise? 
+What Is Puppet Enterprise?
 -----
 
-Puppet Enterprise is a fully supported software distribution of the Puppet family of systems management tools. It adds several premium enterprise-only features, and deploys out-of-the-box into a highly scalable production-ready configuration. 
+Puppet Enterprise is a fully supported software distribution of the Puppet family of systems management tools. It adds several premium enterprise-only features, and deploys out-of-the-box into a highly scalable production-ready configuration.
 
-- **Puppet** (version 2.6.9) is an industry-leading configuration management platform that lets you describe a desired system state as code and enforce that state on any number of machines. 
+- **Puppet** (version 2.6.9) is an industry-leading configuration management platform that lets you describe a desired system state as code and enforce that state on any number of machines.
 - **MCollective** (version 1.2.1) is a message-based server orchestration framework for fast parallel command execution.
 - **Puppet Dashboard** (version 1.2) is a web interface to Puppet. It can view and analyze Puppet's reports, and can simplify the process of assigning your existing Puppet classes to nodes.
 - **Puppet Compliance** is an enterprise-only extension to Puppet Dashboard that enables a new workflow for auditing changes to resources.
-- **Facter** (version 1.6.0) is a system data discovery utility used by both Puppet and MCollective. 
-- **Accounts** (version 1.0.0) is a ready-to-use Puppet module for managing user accounts. 
+- **Facter** (version 1.6.0) is a system data discovery utility used by both Puppet and MCollective.
+- **Accounts** (version 1.0.0) is a ready-to-use Puppet module for managing user accounts.
 
 To get maximum compatibility and performance on your existing systems, PE bundles and maintains its own versions of Ruby, Apache, and all required libraries, and installs all included software in the `/opt/puppet` directory. This lets us enable advanced features while still shielding users from dependency conflicts, and it offers a relatively seamless transition path for users migrating from a manually maintained Puppet installation.
 
@@ -38,7 +38,7 @@ Puppet Enterprise's features are divided into three main **roles,** any or all o
 Licensing
 ------
 
-Puppet Enterprise can be evaluated with a complementary ten-node license; beyond that, a commercial per-node license is required for use. A license key file will have been emailed to you after your purchase, and the puppet master  will look for this key at `/etc/puppetlabs/license.key`. Puppet will log warnings if the license is expired or exceeded, and you can view the status of your license by running `puppet license` at the command line on the puppet master. 
+Puppet Enterprise can be evaluated with a complementary ten-node license; beyond that, a commercial per-node license is required for use. A license key file will have been emailed to you after your purchase, and the puppet master  will look for this key at `/etc/puppetlabs/license.key`. Puppet will log warnings if the license is expired or exceeded, and you can view the status of your license by running `puppet license` at the command line on the puppet master.
 
-To purchase a license, please see the [Puppet Enterprise pricing page](http://www.puppetlabs.com/puppet/how-to-buy/), or contact Puppet Labs at <sales@puppetlabs.com> or (877) 575-9775. For more information on licensing terms, please see [the licensing FAQ](http://www.puppetlabs.com/licensing-faq/). If you have misplaced or never received your license key, please contact <sales@puppetlabs.com>. 
+To purchase a license, please see the [Puppet Enterprise pricing page](http://www.puppetlabs.com/puppet/how-to-buy/), or contact Puppet Labs at <sales@puppetlabs.com> or (877) 575-9775. For more information on licensing terms, please see [the licensing FAQ](http://www.puppetlabs.com/licensing-faq/). If you have misplaced or never received your license key, please contact <sales@puppetlabs.com>.
 

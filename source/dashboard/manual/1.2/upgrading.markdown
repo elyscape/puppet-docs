@@ -19,7 +19,7 @@ This is a chapter of the [Puppet Dashboard 1.2 manual](./index.html).
 
 [dbbackups]: ./maintaining.html#database-backups
 
-* * * 
+* * *
 
 Overview
 --------
@@ -31,7 +31,7 @@ Upgrading Dashboard from a previous version generally consists of the following:
 * [Running any new database migrations](#running-database-migrations)
 * Restarting the webserver and delayed jobs workers
 
-In addition, there are several tasks you must take into account when upgrading from certain versions. 
+In addition, there are several tasks you must take into account when upgrading from certain versions.
 
 * [Upgrading from pre-1.2 versions](#upgrading-from-versions-prior-to-120)
 * [Upgrading from pre-1.1 versions](#upgrading-from-versions-prior-to-110)
@@ -43,7 +43,7 @@ Upgrading Code
 
 ### From Packages
 
-Dashboard installations that used Puppet Labs' packages are the easiest to upgrade. If you installed Dashboard with Yum: 
+Dashboard installations that used Puppet Labs' packages are the easiest to upgrade. If you installed Dashboard with Yum:
 
     $ sudo yum update puppet-dashboard
 
@@ -99,7 +99,7 @@ Finally, re-chown all Dashboard files to the puppet-dashboard user:
 
 If you originally installed Dashboard from a source tarball, you'll need to either pick out all of your modified or created files and transplant them into the new installation, or convert your installation to Git; either way, you should back up the entire installation first.
 
-To convert an existing Dashboard installation to a Git repo, do something like the following, replacing {version tag} with the version of Dashboard you originally installed: 
+To convert an existing Dashboard installation to a Git repo, do something like the following, replacing {version tag} with the version of Dashboard you originally installed:
 
 
     git init
@@ -128,9 +128,9 @@ Puppet Dashboard's database schema changes as features are added and improved, a
 
 DB migrations are done with a rake task, and should be simple and painless when upgrading between any two official releases of Dashboard.
 
-    $ sudo -u puppet-dashboard rake db:migrate RAILS_ENV=production 
+    $ sudo -u puppet-dashboard rake db:migrate RAILS_ENV=production
 
-Remember that Rails does not consider "production" its default environment, so you must specify it manually for all rake tasks unless your `RAILS_ENV` environment variable is set or you are using the same database in the production and development environments. 
+Remember that Rails does not consider "production" its default environment, so you must specify it manually for all rake tasks unless your `RAILS_ENV` environment variable is set or you are using the same database in the production and development environments.
 
 You'll need to run `db:migrate` once for each environment you use. The `db:migrate` task can be safely run multiple times in the same environment.
 
@@ -151,15 +151,15 @@ See [the delayed jobs section](./bootstrapping.html#starting-and-managing-delaye
 Upgrading From Versions Prior to 1.1.0
 --------------------------------------
 
-In version 1.1.0, Dashboard changed the way it stores reports, and any reports from the 1.0.x series will have to be converted before they can be displayed or analyzed by the new version. 
+In version 1.1.0, Dashboard changed the way it stores reports, and any reports from the 1.0.x series will have to be converted before they can be displayed or analyzed by the new version.
 
 Since this can potentially take a long time, depending on your installation's report history, it isn't performed when running `rake db:migrate`. Instead, you should run:
 
     $ sudo -u puppet-dashboard rake reports:schematize RAILS_ENV=production
 
-This task will convert the most recent reports first, and if it is interrupted, it can be resumed by just re-running the command. 
+This task will convert the most recent reports first, and if it is interrupted, it can be resumed by just re-running the command.
 
-* * * 
+* * *
 
 #### Navigation
 

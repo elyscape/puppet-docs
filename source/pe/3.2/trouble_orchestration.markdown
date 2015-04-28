@@ -22,13 +22,13 @@ If you alter an agent's name in `puppet.conf` or make other changes that affect 
     # Plugins
     securityprovider           = ssl
     plugin.ssl_server_private = /etc/puppetlabs/mcollective/ssl/mcollective-private.pem
- 
->**Tip**: You should also run NTP to verify that time is in sync across your deployment.  
+
+>**Tip**: You should also run NTP to verify that time is in sync across your deployment.
 
 Accessing the ActiveMQ Console
 ----------
 
-In some cases, you may need to access the ActiveMQ console to troubleshoot orchestration messages, which are handled by the `pe-activemq` service. To do this, you will need to enable the ActiveMQ console from within the PE console by editing the `activemq_enable_web_console` parameter of the `pe_mcollective::role::master` class. The ActiveMQ node can be reached from whichever node has the `pe_mcollective::role::master` class. 
+In some cases, you may need to access the ActiveMQ console to troubleshoot orchestration messages, which are handled by the `pe-activemq` service. To do this, you will need to enable the ActiveMQ console from within the PE console by editing the `activemq_enable_web_console` parameter of the `pe_mcollective::role::master` class. The ActiveMQ node can be reached from whichever node has the `pe_mcollective::role::master` class.
 
 To activate the ActiveMQ console:
 
@@ -40,7 +40,7 @@ To activate the ActiveMQ console:
 
 4. From the class list, select `pe_mcollective::role::master`.
 
-5. From the `pe_mcollective::role::master parameters` dialog, set the `activemq_enable_web_console` parameter to `true`. 
+5. From the `pe_mcollective::role::master parameters` dialog, set the `activemq_enable_web_console` parameter to `true`.
 
 6. Click the __Done__ button when finished.
 
@@ -54,13 +54,13 @@ In some cases, the MCollective service on AIX agents may be stuck in the `stoppi
 
     lssrc -s pe-mcollective   # note returned pid
     kill -9 <pid-of-pe-mcollective>
-    
+
 Running a 3.x Master with 2.8.x Agents is not Supported
 ----------
-  
+
 3.x versions of PE contain changes to the MCollective module that are not compatible with 2.8.x agents. When running a 3.x master with a 2.8.x agent, it is possible that puppet will still continue to run and check into the console, but this means puppet is running in a degraded state that is not supported.
 
 
-* * * 
+* * *
 
 - [Next: Troubleshooting: Cloud Provisioner ](./trouble_cloudprovisioner.html)

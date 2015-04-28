@@ -17,7 +17,7 @@ See the sections on [VMware](./cloudprovisioner_vmware.html), [AWS](./cloudprovi
 
 The cloud provisioning tools can be added during an installation of Puppet Enterprise. If you have already installed PE and you want to install the cloud provisioning tools, simply run the upgrader again.
 
-**Note for Puppet users** Most of the information in these sections applies to Puppet as well as PE. However, provisioning on VMWare is only supported by Puppet Enterprise. 
+**Note for Puppet users** Most of the information in these sections applies to Puppet as well as PE. However, provisioning on VMWare is only supported by Puppet Enterprise.
 
 Tools
 -----

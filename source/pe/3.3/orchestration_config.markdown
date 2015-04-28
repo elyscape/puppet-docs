@@ -33,10 +33,10 @@ Adding Actions
 Changing the Port Used by MCollective/ActiveMQ
 ------
 
-You can change the port that MCollective/ActiveMQ uses with a simple variable change in the console. 
+You can change the port that MCollective/ActiveMQ uses with a simple variable change in the console.
 
-1. In the sidebar, select the `mcollective` group. 
-2. On the `mcollective` group page, click __Edit__. 
+1. In the sidebar, select the `mcollective` group.
+2. On the `mcollective` group page, click __Edit__.
 3. Under __Variables__, in the __key__ field, add `fact_stomp_port`, and in the __value__ field, add the port number you want to use.
 4. Click __Update__.
 

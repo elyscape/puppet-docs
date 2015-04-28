@@ -23,7 +23,7 @@ _Read-Only Users_ can only view information on the console, but cannot perform a
 * accepting or rejecting changes to the baseline in Compliance
 * adding, editing, or removing nodes, groups, or classes
 
-_Read-Write Users_ have access to all parts of the console EXCEPT the user-management interface. Read-write users can interact with the console and use it to perform node management tasks. 
+_Read-Write Users_ have access to all parts of the console EXCEPT the user-management interface. Read-write users can interact with the console and use it to perform node management tasks.
 
 _Admin Users_ have unrestricted access to all parts of the console, including the user-management interface. Through this interface, admin users can:
 
@@ -58,7 +58,7 @@ When you're done working in the console, choose *Logout* from the user account m
 
 ### Viewing Your User Account
 
-To view your user information, access the user account menu by clicking on your username (the first part of your email address) at the top right of the navigation bar. 
+To view your user information, access the user account menu by clicking on your username (the first part of your email address) at the top right of the navigation bar.
 
 ![account menu](./images/console/user_account_menu.jpg)
 
@@ -74,7 +74,7 @@ Users with admin level access can view information about users and manage their 
 
 #### Viewing Users and Settings
 
-Selecting *Admin Tools* will open a screen showing a list of users by email address, their access role and  status. Note that users who have not yet activated their accounts by responding to the activation email and setting a password will show a status of *pending*. 
+Selecting *Admin Tools* will open a screen showing a list of users by email address, their access role and  status. Note that users who have not yet activated their accounts by responding to the activation email and setting a password will show a status of *pending*.
 
 ![user listing screen](./images/console/user_admin_screen.jpg)
 
@@ -84,7 +84,7 @@ Click on a user's row to open a pop-up pane with information about that user. Th
 
 #### Modifying User Settings
 
-To modify the settings for a given user, click on the user's row to open the pop-up pane. In this pane, you can change their role and their email address or reset their password. Don't forget to click the *Save changes* button after making your edits. 
+To modify the settings for a given user, click on the user's row to open the pop-up pane. In this pane, you can change their role and their email address or reset their password. Don't forget to click the *Save changes* button after making your edits.
 
 Note that resetting a password or changing an email address will change that user's status back to *Pending*, which will send them another validation email and require them to complete the validation and password setting process again.
 
@@ -100,9 +100,9 @@ To delete an existing user (including pending users), click on the user's name i
 
 ### Creating Users From the Command Line
 
-From PE 2.5.2 onward, you can create new console users from the command line. This can be used to automate user creation or import large numbers of users from an external source at once. 
+From PE 2.5.2 onward, you can create new console users from the command line. This can be used to automate user creation or import large numbers of users from an external source at once.
 
-Command line user creation is done with a rake task. Due to a bug in PE 2.5.2 and 2.5.3, this task must be performed from a specific working directory, so keep this in mind if building scripts around it. 
+Command line user creation is done with a rake task. Due to a bug in PE 2.5.2 and 2.5.3, this task must be performed from a specific working directory, so keep this in mind if building scripts around it.
 
 On the console server, the following commands will add a new user:
 
@@ -114,8 +114,8 @@ Thus, to add a read-write user named jones@example.com, you would run:
     $ cd /opt/puppet/share/console-auth
     $ sudo /opt/puppet/bin/rake db:create_user EMAIL="jones@example.com" PASSWORD="good_password_1" ROLE="Read-Write"
 
-You cannot currently delete or disable users or reset passwords from the command line. 
+You cannot currently delete or disable users or reset passwords from the command line.
 
-* * * 
+* * *
 
-- [Next: Grouping and Classifying Nodes](./console_classes_groups.html) 
+- [Next: Grouping and Classifying Nodes](./console_classes_groups.html)

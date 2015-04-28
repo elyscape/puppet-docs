@@ -37,9 +37,9 @@ Puppet Labs provides two levels of [commercial support offerings for Puppet Ente
 
 When seeking support, you may be asked to run the information-gathering support script included with in the Puppet Enterprise installer tarball. This script is located in the root of the unzipped tarball and is named simply "`support`."
 
-This script will collect a large amount of system information, compress it, and print the location of the zipped tarball when it finishes running; an uncompressed directory (named `support`) containing the same data will be left in the same directory the compressed copy. We recommend that you examine the collected data before forwarding it to Puppet Labs, as it may contain sensitive information that you will wish to redact. 
+This script will collect a large amount of system information, compress it, and print the location of the zipped tarball when it finishes running; an uncompressed directory (named `support`) containing the same data will be left in the same directory the compressed copy. We recommend that you examine the collected data before forwarding it to Puppet Labs, as it may contain sensitive information that you will wish to redact.
 
-The information collected by the support script includes: 
+The information collected by the support script includes:
 
 - iptables info (is it loaded? what are the inbound and outbound rules?) (both ipv4 and ipv6)
 - a full run of facter (if installed)
@@ -77,9 +77,9 @@ Join the Puppet Enterprise user group
 
 <http://groups.google.com/a/puppetlabs.com/group/pe-users>
 
-- Click on “Sign in and apply for membership”     
-- Click on “Enter your email address to access the document”     
-- Enter your email address.     
+- Click on “Sign in and apply for membership”
+- Click on “Enter your email address to access the document”
+- Enter your email address.
 
 
 

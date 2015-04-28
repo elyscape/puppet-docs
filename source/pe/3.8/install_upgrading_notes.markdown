@@ -52,7 +52,7 @@ For example, if you have an agent node for which the `[agent]` section of `puppe
 
 ### Adding Nodes to Preconfigured PE Groups
 
-For fresh installations of PE 3.8, there are some special infrastructure node groups that are created and configured during the installation process. For upgrades, if these groups do not exist, or do not contain any classes, they will be created and configured but **no nodes will be pinned to them**. This helps prevent errors during the upgrade process, but you must manually pin the correct nodes to each group after you complete the upgrade process. 
+For fresh installations of PE 3.8, there are some special infrastructure node groups that are created and configured during the installation process. For upgrades, if these groups do not exist, or do not contain any classes, they will be created and configured but **no nodes will be pinned to them**. This helps prevent errors during the upgrade process, but you must manually pin the correct nodes to each group after you complete the upgrade process.
 
 The [preconfigured groups doc](./console_classes_groups_preconfigured_groups.html) has a list of the preconfigured node groups and classification data that come preconfigured in fresh installs.
 
@@ -99,7 +99,7 @@ Here are some notable changes that have been made to the endpoints in `auth.conf
 
 - The `resource_type` endpoint was modified to allow `classifier_client_certname` (pe-internal-classifier) and `console_client_certname` (pe-internal-dashboard) (3.7.0).
 
-Note that access to the CA functions of the Puppet master is no longer managed with `auth.conf`; it is now managed by [ca.conf](./puppet_server_config_files.html#caconf) in the Puppet Server configuration files. 
+Note that access to the CA functions of the Puppet master is no longer managed with `auth.conf`; it is now managed by [ca.conf](./puppet_server_config_files.html#caconf) in the Puppet Server configuration files.
 
 You will need to acknowledge you're aware of the differences when prompted by the upgrader, or pass in an answer file with `q_exit_and_update_auth_conf` in it when running the upgrade.
 

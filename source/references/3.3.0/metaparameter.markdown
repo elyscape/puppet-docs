@@ -221,7 +221,7 @@ Stages can only be set on classes, not individual resources.  This will
 fail:
 
     file { '/foo': stage => 'pre', ensure => file }
-    
+
 
 ### subscribe
 

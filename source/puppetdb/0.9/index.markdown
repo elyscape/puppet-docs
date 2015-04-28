@@ -8,7 +8,7 @@ canonical: "/puppetdb/latest/index.html"
 Welcome to the beta release of PuppetDB!
 
 PuppetDB is a Puppet data warehouse; it manages storage and retrieval
-of all platform-generated data. Currently, it stores catalogs and facts; in future releases, it will expand to include more data, like reports. 
+of all platform-generated data. Currently, it stores catalogs and facts; in future releases, it will expand to include more data, like reports.
 
 So far, we've implemented the following features:
 

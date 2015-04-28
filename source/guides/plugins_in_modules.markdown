@@ -48,7 +48,7 @@ Plugins are stored in the `lib` directory of a module, using an internal directo
                 └── type
 
 
-As the directory tree suggests, custom facts should go in `lib/facter/`, custom types should go in `lib/puppet/type/`, custom providers should go in `lib/puppet/provider/{type}/`, and custom functions should go in `lib/puppet/parser/functions/`. 
+As the directory tree suggests, custom facts should go in `lib/facter/`, custom types should go in `lib/puppet/type/`, custom providers should go in `lib/puppet/provider/{type}/`, and custom functions should go in `lib/puppet/parser/functions/`.
 
 For example:
 
@@ -56,7 +56,7 @@ A custom user provider:
 
     {modulepath}/{module}/lib/puppet/provider/user/custom_user.rb
 
-A custom package provider: 
+A custom package provider:
 
     {modulepath}/{module}/lib/puppet/provider/package/custom_pkg.rb
 
@@ -64,7 +64,7 @@ A custom type for bare Git repositories:
 
     {modulepath}/{module}/lib/puppet/type/gitrepo.rb
 
-A custom fact for the root of all home directories (that is, `/home` on Linux, `/Users` on Mac OS X, etc.): 
+A custom fact for the root of all home directories (that is, `/home` on Linux, `/Users` on Mac OS X, etc.):
 
     {modulepath}/{module}/lib/facter/homeroot.rb
 
@@ -74,12 +74,12 @@ A custom Augeas lens:
 
 > Note: Support for syncing Augeas lenses was added in Puppet 2.7.18.
 
-And so on. 
+And so on.
 
 Most types and facts should be stored in which ever module they are related to;
 for example, a Bind fact might be distributed in your Bind module.  If you wish to centrally
 deploy types and facts you could create a separate module just for this purpose, for example
-one called `custom`.  
+one called `custom`.
 
 So, if we are using our custom module and our modulepath is
 /etc/puppet/modules then types and facts would be stored in the

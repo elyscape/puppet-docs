@@ -92,7 +92,7 @@ Luego, cambiaremos cómo configurar la variable **$servers_real** que utiliza el
 	        $servers_real = $servers
 	      }
 
-Si especificamos un array de servidores, utilizaremos ese; de lo contrario, utilizaremos los defaults. Eso es todo lo que necesita. 
+Si especificamos un array de servidores, utilizaremos ese; de lo contrario, utilizaremos los defaults. Eso es todo lo que necesita.
 
 Si declaras la clase sin atributos:
 
@@ -126,7 +126,7 @@ En este momento tienes un módulo NTP bastante funcional, faltaría la documenta
 	    #
 	    # $servers:: Un array de servidores NTP, con o sin +iburst+ y
 	    #            declaraciones +dynamic+ anexadas. Asume por defecto los defaults del sistema operativo.
-	    # $enable::  iniciar el servicio NTP en el arranque o no. El valor predeterminado es verdadero. 
+	    # $enable::  iniciar el servicio NTP en el arranque o no. El valor predeterminado es verdadero.
 	    #            Valores válidos: true y false.
 	    # $ensure::  ejecutar el servicio NTP o no. El valor predeterminado es running. Valores válidos:
 	    #            running y stopped.

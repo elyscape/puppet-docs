@@ -151,7 +151,7 @@ En el ejemplo anterior, vimos algo nuevo: ** str2bool("$is_virtual")**.
 
 La condición para una declaración **if** tiene que resolver a un valor booleano verdadero/falso. Sin embargo, todos los facts son [strings](http://docs.puppetlabs.com/puppet/latest/reference/lang_datatypes.html#strings), y todos los strings que no estén vacíos, incluyendo el string **”False”**, son verdaderos. Esto significa que los facts que sean “false” tienen que ser transformados antes que Puppet los pueda interpretarlos como falsos.
 
-En este caso: 
+En este caso:
 
 + Colocamos la variable entre comillas dobles, si por algún motivo contiene un booleano real (lo que no es lo más usual) esto lo convertiría en un un string.
 + Pasamos el string a la función **str2bool**, la cual convierte un string que *parece* un booleano en uno de valor real verdadero/falso.
@@ -177,7 +177,7 @@ Otro tipo de condicional es la [declaración de *case*](http://docs.puppetlabs.c
           ensure => latest,
         }
 
-En lugar de probar una condición al principio, **case** compara una variable contra un grupo de valores posibles. **_default_ es un valor especial**, que hace exactamente lo que parece. 
+En lugar de probar una condición al principio, **case** compara una variable contra un grupo de valores posibles. **_default_ es un valor especial**, que hace exactamente lo que parece.
 
 En este ejemplo, también vemos la [función **fail**](http://docs.puppetlabs.com/references/latest/function.html#fail). A diferencia de la función **str2bool** que vimos antes, **fail** no resuelve a un valor; por el contrario, se produce inmediatamente un error de compilación con un mensaje de error.
 
@@ -232,7 +232,7 @@ Utiliza el fact $operatingsystem para escribir un manifiesto que instale un ento
 ### Ejercicio: NTP simple
 Escribe un manifiesto que instale y configure NTP para sistemas Linux basados en Debian y Entreprise Linux. Será un patrón paquete/archivo/servicio donde ambos tipos de sistemas utilicen el mismo nombre de paquete (**ntp**), pero tu enviarás archivos de configuración diferentes ([versión Debian](http://docs.puppetlabs.com/learning/files/examples/modules/ntp/files/ntp.conf.debian), [versión RedHat](http://docs.puppetlabs.com/learning/files/examples/modules/ntp/files/ntp.conf.el)- recuerda el atributo “source” del tipo de archivo) y utilizarás diferentes nombres de servicio (**ntp** y **ntpd** respectivamente).
 
-##  
+##
 Paso Siguiente
 **Próxima clase:**
 Ahora que tus manifiestos se pueden adaptar a los diferentes tipos de sistemas, es momento de comenzar a agrupar recursos y condicionales en unidades significativas. Sigamos adelante hacia las [clases, tipos de recurso definidos y módulos](http://docs.puppetlabs.com/es/learning/modules1.html)!

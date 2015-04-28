@@ -15,7 +15,7 @@ See the [Answer File Overview](./install_answer_file_reference.html) and the sec
 >
 > 1. Puppet master
 > 2. Puppet DB and database support (which includes the console database)
-> 3. The PE console 
+> 3. The PE console
 
 ### Global Answers
 These answers are always needed.

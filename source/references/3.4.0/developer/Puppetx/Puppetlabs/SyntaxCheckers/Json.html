@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Class: Puppetx::Puppetlabs::SyntaxCheckers::Json
-  
+
     &mdash; Documentation by YARD 0.8.7.3
-  
+
 </title>
 
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../../../_index.html">Index (J)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../Puppetx.html" title="Puppetx (module)">Puppetx</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Puppetlabs.html" title="Puppetx::Puppetlabs (module)">Puppetlabs</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../SyntaxCheckers.html" title="Puppetx::Puppetlabs::SyntaxCheckers (module)">SyntaxCheckers</a></span></span>
-     &raquo; 
+     &raquo;
     <span class="title">Json</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../../../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../../../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../../../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,40 +64,40 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Class: Puppetx::Puppetlabs::SyntaxCheckers::Json
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
+
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
       <span class="inheritName"><span class='object_link'>Puppetx::Puppet::SyntaxChecker</span></span>
-      
+
         <ul class="fullTree">
           <li><span class='object_link'>Object</span></li>
-          
+
             <li class="next"><span class='object_link'>Puppetx::Puppet::SyntaxChecker</span></li>
-          
+
             <li class="next">Puppetx::Puppetlabs::SyntaxCheckers::Json</li>
-          
+
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
-      
+
       </dd>
-    
-  
-  
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">lib/puppetx/puppetlabs/syntax_checkers/json.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -109,7 +109,7 @@
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div>
 
@@ -118,63 +118,63 @@
 
 
 
-  
+
     <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#check-instance_method" title="#check (instance method)">- (Boolean) <strong>check</strong>(text, syntax, acceptor, location_info = {}) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Checks the text for JSON syntax issues and reports them to the given acceptor.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
 
 
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="check-instance_method">
-  
-    - (<tt>Boolean</tt>) <strong>check</strong>(text, syntax, acceptor, location_info = {}) 
-  
 
-  
+    - (<tt>Boolean</tt>) <strong>check</strong>(text, syntax, acceptor, location_info = {})
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Checks the text for JSON syntax issues and reports them to the given acceptor.
@@ -187,136 +187,136 @@ method.</p>
 <div class="tags">
   <p class="tag_title">Parameters:</p>
 <ul class="param">
-  
+
     <li>
-      
+
         <span class='name'>text</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The text to check</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>syntax</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>String</span></tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>The syntax identifier in mime style (e.g. 'json', 'json-patch+json', 'xml', 'myapp+xml'</p>
 </div>
-      
+
     </li>
-  
+
     <li>
-      
+
         <span class='name'>location_info</span>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Hash</span></tt>)</span>
-      
-      
+
+
         <em class="default">(defaults to: <tt>{}</tt>)</em>
-      
-      
+
+
         &mdash;
         <div class='inline'><p>a customizable set of options</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
-  
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
     <p class="tag_title">Options Hash (<tt>location_info</tt>):</p>
     <ul class="option">
-      
+
         <li>
           <span class="name">:file</span>
           <span class="type">(<tt><span class='object_link'>String</span></tt>)</span>
           <span class="default">
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>The filename where the string originates</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:line</span>
           <span class="type">(<tt>Integer</tt>)</span>
           <span class="default">
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>The line number identifying the location where the string is being used/checked</p>
 </div>
-          
+
         </li>
-      
+
         <li>
           <span class="name">:position</span>
           <span class="type">(<tt>Integer</tt>)</span>
           <span class="default">
-            
+
           </span>
-          
+
             &mdash; <div class='inline'><p>The position on the line identifying the location where the string is being used/checked</p>
 </div>
-          
+
         </li>
-      
+
     </ul>
-  
+
 
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>Whether the checked string had issues (warnings and/or errors) or not.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>ArgumentError</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -378,7 +378,7 @@ method.</p>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

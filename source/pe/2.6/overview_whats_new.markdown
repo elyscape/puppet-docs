@@ -5,7 +5,7 @@ subtitle: "New Features in PE 2.6"
 canonical: "/pe/latest/release_notes.html"
 ---
 ### Version 2.6.1
-PE 2.6.1 is a bug fix release and security update. 
+PE 2.6.1 is a bug fix release and security update.
 
 #### ConsoleAuth Session Error
 Users who attempted to upgrade to 2.6.0 while they had an active console session encountered an error caused by an older, incompatible cookie. This could also cause a low-risk security vulnerability. PE 2.6.1 addresses this by correctly logging out the user and creating new, fully compatible cookies. For more information, see [CVE-2012-5158](http://puppetlabs.com/security/cve/cve-2012-5158/).
@@ -19,7 +19,7 @@ When upgrading from 2.5.0 to 2.6.0, commented out sections in the cas_client_con
 #### CVE-2012-5158
 2.6.0 introduced a low-risk vulnerability wherein user sessions were not fully terminated. This has been resolved in 2.6.1. For more information, see [CVE-2012-5158](http://puppetlabs.com/security/cve/cve-2012-5158/).
 
-### Version 2.6.0 
+### Version 2.6.0
 
 PE 2.6.0 is a maintenance and feature release of Puppet Enterprise (PE). In addition to fixes and corrections, PE 2.6 introduces the following new features and improvements:
 
@@ -58,6 +58,6 @@ PE 2.6 updates numerous dependent packages and modules. The versions used in 2.6
 In addition, the libaugeas package is now installed on Solaris.
 
 
-* * * 
+* * *
 
 - [Next: Getting Support](./overview_getting_support.html)

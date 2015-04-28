@@ -86,7 +86,7 @@ The distinguished name (DN) of the user account that PE will use to look up user
 
 **PASSWORD**
 
-The lookup user's password. This password is **not** stored securely and may be viewed by anyone with the “View, Edit, and Test” permission for the directory service. 
+The lookup user's password. This password is **not** stored securely and may be viewed by anyone with the “View, Edit, and Test” permission for the directory service.
 
 
 **CONNECTION TIMEOUT (SECONDS)**
@@ -99,9 +99,9 @@ Select if you want to use SSL to connect to the external directory. If you selec
 
 **BASE DISTINGUISHED NAME**
 
-When PE constructs queries to your external directory (for example to look up user groups or users), the queries consist of the relative distinguished name (RDN) (optional) + the base distinguished name (DN), and are then filtered by lookup/login attributes. For example, if PE wants to authenticate a user named Bob who has the RDN `ou=bob,ou=users`, it sends a query in which the RDN is concatenated with the DN specified in this field (for example, `dc=puppetlabs,dc=com`). This gives a search base of `ou=bob,ou=users,dc=puppetlabs,dc=com`. 
+When PE constructs queries to your external directory (for example to look up user groups or users), the queries consist of the relative distinguished name (RDN) (optional) + the base distinguished name (DN), and are then filtered by lookup/login attributes. For example, if PE wants to authenticate a user named Bob who has the RDN `ou=bob,ou=users`, it sends a query in which the RDN is concatenated with the DN specified in this field (for example, `dc=puppetlabs,dc=com`). This gives a search base of `ou=bob,ou=users,dc=puppetlabs,dc=com`.
 
-The base DN that you provide in this field specifies where in the directory service tree to search for groups and users. It is the part of the DN that all users and groups that you want to use have in common. It is commonly the root DN (example `dc=example,dc=com`) but in the following example of a directory service entry, you could set the base DN to `ou=Puppet,dc=example,dc=com` since both the group and the user are also under the organizational unit `ou=Puppet`. 
+The base DN that you provide in this field specifies where in the directory service tree to search for groups and users. It is the part of the DN that all users and groups that you want to use have in common. It is commonly the root DN (example `dc=example,dc=com`) but in the following example of a directory service entry, you could set the base DN to `ou=Puppet,dc=example,dc=com` since both the group and the user are also under the organizational unit `ou=Puppet`.
 
 **Example directory service entry**
 
@@ -210,7 +210,7 @@ To turn on verification:
 1. From the console, navigate to the **Classification** page and select the **PE Console** node group.
 2. Click **Classes** and scroll down to the `puppet_enterprise::profile::console` class.
 3. Click the **Parameter name** drop-down list and select `rbac_ds_trust_chain`.
-4. In **Value**, set the absolute path to the trust store file. 
+4. In **Value**, set the absolute path to the trust store file.
 5. Click **Add parameter** and then click the commit button.
 6. To make the change take affect, run Puppet (`puppet agent -t`). Running Puppet will restart pe-console-services.
 

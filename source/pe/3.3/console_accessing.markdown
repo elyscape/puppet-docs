@@ -45,11 +45,11 @@ The console uses an SSL certificate created by your own local Puppet certificate
 
 ### Accepting the Certificate in Google Chrome or Chromium
 
-Step 1: 
+Step 1:
 
 ![Screenshot: Chrome showing an untrusted cert warning, with the 'Proceed anyway' button highlighted][cert_chrome1]
 
-Step 2: 
+Step 2:
 
 ![Screenshot: Chrome showing an untrusted cert warning, with the 'Proceed to IP address' button highlighted][cert_chrome2]
 
@@ -71,7 +71,7 @@ Click the __Continue__ button on the warning dialog.
 
 ![Screenshot: Safari's untrusted cert dialog, with the continue button highlighted][cert_safari]
 
-> **Note**: Safari certificate handling may prevent console access. 
+> **Note**: Safari certificate handling may prevent console access.
 >
 >Due to [Apache bug 53193](https://issues.apache.org/bugzilla/show_bug.cgi?id=53193) and the way Safari handles certificates, Puppet Labs recommends that PE 3.3 users avoid using Safari to access the PE console.
 >

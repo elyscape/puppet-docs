@@ -40,7 +40,7 @@ If you haven't already done so, you'll need to get PE installed. See the [system
 
 >**Note**: You can add the NTP service to as many agents as needed. For ease of explanation, our console images or instructions may show only one agent node.
 
-  
+
 ## Install the puppetlabs-ntp Module
 
 The puppetlabs-ntp module is part of the PE [supported modules](http://forge.puppetlabs.com/supported) program; these modules are supported, tested, and maintained by Puppet Labs. You can learn more about the puppetlabs-ntp module by visiting [http://forge.puppetlabs.com/puppetlabs/ntp](http://forge.puppetlabs.com/puppetlabs/ntp).
@@ -78,7 +78,7 @@ We're going to add the `ntp` class to a node group we'll create, called **NTP**,
 
    ![classification selection][classification_selector]
 
-2. In the **Node group name** field, name your group **NTP**. 
+2. In the **Node group name** field, name your group **NTP**.
 3. Click **Add group**.
 
    **Note**: Leave the **Parent name** and **Environment** values as their defaults (**default** and **production**, respectively).
@@ -86,10 +86,10 @@ We're going to add the `ntp` class to a node group we'll create, called **NTP**,
 4. From the __Classification page__, select the __NTP__ group, and click the __Rules_ tab.
 5. In the **Fact** field, enter "name" (without the quotes).
 6. From the **Operator** drop-down list, select **matches regex**.
-7. In the **Value** field, enter ".x" (without the quotes). 
+7. In the **Value** field, enter ".x" (without the quotes).
 8. Click **Add rule**.
 
-   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **NTP** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.) 
+   This rule will ["dynamically" pin all nodes]((./console_classes_groups.html#adding-nodes-dynamically) to the **NTP** group. (Note that this rule is for testing purposes and that decisions about pinning nodes to groups in a production environment will vary from user to user.)
 
 **To add the** `ntp` **class to the NTP group**:
 

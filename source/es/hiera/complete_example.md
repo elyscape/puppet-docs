@@ -96,10 +96,10 @@ En este ejemplo, usamos el fact **fqdn** para identificar nodos específicos; la
 ### Configuración de la línea de comando
 La [Herramienta de línea de comando de Hiera](http://docs.puppetlabs.com/es/hiera/command_line.html) es útil cuando estás en proceso de diseñar y testear tu jerarquía. Puedes usarla para imitar facts para que Hiera busque sin tener que pasar por engorrosas acciones de prueba y error de Puppet. Como el comando **hiera** espera encontrar **hiera.yaml** en **/etc/hiera.yaml**,  debes configurar un link simbólico desde tu  archivo **hieral.yaml** a **/etc/hiera.yaml**:
 
-	$ ln -s /etc/puppet/hiera.yaml /etc/hiera.yaml	
+	$ ln -s /etc/puppet/hiera.yaml /etc/hiera.yaml
 
-## Escribir Fuentes de información 
-Ahora que tenemos Hiera configurado, estamos listos para volver al módulo ntp y mirar los parámetros de la clase **ntp**. 
+## Escribir Fuentes de información
+Ahora que tenemos Hiera configurado, estamos listos para volver al módulo ntp y mirar los parámetros de la clase **ntp**.
 **Aprende acerca de las fuentes de información de Hiera**: Este ejemplo no cubrirá todos los tipos de información que quizás quieras usar, y nosotros  estamos usando sólo uno de los dos backends integrados (JSON). Para una mirada completa de las fuentes de información, por favor mira nuestra guía para [escribir fuentes de información de Hiera](http://docs.puppetlabs.com/es/hiera/data_sources.html) que incluye ejemplos más completos, escritos en JSON y YAML.
 
 ### Identificar parámetros
@@ -220,7 +220,7 @@ De hecho, teníamos tres estrofas separadas de esa longitud. Pero ahora que hemo
 	}
 
 Esto es todo.
-Como Hiera está proporcionando automáticamente información de parámetros desde las fuentes de información en esta jerarquía, no necesitamos hacer nada más que asignar la clase NTP al nodo y dejar que el parámetro de Hiera busque el resto. En el futuro, cuando modifiquemos o agreguemos nodos que necesiten usar la clase NTP, podremos: 
+Como Hiera está proporcionando automáticamente información de parámetros desde las fuentes de información en esta jerarquía, no necesitamos hacer nada más que asignar la clase NTP al nodo y dejar que el parámetro de Hiera busque el resto. En el futuro, cuando modifiquemos o agreguemos nodos que necesiten usar la clase NTP, podremos:
 
 + Copiar rápidamente la fuente de información para cubrir casos donde el nodo necesite una configuración específica.
 + Si el nuevo nodo puede funcionar con la configuración genérica en **common.json** podremos decir **include ntp** en nuestro **site.pp** sin escribir ninguna información nueva en Hiera.
@@ -228,7 +228,7 @@ Como Hiera está proporcionando automáticamente información de parámetros des
 
 Si estás interesado en avanzar, usando las habilidades para la toma de decisiones que has recogido de este ejemplo para elegir qué nodos tienen clase particular, entonces continuemos.
 
-## Asignar una clase a un nodo con Hiera 
+## Asignar una clase a un nodo con Hiera
 En la primera parte de nuestro ejemplo, estuvimos enfocados en cómo usar Hiera para proporcionar información a una clase parametrizada, pero asignando las clases a nodos con el método tradicional de Puppet: Haciendo declaraciones de **clase** para cada nodo en nuestro manifiesto **site.pp**. Gracias a la función **hiera_include**, puedes asignar nodos a las clases de la misma forma que puedes asignar valores para clasificar parámetros: Tomando un *fact* en el cual quieres basar una decisión, agregándolo a la jerarquía en tu archivo **hiera.yaml** y luego escribiendo las fuentes de información.
 
 ### Uso de **hiera_include**
@@ -272,7 +272,7 @@ Modificar la fuente de información de kermit, por ejemplo, para que se vea así
 		   "2.us.pool.ntp.org iburst",
 		   "3.us.pool.ntp.org iburst"
 		   ]
-	} 
+	}
 
 Podemos testear qué clases hemos asignado a un nodo determinado con la herramienta de línea de comandos de Hiera:
 
@@ -348,13 +348,13 @@ Una vez que tienes todo esto configurado, continúa el proceso testeando la herr
 
 	$ hiera vmwaretools::working_dir osfamily=RedHat
 	/opt/vmware
-	
+
 	$ hiera vmwaretools::working_dir osfamily=Debian
 	/usr/local/vmware
-	
+
 	$ hiera vmwaretools::version
 	8.6.5-621624
-	
+
 	$ hiera classes virtual=vmware
 	Vmwaretools
 

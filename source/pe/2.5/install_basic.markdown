@@ -18,7 +18,7 @@ Before installing Puppet Enterprise, you must [download it from the Puppet Labs 
 
 ### Choosing an Installer Tarball
 
-Puppet Enterprise can be downloaded in tarballs specific to your OS version and architecture, or as a universal tarball. 
+Puppet Enterprise can be downloaded in tarballs specific to your OS version and architecture, or as a universal tarball.
 
 > Note: The universal tarball is simpler to use, but is roughly ten times the size of a version-specific tarball.
 
@@ -43,7 +43,7 @@ Starting the Installer
 * Run the `puppet-enterprise-installer` script with root privileges:
 
         $ sudo ./puppet-enterprise-installer
-* Answer the interview questions to [select and configure PE's roles](#selecting-roles). 
+* Answer the interview questions to [select and configure PE's roles](#selecting-roles).
 * Log into the puppet master server and [sign the new node's certificate](#signing-agent-certificates).
 * If you have purchased PE and are installing the puppet master, [copy your license key into place](#verifying-your-license).
 
@@ -104,13 +104,13 @@ In most deployments, this role should be installed on **one node;** installing m
 
 * Compile and serve configuration catalogs to puppet agent nodes.
 * Route MCollective messages through its ActiveMQ server.
-* Issue valid MCollective commands (from an administrator logged in as the `peadmin` user). 
+* Issue valid MCollective commands (from an administrator logged in as the `peadmin` user).
 
 ### The Console Role
 
-This role should be installed on **one node.** It should usually run on its own dedicated server, but can also run on the same server as the puppet master. The console server can: 
+This role should be installed on **one node.** It should usually run on its own dedicated server, but can also run on the same server as the puppet master. The console server can:
 
-* Serve the console web interface, with which administrators can directly edit resources on nodes, trigger immediate Puppet runs, group and assign classes to nodes, view reports and graphs, view inventory information, approve and reject audited changes, and invoke MCollective agent actions. 
+* Serve the console web interface, with which administrators can directly edit resources on nodes, trigger immediate Puppet runs, group and assign classes to nodes, view reports and graphs, view inventory information, approve and reject audited changes, and invoke MCollective agent actions.
 * Collect reports from, and serve node information to the puppet master.
 
 ### The Cloud Provisioner Role
@@ -119,7 +119,7 @@ This optional role can be installed on a computer where administrators have shel
 
 * Create new VMware and Amazon EC2 virtual machine instances.
 * Install Puppet Enterprise on any virtual or physical system.
-* Add newly provisioned nodes to a group in the console. 
+* Add newly provisioned nodes to a group in the console.
 
 
 Customizing Your Installation
@@ -131,7 +131,7 @@ After you choose the roles for the system you're installing onto, the installer 
 
 #### Certname
 
-The certname is the puppet master's unique identifier. It should be a DNS name at which the master server can be reliably reached, and defaults to its fully-qualified domain name. 
+The certname is the puppet master's unique identifier. It should be a DNS name at which the master server can be reliably reached, and defaults to its fully-qualified domain name.
 
 (If the master's certname is not one of its DNS names, you [may need to edit puppet.conf after installation][bucket-troubleshooting].)
 
@@ -159,13 +159,13 @@ If the installer detects another web server on the node, it will suggest the fir
 
 #### User Email and Password
 
-Access to the console's web interface is [limited to approved users and governed by a lightweight system of roles](./console_auth.html). During installation, you must create an initial admin user for the console by providing an email address and password. 
+Access to the console's web interface is [limited to approved users and governed by a lightweight system of roles](./console_auth.html). During installation, you must create an initial admin user for the console by providing an email address and password.
 
 The only forbidden characters for a console password are `\` (backslash), `'` (single quote), and `$` (dollar sign).
 
 #### SMTP Server
 
-The console's account management tools will send activation emails to new users, and requires an SMTP server to do so. 
+The console's account management tools will send activation emails to new users, and requires an SMTP server to do so.
 
 * If you cannot provide an SMTP server, an admin user can manually copy and email the activation codes for new users. (Note that `localhost` will usually work as well.)
 * If your SMTP server requires TLS or a user name and password, you must [perform additional configuration after installing.][smtpconfig]
@@ -174,7 +174,7 @@ The console's account management tools will send activation emails to new users,
 
 #### Inventory Certname and DNS Names (Optional)
 
-If you are splitting the master and the console roles, the console will maintain an inventory service to collect facts from the puppet master. Like the master, the inventory service needs a unique certname and a list of valid DNS names. 
+If you are splitting the master and the console roles, the console will maintain an inventory service to collect facts from the puppet master. Like the master, the inventory service needs a unique certname and a list of valid DNS names.
 
 #### Databases
 
@@ -184,7 +184,7 @@ The installer gives slightly different options to choose from depending on your 
 
 * Automatically install a MySQL server and auto-configure databases (only available if MySQL is not yet installed). **This option will generate a random root MySQL password,** and you will need to look it up in the saved answer file after installation finishes. A message at the end of the installer will tell you the location of the answer file.
 * Auto-configure databases on an existing local or remote MySQL server. You will need to provide your server's root MySQL password to the installer. (Note that if you want to auto-configure databases on a remote server, you must make sure the root MySQL user is allowed to log in remotely.)
-* Use a set of pre-existing manually configured databases and users. 
+* Use a set of pre-existing manually configured databases and users.
 
 ##### Manual Database Configuration
 
@@ -212,7 +212,7 @@ You will also need to make sure the databases and users actually exist. The SQL 
     GRANT ALL PRIVILEGES ON console_auth.* TO 'console_auth'@'localhost';
     FLUSH PRIVILEGES;
 
-**Note that the names of the console and inventory databases are related:** the name of the inventory service database must start with the name of the primary console database, followed by `_inventory_service`. 
+**Note that the names of the console and inventory databases are related:** the name of the inventory service database must start with the name of the primary console database, followed by `_inventory_service`.
 
 Consult the MySQL documentation for more info.
 
@@ -244,7 +244,7 @@ Final Questions
 
 Puppet Enterprise may need some extra system software from your OS vendor's package repositories.
 
-* The puppet master role requires **a Java runtime,** in order to run the ActiveMQ server for orchestration. 
+* The puppet master role requires **a Java runtime,** in order to run the ActiveMQ server for orchestration.
 * The console role requires **MySQL;** if using local databases, it also requires **MySQL server.**
 
 If these aren't already present, the installer will offer to automatically install them. If you decline, it will exit, and you will need to install them manually before running the installer again.
@@ -252,15 +252,15 @@ If these aren't already present, the installer will offer to automatically insta
 #### Java and MySQL Versions
 
 * On every supported platform, PE can use the **default system packages** for MySQL and Java (OpenJDK on most Linuxes, and IBM Java on SUSE).
-* Custom-compiled MySQL or Java versions may or may not work, as Puppet Enterprise expects to find shared objects and binaries in their standard locations. In particular, we have noticed problems with custom compiled MySQL 5.5 on Enterprise Linux variants. 
-* On Enterprise Linux variants, you may optionally use the Java and MySQL packages provided by Oracle. Before installing PE, you must manually install Java and/or MySQL, then install the  `pe-virtual-java` and/or `pe-virtual-mysql` packages included with Puppet Enterprise: 
+* Custom-compiled MySQL or Java versions may or may not work, as Puppet Enterprise expects to find shared objects and binaries in their standard locations. In particular, we have noticed problems with custom compiled MySQL 5.5 on Enterprise Linux variants.
+* On Enterprise Linux variants, you may optionally use the Java and MySQL packages provided by Oracle. Before installing PE, you must manually install Java and/or MySQL, then install the  `pe-virtual-java` and/or `pe-virtual-mysql` packages included with Puppet Enterprise:
 
         $ sudo rpm -ivh packages/pe-virtual-java-1.0-1.pe.el5.noarch.rpm
 
-Find these in the installer's `packages/` directory. Note that these packages may have additional ramifications if you later install other software that depends on OS MySQL or Java packages. 
+Find these in the installer's `packages/` directory. Note that these packages may have additional ramifications if you later install other software that depends on OS MySQL or Java packages.
 
 > Note: If installing `pe-virtual-java`, make sure that the `keytool` binary is in one of the following directories:
-> 
+>
 > * `/opt/puppet/bin`
 > * `/usr/kerberos/sbin`
 > * `/usr/kerberos/bin`
@@ -270,20 +270,20 @@ Find these in the installer's `packages/` directory. Note that these packages ma
 > * `/bin`
 > * `/usr/sbin`
 > * `/usr/bin`
-> 
+>
 > If `keytool` isn't already there, use `find` or `which` to locate it, and symlink it into place so that the PE installer can find it during installation. This binary is necessary for configuring MCollective.
-> 
+>
 >     $ which keytool
 >     /path/to/keytool
 >     $ sudo ln -s /path/to/keytool /usr/local/bin/keytool
 
 ### Convenience Links
 
-PE installs its binaries in `/opt/puppet/bin` and `/opt/puppet/sbin`, which aren't included in your default `$PATH`. If you want to make the Puppet tools more visible to all users, the installer can make symlinks in `/usr/local/bin` for the `facter, puppet, pe-man`, and `mco` binaries. 
+PE installs its binaries in `/opt/puppet/bin` and `/opt/puppet/sbin`, which aren't included in your default `$PATH`. If you want to make the Puppet tools more visible to all users, the installer can make symlinks in `/usr/local/bin` for the `facter, puppet, pe-man`, and `mco` binaries.
 
 ### Confirming Installation
 
-The installer will offer a final chance to confirm your answers before installing. 
+The installer will offer a final chance to confirm your answers before installing.
 
 After Installing
 -----
@@ -306,7 +306,7 @@ To sign one of the pending requests, run:
 
     $ sudo puppet cert sign <name>
 
-After signing a new node's certificate, it may take up to 30 minutes before that node appears in the console and begins retrieving configurations. 
+After signing a new node's certificate, it may take up to 30 minutes before that node appears in the console and begins retrieving configurations.
 
 ### Verifying Your License
 
@@ -314,6 +314,6 @@ When you purchased Puppet Enterprise, you should have been sent a `license.key` 
 
 Note that you can download and install Puppet Enterprise on up to ten nodes at no charge. No licence key is needed to run PE on up to ten nodes.
 
-* * * 
+* * *
 
 - [Next: Upgrading](./install_upgrading.html)

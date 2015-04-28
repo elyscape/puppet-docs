@@ -105,7 +105,7 @@ To delete an existing user (including pending users), click on the user's name i
 
 Several actions related to console users can be done from the command line using rake tasks. This can be useful for things like automating user creation/deletion or importing large numbers of users from an external source all at once. All of these tasks should be run on the console server node.
 
-Note that `console_auth` rake tasks that list, add or remove users **must** be run using the bundle `exec` command. For example, 
+Note that `console_auth` rake tasks that list, add or remove users **must** be run using the bundle `exec` command. For example,
 
     cd /opt/puppet/share/puppet-dashboard
     sudo /opt/puppet/bin/bundle exec rake -f /opt/puppet/share/console-auth/Rakefile db:users:list

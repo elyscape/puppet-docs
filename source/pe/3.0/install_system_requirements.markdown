@@ -24,13 +24,13 @@ Puppet Enterprise 3.0 supports the following systems:
 
 Operating system             | Version(s)                              | Arch          | Roles
 -----------------------------|-----------------------------------------|---------------|----------------------------
-Red Hat Enterprise Linux     | 5 & 6                                   | x86 & x86\_64 | all 
-CentOS                       | 5 & 6                                   | x86 & x86\_64 | all 
-Ubuntu LTS                   | 10.04 & 12.04                           | i386 & amd64  | all 
-Debian                       | Squeeze (6) & Wheezy (7)                | i386 & amd64  | all 
-Oracle Linux                 | 5 & 6                                   | x86 & x86\_64 | all 
-Scientific Linux             | 5 & 6                                   | x86 & x86\_64 | all 
-SUSE Linux Enterprise Server | 11 (SP1 and later)                      | x86 & x86\_64 | all 
+Red Hat Enterprise Linux     | 5 & 6                                   | x86 & x86\_64 | all
+CentOS                       | 5 & 6                                   | x86 & x86\_64 | all
+Ubuntu LTS                   | 10.04 & 12.04                           | i386 & amd64  | all
+Debian                       | Squeeze (6) & Wheezy (7)                | i386 & amd64  | all
+Oracle Linux                 | 5 & 6                                   | x86 & x86\_64 | all
+Scientific Linux             | 5 & 6                                   | x86 & x86\_64 | all
+SUSE Linux Enterprise Server | 11 (SP1 and later)                      | x86 & x86\_64 | all
 Solaris                      | 10 (Update 9 or later)                                      | SPARC & i386  | agent
 Microsoft Windows            | 2003, 2003R2, 2008, 2008R2 7, 8, & 2012 | x86 & x86\_64 | agent
 AIX                          | 5.3, 6.1, & 7.1                         | Power         | agent
@@ -72,7 +72,7 @@ Browser
 
  The following browsers are supported for use with the console:
 
-* Chrome: Current version 
+* Chrome: Current version
 * Firefox: Current version
 * Internet Explorer: 9 or higher
 * Safari: 5.1 and higher
@@ -149,19 +149,19 @@ cronie (RHEL 6)     |                        |                        |         
 vixie-cron (RHEL 5) |                        |                        |                          |
 virt-what           |                        |                        |                          |
 
-  <br> 
-    
+  <br>
+
 ***SLES***
 
 All Nodes | Master Nodes   | Console Nodes | Console/Console DB Nodes | Cloud Provisioner Nodes
 ----------|----------------|---------------|--------------------------|------------------------
 pciutils  | libapr1        | libapr1       | libjpeg                  | libxml2
-pmtools | libapr-util1   | libapr-util1  |                          | 
+pmtools | libapr-util1   | libapr-util1  |                          |
 cron      | libxslt | curl          |                          |
 libxml2  | curl           |               |                          |
 net-tools | libjpeg        |               |                          |
 libxslt      | | | |
- 
+
  <br>
 
 ***Debian***

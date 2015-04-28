@@ -5,7 +5,7 @@ subtitle: "Split Puppet Enterprise Install, Puppet Master Answer File Reference"
 canonical: "/pe/latest/install_split_console_answers.html"
 ---
 
-The following example answers can be used as a baseline to perform an automated split installation of PE on the node assigned to the Puppet master component. 
+The following example answers can be used as a baseline to perform an automated split installation of PE on the node assigned to the Puppet master component.
 
 A .txt file version can be found in the `answers` directory of the PE installer tarball.
 
@@ -15,7 +15,7 @@ See the [Answer File Overview](./install_answer_file_reference.html) and [Instal
 >
 > 1. Puppet master
 > 2. Puppet DB and database support (which includes the console database)
-> 3. The PE console 
+> 3. The PE console
 
 ### Global Answers
 These answers are always needed.
@@ -85,7 +85,7 @@ These answers are generally needed if you are installing the Puppet master compo
    * the type and version of the client’s OS
    * the installed version of PE
    * the number of nodes licensed and the number of nodes used
-   
+
 If you wish to disable update checks (e.g. if your company policy forbids transmitting this information), you will need to set this to n. You can also disable checking after installation by editing the /etc/puppetlabs/installer/answers.install file.
 
 `q_public_hostname=`

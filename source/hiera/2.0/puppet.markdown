@@ -189,7 +189,7 @@ Example:
 
 {% highlight ruby %}
     # get only what you need from Hiera
-    $use_ip = hiera( 'proxies.1.ipaddress' ) 
+    $use_ip = hiera( 'proxies.1.ipaddress' )
 {% endhighlight %}
 
 

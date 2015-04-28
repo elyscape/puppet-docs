@@ -33,7 +33,7 @@ See the [installation overview](./install_basic.html) for instructions on downlo
 >
 >If you have a properly configured SSH agent with agent forwarding enabled, you don't need to perform any additional SSH configurations. Your SSH agent will be used by the installer.
 >
->If you have any kind of authentication security system in place (e.g., two factor authentication or RSA key prompting) you will need to temporarily disable that system when installing with the web-based installer. 
+>If you have any kind of authentication security system in place (e.g., two factor authentication or RSA key prompting) you will need to temporarily disable that system when installing with the web-based installer.
 >
 >If you're using SSH keys to authenticate across the nodes of your PE installation, the public key for the user account performing the installation must be included in the `authorized_keys` file for that user account on each node that you're installing a PE component on, including the machine from which you're running the installer. This applies to root or non-root users.
 >
@@ -188,7 +188,7 @@ Finally, click **Start using Puppet Enterprise** to [log into the console](./con
 >From a Linux machine:
 >
 >1. On the machine from which you're running the installer, run `ssh -L 3000:localhost:3000 jumphost.exmple.tld`
->2. Run the installer script as indicated in the instructions below. 
+>2. Run the installer script as indicated in the instructions below.
 >3. When prompted to enter the installer URL, instead navigate to `https://localhost:3000`.
 >
 >From a Windows machine:
@@ -196,11 +196,11 @@ Finally, click **Start using Puppet Enterprise** to [log into the console](./con
 >1. Open PuTTY, and select **Sessions**.
 >2. In the **Host Name** field, enter the FQDN of the host you want to run the installer from.
 >3. Select **Tunnels**.
->4. In the **Source Port** field, enter `3000`. 
+>4. In the **Source Port** field, enter `3000`.
 >5. In the **Destination** field, enter `localhost:3000`.
->6. Select **Local**. 
+>6. Select **Local**.
 >7. Click **Add**.
->8. Click **Open**. 
+>8. Click **Open**.
 >
 >When the installer asks you to launch the browser, use `https://localhost:3000`, and continue following the installation instructions.
 

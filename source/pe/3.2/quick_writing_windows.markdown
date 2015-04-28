@@ -51,7 +51,7 @@ Many modules contain directories other than `manifests`; for simplicity's sake, 
 
 ### Editing a Manifest
 
-This simplified exercise will modify an example manifest from the Puppet Labs Registry module, specifically `service_example.pp`. The `registry::service` [defined resource type](./puppet/3/reference/lang_defined_types.html) makes it easy to control your registry; you can avoid having to declare both `registry_key` and `registry_value` resources with just a bit of puppet code.  
+This simplified exercise will modify an example manifest from the Puppet Labs Registry module, specifically `service_example.pp`. The `registry::service` [defined resource type](./puppet/3/reference/lang_defined_types.html) makes it easy to control your registry; you can avoid having to declare both `registry_key` and `registry_value` resources with just a bit of puppet code.
 
 1. **On the puppet master,** navigate to the modules directory by running `cd /etc/puppetlabs/puppet/modules`.
 2. Run `ls` to view the currently installed modules; note that `registry` is present.
@@ -59,7 +59,7 @@ This simplified exercise will modify an example manifest from the Puppet Labs Re
 
     `service_example.pp` contains the following:
 
-	
+
         class registry::service_example {
         # Define a new service named "Puppet Test" that is disabled.
         registry::service { 'PuppetExample1':
@@ -72,12 +72,12 @@ This simplified exercise will modify an example manifest from the Puppet Labs Re
           display_name => "Puppet Example 2",
           description  => "This is a simple example managing the registry entries for a Windows Service",
           command      => 'C:\PuppetExample2.bat',
-          start        => 'disabled',    
+          start        => 'disabled',
           }
-        }   
-  
+        }
+
 4. Remove the "PuppetExample2" `registry::service` resource, and add the following `file` resource:
- 	
+
         class registry::service_example {
         # Define a new service named "Puppet Test" that is disabled.
           registry::service { 'PuppetExample1':
@@ -86,21 +86,21 @@ This simplified exercise will modify an example manifest from the Puppet Labs Re
             command      => 'C:\PuppetExample1.bat',
             start        => 'disabled',
             }
-      
+
         file { 'C:\PuppetExample1.bat':
             ensure  => file,
             content => ":loop\r\nTIMEOUT /T 300\r\ngoto loop\r\n",
             notify  => registry::service['PuppetExample1'],
-            }	
+            }
         }
-   
+
     The `registry::service_example` class is now managing `C:\PuppetExample1.bat`, and the contents of that file are being set with the `content` attribute. For more on resource declarations, see the [manifests chapter of Learning Puppet](/learning/manifests.html) or the [resources page of the language reference](/puppet/3/reference/lang_resources.html). For more about how file paths with backslashes work in manifests for Windows, see the page on [writing manifests for Windows](/windows/writing.html).
 
 5. Save and close the file.
 6. **On the console**, add `registry::service_example` to the available classes, and then add that class to the Windows agent node. Refer to [the introductory section of this guide if you need help adding classes in the console](./quick_start#using_modules_in_the_pe_console).
-7. Kick off a puppet run. 
+7. Kick off a puppet run.
 
-On the windows agent node, navigate to your `C:\` directory. Puppet has created the `file` resource `PuppetExample1.bat`, which is one of the resources that Puppet manages when it applies the class `registry::service_example`. 
+On the windows agent node, navigate to your `C:\` directory. Puppet has created the `file` resource `PuppetExample1.bat`, which is one of the resources that Puppet manages when it applies the class `registry::service_example`.
 
 ![PuppetExample1][puppet_example_batch]
 
@@ -108,7 +108,7 @@ Puppet has also set a number of Registry keys to define the `PuppetExample1` Win
 
 ![EI registry service example][ei_registry_example]
 
-To see `PuppetExample1` in the list of services that are running, you'll first need to reboot your Windows agent node, and then navigate to __Services__ via the __Administrative Tools.__ 
+To see `PuppetExample1` in the list of services that are running, you'll first need to reboot your Windows agent node, and then navigate to __Services__ via the __Administrative Tools.__
 
 [puppet_example_batch]: ./images/quick/puppet_example_batch.png
 [ei_registry_example]: ./images/quick/ei_registry_example.png
@@ -120,26 +120,26 @@ Puppet Labs modules save time, but at some point most users will also need to wr
 
 ### Writing a Class in a Module
 
-During this exercise, you will create a class called `critical_policy` that will manage a collection of important settings and options in your Windows registry, most notably the legal caption and text users will see before the login screen. 
+During this exercise, you will create a class called `critical_policy` that will manage a collection of important settings and options in your Windows registry, most notably the legal caption and text users will see before the login screen.
 
 1. **On the puppet master**, make sure you're still in the modules directory, `cd /etc/puppetlabs/puppet/modules`, and then run `mkdir -p critical_policy/manifests` to create the new module directory and its manifests directory.
 2. Use your text editor to create and open the `critical_policy/manifests/init.pp` file.
 3. Edit the init.pp file so it contains the following puppet code, and then save it and exit the editor:
 
         class critical_policy {
-        
+
           registry::value { 'Legal notice caption':
             key   => 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System',
             value => 'legalnoticecaption',
             data  => 'Legal Notice',
             }
- 
+
           registry::value { 'Legal notice text':
             key   => 'HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System',
             value => 'legalnoticetext',
             data  => 'Login constitutes acceptance of the End User Agreement',
             }
- 
+
           registry::value { 'Allow Windows Update to Forcibly reboot':
             key   => 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU',
             value => 'NoAutoRebootWithLoggedOnUsers',
@@ -147,17 +147,17 @@ During this exercise, you will create a class called `critical_policy` that will
             data  => '0',
             }
           }
-  
+
 
 > You have written a new module containing a single class. Puppet now knows about this class, and it can be added to the console and assigned to your Windows nodes, just as you did in part one of this guide.
 >
 > Note the following about this new class:
 >
-> * The `registry::value` defined resource type allows you to use Puppet to manage the parent key for a particular value automatically. 
+> * The `registry::value` defined resource type allows you to use Puppet to manage the parent key for a particular value automatically.
 > * The `key` parameter specifies the path the key the value(s) must be in.
 > * The `value` parameter lists the name of the registry value(s) to manage. This is copied from the resource title if not specified.
 > * The `type` parameter determines the type of the registry value(s). Defaults to 'string'. Valid values are 'string', 'array', 'dword', 'qword', 'binary', or 'expand'.
-> * `data` Lists the data inside the registry value. 
+> * `data` Lists the data inside the registry value.
 
 
 [registry::value]: http://forge.puppetlabs.com/puppetlabs/registry
@@ -179,14 +179,14 @@ For more information about writing classes, refer to the following documentation
 3. **On the Windows agent node,** manually set the data values of `legalnoticecaption` and `legalnoticetext` to some other values. For example, set `legalnoticecaption` to "Larry's Computer" and set `legalnoticetext` to "This is Larry's computer."
 
    ![Legal notice text larry][legal_notice_text_larry]
-    
-4. Use live management to run the __runonce__ action on your Windows agent node.         
+
+4. Use live management to run the __runonce__ action on your Windows agent node.
 5. **On the Windows agent node,** refresh the registry and note that the values of `legalnoticecaption` and `legalnoticetext` have been returned to the values specified in your `critical_policy` manifest.
 
    ![Legal notice text original value][legal_notice_text_values]
 
-If you reboot your Windows machine, you will see the legal caption and text before you log in again. 
-       
+If you reboot your Windows machine, you will see the legal caption and text before you log in again.
+
 > You have created a new class from scratch and used it to manage registry settings on your Windows server.
 
 Using a Site Module

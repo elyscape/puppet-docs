@@ -29,10 +29,10 @@ In particular, note that puppet *must* be run with elevated privileges (a.k.a., 
 [server]: ./images/windows/wizard_server.png
 [signcert]: ./install_agents.html#signing-agent-certificates
 
-Installing Windows Puppet Enterprise Agents 
+Installing Windows Puppet Enterprise Agents
 -----
 
-**Note**: Windows nodes can only run the puppet agent component; the puppet master component must be run on a supported Linux machine. 
+**Note**: Windows nodes can only run the puppet agent component; the puppet master component must be run on a supported Linux machine.
 
 The PE Windows installer is a standard Windows .msi package and will run as a graphical wizard. Alternately, you can run the installer unattended; [see "Automated Installation"](#automated-installation) for more information.
 
@@ -40,7 +40,7 @@ The installer must be run with elevated privileges. Installing Puppet **does not
 
 **To install Puppet Enterprise on a Windows node**:
 
-1. [Download][pedownloads] and run the installer. 
+1. [Download][pedownloads] and run the installer.
 
 2. When prompted by the install dialog, provide the hostname of your puppet master server.
 

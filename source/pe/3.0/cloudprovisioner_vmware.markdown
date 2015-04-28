@@ -24,7 +24,7 @@ server.  You do this by running the `puppet node_vmware list` command:
 
     $ puppet node_vmware list
 
-If you haven't yet [confirmed your vSphere server's public key hash in your `~/.fog` file](./cloudprovisioner_configuring.html#adding-vmware-credentials), you'll receive an error message containing said hash: 
+If you haven't yet [confirmed your vSphere server's public key hash in your `~/.fog` file](./cloudprovisioner_configuring.html#adding-vmware-credentials), you'll receive an error message containing said hash:
 
     $ puppet node_vmware list
     notice: Connecting ...·
@@ -64,7 +64,7 @@ Now you should be able to run the `puppet node_vmware list` command and see a li
     ipaddress:  192.168.100.218
     template:   false
 
-This shows that you're connected to your vSphere server and shows an available VMware template ( at `master_template`). Two virtual machines are also shown (puppetmaster.example.com and agent.example.com). VMware templates contain the information needed to build new virtual machines, such as the operating system, hardware configuration, and other details. 
+This shows that you're connected to your vSphere server and shows an available VMware template ( at `master_template`). Two virtual machines are also shown (puppetmaster.example.com and agent.example.com). VMware templates contain the information needed to build new virtual machines, such as the operating system, hardware configuration, and other details.
 
 
 Specifically, `list` will return all of the following information:
@@ -123,7 +123,7 @@ To start a virtual machine:
     $ puppet node_vmware start /Datacenters/Solutions/vm/newpuppetmaster
 
 You can see we've specified the path to the virtual machine we wish to start,
-in this case `/Datacenters/Solutions/vm/newpuppetmaster`.  
+in this case `/Datacenters/Solutions/vm/newpuppetmaster`.
 
 To stop a virtual machine, use:
 
@@ -157,7 +157,7 @@ The `puppet node_vmware` command has extensive in-line help and a man page.
 To see the available actions and command line options, run:
 
     $ puppet help node_vmware
-    USAGE: puppet node_vmware <action> 
+    USAGE: puppet node_vmware <action>
 
     This subcommand provides a command line interface to work with VMware vSphere
     Virtual Machine instances.  The goal of these actions is to easily create
@@ -189,6 +189,6 @@ For example:
 
 
 
-* * * 
+* * *
 
-- [Next: Provisioning with AWS](./cloudprovisioner_aws.html) 
+- [Next: Provisioning with AWS](./cloudprovisioner_aws.html)

@@ -20,7 +20,7 @@ Puppet 3.x y versiones superiores vienen con soporte para Hiera ya habilitado. N
 Debes instalar Hiera y el paquete **hiera-puppet** en tus puppet master(s) antes de usar Hiera con Puppet. La información de Hiera debería existir en el o los puppet master(s).
 
 + Puppet espera encontrar el [archivo hiera.yaml](http://docs.puppetlabs.com/es/hiera/configuring.html) en **$confdir/hiera.yaml** (normalmente **/etc/puppet/hiera.yaml**); Esto no es configurable en 2.7.
-+ Recuerda configurar los valores de **:datadir** para todos los backends que uses. Generalmente lo mejor es utilizar algo dentro del directorio **/etc/puppet/** ya que es en el primer lugar que tus colegas administradores esperan encontrar información. 
++ Recuerda configurar los valores de **:datadir** para todos los backends que uses. Generalmente lo mejor es utilizar algo dentro del directorio **/etc/puppet/** ya que es en el primer lugar que tus colegas administradores esperan encontrar información.
 
 ### Versiones anteriores
 
@@ -30,7 +30,7 @@ Hiera no es compatible con versiones anteriores, pero podría ser posible hacerl
 
 En el momento que una búsqueda de Hiera se dispara desde Puppet, Hiera recibe una copia de **todas** las variables actualmente disponibles para Puppet, incluyendo variables locales y de top scope (top scope, ver [Referencia del lenguaje](http://docs.puppetlabs.com/puppet/3/reference/lang_scope.html) .
 
-Entonces Hiera puede usar cualquiera de estas variables en los [símbolos de interpolación de variables](http://docs.puppetlabs.com/es/hiera/variables.html) desperdigados por toda la [jerarquía](http://docs.puppetlabs.com/es/hiera/hierarchy.html) y [fuentes de información](http://docs.puppetlabs.com/es/hiera/data_sources.html). Puedes habilitar jerarquías más flexibles creando [facts personalizados](http://docs.puppetlabs.com/guides/custom_facts.html) para cosas como la ubicación de datacenters y el propósito de los servidores. 
+Entonces Hiera puede usar cualquiera de estas variables en los [símbolos de interpolación de variables](http://docs.puppetlabs.com/es/hiera/variables.html) desperdigados por toda la [jerarquía](http://docs.puppetlabs.com/es/hiera/hierarchy.html) y [fuentes de información](http://docs.puppetlabs.com/es/hiera/data_sources.html). Puedes habilitar jerarquías más flexibles creando [facts personalizados](http://docs.puppetlabs.com/guides/custom_facts.html) para cosas como la ubicación de datacenters y el propósito de los servidores.
 
 ### Pseudo-variables especiales
 
@@ -60,9 +60,9 @@ Puppet recuperará automáticamente los parámetros de clase desde Hiera, usando
 
 **Nota**: Esta función está disponible sólo en Puppet 3 y superiores.
 
-Las [clases](http://docs.puppetlabs.com/puppet/latest/reference/lang_classes.html) pueden incluir opcionalmente [parámetros](http://docs.puppetlabs.com/puppet/latest/reference/lang_classes.html#class-parameters-and-variables) en sus definiciones. Esto le permite a la clase pedir que se pase información en el momento que sea declarada, y pueda usar esos datos como variables normales a lo largo de su definición. 
+Las [clases](http://docs.puppetlabs.com/puppet/latest/reference/lang_classes.html) pueden incluir opcionalmente [parámetros](http://docs.puppetlabs.com/puppet/latest/reference/lang_classes.html#class-parameters-and-variables) en sus definiciones. Esto le permite a la clase pedir que se pase información en el momento que sea declarada, y pueda usar esos datos como variables normales a lo largo de su definición.
 
-		# En este ejemplo, el valor de $parameter se define cuando `myclass` es declarada. 
+		# En este ejemplo, el valor de $parameter se define cuando `myclass` es declarada.
     	# Definición de la clase:
     	class myclass ($parameter_one = "default text") {
       	    file {'/tmp/foo':
@@ -183,7 +183,7 @@ Una vez que hayas hecho estos pasos, Puppet asignará automáticamente clases de
 Ejemplo:
 
 Asumiendo una jerarquía de:
-	
+
 	:hierarchy:
      	 - %{::clientcert}
   	    - %{::osfamily}
@@ -194,7 +194,7 @@ E información de Hiera como la siguiente:
 	# common.yaml
     	---
    	 classes:
-     	 - base	
+     	 - base
      	 - security
     	  - mcollective
 

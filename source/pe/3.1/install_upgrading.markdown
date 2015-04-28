@@ -29,7 +29,7 @@ Important Notes and Warnings
 ---
 ### Before Upgrading Back Up Your Databases and Other PE Files
 
-   We recommend that you backup the following databases and PE files. 
+   We recommend that you backup the following databases and PE files.
 
    On a monolithic (all-in-one) install, the databases and PE files will all be located on the same node as the puppet master.
 
@@ -37,27 +37,27 @@ Important Notes and Warnings
    - `/opt/puppet/share/puppet-dashboard/certs`
    - [The console and console_auth databases](./maintain_console-db.html#database-backups)
    - [The PuppetDB database](/puppetdb/1.5/migrate.html#exporting-data-from-an-existing-puppetdb-database)
-   
+
 On a split install, the databases and PE files will be located across the various roles assigned to your servers.
 
    - `/etc/puppetlabs/`: different versions of this directory can be found on the server assigned to the puppet master role, the server assigned to the console role, and the server assigned to the database support role (i.e., PuppetDB and PostgreSQL). You should back up each version.
-   - `/opt/puppet/share/puppet-dashboard/certs`: located on the server assigned to the console role. 
+   - `/opt/puppet/share/puppet-dashboard/certs`: located on the server assigned to the console role.
    - The console and console_auth databases: located on the server assigned to the database support role.
-   - The PuppetDB database: located on the server assigned to the database support role. 
+   - The PuppetDB database: located on the server assigned to the database support role.
 
 ### Upgrading is only supported from PE 2.8.3 or the latest point release of newer versions.
 
- To upgrade from a version older than 2.8.3, you *must* first upgrade to 2.8.3, make sure everything is working correctly, and then move on to upgrading to 3.1.1. To upgrade from 3.0.x you *must* first upgrade to the latest point release of the 3.0.x series, make sure everything is working, and then move on to upgrading to 3.1.1. You can find older versions of PE on the [previous releases page](https://puppetlabs.com/misc/pe-files/previous-releases/). 
-- If you are upgrading from an installation of PE 2.8.3 or later in the 2.8.x series that includes a manually added PuppetDB, you will need to remove PuppetDB before upgrading or your upgrade the will fail. 
+ To upgrade from a version older than 2.8.3, you *must* first upgrade to 2.8.3, make sure everything is working correctly, and then move on to upgrading to 3.1.1. To upgrade from 3.0.x you *must* first upgrade to the latest point release of the 3.0.x series, make sure everything is working, and then move on to upgrading to 3.1.1. You can find older versions of PE on the [previous releases page](https://puppetlabs.com/misc/pe-files/previous-releases/).
+- If you are upgrading from an installation of PE 2.8.3 or later in the 2.8.x series that includes a manually added PuppetDB, you will need to remove PuppetDB before upgrading or your upgrade the will fail.
 
   Before upgrading, remove the following:
-  
+
    * `/etc/puppetlabs/puppet/routes.yaml`
    * `/etc/puppetlabs/puppet/puppetdb.conf`
    * PostgreSQL (if installed on the master), including any data and config directories
-   
+
 Next, in the `[master]` stanza of `/etc/puppetlabs/puppet/puppet.conf`, make the following changes:
-  
+
    * remove the entire `storeconfigs_backend` entry; it will default to ActiveRecord.
    * make sure the `facts_terminus` parameter is set to `inventory_active_record`.
 
@@ -118,7 +118,7 @@ The upgrade script will run and provide detailed information as to what it insta
 
 ### Upgrade PuppetDB
 
-On the node you provisioned for PuppetDB before starting the upgrade, unpack the PE 3.1 tarball and run the `puppet-enterprise-installer` script. 
+On the node you provisioned for PuppetDB before starting the upgrade, unpack the PE 3.1 tarball and run the `puppet-enterprise-installer` script.
 
 If you are upgrading from a 2.8 deployment, you will need to provide some answers to the upgrader. These answers are ONLY needed when upgrading from the 2.8 line.
 

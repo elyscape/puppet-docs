@@ -174,7 +174,7 @@ See the [installation overview](./install_basic.html#downloading-puppet-enterpri
    >
           sudo -u postgres sh
           psql puppetdb -c 'create extension pg_trgm'
-          exit  
+          exit
 
 6. Provide the following information about the PE console administrator user:
 

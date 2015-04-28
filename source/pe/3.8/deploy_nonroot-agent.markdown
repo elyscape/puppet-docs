@@ -24,7 +24,7 @@ When you or another user are set up as a non-root user, you will have a reduced 
 
 To properly configure non-root agent access, you will need to:
 
-   * Install a monolithic PE master 
+   * Install a monolithic PE master
    * Install and configure PE agents, disable the `pe-puppet` service on all nodes, and create non-root users
    * Verify the non-root configuration
 

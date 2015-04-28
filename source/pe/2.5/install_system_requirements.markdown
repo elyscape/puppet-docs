@@ -34,7 +34,7 @@ Puppet Enterprise 2.5 supports the following systems:
 Hardware
 -----
 
-Puppet Enterprise's hardware requirements depend on the roles a machine performs. 
+Puppet Enterprise's hardware requirements depend on the roles a machine performs.
 
 * The **puppet master** role should be installed on a robust, dedicated server.
     * Minimum requirements: 2 processor cores, 1 GB RAM, and very accurate timekeeping.

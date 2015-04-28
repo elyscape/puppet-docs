@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
   Class: Puppet::Pops::Evaluator::CallableSignature
-  
+
     &mdash; Documentation by YARD 0.8.7.6
-  
+
 </title>
 
   <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../../../_index.html">Index (C)</a> &raquo;
     <span class='title'><span class='object_link'><a href="../../../Puppet.html" title="Puppet (module)">Puppet</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Pops.html" title="Puppet::Pops (module)">Pops</a></span></span> &raquo; <span class='title'><span class='object_link'>Evaluator</span></span>
-     &raquo; 
+     &raquo;
     <span class="title">CallableSignature</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../../../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../../../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../../../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,38 +64,38 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Class: Puppet::Pops::Evaluator::CallableSignature
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
+
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
       <span class="inheritName"><span class='object_link'>Object</span></span>
-      
+
         <ul class="fullTree">
           <li><span class='object_link'>Object</span></li>
-          
+
             <li class="next">Puppet::Pops::Evaluator::CallableSignature</li>
-          
+
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
-      
+
       </dd>
-    
-  
-  
-    
-  
-    
-  
-  
-  
+
+
+
+
+
+
+
+
+
     <dt class="r2 last">Defined in:</dt>
     <dd class="r2 last">lib/puppet/pops/evaluator/callable_signature.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
@@ -110,7 +110,7 @@ Different implementation of this class are used for different types of callables
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
@@ -123,207 +123,207 @@ Different implementation of this class are used for different types of callables
 
 
 
-  
+
     <h2>
       Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#args_range-instance_method" title="#args_range (instance method)">- (Array[Integer, Numeric]) <strong>args_range</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns the range of required/optional argument values as an array of [min, max], where an infinite end is given as Float::INFINITY.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#block_name-instance_method" title="#block_name (instance method)">- (String) <strong>block_name</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns the name of the block parameter if the callable accepts a block.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#block_type-instance_method" title="#block_type (instance method)">- (Puppet::Pops::Types::PAnyType<sup>?</sup>) <strong>block_type</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns the expected type for an optional block.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#infinity%3F-instance_method" title="#infinity? (instance method)">- (Boolean) <strong>infinity?</strong>(x) </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns true if the given x is infinity.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#last_captures_rest%3F-instance_method" title="#last_captures_rest? (instance method)">- (Boolean) <strong>last_captures_rest?</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns true if the last parameter captures the rest of the arguments, with a possible cap, as indicated by the <code>args_range</code> method.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#parameter_names-instance_method" title="#parameter_names (instance method)">- (Array&lt;String&gt;) <strong>parameter_names</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns the names of the parameters as an array of strings.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
+
       <a href="#type-instance_method" title="#type (instance method)">- (Puppet::Pops::Types::PCallableType) <strong>type</strong> </a>
-    
 
-    
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
+
+
+
     <span class="summary_desc"><div class='inline'><p>Returns a PCallableType with the type information, required and optional count, and type information about an optional block.</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
+
 
 
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="args_range-instance_method">
-  
-    - (<tt><span class='object_link'>Array</span>[Integer, Numeric]</tt>) <strong>args_range</strong> 
-  
 
-  
+    - (<tt><span class='object_link'>Array</span>[Integer, Numeric]</tt>) <strong>args_range</strong>
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the range of required/optional argument values as an array of [min, max], where an infinite
@@ -333,26 +333,26 @@ end is given as Float::INFINITY. To test against infinity, use the infinity? met
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Array</span>[Integer, Numeric]</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><ul>
 <li>an Array with [min, max]</li>
 </ul>
 
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -375,16 +375,16 @@ end is given as Float::INFINITY. To test against infinity, use the infinity? met
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="block_name-instance_method">
-  
-    - (<tt>String</tt>) <strong>block_name</strong> 
-  
 
-  
+    - (<tt>String</tt>) <strong>block_name</strong>
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the name of the block parameter if the callable accepts a block.
@@ -394,36 +394,36 @@ A derived class must implement this method.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the name of the block parameter</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>NotImplementedError</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -446,16 +446,16 @@ A derived class must implement this method.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="block_type-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Types/PAnyType.html" title="Puppet::Pops::Types::PAnyType (class)">Puppet::Pops::Types::PAnyType</a></span></tt><sup>?</sup>) <strong>block_type</strong> 
-  
 
-  
+    - (<tt><span class='object_link'><a href="../Types/PAnyType.html" title="Puppet::Pops::Types::PAnyType (class)">Puppet::Pops::Types::PAnyType</a></span></tt><sup>?</sup>) <strong>block_type</strong>
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the expected type for an optional block. The type may be nil, which means that the callable does
@@ -467,23 +467,23 @@ The Optional type is used when the block is optional.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="../Types/PAnyType.html" title="Puppet::Pops::Types::PAnyType (class)">Puppet::Pops::Types::PAnyType</a></span></tt>, <tt>nil</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>the expected type of a block given as the last parameter in a call.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -506,16 +506,16 @@ The Optional type is used when the block is optional.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="infinity?-instance_method">
-  
-    - (<tt>Boolean</tt>) <strong>infinity?</strong>(x) 
-  
 
-  
+    - (<tt>Boolean</tt>) <strong>infinity?</strong>(x)
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns true if the given x is infinity</p>
@@ -524,23 +524,23 @@ The Optional type is used when the block is optional.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>true, if given value represents infinity</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -563,16 +563,16 @@ The Optional type is used when the block is optional.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="last_captures_rest?-instance_method">
-  
-    - (<tt>Boolean</tt>) <strong>last_captures_rest?</strong> 
-  
 
-  
+    - (<tt>Boolean</tt>) <strong>last_captures_rest?</strong>
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns true if the last parameter captures the rest of the arguments, with a possible cap, as indicated
@@ -583,36 +583,36 @@ A derived class must implement this method.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>Boolean</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>true if last parameter captures the rest of the given arguments (up to a possible cap)</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>NotImplementedError</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -635,16 +635,16 @@ A derived class must implement this method.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="parameter_names-instance_method">
-  
-    - (<tt><span class='object_link'>Array</span>&lt;String&gt;</tt>) <strong>parameter_names</strong> 
-  
 
-  
+    - (<tt><span class='object_link'>Array</span>&lt;String&gt;</tt>) <strong>parameter_names</strong>
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns the names of the parameters as an array of strings. This does not include the name
@@ -660,39 +660,39 @@ required arguments, optional arguments, etc.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'>Array</span>&lt;String&gt;</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><ul>
 <li>an array of names (that may be empty if names are unavailable)</li>
 </ul>
 
 </div>
-      
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>NotImplementedError</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -715,16 +715,16 @@ required arguments, optional arguments, etc.</p>
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="type-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Types/PCallableType.html" title="Puppet::Pops::Types::PCallableType (class)">Puppet::Pops::Types::PCallableType</a></span></tt>) <strong>type</strong> 
-  
 
-  
+    - (<tt><span class='object_link'><a href="../Types/PCallableType.html" title="Puppet::Pops::Types::PCallableType (class)">Puppet::Pops::Types::PCallableType</a></span></tt>) <strong>type</strong>
 
-  
+
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p>Returns a PCallableType with the type information, required and optional count, and type information about
@@ -736,32 +736,32 @@ an optional block.</p>
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt><span class='object_link'><a href="../Types/PCallableType.html" title="Puppet::Pops::Types::PCallableType (class)">Puppet::Pops::Types::PCallableType</a></span></tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 <p class="tag_title">Raises:</p>
 <ul class="raise">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>NotImplementedError</tt>)</span>
-      
-      
-      
+
+
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -784,7 +784,7 @@ an optional block.</p>
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

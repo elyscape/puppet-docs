@@ -55,7 +55,7 @@ Whether to allow a new certificate request to overwrite an existing certificate.
 
 ### allow_variables_with_dashes
 
-Permit hyphens (`-`) in variable names and issue deprecation warnings about them. This setting **should always be `false`;** setting it to `true` will cause subtle and wide-ranging bugs. It will be removed in a future version. Hyphenated variables caused major problems in the language, but were allowed between Puppet 2.7.3 and 2.7.14. If you used them during this window, we apologize for the inconvenience --- you can temporarily set this to `true` in order to upgrade, and can rename your variables at your leisure. Please revert it to `false` after you have renamed all affected variables. 
+Permit hyphens (`-`) in variable names and issue deprecation warnings about them. This setting **should always be `false`;** setting it to `true` will cause subtle and wide-ranging bugs. It will be removed in a future version. Hyphenated variables caused major problems in the language, but were allowed between Puppet 2.7.3 and 2.7.14. If you used them during this window, we apologize for the inconvenience --- you can temporarily set this to `true` in order to upgrade, and can rename your variables at your leisure. Please revert it to `false` after you have renamed all affected variables.
 
 - *Default*: false
 
@@ -189,7 +189,7 @@ The CA public key.
 
 How to store cached catalogs. Valid values are 'json' and 'yaml'. The agent application defaults to 'json'.
 
-- *Default*: 
+- *Default*:
 
 ### catalog_format
 
@@ -216,7 +216,7 @@ The certificate directory.
 
 ### certdnsnames
 
-The `certdnsnames` setting is no longer functional, after CVE-2011-3872. We ignore the value completely. For your own certificate request you can set `dns_alt_names` in the configuration and it will apply locally.  There is no configuration option to set DNS alt names, or any other `subjectAltName` value, for another nodes certificate. Alternately you can use the `--dns_alt_names` command line option to set the labels added while generating your own CSR. 
+The `certdnsnames` setting is no longer functional, after CVE-2011-3872. We ignore the value completely. For your own certificate request you can set `dns_alt_names` in the configuration and it will apply locally.  There is no configuration option to set DNS alt names, or any other `subjectAltName` value, for another nodes certificate. Alternately you can use the `--dns_alt_names` command line option to set the labels added while generating your own CSR.
 
 
 ### certificate_expire_warning
@@ -419,7 +419,7 @@ Which arguments to pass to the diff command when printing differences between fi
 
 ### dns_alt_names
 
-The comma-separated list of alternative DNS names to use for the local host. When the node generates a CSR for itself, these are added to the request as the desired `subjectAltName` in the certificate: additional DNS labels that the certificate is also valid answering as. This is generally required if you use a non-hostname `certname`, or if you want to use `puppet kick` or `puppet resource -H` and the primary certname does not match the DNS name you use to communicate with the host. This is unnecessary for agents, unless you intend to use them as a server for `puppet kick` or remote `puppet resource` management. It is rarely necessary for servers; it is usually helpful only if you need to have a pool of multiple load balanced masters, or for the same master to respond on two physically separate networks under different names. 
+The comma-separated list of alternative DNS names to use for the local host. When the node generates a CSR for itself, these are added to the request as the desired `subjectAltName` in the certificate: additional DNS labels that the certificate is also valid answering as. This is generally required if you use a non-hostname `certname`, or if you want to use `puppet kick` or `puppet resource -H` and the primary certname does not match the DNS name you use to communicate with the host. This is unnecessary for agents, unless you intend to use them as a server for `puppet kick` or remote `puppet resource` management. It is rarely necessary for servers; it is usually helpful only if you need to have a pool of multiple load balanced masters, or for the same master to respond on two physically separate networks under different names.
 
 
 ### document_all
@@ -697,7 +697,7 @@ The user to use to connect to LDAP.  Must be specified as a full DN.
 
 ### libdir
 
-An extra search path for Puppet.  This is only useful for those files that Puppet will load on demand, and is only guaranteed to work for those cases.  In fact, the autoload mechanism is responsible for making sure this directory is in Ruby's search path 
+An extra search path for Puppet.  This is only useful for those files that Puppet will load on demand, and is only guaranteed to work for those cases.  In fact, the autoload mechanism is responsible for making sure this directory is in Ruby's search path
 
 - *Default*: $vardir/lib
 
@@ -723,7 +723,7 @@ Where puppet agent caches the local configuration.  An extension indicating the 
 
 The directory in which to store log files
 
-- *Default*: 
+- *Default*:
 
 ### manage_internal_file_permissions
 
@@ -795,7 +795,7 @@ The search path for modules, as a list of directories separated by the system pa
 
 The name of the application, if we are running as one.  The default is essentially $0 without the path or `.rb`.
 
-- *Default*: 
+- *Default*:
 
 ### node_name
 
@@ -1032,7 +1032,7 @@ How often RRD should expect data. This should match how often the hosts report b
 
 Where Puppet PID files are kept.
 
-- *Default*: 
+- *Default*:
 
 ### runinterval
 
@@ -1104,7 +1104,7 @@ The domain which will be queried to find the SRV records of servers to use.
 
 Certificate authorities who issue server certificates.  SSL servers will not be  considered authentic unless they posses a certificate issued by an authority  listed in this file.  If this setting has no value then the Puppet master's CA  certificate (localcacert) will be used.
 
-- *Default*: 
+- *Default*:
 
 ### ssl_client_header
 
@@ -1122,7 +1122,7 @@ The header containing the status message of the client verification. This header
 
 Certificate authorities who issue client certificates.  SSL clients will not be  considered authentic unless they posses a certificate issued by an authority  listed in this file.  If this setting has no value then the Puppet master's CA  certificate (localcacert) will be used.
 
-- *Default*: 
+- *Default*:
 
 ### ssldir
 

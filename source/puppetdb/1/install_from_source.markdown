@@ -9,7 +9,7 @@ canonical: "/puppetdb/latest/install_from_source.html"
 [configure_postgres]: ./configure.html#using-postgresql
 [configure_heap]: ./configure.html#configuring-the-java-heap-size
 
-If possible, we recommend installing PuppetDB from packages. However, if you are installing PuppetDB on a system not supported with official packages, or if you are testing or developing a new version of PuppetDB, you will need to install it from source. 
+If possible, we recommend installing PuppetDB from packages. However, if you are installing PuppetDB on a system not supported with official packages, or if you are testing or developing a new version of PuppetDB, you will need to install it from source.
 
 
 Step 1: Install Prerequisites
@@ -17,7 +17,7 @@ Step 1: Install Prerequisites
 
 Use your system's package tools to ensure that the following prerequisites are installed:
 
-* Facter, version 1.6.8 or higher 
+* Facter, version 1.6.8 or higher
 * JDK 1.6 or higher
 * [Leiningen][]
 * Git (for checking out the source code)
@@ -40,7 +40,7 @@ Step 2, Option B: Run Directly from Source
 
 While installing from source is useful for simply running a development version
 for testing, for development it's better to be able to run *directly* from
-source, without any installation step. 
+source, without any installation step.
 
 Run the following commands:
 
@@ -55,7 +55,7 @@ This will let you develop on PuppetDB and see your changes by simply editing the
 
     $ lein run services -c /path/to/config.ini
 
-A sample config file is provided in the root of the source repo:  `config.sample.ini`. You can also provide a conf.d-style directory instead of a flat config file. 
+A sample config file is provided in the root of the source repo:  `config.sample.ini`. You can also provide a conf.d-style directory instead of a flat config file.
 
 Other useful commands for developers:
 
@@ -65,13 +65,13 @@ Other useful commands for developers:
 Step 3, Option A: Run the SSL Configuration Script
 -----
 
-If your PuppetDB server has puppet agent installed, has received a valid certificate from your site's Puppet CA, and you _installed_ PuppetDB from source, then PuppetDB can re-use Puppet's certificate. 
+If your PuppetDB server has puppet agent installed, has received a valid certificate from your site's Puppet CA, and you _installed_ PuppetDB from source, then PuppetDB can re-use Puppet's certificate.
 
-Run the following command: 
+Run the following command:
 
     $ sudo /usr/sbin/puppetdb-ssl-setup
 
-This will create a keystore and truststore in `/etc/puppetdb/ssl` and will print the password to both files in `/etc/puppetdb/ssl/puppetdb_keystore_pw.txt`. 
+This will create a keystore and truststore in `/etc/puppetdb/ssl` and will print the password to both files in `/etc/puppetdb/ssl/puppetdb_keystore_pw.txt`.
 
 You should now configure HTTPS in PuppetDB's config file(s); [see below](#step-4-configure-https).
 
@@ -161,7 +161,7 @@ You can validate this was correct:
     puppetdb.example.com, Mar 30, 2012, PrivateKeyEntry,
     Certificate fingerprint (MD5): 7E:2A:B4:4D:1E:6D:D1:70:A9:E7:20:0D:9D:41:F3:B9
 
-Compare to the certificate's fingerprint on the CA puppet master: 
+Compare to the certificate's fingerprint on the CA puppet master:
 
     $ sudo puppet cert fingerprint puppetdb.example.com --digest=md5
     MD5 Fingerprint=7E:2A:B4:4D:1E:6D:D1:70:A9:E7:20:0D:9D:41:F3:B9
@@ -178,7 +178,7 @@ as, and ensure that only that user can read the files:
     $ sudo chown puppetdb:puppetdb /etc/puppetdb/ssl/truststore.jks /etc/puppetdb/ssl/keystore.jks
     $ sudo chmod 400 /etc/puppetdb/ssl/truststore.jks /etc/puppetdb/ssl/keystore.jks
 
-You can now safely delete the temporary copies of the keystore, truststore, CA certificate, PuppetDB certificate and private key. These can be retrieved or recreated using the original copies stored on the CA puppet master. 
+You can now safely delete the temporary copies of the keystore, truststore, CA certificate, PuppetDB certificate and private key. These can be retrieved or recreated using the original copies stored on the CA puppet master.
 
 You should now configure HTTPS in PuppetDB's config file(s); [see below](#step-4-configure-https).
 
@@ -211,9 +211,9 @@ Step 5: Configure Database
 If this is a production deployment, you should confirm and configure your database settings:
 
 - Deployments of **100 nodes or fewer** can continue to use the default built-in database backend, but should [increase PuppetDB's maximum heap size][configure_heap] to at least 1 GB.
-- Large deployments should [set up a PostgreSQL server and configure PuppetDB to use it][configure_postgres]. You may also need to [adjust the maximum heap size][configure_heap]. 
+- Large deployments should [set up a PostgreSQL server and configure PuppetDB to use it][configure_postgres]. You may also need to [adjust the maximum heap size][configure_heap].
 
-You can change PuppetDB's database at any time, but note that changing the database does not migrate PuppetDB's data, so the new database will be empty. However, as this data is automatically generated many times a day, PuppetDB should recover in a relatively short period of time. 
+You can change PuppetDB's database at any time, but note that changing the database does not migrate PuppetDB's data, so the new database will be empty. However, as this data is automatically generated many times a day, PuppetDB should recover in a relatively short period of time.
 
 
 
@@ -235,9 +235,9 @@ If you are running PuppetDB from source, you should start it as follows:
 
 > PuppetDB is now fully functional and ready to receive catalogs and facts from any number of puppet master servers.
 
-Finish: Connect Puppet to PuppetDB 
+Finish: Connect Puppet to PuppetDB
 -----
 
-[You should now configure your puppet master(s) to connect to PuppetDB](./connect_puppet_master.html). 
+[You should now configure your puppet master(s) to connect to PuppetDB](./connect_puppet_master.html).
 
 If you use a standalone Puppet site, [you should configure every node to connect to PuppetDB](./connect_puppet_apply.html).

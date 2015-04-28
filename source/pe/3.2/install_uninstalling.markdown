@@ -5,12 +5,12 @@ subtitle: "Uninstalling Puppet Enterprise"
 canonical: "/pe/latest/install_uninstalling.html"
 ---
 
-* If you are uninstalling PE from a puppet master, PuppetDB, or console node (or a monolithic install), refer to [Using the Uninstaller Script](#using-the-uninstaller-script). 
+* If you are uninstalling PE from a puppet master, PuppetDB, or console node (or a monolithic install), refer to [Using the Uninstaller Script](#using-the-uninstaller-script).
 
 Using the Uninstaller Script
 -----
 
-The `puppet-enterprise-uninstaller` script is installed on the master, PuppetDB, and console nodes; you can run it with `/opt/puppet/bin/puppet-enterprise-uninstaller`.  
+The `puppet-enterprise-uninstaller` script is installed on the master, PuppetDB, and console nodes; you can run it with `/opt/puppet/bin/puppet-enterprise-uninstaller`.
 
 You can also run the uninstaller from the same directory as the installer script; run it with root privileges from the command line:
 
@@ -28,7 +28,7 @@ You can use the following command-line flags to change the uninstaller's behavio
 : Purge additional files. With this flag, the uninstaller will also remove all configuration files, modules, manifests, certificates, and the home directories of any users created by the PE installer. This will also remove the Puppet Labs public GPG key used for package verification.
 
 `-d`
-: Also remove any databases created during installation. 
+: Also remove any databases created during installation.
 
 `-h`
 : Display a help message.
@@ -54,11 +54,11 @@ You can use the following command-line flags to change the uninstaller's behavio
 Thus, to remove every trace of PE from a system, you would run:
 
     $ sudo ./puppet-enterprise-uninstaller -d -p
-    
+
 Note that if you plan to reinstall any PE role on a node you've run an uninstall on, you may need to run `puppet cert clean <node name>` on the master in order to remove any orphaned certificates from the node.
 
 
 
-* * * 
+* * *
 
 - [Next: Automated Installation](./install_automated.html)

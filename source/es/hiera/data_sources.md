@@ -63,21 +63,21 @@ Cualquier string puede incluir cualquier número de [símbolo de interpolación 
 	    - apache2
 	    - apache2-common
 	    - apache2-utils
-	
+
 	# string
 	apache-service: apache2
-	
+
 	# variable de facter interpolada
 	hosts_entry: sandbox.%{fqdn}
-	
+
 	# hash
-	sshd_settings: 
+	sshd_settings:
 	    root_allowed: "no"
 	    password_allowed: "yes"
-	
+
 	# notación alternativa de hash
 	sshd_settings: {root_allowed: "no", password_allowed: "yes"}
-	
+
 	# para devolver "true" o "false"
 	sshd_settings: {root_allowed: no, password_allowed: yes}
 
@@ -128,7 +128,7 @@ Cualquier string puede incluir cualquier número de [símbolos de interpolación
 
 ### Ejemplo
 
-	{   
+	{
     "apache-packages" : [
     "apache2",
     "apache2-common",
@@ -138,7 +138,7 @@ Cualquier string puede incluir cualquier número de [símbolos de interpolación
     "hosts_entry" :  "sandbox.%{fqdn}",
 
     "sshd_settings" : {
-                        "root_allowed" : "no", 
+                        "root_allowed" : "no",
                         "password_allowed" : "no"
                       }
 	}

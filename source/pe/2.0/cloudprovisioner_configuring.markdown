@@ -16,7 +16,7 @@ Configuring and Troubleshooting Cloud Provisioning
 Configuring
 -----------
 
-To create new virtual machines with Puppet Enterprise, you'll need to first configure the services you'll be using. 
+To create new virtual machines with Puppet Enterprise, you'll need to first configure the services you'll be using.
 
 First, create a file called `.fog` in the home directory of the user who will be provisioning new nodes.
 
@@ -51,7 +51,7 @@ To connect to a VMware vSphere server, you must put the following information in
 : A public key hash for your vSphere server. The value for this setting can be obtained by filling the other three settings and running the following command:
 
         $ puppet node_vmware list
-    
+
     This will result in an error message containing the server's public key hash...
 
         notice: Connecting ...·
@@ -61,7 +61,7 @@ To connect to a VMware vSphere server, you must put the following information in
         authentic set vsphere_expected_pubkey_hash: <the hash printed in this
         message> in ~/.fog
         err: Try 'puppet help node_vmware list' for usage
-    
+
     ...which can then be entered as the value of this setting.
 
 <object width="560" height="315"><param name="movie"
@@ -89,7 +89,7 @@ You can get find your Amazon Web Services credentials online in your Amazon acco
 Select the Security Credentials menu and from there choose the "Access Credentials"
 section; click on the "Access Keys" tab to view your Access Keys.
 
-You need to record two pieces of information: the Access Key ID and the Secret Key ID. To see your Secret Access Key, just click the "Show" link under "Secret Access Key". 
+You need to record two pieces of information: the Access Key ID and the Secret Key ID. To see your Secret Access Key, just click the "Show" link under "Secret Access Key".
 
 Put both keys in your `~/.fog` file as described above.
 
@@ -120,7 +120,7 @@ EC2 console](https://console.aws.amazon.com/ec2/).
 Select the "Key Pairs" menu item from the dashboard. If you don't have any
 existing key pairs, you can create one with the "Create Key Pairs" button.
 Specify a new name for the key pair to create it; the private key
-file will be automatically downloaded to your host. 
+file will be automatically downloaded to your host.
 
 Make a note of the name of your key pair, as it is used when creating new instances.
 

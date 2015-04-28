@@ -58,7 +58,7 @@ Classes should contain [resource declarations](/learning/manifests.html#resource
     }
 {% endhighlight %}
 
-Resources have: 
+Resources have:
 
 * A **type** ("file")
 * A **title** ("/etc/fstab")
@@ -71,7 +71,7 @@ Note especially:
 
 ...as resource declarations will break without them.
 
-Every resource type also has one attribute (called the "namevar") that will default to the title; with the file type, the namevar is "path." See the [core types cheat sheet](/puppet_core_types_cheatsheet.pdf) for a quick reference to the most common resource types. 
+Every resource type also has one attribute (called the "namevar") that will default to the title; with the file type, the namevar is "path." See the [core types cheat sheet](/puppet_core_types_cheatsheet.pdf) for a quick reference to the most common resource types.
 
 Your First Complete Module
 -----
@@ -91,14 +91,14 @@ Paste the following code into the `init.pp` file:
         owner  => 'root',
         group  => 'root',
       }
-      
+
       file {'/etc/passwd':
         ensure => present,
         mode   => 0644,
         owner  => 'root',
         group  => 'root',
       }
-      
+
       file {'/etc/crontab':
         ensure => present,
         mode   => 0644,

@@ -184,8 +184,8 @@ These answers are generally needed if you are installing the console role.
   * the installed version of PE
 
   If you wish to disable update checks (e.g. if your company policy forbids transmitting this information), you will need to set this to `n`. You can also disable checking after installation by editing the `/etc/puppetlabs/installer/answers.install` file.
-  
-  `q_public_hostname` 
+
+  `q_public_hostname`
 : **String** ---   A publicly accessible hostname where the console can be accessed if the host name resolves  to a private interface (e.g., Amazon EC2). This is set automatically by the installer on EC2 nodes, but can be set manually in environments with multiple hostnames.
 
 

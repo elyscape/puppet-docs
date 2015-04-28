@@ -84,7 +84,7 @@ Puppet tiene dos tipos de funciones:
 + Funciones que devuelven un valor
 + Funciones que hacen otra cosa y no devuelven un valor.
 
-Las funciones **template** y **str2bool** devuelven valores que puedes utilizar en cualquier lugar que necesite un valor, siempre que el valor de retorno sea el correcto. Las funciones **include** y **fail** hacen algo diferente a devolver un valor: declaran una clase y paran la compilación de un catálogo respectivamente. 
+Las funciones **template** y **str2bool** devuelven valores que puedes utilizar en cualquier lugar que necesite un valor, siempre que el valor de retorno sea el correcto. Las funciones **include** y **fail** hacen algo diferente a devolver un valor: declaran una clase y paran la compilación de un catálogo respectivamente.
 
 Todas las funciones se ejecutan durante la compilación de catálogo, esto significa que se ejecutan en el puppet master y no necesitan acceder a ningún archivo u opciones de configuración en el nodo agente.
 
@@ -111,12 +111,12 @@ Los templates ERB parecen archivos de configuración normales, con el ocasional 
 
 ## Tags no imprimibles
 Los tags de ERB están delimitados por símbolos menor y mayor con signos de porcentaje dentro. No existe ningún concepto del tipo HTML para abrir o cerrar tags.
- 
+
 	   <% document = "" %>
 
 Los tags contienen una o más líneas de código Ruby, que pueden establecer variables, manipular información, implementar control de flujo, o, de hecho, prácticamente cualquier cosa excepto imprimir texto en el output renderizado.
 
-### Imprimir una expresión 
+### Imprimir una expresión
 
 Para eso, necesitas utilizar un tag de impresión que parece un tag normal con un signo igual después del separador de apertura:
 

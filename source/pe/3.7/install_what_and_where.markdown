@@ -75,7 +75,7 @@ The software distributed with Puppet Enterprise generates the following log file
 The Puppet master service's logging are contained in two files:
 
 * `/var/log/pe-puppetserver/puppetserver.log`: the Puppet master application logs its activity here; this is where things like compilation errors and deprecation warnings can be found.
-* `/var/log/pe-puppetserver/pe-puppetserver-daemon.log`: this is where fatal errors or crash reports can be found. 
+* `/var/log/pe-puppetserver/pe-puppetserver-daemon.log`: this is where fatal errors or crash reports can be found.
 
 #### Puppet Agent Logs
 
@@ -98,7 +98,7 @@ On Windows nodes, the Puppet agent service logs its activity to the Windows Even
 #### Console Logs
 
 - `/var/log/pe-httpd/error.log` contains errors related to Passenger. Console errors that don't get logged anywhere else can be found in this log. If you have problems with the console or Puppet, this log may be useful.
-- `/var/log/pe-httpd/puppetdashboard.access.log` 
+- `/var/log/pe-httpd/puppetdashboard.access.log`
 - `/var/log/pe-httpd/puppetdashboard.error.log`
 - `/var/log/pe-puppet-dashboard/certificate_manager.log`
 - `/var/log/pe-puppet-dashboard/delayed_job.log`
@@ -224,7 +224,7 @@ During install, PE generates the following certificates (can be found at `/etc/p
 - **`pe-internal-mcollective-servers`** --- A shared certificate generated on the Puppet master and shared to all agent nodes.
 - **`pe-internal-peadmin-mcollective-client`** --- The orchestration certificate for the peadmin account on the Puppet master.
 - **`pe-internal-puppet-console-mcollective-client`** --- The orchestration certificate for the PE console/live management
-- **`pe-internal-classifier`** --- The certificate for the node classifier. 
+- **`pe-internal-classifier`** --- The certificate for the node classifier.
 
 A fresh PE install should thus give the following list of certificates:
 

@@ -6,7 +6,7 @@ canonical: "/pe/latest/maintain_console-db.html"
 ---
 
 
-If PE's console becomes sluggish or begins taking up too much disk space, there are several maintenance tasks that can improve its performance. 
+If PE's console becomes sluggish or begins taking up too much disk space, there are several maintenance tasks that can improve its performance.
 
 Pruning the Console Database with a Cron Job
 -------------
@@ -15,7 +15,7 @@ For new PE installs (3.3 and later), a cron job, managed by a class in the `pupp
 
 However, to prevent users from deleting data without notice, the cron job is not installed on upgrades from versions earlier than 3.3.
 
-To prevent bloating in the console database, we recommend adding the `pe_console_prune` class to the `puppet_console` group after upgrading to PE 3.3.  
+To prevent bloating in the console database, we recommend adding the `pe_console_prune` class to the `puppet_console` group after upgrading to PE 3.3.
 
 To access the `prune_upto` parameter:
 
@@ -27,7 +27,7 @@ To access the `prune_upto` parameter:
 
 4. From the class list, select `pe_console_prune`.
 
-5. From the `pe_console_prune parameters` dialog, edit the parameters as needed. The `prune_upto` parameter is at the bottom of the list.  
+5. From the `pe_console_prune parameters` dialog, edit the parameters as needed. The `prune_upto` parameter is at the bottom of the list.
 
 6. Click the __Done__ button when finished.
 
@@ -45,7 +45,7 @@ If the number of pending tasks appears to be growing linearly, the background ta
 
     $ sudo /etc/init.d/pe-puppet-dashboard-workers restart
 
-The number of pending tasks shown in the console should start decreasing rapidly after restarting the workers. 
+The number of pending tasks shown in the console should start decreasing rapidly after restarting the workers.
 
 
 Optimizing the Database
@@ -57,7 +57,7 @@ This task, `rake db:raw:optimize[mode]`,  runs in three modes:
 
   * `reindex` mode will run the REINDEX DATABASE command on the console database. This is also the default mode if no mode is specified.
   * `vacuum` model will run the VACUUM FULL command on the console database.
-  * `reindex+vacuum` will run both of the above commands on the console database. 
+  * `reindex+vacuum` will run both of the above commands on the console database.
 
 To run the task, change your working directory to `/opt/puppet/share/puppet-dashboard` and make sure your PATH variable contains `/opt/puppet/bin` (or use the full path to the rake binary). Then run the task `rake db:raw:optimize[mode]`. You can disregard any error messages about insufficient privileges to vacuum certain system objects because these objects should not require vacuuming. If you believe they do, you can do so manually by logging in to psql (or your tool of choice) as a database superuser.
 
@@ -92,7 +92,7 @@ Providing comprehensive documentation about backing up and restoring PostgreSQL 
 To backup the databases, run:
 
     su - pe-postgres -s /bin/bash
-        
+
     pg_dump pe-puppetdb -f /tmp/pe-puppetdb.backup --create
     pg_dump console -f /tmp/console.backup --create
     pg_dump console_auth -f /tmp/console_auth.backup --create
@@ -100,7 +100,7 @@ To backup the databases, run:
 To restore the databases, run:
 
     su - pe-postgres -s /bin/bash
-        
+
     psql -f /tmp/pe-puppetdb.backup
     psql -f /tmp/console.backup
     psql -f /tmp/console_auth.backup
@@ -120,7 +120,7 @@ The console uses a database user account to access its PostgreSQL database. If t
 4. Start the `pe-httpd` service on the console server:
 
         $ sudo /etc/init.d/pe-httpd start
-        
+
 You will use the same procedure to change the console_auth database user's password, except you will need to edit both the `/opt/puppet/share/console-auth/db/database.yml` and `/opt/puppet/share/rubycas-server/config.yml` files.
 
 The same procedure is also used for the PuppetDB user's password, except you'll edit `/etc/puppetlabs/puppetdb/conf.d/database.ini` and will restart the `pe-puppetdb` service.
@@ -137,6 +137,6 @@ Instead, you should use the console to make changes to the parameters of the `pe
 If you are unfamiliar with editing class parameters in the console, refer to [Editing Class Parameters on Nodes](./console_classes_groups.html#editing-class-parameters-on-nodes).
 
 
-* * * 
+* * *
 
-- [Next: Troubleshooting the Installer](./trouble_install.html) 
+- [Next: Troubleshooting the Installer](./trouble_install.html)

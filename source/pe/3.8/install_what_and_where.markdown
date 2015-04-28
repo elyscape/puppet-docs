@@ -23,7 +23,7 @@ Unused nodes will be deactivated automatically after seven days with no activity
 
 ## PE Enterprise Software Components
 
-### What 
+### What
 
 All functional components of PE, excluding configuration files. You are not likely to need to change these components. PE 3.8 includes the following major software components:
 

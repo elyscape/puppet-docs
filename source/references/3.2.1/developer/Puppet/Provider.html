@@ -5,9 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=c" />
 <title>
   Class: Puppet::Provider
-  
+
     &mdash; Documentation by YARD 0.8.4.1
-  
+
 </title>
 
   <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
@@ -30,33 +30,33 @@
   <body>
     <div id="header">
       <div id="menu">
-  
+
     <a href="../_index.html">Index (P)</a> &raquo;
     <span class='title'><span class='object_link'>Puppet</span></span>
-     &raquo; 
+     &raquo;
     <span class="title">Provider</span>
-  
+
 
   <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
 </div>
 
       <div id="search">
-  
+
     <a class="full_list_link" id="class_list_link"
         href="../class_list.html">
       Class List
     </a>
-  
+
     <a class="full_list_link" id="method_list_link"
         href="../method_list.html">
       Method List
     </a>
-  
+
     <a class="full_list_link" id="file_list_link"
         href="../file_list.html">
       File List
     </a>
-  
+
 </div>
       <div class="clear"></div>
     </div>
@@ -64,48 +64,48 @@
     <iframe id="search_frame"></iframe>
 
     <div id="content"><h1>Class: Puppet::Provider
-  
-  
-  
+
+
+
 </h1>
 
 <dl class="box">
-  
+
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
       <span class="inheritName"><span class='object_link'>Object</span></span>
-      
+
         <ul class="fullTree">
           <li><span class='object_link'>Object</span></li>
-          
+
             <li class="next">Puppet::Provider</li>
-          
+
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
-      
+
       </dd>
-    
-  
-  
-    
-  
-    
+
+
+
+
+
+
       <dt class="r2">Includes:</dt>
       <dd class="r2">Comparable, <span class='object_link'><a href="Util/Errors.html" title="Puppet::Util::Errors (module)">Util::Errors</a></span></dd>
-      
-    
-  
-  
-  
+
+
+
+
+
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/puppet/provider.rb</dd>
-  
+
 </dl>
 <div class="clear"></div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    
+
   <div class="note notetag">
     <strong>Note:</strong>
     <div class='inline'><p>An instance of a Provider is associated with one resource.</p>
@@ -156,192 +156,192 @@ class of Resource or a specific Type).</li>
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><h2>Defined Under Namespace</h2>
 <p class="children">
-  
-    
-  
-    
+
+
+
+
       <strong class="classes">Classes:</strong> <span class='object_link'><a href="Provider/CommandDefiner.html" title="Puppet::Provider::CommandDefiner (class)">CommandDefiner</a></span>
-    
-  
+
+
 </p>
 
   <h2>Constant Summary</h2>
-  
+
 
 
 
 
   <h2>Class Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
-    
-      
+
+
 <li class="public deprecated">
   <span class="summary_signature">
-    
-      <a href="#model-class_method" title="model (class method)">+ (???) <strong>model</strong> </a>
-    
 
-    
+      <a href="#model-class_method" title="model (class method)">+ (???) <strong>model</strong> </a>
+
+
+
   </span>
-  
-  
-  
-  
-    
+
+
+
+
+
       <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
+
+
+
+
+
   <span class="deprecated note title">deprecated</span>
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>This attribute is available for backwards compatibility reasons.</p>
 </div></span>
-  
+
 </li>
 
-    
+
   </ul>
 
 
 
 
-  
+
     <h2>
       Class Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
     <ul class="summary">
-      
-        
+
+
 <li class="public ">
   <span class="summary_signature">
-    
-      <a href="#create_class_and_instance_method-class_method" title="create_class_and_instance_method (class method)">+ <strong>create_class_and_instance_method</strong>(name, &amp;block) </a>
-    
 
-    
+      <a href="#create_class_and_instance_method-class_method" title="create_class_and_instance_method (class method)">+ <strong>create_class_and_instance_method</strong>(name, &amp;block) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><div class='inline'><p>This method is used to generate a method for a command.</p>
 </div></span>
-  
+
 </li>
 
-      
-        
+
+
 <li class="public deprecated">
   <span class="summary_signature">
-    
-      <a href="#make_command_methods-class_method" title="make_command_methods (class method)">+ (Object) <strong>make_command_methods</strong>(name) </a>
-    
 
-    
+      <a href="#make_command_methods-class_method" title="make_command_methods (class method)">+ (Object) <strong>make_command_methods</strong>(name) </a>
+
+
+
   </span>
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
   <span class="deprecated note title">deprecated</span>
   <span class="private note title">private</span>
 
-  
+
     <span class="summary_desc"><strong>Deprecated.</strong> <div class='inline'><p>Use <span class='object_link'>Provider.commands</span>, <span class='object_link'>Provider.optional_commands</span>, or <span class='object_link'>Provider.has_command</span> instead. This was not meant to be part of a public API</p>
 </div></span>
-  
+
 </li>
 
-      
+
     </ul>
-  
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h3 class="inherited">Methods included from <span class='object_link'>Util</span></h3>
   <p class="inherited"><span class='object_link'><a href="Util.html#exit_on_fail-class_method" title="Puppet::Util.exit_on_fail (method)">exit_on_fail</a></span>, <span class='object_link'><a href="Util.html#exit_on_fail-instance_method" title="Puppet::Util#exit_on_fail (method)">exit_on_fail</a></span>, <span class='object_link'><a href="Util.html#which-class_method" title="Puppet::Util.which (method)">which</a></span>, <span class='object_link'><a href="Util.html#which-instance_method" title="Puppet::Util#which (method)">which</a></span></p>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <h3 class="inherited">Methods included from <span class='object_link'>Confiner</span></h3>
   <p class="inherited"><span class='object_link'><a href="Provider/Confiner.html#confine-instance_method" title="Puppet::Provider::Confiner#confine (method)">confine</a></span>, <span class='object_link'><a href="Provider/Confiner.html#confine_collection-instance_method" title="Puppet::Provider::Confiner#confine_collection (method)">confine_collection</a></span>, <span class='object_link'><a href="Provider/Confiner.html#suitable%3F-instance_method" title="Puppet::Provider::Confiner#suitable? (method)">suitable?</a></span></p>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="class_attr_details" class="attr_details">
     <h2>Class Attribute Details</h2>
-    
-      
+
+
       <span id=""></span>
       <div class="method_details first">
   <h3 class="signature first" id="model-class_method">
-  
+
     + (<tt>???</tt>) <strong>model</strong>  <span class="extras">(readonly)</span>&nbsp;<span class="deprecated note title">deprecated</span><span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -364,23 +364,23 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </div>
 </div>
 <div class="tags">
-  
+
 <p class="tag_title">Returns:</p>
 <ul class="return">
-  
+
     <li>
-      
-      
+
+
         <span class='type'>(<tt>???</tt>)</span>
-      
-      
-      
+
+
+
         &mdash;
         <div class='inline'><p>A model kept for backwards compatibility.</p>
 </div>
-      
+
     </li>
-  
+
 </ul>
 
 </div><table class="source_code">
@@ -404,23 +404,23 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
 
-    
+
       <div class="method_details first">
   <h3 class="signature first" id="create_class_and_instance_method-class_method">
-  
+
     + <strong>create_class_and_instance_method</strong>(name, &amp;block) &nbsp;<span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -433,7 +433,7 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -472,16 +472,16 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </tr>
 </table>
 </div>
-    
+
       <div class="method_details ">
   <h3 class="signature " id="make_command_methods-class_method">
-  
+
     + (<tt><span class='object_link'>Object</span></tt>) <strong>make_command_methods</strong>(name) &nbsp;<span class="deprecated note title">deprecated</span><span class="private note title">private</span>
-  
 
-  
 
-  
+
+
+
 </h3><div class="docstring">
   <div class="discussion">
     <p class="note private">
@@ -496,7 +496,7 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </div>
 </div>
 <div class="tags">
-  
+
 
 </div><table class="source_code">
   <tr>
@@ -555,7 +555,7 @@ Is this really needed? The comment about backwards compatibility was made in 200
   </tr>
 </table>
 </div>
-    
+
   </div>
 
 </div>

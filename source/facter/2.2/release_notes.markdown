@@ -48,7 +48,7 @@ Here's an example of what the new `os` fact looks like:
          "full"  => "1.2.3" },
     "lsb" => {
          "distid"          => "Debian",
-         "distcodename"    => "wheezy", 
+         "distcodename"    => "wheezy",
          "distdescription" => "Debian GNU/Linux 7.4 (wheezy)",
          "distrelease"     => "1.2.3",
          "majdistrelease"  => "1" }
@@ -91,8 +91,8 @@ The new `processors` (note the plural) fact is a hash that incorporates the foll
 Here's an example of what the new `processors` fact looks like:
 
 {% highlight ruby %}
-{ "models"=> [ "Processor0"=>"Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz", 
-               "Processor1"=>"Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz"], 
+{ "models"=> [ "Processor0"=>"Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz",
+               "Processor1"=>"Intel(R) Xeon(R) CPU E5-2609 0 @ 2.40GHz"],
  "count"=>2,
  "physicalcount"=>2,
  "speed"=>"2.40 GHz" }

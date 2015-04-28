@@ -28,7 +28,7 @@ You can use the following command-line flags to change the installer's behavior:
   home directories of any users created by the PE installer.
 
 `-d`
-: Also remove any databases during the uninstall. 
+: Also remove any databases during the uninstall.
 
 `-h`
 : Display a help message.
@@ -57,6 +57,6 @@ Thus, to remove every trace of PE from a system, you would run:
     $ sudo ./puppet-enterprise-uninstaller -d -p
 
 
-* * * 
+* * *
 
 - [Next: Automated Installation](./install_automated.html)

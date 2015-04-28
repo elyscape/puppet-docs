@@ -196,9 +196,9 @@ Log a message on the server at level info.
 
 inline_template
 ---------------
-Evaluate a template string and return its value.  See 
-[the templating docs](http://docs.puppetlabs.com/guides/templating.html) for 
-more information.  Note that if multiple template strings are specified, their 
+Evaluate a template string and return its value.  See
+[the templating docs](http://docs.puppetlabs.com/guides/templating.html) for
+more information.  Note that if multiple template strings are specified, their
 output is all concatenated and returned as the output of the function.
 
 - *Type*: rvalue
@@ -372,7 +372,7 @@ the function to return true.
 template
 --------
 Evaluate a template and return its value.  See
-[the templating docs](http://docs.puppetlabs.com/guides/templating.html) for 
+[the templating docs](http://docs.puppetlabs.com/guides/templating.html) for
 more information.
 
 Note that if multiple templates are specified, their output is all

@@ -55,7 +55,7 @@ For standalone Puppet nodes that won't be connecting to a master, use the defaul
 
 ![Puppet master hostname selection][server]
 
-Once the installer finishes, Puppet will be installed, running, and at least partially configured. 
+Once the installer finishes, Puppet will be installed, running, and at least partially configured.
 
 ### Automated Installation
 
@@ -73,7 +73,7 @@ You can also set several MSI properties to pre-configure Puppet as you install i
 
 See the next heading for info about these MSI properties.
 
-Once the installer finishes, Puppet will be installed, running, and at least partially configured. 
+Once the installer finishes, Puppet will be installed, running, and at least partially configured.
 
 ### MSI Properties
 

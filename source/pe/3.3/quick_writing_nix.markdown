@@ -37,7 +37,7 @@ Modules are directory trees. For these exercises you'll use the following files:
         - `vhosts.pp` (contains the Apache virtual hosts class)
     - `templates/`
         - `vhost.conf.erb` (contains the vhost template, managed by PE)
-      
+
 Every manifest (.pp) file contains a single class. File names map to class names in a predictable way: `init.pp` contains a class with the same name as the module; `<NAME>.pp` contains a class called `<MODULE NAME>::<NAME>`; and `<NAME>/<OTHER NAME>.pp` contains `<MODULE NAME>::<NAME>::<OTHER NAME>`.
 
 Many modules, including Apache, contain directories other than `manifests` and `templates`; for simplicity's sake, we do not cover them in this introductory guide.
@@ -52,17 +52,17 @@ This simplified exercise modifies a template from the Puppet Labs Apache module,
 
 1. **On the puppet master,** navigate to the modules directory by running `cd /etc/puppetlabs/puppet/modules`.
 2. Run `ls` to view the currently installed modules; note that `apache` is present.
-3. Open `apache/templates/vhosts.conf.erb`, using the text editor of your choice (vi, nano, etc.). Avoid using Notepad since it can introduce errors. 
+3. Open `apache/templates/vhosts.conf.erb`, using the text editor of your choice (vi, nano, etc.). Avoid using Notepad since it can introduce errors.
       `vhosts.conf.erb` contains the following header:
-    
+
         # ************************************
         # Vhost template in module puppetlabs-apache
         # Managed by Puppet
         # ************************************
-  
+
 4. Collect the following facts about your agent node:
    - run `facter osfamily` (this returns your agent node's OS)
-   - run `facter id` (this returns the id of the currently logged in user) 	  
+   - run `facter id` (this returns the id of the currently logged in user)
 5. Edit the header of `vhosts.conf.erb` so that it contains the following variables for Facter lookups:
 
         # ************************************
@@ -72,19 +72,19 @@ This simplified exercise modifies a template from the Puppet Labs Apache module,
         # This file is authorized for deployment by <%= scope.lookupvar('::id') %>.
         #
         # This file is authorized for deployment ONLY on <%= scope.lookupvar('::osfamily') %> <%= scope.lookupvar('::operatingsystemmajrelease')     %>.
-        # 
+        #
         # Deployment by any other user or on any other system is strictly prohibited.
         # ************************************
 
 6. **On the console**, add `apache` to the available classes, and then add that class to your agent node. Refer to [the introductory section of this guide if you need help adding classes in the console](./quick_start#using_modules_in_the_pe_console).
-7. Use live management to kick off a puppet run. 
+7. Use live management to kick off a puppet run.
 
-At this point, puppet configures apache and starts the httpd service. When this happens, a default apache vhost is created based on the contents of `vhosts.conf.erb`. 
+At this point, puppet configures apache and starts the httpd service. When this happens, a default apache vhost is created based on the contents of `vhosts.conf.erb`.
 
 8. **On the agent node**, navigate to one of the following locations based on your operating system:
    - Redhat-based: `/etc/httpd/conf.d`
    - Debian-based: `/etc/apache2/sites-available`
-   
+
 9. View `15-default.conf`; depending on the node's OS, the header will show some variation of the following contents:
 
         # ************************************
@@ -94,11 +94,11 @@ At this point, puppet configures apache and starts the httpd service. When this 
         # This file is authorized for deployment by root.
         #
         # This file is authorized for deployment ONLY on Redhat 6.
-        # 
+        #
         # Deployment by any other user or on any other system is strictly prohibited.
         # ************************************
 
-As you can see, PE has used Facter to retrieve some key facts about your node, and then used those facts to populate the header of your vhost template.  
+As you can see, PE has used Facter to retrieve some key facts about your node, and then used those facts to populate the header of your vhost template.
 
 But now, let's see what happens when you write your own Puppet code.
 
@@ -109,32 +109,32 @@ Puppet Labs modules save time, but at some point you may find that you'll need t
 
 ### Writing a Class in a Module
 
-During this exercise, you will create a class called `pe_quickstart_app` that will manage a PHP-based web app running on an Apache virtual host.  
+During this exercise, you will create a class called `pe_quickstart_app` that will manage a PHP-based web app running on an Apache virtual host.
 
 1. **On the puppet master**, make sure you're still in the modules directory (`cd /etc/puppetlabs/puppet/modules`) and then run `mkdir -p pe_quickstart_app/manifests` to create the new module directory and its manifests directory.
 2. Use your text editor to create and open the `pe_quickstart_app/manifests/init.pp` file.
 3. Edit the `init.pp` file so it contains the following puppet code, and then save it and exit the editor:
 
         class pe_quickstart_app {
-        
+
           class { 'apache':
             mpm_module => 'prefork',
-          }      
- 
+          }
+
           include apache::mod::php
- 
+
           apache::vhost { 'pe_quickstart_app':
             port     => '80',
             docroot  => '/var/www/pe_quickstart_app',
             priority => '10',
           }
- 
+
           file { '/var/www/pe_quickstart_app/index.php':
             ensure  => file,
             content => "<?php phpinfo() ?>\n",
             mode    => '0644',
           }
-          
+
         }
 
 > You have written a new module containing a new class that includes two other classes. Puppet now knows about your new class, and it can be added to the console and assigned to your node, just as you did in part one of this guide.
@@ -144,8 +144,8 @@ During this exercise, you will create a class called `pe_quickstart_app` that wi
 > * The class `apache` has been modified to include the `mpm_module` attribute; this attribute determines which multi-process module is configured and loaded for the Apache (HTTPD) process. In this case, the value is set to `prefork`.
 > * `include apache::mod::php` indicates that your new class relies on those classes to function correctly. However, PE understands that your node needs to be classified with these classes and will take care of that work automatically when you classify your node with the `pe_quickstart_app` class; in other words, you don't need to worry about classifying your nodes with Apache and Apache PHP.
 > * The `priority` attribute of `10` ensures that your app has a higher priority on port 80 than the default Apache vhost app.
-> * The file `/var/pe_quickstart_app/index.php` contains whatever is specified by the `content` attribute. This is the content you will see when you launch your app. PE uses the `ensure` attribute to create that file the first time the class is applied. This the content you will see when you launch your app.  
- 
+> * The file `/var/pe_quickstart_app/index.php` contains whatever is specified by the `content` attribute. This is the content you will see when you launch your app. PE uses the `ensure` attribute to create that file the first time the class is applied. This the content you will see when you launch your app.
+
 For more information about writing classes, refer to the following documentation:
 
 * To learn how to write resource declarations, conditionals, and classes in a guided tour format, [start at the beginning of Learning Puppet.](/learning/)
@@ -160,19 +160,19 @@ For more information about writing classes, refer to the following documentation
 1. **On the console**, click the __Add classes__ button, choose the `pe_quickstart_app` class from the list, and then click the __Add selected classes__ button to make it available, just as in the [previous example](./quick_start.html#using-modules-in-the-console). You may need to wait a moment or two for the class to show up in the list.
 2. Navigate to the node view page for your agent node, and use the __Edit__ button to add the `pe_quickstart_app` class to your agent node, and remove the `apache` class you previously added.
 
-   >**Note**: Since the `pe_quickstart_app` includes the `apache` class, you need to remove the first `apache` class you added the master node, as puppet will only allow you to declare a class once. 
+   >**Note**: Since the `pe_quickstart_app` includes the `apache` class, you need to remove the first `apache` class you added the master node, as puppet will only allow you to declare a class once.
 
-3. Use live management to run the __runonce__ action your agent node. 
+3. Use live management to run the __runonce__ action your agent node.
 
      When the puppet run is complete, you will see in the node's log that a vhost for the app has been created and the Apache service (httpd) has been started.
-     
+
 4. Use a browser to navigate to port 80 of the IP address for your node; e.g, `http://<yournodeip>:80`.
 
    >**Tip**: Be sure to use `http` instead of `https`.
 
    ![PHP Info Page][php_info]
-       
-You have created a new class from scratch and used it to launch a Apache PHP-based web app. Needless to say, in the real world, your apps will do a lot more than display PHP info pages. But for the purposes of this exercise, let's take a closer look at how PE is managing your app. 
+
+You have created a new class from scratch and used it to launch a Apache PHP-based web app. Needless to say, in the real world, your apps will do a lot more than display PHP info pages. But for the purposes of this exercise, let's take a closer look at how PE is managing your app.
 
 ### Using PE to Manage Your App
 
@@ -202,7 +202,7 @@ Site modules hide complexity so you can more easily divide labor at your site. S
           elsif $kernel == 'windows' {
             include registry::compliance_example
           }
-        } 
+        }
 
 
 This class declares other classes with the `include` function. Note the "if" conditional that sets different classes for different kernels using the `$kernel` fact. In this example, if an agent node is a Linux machine, puppet will apply your `pe_quickstart_app` class; if it is a window machines, puppet will apply the `registry::compliance_example` class. For more information about declaring classes, see the [modules and classes chapters of Learning Puppet](/learning/modules1.html).

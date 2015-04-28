@@ -24,7 +24,7 @@ To install PE:
 * Run the `puppet-enterprise-installer` script with root privileges:
 
         $ sudo ./puppet-enterprise-installer
-* Answer the interview questions to [customize your installation](#customizing-your-installation). 
+* Answer the interview questions to [customize your installation](#customizing-your-installation).
 * Log into the puppet master server and [sign the new node's certificate](#signing-agent-certificates).
 * If you have purchased PE and are installing the puppet master, [copy your license key into place](#verifying-your-license).
 
@@ -67,7 +67,7 @@ The PE installer configures Puppet by asking a series of questions. Most questio
 
 ### Roles
 
-First, the installer will ask which of PE's [roles](./welcome_roles.html) (puppet master, console, cloud provisioner, and puppet agent) to install. The roles you apply will determine which other questions the installer will ask. 
+First, the installer will ask which of PE's [roles](./welcome_roles.html) (puppet master, console, cloud provisioner, and puppet agent) to install. The roles you apply will determine which other questions the installer will ask.
 
 If you choose the puppet master or console roles, the puppet agent role will be installed automatically.
 
@@ -77,7 +77,7 @@ The puppet master and console roles should each be installed on **only one** sys
 
 #### Certname
 
-The certname is the puppet master's unique identifier. It should be a DNS name at which the master server can be reliably reached, and defaults to its fully-qualified domain name. 
+The certname is the puppet master's unique identifier. It should be a DNS name at which the master server can be reliably reached, and defaults to its fully-qualified domain name.
 
 (If the master's certname is not one of its DNS names, you [may need to edit puppet.conf after installation][bucket-troubleshooting].)
 
@@ -105,13 +105,13 @@ If the installer detects another web server on the node, it will suggest the fir
 
 #### User Name and Password
 
-As the console's web interface is a major point of control for your infrastructure, access is restricted with a user name and password. Additional users and passwords can be added later with Apache's standard authentication tools. 
+As the console's web interface is a major point of control for your infrastructure, access is restricted with a user name and password. Additional users and passwords can be added later with Apache's standard authentication tools.
 
-The only forbidden characters for a console password are `\` (backslash), `'` (single quote), and `$$` (two dollar signs in a row). 
+The only forbidden characters for a console password are `\` (backslash), `'` (single quote), and `$$` (two dollar signs in a row).
 
 #### Inventory Certname and DNS Names (Optional)
 
-If you are splitting the master and the console roles, the console will maintain an inventory service to collect facts from the puppet master. Like the master, the inventory service needs a unique certname and a list of valid DNS names. 
+If you are splitting the master and the console roles, the console will maintain an inventory service to collect facts from the puppet master. Like the master, the inventory service needs a unique certname and a list of valid DNS names.
 
 #### Database
 
@@ -122,11 +122,11 @@ The console needs a pair of MySQL databases and a MySQL user in order to operate
 * A MySQL user name for the console
 * A password for the console's user
 
-The only forbidden characters for a database password are `\` (backslash), `'` (single quote), and `$$` (two dollar signs in a row). 
+The only forbidden characters for a database password are `\` (backslash), `'` (single quote), and `$$` (two dollar signs in a row).
 
 If you don't install a new database server, you can either manually create a database and MySQL user for the console and configure the settings above with the correct information, or allow the installer to log into the MySQL server as root and automatically configure the databases.
 
-Note that if you want to automatically configure databases on a remote database server, you must make sure the root MySQL user is allowed to log in remotely. 
+Note that if you want to automatically configure databases on a remote database server, you must make sure the root MySQL user is allowed to log in remotely.
 
 If you are not automatically configuring the databases, you can create the necessary MySQL resources in a secondary shell session while the installer is waiting for input. The SQL commands you need will resemble the following:
 
@@ -137,7 +137,7 @@ If you are not automatically configuring the databases, you can create the neces
     GRANT ALL PRIVILEGES ON console_inventory_service.* TO 'console'@'localhost';
     FLUSH PRIVILEGES;
 
-**Note that the names of the two databases are related:** the name of the inventory service database must start with the name of the primary console database, followed by `_inventory_service`. 
+**Note that the names of the two databases are related:** the name of the inventory service database must start with the name of the primary console database, followed by `_inventory_service`.
 
 **Note also that the hostname for the console user will differ if you are using a remote database server.**
 
@@ -168,16 +168,16 @@ This setting defaults to `puppet`.
 
 Puppet Enterprise may need some extra system software from your OS vendor's package repositories. If any of this software isn't yet installed, the installer will list the packages it needs and offer to automatically install them. If you decline, it will exit so you can install the necessary packages manually before installing.
 
-**A note about Java and MySQL under Enterprise Linux variants:** Java and MySQL packages provided by Oracle can satisfy the puppet master and console roles' Java and MySQL dependencies, but the installer can't make that decision automatically and will default to using the OS's packages. If you wish to use Oracle's packages instead of the OS's, you must first use RPM to manually install the `pe-virtual-java` and/or `pe-virtual-mysql` packages included with Puppet Enterprise: 
+**A note about Java and MySQL under Enterprise Linux variants:** Java and MySQL packages provided by Oracle can satisfy the puppet master and console roles' Java and MySQL dependencies, but the installer can't make that decision automatically and will default to using the OS's packages. If you wish to use Oracle's packages instead of the OS's, you must first use RPM to manually install the `pe-virtual-java` and/or `pe-virtual-mysql` packages included with Puppet Enterprise:
 
     $ sudo rpm -ivh packages/pe-virtual-java-1.0-1.pe.el5.noarch.rpm
 
-Find these in the installer's `packages/` directory. Note that these packages may have additional ramifications if you later install other software that depends on OS MySQL or Java packages. 
+Find these in the installer's `packages/` directory. Note that these packages may have additional ramifications if you later install other software that depends on OS MySQL or Java packages.
 
 
 ### Convenience Links
 
-PE installs its binaries in `/opt/puppet/bin` and `/opt/puppet/sbin`, which aren't included in your default `$PATH`. If you want to make the Puppet tools more visible to all users, the installer can make symlinks in `/usr/local/bin` for the `facter, puppet, puppet-module, pe-man`, and `mco` binaries. 
+PE installs its binaries in `/opt/puppet/bin` and `/opt/puppet/sbin`, which aren't included in your default `$PATH`. If you want to make the Puppet tools more visible to all users, the installer can make symlinks in `/usr/local/bin` for the `facter, puppet, puppet-module, pe-man`, and `mco` binaries.
 
 
 Finishing Up
@@ -197,7 +197,7 @@ To sign one of the pending requests, run:
 
     $ sudo puppet cert sign <name>
 
-After signing a new node's certificate, it may take up to 30 minutes before that node appears in the console and begins retrieving configurations. 
+After signing a new node's certificate, it may take up to 30 minutes before that node appears in the console and begins retrieving configurations.
 
 ### Verifying Your License
 

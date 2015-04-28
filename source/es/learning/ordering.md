@@ -32,14 +32,14 @@ Cuando lo ejecutamos, los recursos no fueron sincronizados en el orden que los h
 
 Como hemos mencionado en el capítulo anterior, Puppet combina las acciones de “chequea el estado” y “soluciona cualquier problema” en una sola declaración para cada recurso, y como cada recurso está representado por una sola declaración atómica, el orden importa mucho menos que en un script equivalente.
 
-Mejor dicho, importa menos siempre y cuando los recursos sean independientes y no estén relacionados entre ellos; la mayoría de ellos son independientes, pero algunos dependen de otros. Consideremos un servicio instalado por un paquete: es imposible llevar el servicio a su estado deseado si el paquete no está instalado. El servicio *depende* del paquete. 
+Mejor dicho, importa menos siempre y cuando los recursos sean independientes y no estén relacionados entre ellos; la mayoría de ellos son independientes, pero algunos dependen de otros. Consideremos un servicio instalado por un paquete: es imposible llevar el servicio a su estado deseado si el paquete no está instalado. El servicio *depende* del paquete.
 
 Puppet tiene formas de expresar esas relaciones cuando trata con recursos relacionados.
 
 ### Sumario de esta página
 
 + Puedes insertar información de la relación en un recurso con los metaparámetros **before**, **require**, **notify**, y **subscribe**.
-+ También puedes declarar relaciones fuera de un recurso con las flechas de encadenamiento **->** y  **~>** 
++ También puedes declarar relaciones fuera de un recurso con las flechas de encadenamiento **->** y  **~>**
 + Las relaciones se pueden ordenar (esto antes que aquello) u ordenar con notificaciones (esto antes que aquello, y avisa si aquello fue cambiado)
 + La sintaxis y el comportamiento de las relaciones de Puppet está documentada en [la página de relaciones del manual de referencia de Puppet]().
 
@@ -75,9 +75,9 @@ La forma más simple, es recordar que *sólo* usamos nombres en minúscula cuand
 
 ### Before y Require
 
-**before** y **require** crean relaciones de dependencia simples, donde un recurso debe sincronizarse antes que otro. **before** es usado en el recurso anterior, y lista recursos que dependen de él. **require** se usa en el recurso posterior y lista los recursos de los que él depende. 
+**before** y **require** crean relaciones de dependencia simples, donde un recurso debe sincronizarse antes que otro. **before** es usado en el recurso anterior, y lista recursos que dependen de él. **require** se usa en el recurso posterior y lista los recursos de los que él depende.
 
-Estos dos metaparámetros son formas diferentes de escribir la misma relación. El ejemplo anterior se puede escribir así de simple: 
+Estos dos metaparámetros son formas diferentes de escribir la misma relación. El ejemplo anterior se puede escribir así de simple:
 
 
 	    file {'/tmp/test1':
@@ -126,7 +126,7 @@ Existe una última forma de declarar relaciones: encadenar referencias de recurs
 
 Las flechas de encadenamiento pueden tomar varias cosas como sus operandos: este ejemplo utiliza referencias de recurso, pero también podría tomar declaraciones de recursos y [colectores de recursos]().
 
-Como el espacio en blanco puede utilizarse en cualquier lugar en Puppet, y como las flechas de encadenamiento pueden ir entre declaraciones de recursos, es fácil generar  una pequeña cadena de recursos sincronizados en el orden escrito. Sólo tienes que colocar flechas de encadenamiento entre ellas: 
+Como el espacio en blanco puede utilizarse en cualquier lugar en Puppet, y como las flechas de encadenamiento pueden ir entre declaraciones de recursos, es fácil generar  una pequeña cadena de recursos sincronizados en el orden escrito. Sólo tienes que colocar flechas de encadenamiento entre ellas:
 
 	    file {'/tmp/test1':
 	      ensure  => present,
@@ -201,7 +201,7 @@ Ahora reinicia manualmente el servicio sshd:
 ### Repara
 Ahora que has agregado esos recursos al site.pp, Puppet reparará esto automáticamente en aproximadamente media hora; pero si eres impaciente, puedes [loguearte en la consola de Puppet Enterprise](), luego [activar una ejecución del Puppet agent]() en la página de Live Management. Y lo hará! Luego de que la ejecución del agente se haya completado y puedas ver que el reporte aparece en la consola (tendrá un ícono azul con el que moestrará los cambios hechos), podrás loguearte como *root* a través de SSH nuevamente. *Victoria*.
 
-#### Sin cambios? Sin *refresh* 
+#### Sin cambios? Sin *refresh*
 Existe una extraña situación en la que puedes terminar si aplicas un manifiesto que realice cambios de archivos de configuración antes que lo termines de escribir.
 
 Puppet sólo envía eventos de refresh si realiza cambios al recurso que realiza la notificación en *esta ejecución*. Con lo cual, si has escrito un recurso de archivo con un nuevo contenido deseado para un archivo de configuración, el servicio no sería refrescado, ya que el recurso de archivo ya está en su estado deseado.
@@ -247,5 +247,5 @@ Pistas:
 Ahora que puedes expresar dependencias  entre recursos, es tiempo de hacer tus manifiestos más consistentes respecto del mundo real con [variables, facts y condicionales]().
 
 **Nota aparte**
-Ahora que puedes manejar un servicio completo de punta a punta, intenta manejar un servicio importante en tu propio sistema de prueba. [Descarga gratis Puppet Enterprise](), sigue [la guía de comienzo rápido]() para obtener un pequeño entorno instalado y luego intenta construir un patrón package/file/service al final del archivo de Pupper Master **/etc/puppetlabs/puppet/manifests/site.pp**. MySQL? Memcached? 
+Ahora que puedes manejar un servicio completo de punta a punta, intenta manejar un servicio importante en tu propio sistema de prueba. [Descarga gratis Puppet Enterprise](), sigue [la guía de comienzo rápido]() para obtener un pequeño entorno instalado y luego intenta construir un patrón package/file/service al final del archivo de Pupper Master **/etc/puppetlabs/puppet/manifests/site.pp**. MySQL? Memcached?
 Tú decides.

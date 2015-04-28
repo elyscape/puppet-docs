@@ -31,11 +31,11 @@ The `boot_sequence` hash indicates which templates to use when a node using this
 
 ## Writing Templates
 
-Task templates are ERB templates and are searched in all the directories given in the `task_path` configuration setting. Templates are searched in the subdirectories in this order: 
+Task templates are ERB templates and are searched in all the directories given in the `task_path` configuration setting. Templates are searched in the subdirectories in this order:
 
 1. `name/os_version`
 2. `name`
-3. `common` 
+3. `common`
 
 If the task has a base task, the base task's template directories are searched just before the `common` directory.
 

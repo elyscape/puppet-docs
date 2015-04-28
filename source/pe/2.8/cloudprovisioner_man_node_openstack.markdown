@@ -34,16 +34,16 @@ ACTIONS:
  terminate        Terminate machine instance.
 
 See 'puppet man node_openstack' or 'man puppet-node_openstack' for full help.
-                                                                     
-                                                                     
-                                                                     
-                                             
+
+
+
+
 puppet-node_openstack(8) -- View and manage openstack nodes.
 ============================================================
 
 SYNOPSIS
 --------
-puppet node_openstack <action> <--endpoint ENDPOINT> 
+puppet node_openstack <action> <--endpoint ENDPOINT>
 
 DESCRIPTION
 -----------
@@ -101,10 +101,10 @@ ACTIONS
 
   Launches a new OpenStack machine instance and returns the
   machine's identifier.
-  
+
   A newly created system may not be immediately ready after launch while
   it boots.
-  
+
   If creation of the instance fails, Puppet will automatically clean up
   after itself and tear down the instance.
 
@@ -123,7 +123,7 @@ ACTIONS
   The security group(s) that the machine will be associated with. A
   security group determines the rules for both inbound and outbound
   connections.
-  
+
   Multiple groups can be specified as a colon-separated list.
 
   <--image=> | <-i=> -
@@ -134,11 +134,11 @@ ACTIONS
   <--keyname=> -
   The identifier of the SSH public key to inject into the instance's
   authorized_keys file when the instance is created.
-  
+
   This keyname should identify the public key that corresponds with the
   private key identified by the --keyfile option of the `node` subcommand's
   `install` action.
-  
+
   You can use the `list_keynames` action to get a list of valid key pairs for the
   specified endpoint.
 

@@ -12,17 +12,17 @@ Prerequisites
 
 ### Software
 
-- The cloud provisioning tools ship with Puppet Enterprise 2.0 and later. 
+- The cloud provisioning tools ship with Puppet Enterprise 2.0 and later.
 
 - Puppet 2.7.2 or later is required
 
-- The [Fog](http://fog.io/) cloud services library must be installed on the machine running cloud\_provisioner. (Some operating systems and environments may also require you to manually install some of Fog's dependencies.) To install Fog, run 
+- The [Fog](http://fog.io/) cloud services library must be installed on the machine running cloud\_provisioner. (Some operating systems and environments may also require you to manually install some of Fog's dependencies.) To install Fog, run
 
     \# gem install fog -v 0.7.2
 
 - Cloud\_provisioner also requires the GUID library so it can generate unique indentifiers.
 
-     \# gem install guid 
+     \# gem install guid
 
 Note that later versions of fog may not be fully compatible with Cloud Provisioner. This issue is currently being addressed.
 
@@ -42,7 +42,7 @@ Installing
 
 Cloud provisioning tools can be installed on any puppet master or agent node.
 
-The Puppet Enterprise installer will ask whether or not to install cloud provisioning during installation. Answer 'yes' to enable cloud provisioning actions on a given node. 
+The Puppet Enterprise installer will ask whether or not to install cloud provisioning during installation. Answer 'yes' to enable cloud provisioning actions on a given node.
 
 If you have already installed PE without installing the cloud provisioning tools, run the upgrader script `puppet-enterprise-upgrader` and answer "yes" when prompted to install the tools. Running the upgrader script will have no ill effects on your current installation, even if the upgrader is for the version currently installed. (No user-configured files will get overwritten, and of course the installer backs up all relevant files as well.)
 
@@ -51,7 +51,7 @@ If you're using an answer file to install Puppet Enterprise, you can install clo
 Configuring
 -----------
 
-To create new virtual machines with Puppet Enterprise,  you'll need to first configure the services you'll be using. 
+To create new virtual machines with Puppet Enterprise,  you'll need to first configure the services you'll be using.
 
 Start by creating a file called `.fog` in the home directory of the user who will be provisioning new nodes.
 
@@ -86,7 +86,7 @@ To connect to a VMware vSphere server, you must put the following information in
 : A public key hash for your vSphere server. The value for this setting can be obtained by entering the other three settings and then running the following command:
 
         $ puppet node_vmware list
-    
+
     This will result in an error message containing the server's public key hash...
 
         notice: Connecting ...·
@@ -96,9 +96,9 @@ To connect to a VMware vSphere server, you must put the following information in
         authentic set vsphere_expected_pubkey_hash: <the hash printed in this
         message> in ~/.fog
         err: Try 'puppet help node_vmware list' for usage
-    
+
     ...which can then be entered as the value of this setting.
-    
+
 
 ### Adding Amazon Web Services or OpenStack Credentials
 
@@ -116,7 +116,7 @@ For *AWS installations*, you can find your Amazon Web Services credentials onlin
 
 Select the "Security Credentials" menu and choose "Access Credentials." Click on the "Access Keys" tab to view your Access Keys.
 
-You need to record two pieces of information: the Access Key ID and the Secret Key ID. To see your Secret Access Key, click the "Show" link under "Secret Access Key". 
+You need to record two pieces of information: the Access Key ID and the Secret Key ID. To see your Secret Access Key, click the "Show" link under "Secret Access Key".
 
 
 
@@ -140,7 +140,7 @@ EC2 console](https://console.aws.amazon.com/ec2/).
 Select the "Key Pairs" menu item from the dashboard. If you don't have any
 existing key pairs, you can create one with the "Create Key Pairs" button.
 Specify a new name for the key pair to create it; the private key
-file will be automatically downloaded to your host. 
+file will be automatically downloaded to your host.
 
 Make a note of the name of your key pair, since you will need to know it when creating new instances.
 
@@ -176,6 +176,6 @@ type="application/x-shockwave-flash" width="560" height="315"
 allowscriptaccess="always" allowfullscreen="true"></embed></object>
 
 
-* * * 
+* * *
 
 - [Next: Classifying Nodes and Remotely Installing Puppet](./cloudprovisioner_classifying_installing.html)

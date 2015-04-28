@@ -50,7 +50,7 @@ canonical: "/references/latest/type.html"
   Resource types define features they can use, and providers can be tested to see
   which features they provide.
 
-    
+
 
 ----------------
 
@@ -396,7 +396,7 @@ special
   Overrides more specific time of day/week settings.
 
 target
-: The username that will own the cron entry. Defaults to 
+: The username that will own the cron entry. Defaults to
   the value of $USER for the shell that invoked Puppet, or root if $USER
   is empty.
 
@@ -1183,14 +1183,14 @@ provider
   directoryservice
   : Group management using DirectoryService on OS X.
 
-  
+
 
     Required binaries: `/usr/bin/dscl`.  Default for `operatingsystem` == `darwin`.  Supported features: `manages_members`.
 
   groupadd
   : Group management via `groupadd` and its ilk. The default for most platforms.
 
-  
+
 
     Required binaries: `groupdel`, `groupmod`, `groupadd`.  Supported features: `system_groups`.
 
@@ -1256,7 +1256,7 @@ provider
   Available providers are:
 
   parsed
-  : 
+  :
 
 target
 : The file in which to store service information.  Only used by
@@ -1444,7 +1444,7 @@ provider
   macauthorization
   : Manage Mac OS X authorization database rules and rights.
 
-  
+
 
     Required binaries: `/usr/bin/security`, `/usr/bin/sw_vers`.  Default for `operatingsystem` == `darwin`.
 
@@ -1496,7 +1496,7 @@ provider
   Available providers are:
 
   aliases
-  : 
+  :
 
 recipient
 : Where email should be sent.  Multiple values
@@ -1742,7 +1742,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1768,7 +1768,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 target
 : The target.
@@ -1794,7 +1794,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1859,7 +1859,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -1906,7 +1906,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1935,7 +1935,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -1964,7 +1964,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2095,7 +2095,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 realm
 : Nagios configuration file parameter.
@@ -2145,7 +2145,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2189,7 +2189,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2218,7 +2218,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2265,7 +2265,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2294,7 +2294,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2326,7 +2326,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2361,7 +2361,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2399,7 +2399,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 realm
 : Nagios configuration file parameter.
@@ -2431,7 +2431,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2565,7 +2565,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2615,7 +2615,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2662,7 +2662,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2694,7 +2694,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2741,7 +2741,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2776,7 +2776,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2814,7 +2814,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2846,7 +2846,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2876,7 +2876,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -2913,7 +2913,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2940,7 +2940,7 @@ provider
   Available providers are:
 
   naginator
-  : 
+  :
 
 register
 : Nagios configuration file parameter.
@@ -3251,7 +3251,7 @@ provider
 
     When specifying a version in the Puppet DSL, only specify the version, not the revision.
     Revisions are only used internally for ensuring the latest version/revision of a port.
-  
+
 
     Required binaries: `/opt/local/bin/port`.  Supported features: `installable`, `uninstallable`, `upgradeable`, `versionable`.
 
@@ -3378,8 +3378,8 @@ provider
   yum
   : Support via `yum`.
 
-    Using this provider's `uninstallable` feature will not remove dependent packages. To 
-    remove dependent packages with this provider use the `purgeable` feature, but note this 
+    Using this provider's `uninstallable` feature will not remove dependent packages. To
+    remove dependent packages with this provider use the `purgeable` feature, but note this
     feature is destructive and should be used with the utmost care.
 
     Required binaries: `yum`, `python`, `rpm`.  Default for `operatingsystem` == `fedora, centos, redhat`.  Supported features: `installable`, `purgeable`, `uninstallable`, `upgradeable`, `versionable`.
@@ -4121,7 +4121,7 @@ provider
   : Red Hat's (and probably many others') form of `init`-style service
     management. Uses `chkconfig` for service enabling and disabling.
 
-  
+
 
     Required binaries: `/sbin/chkconfig`, `/sbin/service`.  Default for `osfamily` == `redhat, suse`.  Supported features: `enableable`, `refreshable`.
 
@@ -4262,8 +4262,8 @@ ensure
 : The basic property that the resource should be in.  Valid values are `present`, `absent`.
 
 key
-: The key itself; generally a long string of hex characters. The key attribute 
-  may not contain whitespace: Omit key headers (e.g. 'ssh-rsa') and key identifiers 
+: The key itself; generally a long string of hex characters. The key attribute
+  may not contain whitespace: Omit key headers (e.g. 'ssh-rsa') and key identifiers
   (e.g. 'joe@joescomputer.local') found in the public key file.
 
 name

@@ -49,7 +49,7 @@ title: Type Reference
   Resource types define features they can use, and providers can be tested to see
   which features they provide.
 
-    
+
 
 ----------------
 
@@ -224,7 +224,7 @@ provider
       If you wish to manage /etc/hosts on Mac OS X, then simply use the host
       type as per other platforms.
 
-          Default for `operatingsystem` == `darwin`.  
+          Default for `operatingsystem` == `darwin`.
 
 realname
 : The 'long' name of the computer record.
@@ -338,7 +338,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **crontab**:   Required binaries: `crontab`.    
+    * **crontab**:   Required binaries: `crontab`.
 
 special
 : Special schedules
@@ -718,8 +718,8 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **microsoft_windows**: Uses Microsoft Windows functionality to manage file's users and rights.    
-    * **posix**: Uses POSIX functionality to manage file's users and rights.    
+    * **microsoft_windows**: Uses Microsoft Windows functionality to manage file's users and rights.
+    * **posix**: Uses POSIX functionality to manage file's users and rights.
 
 purge
 : Whether unmanaged files should be purged.  If you have a filebucket
@@ -960,7 +960,7 @@ provider
 
       The default for most platforms
 
-        Required binaries: `groupdel`, `groupmod`, `groupadd`.    
+        Required binaries: `groupdel`, `groupmod`, `groupadd`.
     * **ldap**: Group management via `ldap`.
 
       This provider requires that you have valid values for all of the
@@ -972,12 +972,12 @@ provider
       not specify one, but it is a potentially expensive operation, as it
       iterates across all existing groups to pick the appropriate next one.
 
-      
+
     * **pw**: Group management via `pw`.
 
       Only works on FreeBSD.
 
-        Required binaries: `/usr/sbin/pw`.    Default for `operatingsystem` == `freebsd`.  
+        Required binaries: `/usr/sbin/pw`.    Default for `operatingsystem` == `freebsd`.
 
 
 
@@ -1011,7 +1011,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **parsed**:     
+    * **parsed**:
 
 target
 : The file in which to store service information.  Only used by
@@ -1051,7 +1051,7 @@ provider
     appropriate provider for your platform.  Available providers are:
 
     * **k5login**: The k5login provider is the only provider for the k5login
-          type.    
+          type.
 
 
 
@@ -1120,7 +1120,7 @@ provider
 
     * **macauthorization**: Manage Mac OS X authorization database rules and rights.
 
-        Required binaries: `/usr/bin/sw_vers`, `/usr/bin/security`.    Default for `operatingsystem` == `darwin`.  
+        Required binaries: `/usr/bin/sw_vers`, `/usr/bin/security`.    Default for `operatingsystem` == `darwin`.
 
 rule
 : The rule(s) that this right refers to.
@@ -1170,7 +1170,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **aliases**:     
+    * **aliases**:
 
 recipient
 : Where email should be sent.  Multiple values
@@ -1216,7 +1216,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **mailman**:   Required binaries: `/usr/lib/mailman/mail/mailman`, `/usr/lib/mailman/bin/newlist`, `/usr/lib/mailman/bin/list_lists`, `/usr/lib/mailman/bin/rmlist`.    
+    * **mailman**:   Required binaries: `/usr/lib/mailman/mail/mailman`, `/usr/lib/mailman/bin/newlist`, `/usr/lib/mailman/bin/list_lists`, `/usr/lib/mailman/bin/rmlist`.
 
 webserver
 : The name of the host providing web archives and the administrative interface.
@@ -1255,7 +1255,7 @@ mcxcontent | *X*             |
 content
 : The XML Plist.  The value of MCXSettings in DirectoryService.
     This is the standard output from the system command:
-    
+
         dscl localhost -mcxexport /Local/Default/<ds_type>/ds_name
 
     Note that `ds_type` is capitalized and plural in the dscl command.  Requires features manages_content.
@@ -1407,7 +1407,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1428,7 +1428,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 target
 : target
@@ -1454,7 +1454,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1517,7 +1517,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -1564,7 +1564,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1591,7 +1591,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -1620,7 +1620,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1743,7 +1743,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -1790,7 +1790,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1832,7 +1832,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -1861,7 +1861,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1906,7 +1906,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -1935,7 +1935,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -1965,7 +1965,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2000,7 +2000,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2036,7 +2036,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2065,7 +2065,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2191,7 +2191,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2241,7 +2241,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2286,7 +2286,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2318,7 +2318,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2363,7 +2363,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2398,7 +2398,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2434,7 +2434,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2466,7 +2466,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2494,7 +2494,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -2531,7 +2531,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 #### Parameters
 
@@ -2556,7 +2556,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **naginator**:     
+    * **naginator**:
 
 register
 : Nagios configuration file parameter.
@@ -3001,7 +3001,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **getsetsebool**: Manage SELinux booleans using the getsebool and setsebool binaries.  Required binaries: `/usr/sbin/getsebool`, `/usr/sbin/setsebool`.    
+    * **getsetsebool**: Manage SELinux booleans using the getsebool and setsebool binaries.  Required binaries: `/usr/sbin/getsebool`, `/usr/sbin/setsebool`.
 
 value
 : Whether the the SELinux boolean should be enabled or disabled.  Valid values are `on`, `off`.
@@ -3032,7 +3032,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **semodule**: Manage SELinux policy modules using the semodule binary.  Required binaries: `/usr/sbin/semodule`.    
+    * **semodule**: Manage SELinux policy modules using the semodule binary.  Required binaries: `/usr/sbin/semodule`.
 
 selmoduledir
 : The directory to look for the compiled pp module file in.
@@ -3377,7 +3377,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **parsed**: Parse and generate authorized_keys files for SSH.    
+    * **parsed**: Parse and generate authorized_keys files for SSH.
 
 target
 : The absolute filename in which to store the SSH key. This
@@ -3400,7 +3400,7 @@ user
 ### sshkey
 
 Installs and manages ssh host keys.  At this point, this type
-only knows how to install keys into `/etc/ssh/ssh_known_hosts`.  See 
+only knows how to install keys into `/etc/ssh/ssh_known_hosts`.  See
 the `ssh_authorized_key` type to manage authorized keys.
 
 #### Parameters
@@ -3424,7 +3424,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **parsed**: Parse and generate host-wide known hosts files for SSH.    
+    * **parsed**: Parse and generate host-wide known hosts files for SSH.
 
 target
 : The file in which to store the ssh key.  Only used by
@@ -3442,7 +3442,7 @@ type
 
 A resource type for specifying run stages.  The actual stage should
 be specified on resources:
-    
+
     class { foo: stage => pre }
 
 And you must manually control stage order:
@@ -3715,7 +3715,7 @@ uid
 
 The client-side description of a yum repository. Repository
 configurations are found by parsing `/etc/yum.conf` and
-the files indicated by the `reposdir` option in that file 
+the files indicated by the `reposdir` option in that file
 (see yum.conf(5) for details)
 
 Most parameters are identical to the ones documented
@@ -3862,7 +3862,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **solaris**: Provider for Solaris zfs.  Required binaries: `/usr/sbin/zfs`.    Default for `operatingsystem` == `solaris`.  
+    * **solaris**: Provider for Solaris zfs.  Required binaries: `/usr/sbin/zfs`.    Default for `operatingsystem` == `solaris`.
 
 quota
 : The quota property.
@@ -3943,7 +3943,7 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **solaris**: Provider for Solaris Zones.  Required binaries: `/usr/sbin/zoneadm`, `/usr/sbin/zonecfg`.    Default for `operatingsystem` == `solaris`.  
+    * **solaris**: Provider for Solaris Zones.  Required binaries: `/usr/sbin/zoneadm`, `/usr/sbin/zonecfg`.    Default for `operatingsystem` == `solaris`.
 
 realhostname
 : The actual hostname of the zone.
@@ -4010,7 +4010,7 @@ mirror
 
     mirror => ["disk1 disk2", "disk3 disk4"]
 
-  
+
 
 pool
 : - **namevar**
@@ -4022,17 +4022,17 @@ provider
     seldom need to specify this -- Puppet will usually discover the
     appropriate provider for your platform.  Available providers are:
 
-    * **solaris**: Provider for Solaris zpool.  Required binaries: `/usr/sbin/zpool`.    Default for `operatingsystem` == `solaris`.  
+    * **solaris**: Provider for Solaris zpool.  Required binaries: `/usr/sbin/zpool`.    Default for `operatingsystem` == `solaris`.
 
 raid_parity
 : Determines parity when using raidz property.
 
 raidz
 : List of all the devices to raid for this pool. Should be an array of space separated strings:
-      
+
     raidz => ["disk1 disk2", "disk3 disk4"]
 
-      
+
 
 spare
 : Spare disk(s) for this pool.

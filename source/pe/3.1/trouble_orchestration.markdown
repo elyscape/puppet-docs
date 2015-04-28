@@ -22,8 +22,8 @@ If you alter an agent's name in `puppet.conf` or make other changes that affect 
     # Plugins
     securityprovider           = ssl
     plugin.ssl_server_private = /etc/puppetlabs/mcollective/ssl/mcollective-private.pem
- 
- 
+
+
 
 AIX Agents Not Registering with Live Management After 3.0 Upgrade
 -----
@@ -34,6 +34,6 @@ In some cases, the MCollective service on AIX agents may be stuck in the `stoppi
     kill -9 <pid-of-pe-mcollective>
 
 
-* * * 
+* * *
 
 - [Next: Troubleshooting: Cloud Provisioner ](./trouble_cloudprovisioner.html)

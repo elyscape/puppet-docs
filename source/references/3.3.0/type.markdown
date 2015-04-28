@@ -1879,7 +1879,7 @@ Required binaries: `/usr/bin/chgroup`, `/usr/sbin/lsgroup`, `/usr/sbin/rmgroup`,
 
 Group management using DirectoryService on OS X.
 
-  
+
 
 Required binaries: `/usr/bin/dscl`.  Default for `operatingsystem` == `darwin`.  Supported features: `manages_members`.
 
@@ -1887,7 +1887,7 @@ Required binaries: `/usr/bin/dscl`.  Default for `operatingsystem` == `darwin`. 
 
 Group management via `groupadd` and its ilk. The default for most platforms.
 
-  
+
 
 Required binaries: `groupmod`, `groupdel`, `lgroupadd`, `groupadd`.  Supported features: `system_groups`.
 
@@ -2533,7 +2533,7 @@ The number of tries allowed.
 
 Manage Mac OS X authorization database rules and rights.
 
-  
+
 
 Required binaries: `/usr/bin/sw_vers`, `/usr/bin/security`.  Default for `operatingsystem` == `darwin`.
 
@@ -3072,7 +3072,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_command-attributes">Attributes</h3>
 
@@ -3179,7 +3179,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_contact-attributes">Attributes</h3>
 
@@ -3466,7 +3466,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_contactgroup-attributes">Attributes</h3>
 
@@ -3591,7 +3591,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_host-attributes">Attributes</h3>
 
@@ -4085,7 +4085,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_hostdependency-attributes">Attributes</h3>
 
@@ -4255,7 +4255,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_hostescalation-attributes">Attributes</h3>
 
@@ -4434,7 +4434,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_hostextinfo-attributes">Attributes</h3>
 
@@ -4586,7 +4586,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_hostgroup-attributes">Attributes</h3>
 
@@ -4747,7 +4747,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_service-attributes">Attributes</h3>
 
@@ -5250,7 +5250,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_servicedependency-attributes">Attributes</h3>
 
@@ -5438,7 +5438,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_serviceescalation-attributes">Attributes</h3>
 
@@ -5635,7 +5635,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_serviceextinfo-attributes">Attributes</h3>
 
@@ -5796,7 +5796,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_servicegroup-attributes">Attributes</h3>
 
@@ -5948,7 +5948,7 @@ you can send them to a different file by setting their `target` attribute.
 You can purge Nagios resources using the `resources` type, but *only*
 in the default file locations.  This is an architectural limitation.
 
-    
+
 
 <h3 id="nagios_timeperiod-attributes">Attributes</h3>
 
@@ -6555,7 +6555,7 @@ Variant preferences may be specified using
 
 When specifying a version in the Puppet DSL, only specify the version, not the revision.
 Revisions are only used internally for ensuring the latest version/revision of a port.
-  
+
 
 Required binaries: `/opt/local/bin/port`.  Supported features: `installable`, `uninstallable`, `upgradeable`, `versionable`.
 
@@ -8193,7 +8193,7 @@ Default for `operatingsystem` == `openwrt`.  Supported features: `enableable`, `
 Red Hat's (and probably many others') form of `init`-style service
 management. Uses `chkconfig` for service enabling and disabling.
 
-  
+
 
 Required binaries: `/sbin/chkconfig`, `/sbin/service`.  Default for `osfamily` == `redhat, suse`.  Supported features: `enableable`, `refreshable`.
 

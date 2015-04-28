@@ -8,7 +8,7 @@ Puppet Dashboard Documentation
 
 Puppet Dashboard is an optional web app that lets you inspect and control your Puppet infrastructure.
 
-* * * 
+* * *
 
 Puppet Dashboard Manual
 -----------------------
@@ -23,4 +23,4 @@ New versions of the Dashboard manual are released for each major version of Dash
     * [Using Dashboard](./manual/1.2/using.html)
     * [Rake API](./manual/1.2/rake_api.html)
 
-For documentation of previous versions of Dashboard, see the README.markdown file in the root of Dashboard's installation directory. 
+For documentation of previous versions of Dashboard, see the README.markdown file in the root of Dashboard's installation directory.

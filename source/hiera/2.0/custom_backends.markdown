@@ -230,7 +230,7 @@ If you do need to explicitly call `Backend.parse_string` for some reason, you'll
 
 The `Backend.merge_answer` method expects three arguments, and returns a merged hash using the [configured hash merge behavior](./lookup_types.html#hash-merge). If your backend supports hash merge lookups, you should always use this helper method to do the merging.
 
-In passing `resolution_type` to `Backend.merge_answer`, you'll need to pass, verbatim, the `resolution_type` value you received in your `lookup` method. 
+In passing `resolution_type` to `Backend.merge_answer`, you'll need to pass, verbatim, the `resolution_type` value you received in your `lookup` method.
 
 From the json backend:
 

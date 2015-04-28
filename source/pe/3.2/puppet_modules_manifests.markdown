@@ -56,9 +56,9 @@ This page covers the first part of that process: writing manifests and modules. 
 >
 > ### Geppetto IDE
 >
-> Geppetto is an integrated development environment (IDE) for Puppet. It provides a toolset for developing puppet modules and manifests that includes syntax highlighting, content assistance, error tracing/debugging, and code completion features. Geppetto also provides integration with git, enabling side-by-side comparison of code from a given repo complete with highlighting, code validation, syntax error parsing, and expression troubleshooting. 
+> Geppetto is an integrated development environment (IDE) for Puppet. It provides a toolset for developing puppet modules and manifests that includes syntax highlighting, content assistance, error tracing/debugging, and code completion features. Geppetto also provides integration with git, enabling side-by-side comparison of code from a given repo complete with highlighting, code validation, syntax error parsing, and expression troubleshooting.
 >
->In addition, Geppetto provides tools that integrate with Puppet products. It includes an interface to the Puppet Forge, which allows you to create modules from existing modules on the Forge as well as easily upload your custom modules. 
+>In addition, Geppetto provides tools that integrate with Puppet products. It includes an interface to the Puppet Forge, which allows you to create modules from existing modules on the Forge as well as easily upload your custom modules.
 > Geppetto also provides PE integration by parsing PuppetDB error reporting. This allows you to quickly find the problems with your puppet code that are causing configuration failures. For complete information, visit the [Geppetto documentation][geppetto].
 >
 >
@@ -196,7 +196,7 @@ This example module, named "`my_module`," shows the standard module layout:
 You can search for pre-built modules on [the Puppet Forge][forge] and use them in your own infrastructure.
 
 * Use the `puppet module search` command to locate modules, or [browse the Puppet Forge's web interface][forge].
-* The Puppet Forge provides Puppet Enterprise supported modules; these modules are rigorously tested with PE, supported via the usual [support channels](http://puppetlabs.com/services/customer-support), maintained for a long-term lifecycle, and are compatible with multiple platforms and architectures. 
+* The Puppet Forge provides Puppet Enterprise supported modules; these modules are rigorously tested with PE, supported via the usual [support channels](http://puppetlabs.com/services/customer-support), maintained for a long-term lifecycle, and are compatible with multiple platforms and architectures.
 * On your puppet master server, use the `puppet module install` command to install modules from the Forge.
 * See [the Installing Modules page][install] for details about installing pre-built modules.
 
